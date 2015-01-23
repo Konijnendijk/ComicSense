@@ -1,0 +1,19 @@
+coding standaartz
+
+
+variable: int myCoolVariable;
+member variable: int m_myCoolMemberVariable
+static variable: int s_myCoolStaticVariable
+
+Function: void MyCoolFunction() {...}
+
+getter/setters: public int myCoolMemberVariable
+{
+  get { return m_myCoolMemberVariable; }
+  set { m_myCoolVariable = value;
+}
+
+class: class MyCoolClass {...}
+struct: struct MyCoolStruct {...}
+
+
