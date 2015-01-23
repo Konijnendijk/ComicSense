@@ -7,7 +7,7 @@ using System.Collections;
 public class FlySpawner : MonoBehaviour {
 
     // Locations where flies can spawn
-    public Vector3[] SpawnLocations;
+    public Transform[] SpawnLocations;
     public float SpawnInterval=5f;
 
     public GameObject FlyPrefab;
@@ -34,7 +34,7 @@ public class FlySpawner : MonoBehaviour {
     {
         GameObject fly = (GameObject)Instantiate(FlyPrefab);
 
-        Vector3 pos = SpawnLocations[Random.Range(0, SpawnLocations.Length)];
+        Vector3 pos = SpawnLocations[Random.Range(0, SpawnLocations.Length)].position;
         fly.transform.position = new Vector3(pos.x, pos.y, pos.z);
     }
 }
