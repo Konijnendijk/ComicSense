@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
       Input.GetAxis("leftStickX"),
       0.0f,
       -Input.GetAxis("leftStickY"));
-
+    
     if(axisLeft != Vector3.zero)
     {
       transform.rotation = Quaternion.Slerp(
@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
         );
 
       //transform.forward = axisLeft;
-      transform.Translate(Vector3.forward * m_movementSpeed * Time.fixedDeltaTime);
+      transform.Translate(Vector3.forward * axisLeft.magnitude * m_movementSpeed * Time.fixedDeltaTime);
     }
   }
 }
