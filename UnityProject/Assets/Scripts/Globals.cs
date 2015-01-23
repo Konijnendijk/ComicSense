@@ -18,7 +18,7 @@ public class Globals : MonoBehaviour
     if(s_instance)
       return s_instance;
 
-    GameObjec go = new GameObject();
+    GameObject go = new GameObject();
     go.name = "Globals";
 
     s_instance = go.AddComponent<Globals>();
