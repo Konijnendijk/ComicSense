@@ -29,7 +29,7 @@ public class Fly : MonoBehaviour {
 
     public void OnCollisionEnter(Collision collision)
     {
-        m_flyDirection = -m_flyDirection;
+        m_flyDirection = Vector3.ClampMagnitude(Quaternion.AngleAxis(Random.value * 180 - 90, Vector3.up) * collision.contacts[0].normal, FlySpeed);
         resetTimer();
         
     }
@@ -37,7 +37,8 @@ public class Fly : MonoBehaviour {
     private Vector3 chooseDirection()
     {
         float xSpeed = (Random.value>.5?1:-1) * (Random.value * FlySpeed) ;
-        float ySpeed = (Random.value>.5?1:-1) *(FlySpeed - Mathf.Abs(xSpeed)) ;
+        //float ySpeed = (Random.value>.5?1:-1) *(FlySpeed - Mathf.Abs(xSpeed)) ;
+        float ySpeed = (Random.value > .5 ? 1 : -1) * Mathf.Sqrt(-(Mathf.Pow(xSpeed,2) - Mathf.Pow(FlySpeed, 2)));
         return new Vector3(xSpeed, 0, ySpeed);
     }
 	
