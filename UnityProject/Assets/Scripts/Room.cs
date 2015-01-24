@@ -42,9 +42,9 @@ public class Room : MonoBehaviour {
 
             m_numFlies++;
         }
-
-        
     }
+
+
 
     private void setImgPos(Vector3 screenPos)
     {
