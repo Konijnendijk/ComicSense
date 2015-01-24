@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 /// <summary>
 /// Spawns flies at a random location from a list at a set interval.
@@ -15,15 +16,20 @@ public class FlySpawner : MonoBehaviour {
 
     public GameObject FlyPrefab;
 
+    public Text WaveText;
+    public Text FliesText;
+
     private int m_fliesInGame;
     private int m_maxFliesInGame;
     private int m_fliesToKill;
+    private int m_waveSize;
     private int m_currentWaveIndex=-1;
 
 	// Use this for initialization
 	void Start () {
         nextWave();
         InvokeRepeating("spawn", SpawnInterval, SpawnInterval);
+        setFliesText();
 	}
 
     public void FlyDied()
@@ -32,6 +38,8 @@ public class FlySpawner : MonoBehaviour {
         m_fliesToKill--;
         if (m_fliesToKill == 0)
             nextWave();
+
+        setFliesText();
     }
 
     private void spawn()
@@ -47,6 +55,11 @@ public class FlySpawner : MonoBehaviour {
         }
     }
 
+    private void setFliesText()
+    {
+        FliesText.text = string.Format("Fly {0}/{1}", m_waveSize - m_fliesToKill, m_waveSize);
+    }
+
     private void nextWave()
     {
         //repeat the last wave 
@@ -54,6 +67,9 @@ public class FlySpawner : MonoBehaviour {
         Wave wave=Waves[m_currentWaveIndex];
         m_maxFliesInGame = wave.MaxFlies;
         m_fliesToKill = wave.WaveSize;
+        m_waveSize = wave.WaveSize;
+
+        WaveText.text = string.Format("Wave {0}/{1}", m_currentWaveIndex + 1, Waves.Length);
 
         Debug.Log(string.Format("Wave {0}", m_currentWaveIndex));
     }
