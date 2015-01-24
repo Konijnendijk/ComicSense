@@ -16,11 +16,6 @@ public class TowerPreview : MonoBehaviour
 
   int m_objectsCollidingWith = 0;
   bool[] m_intersecting = new bool[1];
-  static string[] raycastMasks =
-    {
-      "Ignore Raycast",
-      "FlyTrigger"
-    };
 
   void OnTriggerEnter(Collider col)
   {

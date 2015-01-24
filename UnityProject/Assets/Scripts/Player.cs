@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+
 
 public class Player : MonoBehaviour
 {
-
   enum State
   {
     IDLE,
@@ -22,6 +23,12 @@ public class Player : MonoBehaviour
   State m_state;
   GameObject m_colliderToBeCleaned;
   GameObject m_trapPreview;
+  Dictionary<PickupType, int> m_inventory = new Dictionary<PickupType,int>();
+
+  public void AddItemToInventory(PickupType pt)
+  {
+    m_inventory[pt] += 1;
+  }
 
   void Start()
   {
