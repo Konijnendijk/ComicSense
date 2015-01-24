@@ -25,9 +25,9 @@ public class Fly : MonoBehaviour
 
   public void FixedUpdate()
   {
-    if(State == FlyState.Flying || State == FlyState.Teleporting)
+    if(State == FlyState.Flying || State == FlyState.Teleporting || State == FlyState.ToFixedPos)
     {
-      gameObject.transform.position += m_flyDirection;
+      gameObject.transform.position += m_flyDirection * Time.fixedDeltaTime;
     }
   }
 
@@ -37,6 +37,17 @@ public class Fly : MonoBehaviour
     m_flyDirection = Vector3.ClampMagnitude(collision.contacts[0].normal, FlySpeed);
     m_flyDirection.y = 0;
     resetTimer();
+  }
+
+  void OnTriggerEnter(Collider collider)
+  {
+    if(collider.tag == "Honey Jar")
+    {
+      Vector3 honeyPos = collider.transform.position;
+      m_flyDirection = honeyPos - transform.position;
+      m_flyDirection.y = 0;
+      State = FlyState.ToFixedPos;
+    }
   }
 
   private Vector3 chooseDirection()
@@ -52,20 +63,20 @@ public class Fly : MonoBehaviour
   {
     m_timer += Time.deltaTime;
 
-    if(State == FlyState.Flying)
+    switch(State)
     {
-      if(m_timer >= MoveTime)
-      {
-        resetTimer();
-        m_flyDirection = chooseDirection();
-      }
-    }
-    else if(State == FlyState.Idle)
-    {
-      if(m_timer >= HangTime)
-      {
-        resetTimer();
-      }
+      case FlyState.Flying:
+        if(m_timer >= MoveTime)
+        {
+          resetTimer();
+          m_flyDirection = chooseDirection();
+        }
+        break;
+      
+      case FlyState.Idle:
+        if(m_timer >= HangTime)
+          resetTimer();
+        break;
     }
   }
 
@@ -105,6 +116,6 @@ public class Fly : MonoBehaviour
 
   public enum FlyState
   {
-    Idle, Flying, Teleporting
+    Idle, Flying, ToFixedPos, Teleporting
   }
 }
