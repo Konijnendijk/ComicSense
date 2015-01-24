@@ -23,10 +23,12 @@ public class Player : MonoBehaviour
   State m_state;
   GameObject m_colliderToBeCleaned;
   GameObject m_trapPreview;
+  Animator m_animator;
 
   void Start()
   {
     m_state = State.IDLE;
+    m_animator = GetComponentInChildren<Animator>();
   }
 
   void EnterTrapPlacingMode()
@@ -53,7 +55,7 @@ public class Player : MonoBehaviour
   {
     GameObject go = (GameObject)Instantiate(m_attackCollider);
     go.transform.parent = transform;
-    go.transform.localPosition = new Vector3(0, 0, 1.235f);
+    go.transform.localPosition = new Vector3(0.366f, 0.9f, 0.452f);
     go.transform.localRotation = Quaternion.identity;
     m_colliderToBeCleaned = go;
     m_state = State.ATTACKING;
@@ -87,6 +89,7 @@ public class Player : MonoBehaviour
 
   void Update()
   {
+    m_animator.SetInteger("State", (int)m_state);
     switch(m_state)
     {
       case State.IDLE:
@@ -127,7 +130,6 @@ public class Player : MonoBehaviour
         }
         break;
     }
-
   }
 
   // Update is called once per frame
@@ -151,8 +153,10 @@ public class Player : MonoBehaviour
       0.0f,
       -Input.GetAxis("leftStickY"),
       0.0f);
-
     Vector3 axisLeft = new Vector3(axis4.x, axis4.y, axis4.z);
+    
+    m_animator.SetFloat("speed", axisLeft.magnitude);
+   
     switch(m_state)
     {
       case State.IDLE:
@@ -169,6 +173,7 @@ public class Player : MonoBehaviour
             transform.Translate(
               Vector3.forward * axisLeft.magnitude *
               m_movementSpeed * Time.fixedDeltaTime);
+
           }
         }
         break;
