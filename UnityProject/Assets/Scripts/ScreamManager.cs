@@ -5,6 +5,9 @@ using UnityEngine.UI;
 public class ScreamManager : MonoBehaviour {
 
     public Image ScreamMeter;
+    public Image North, East, South, West;
+
+    public Transform Knight;
 
     //The amount of scream being subtracted every second
     public float RecoveryPerSecond;
@@ -22,7 +25,7 @@ public class ScreamManager : MonoBehaviour {
     /// Princess screams, play sound and add to scream meter
     /// </summary>
     public void Scream (Room room, int numFlies){
-        m_scream += ScreamIncrement * numFlies;
+        m_scream += ScreamIncrement * numFlies;       
     }
 
     public void Update()
