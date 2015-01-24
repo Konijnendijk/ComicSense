@@ -10,6 +10,7 @@ public class Fly : MonoBehaviour {
     private float m_timer;
     
     private Vector3 m_flyDirection;
+    private FlySpawner m_spawner;
 
     public FlyState State;
 
@@ -17,6 +18,7 @@ public class Fly : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         m_flyDirection = new Vector3(FlySpeed / 2, 0, FlySpeed / 2);
+        m_spawner = GameObject.FindObjectOfType<FlySpawner>();
 	}
 
     public void FixedUpdate()
@@ -77,6 +79,13 @@ public class Fly : MonoBehaviour {
         }
             
     }
+
+    public void OnDestroy()
+    {
+        m_spawner.FlyDied();
+    }
+
+    
 
     private void resetTimer()
     {
