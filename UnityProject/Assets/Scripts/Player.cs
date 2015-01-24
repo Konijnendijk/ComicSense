@@ -133,10 +133,26 @@ public class Player : MonoBehaviour
   // Update is called once per frame
   void FixedUpdate()
   {
-    Vector3 axisLeft = new Vector3(
-      Input.GetAxis("leftStickX"),
+    Vector3 forward = Camera.main.transform.forward;
+    forward.y = 0;
+    forward = forward.normalized;
+    Vector3 up = Vector3.up;
+    Vector3 right = Vector3.Normalize(Vector3.Cross(forward, up));
+    up = Vector3.Cross(right, forward);
+
+    Matrix4x4 matrix = new Matrix4x4();
+    matrix.SetColumn(0, new Vector4(right.x, right.y, right.z, 0.0f));
+    matrix.SetColumn(1, new Vector4(up.x, up.y, up.z, 0.0f));
+    matrix.SetColumn(2, new Vector4(forward.x, forward.y, forward.z, 0.0f));
+    matrix.SetColumn(3, new Vector4(0.0f, 0.0f, 0.0f, 1.0f));
+
+    Vector4 axis4 = matrix * new Vector4(
+      -Input.GetAxis("leftStickX"),
       0.0f,
-      -Input.GetAxis("leftStickY"));
+      -Input.GetAxis("leftStickY"),
+      0.0f);
+
+    Vector3 axisLeft = new Vector3(axis4.x, axis4.y, axis4.z);
     switch(m_state)
     {
       case State.IDLE:
