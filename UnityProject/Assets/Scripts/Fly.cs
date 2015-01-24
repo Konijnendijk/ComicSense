@@ -8,9 +8,11 @@ public class Fly : MonoBehaviour {
     public float HangTime=1f;
 
     private float m_timer;
-    private bool m_flying;
     
     private Vector3 m_flyDirection;
+
+    public FlyState State;
+
     
 	// Use this for initialization
 	void Start () {
@@ -19,7 +21,7 @@ public class Fly : MonoBehaviour {
 
     public void FixedUpdate()
     {
-        if (m_flying)
+        if (State==FlyState.Flying || State==FlyState.Teleporting)
         {
             gameObject.transform.position += m_flyDirection;
         }
@@ -29,6 +31,7 @@ public class Fly : MonoBehaviour {
     {
         m_flyDirection = -m_flyDirection;
         resetTimer();
+        
     }
 
     private Vector3 chooseDirection()
@@ -42,14 +45,14 @@ public class Fly : MonoBehaviour {
 	void Update () {
         m_timer += Time.deltaTime;
 
-        if (m_flying){
+        if (State==FlyState.Flying){
             if (m_timer >= MoveTime)
             {
                 resetTimer();
                 m_flyDirection = chooseDirection();
             }
         }
-        else
+        else if (State==FlyState.Idle)
         {
             if (m_timer >= HangTime)
             {
@@ -58,9 +61,34 @@ public class Fly : MonoBehaviour {
         }
 	}
 
+    
+
+    public void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.GetComponent<FlyTeleport>()!=null)
+        {
+            //Leaving the source teleporter
+            if (State == FlyState.Teleporting)
+                State = FlyState.Flying;
+            //leaving the target teleporter
+            else
+                State = FlyState.Teleporting;
+        }
+            
+    }
+
     private void resetTimer()
     {
-        m_flying = !m_flying;
+        if (State == FlyState.Flying)
+            State = FlyState.Idle;
+        else if (State == FlyState.Idle)
+            State = FlyState.Flying;
+
         m_timer = 0;
+    }
+
+    public enum FlyState
+    {
+        Idle,Flying,Teleporting
     }
 }
