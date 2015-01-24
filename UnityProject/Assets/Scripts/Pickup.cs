@@ -8,7 +8,8 @@ public enum PickupType
   NET,
   WAX,
   HERB,
-  PERFUME
+  PERFUME,
+  SIZE
 }
 
 
@@ -22,7 +23,7 @@ public class Pickup : MonoBehaviour
   {
     if(collision.collider.tag == "Player")
     {
-      gameObject.GetComponent<Player>().AddItemToInventory(m_pickupType);
+      //Globals.GI().inventory.AddItem(m_pickupType);
       Destroy(gameObject);
     }
   }

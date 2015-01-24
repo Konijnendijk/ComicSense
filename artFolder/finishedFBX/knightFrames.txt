@@ -1,0 +1,5 @@
+Walk Frame : 1 - 24
+Run Frame : 26 - 50
+Slash : 52 - 56
+Trap : 58 - 78
+Idle : 80 - 118

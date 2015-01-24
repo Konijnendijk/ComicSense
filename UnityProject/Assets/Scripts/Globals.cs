@@ -8,15 +8,16 @@ public class Globals : MonoBehaviour
 
   //getters and setters
 
-    public string FliesTag { get { return m_fliesTag; } }
-    public string RoomsTag { get { return m_roomsTag; } }
-    public string ScreamMeterTag { get { return m_screamMeterTag; } }
+  public string FliesTag { get { return m_fliesTag; } }
+  public string RoomsTag { get { return m_roomsTag; } }
+  public string ScreamMeterTag { get { return m_screamMeterTag; } }
+  //public Inventory inventory { get { return m_inventory; } }
 
   //variables
-
-    private const string m_fliesTag="Flies";
-    private const string m_roomsTag="Rooms";
-    private const string m_screamMeterTag = "ScreamMeter";
+  private const string m_fliesTag = "Flies";
+  private const string m_roomsTag = "Rooms";
+  private const string m_screamMeterTag = "ScreamMeter";
+  //Inventory m_inventory;
 
   //public variables for the debugging
   public float GRID_TILE_SIZE = 1;
