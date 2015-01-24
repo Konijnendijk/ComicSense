@@ -6,6 +6,8 @@ using System.Collections;
 /// </summary>
 public class FlySpawner : MonoBehaviour {
 
+    public int MaxFliesInGame;
+
     // Locations where flies can spawn
     public Transform[] SpawnLocations;
     public float SpawnInterval=5f;
@@ -13,28 +15,29 @@ public class FlySpawner : MonoBehaviour {
     public GameObject FlyPrefab;
 
     private float m_timer;
+    private int m_fliesInGame;
 
 	// Use this for initialization
 	void Start () {
-	
+        InvokeRepeating("spawn", SpawnInterval, SpawnInterval);
 	}
-	
-	// Update is called once per frame
-	void Update () {
-        m_timer += Time.deltaTime;
 
-        if (m_timer >= SpawnInterval)
-        {
-            spawn();
-            m_timer = 0;
-        }
-	}
+    public void FlyDied()
+    {
+        m_fliesInGame--;
+    }
 
     private void spawn()
     {
-        GameObject fly = (GameObject)Instantiate(FlyPrefab);
+        if (m_fliesInGame < MaxFliesInGame)
+        {
+            GameObject fly = (GameObject)Instantiate(FlyPrefab);
 
-        Vector3 pos = SpawnLocations[Random.Range(0, SpawnLocations.Length)].position;
-        fly.transform.position = new Vector3(pos.x, pos.y, pos.z);
+            Vector3 pos = SpawnLocations[Random.Range(0, SpawnLocations.Length)].position;
+            fly.transform.position = new Vector3(pos.x, pos.y, pos.z);
+
+            m_timer = 0;
+            m_fliesInGame++;
+        }
     }
 }
