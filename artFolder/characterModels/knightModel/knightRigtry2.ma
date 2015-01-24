@@ -1,6 +1,6 @@
 //Maya ASCII 2015 scene
-//Name: knightRigtry.ma
-//Last modified: Sat, Jan 24, 2015 04:07:46 PM
+//Name: knightRigtry2.ma
+//Last modified: Sat, Jan 24, 2015 04:28:44 PM
 //Codeset: 1252
 requires maya "2015";
 currentUnit -l centimeter -a degree -t film;
@@ -12,8 +12,8 @@ fileInfo "osv" "Microsoft Windows 8 Home Premium Edition, 64-bit  (Build 9200)\n
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 4.1950204694659901 0.85494911600145462 3.6273992568161195 ;
-	setAttr ".r" -type "double3" 0.26164721408680736 -1033.4000000014082 -1.8082182442230996e-017 ;
+	setAttr ".t" -type "double3" 3.5337780851966034 1.1575947760011482 4.2181720563052298 ;
+	setAttr ".r" -type "double3" -2.7383527859127703 -1042.2000000014032 3.7736519633664925e-016 ;
 	setAttr ".rp" -type "double3" 2.7755575615628914e-017 -1.1102230246251565e-016 4.4408920985006262e-016 ;
 	setAttr ".rpt" -type "double3" -1.5477247295141069e-016 -9.0501106769285886e-017 
 		5.5191353898254977e-016 ;
@@ -126,8 +126,7 @@ createNode parentConstraint -n "joint1_parentConstraint1" -p "Head_joint";
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -7.9203265993476247e-016 -9.3180312933501483e-018 
-		-2.1120870931593667e-016 ;
+	setAttr ".lr" -type "double3" 1.5900832150798132e-015 -1.553005215558357e-018 -3.7272125173400581e-017 ;
 	setAttr ".rst" -type "double3" 0.080392412655163753 1.302494456194194 0.096562751248372297 ;
 	setAttr -k on ".w0";
 createNode transform -n "Body_ctrlGrp" -p "RootCircle";
@@ -209,6 +208,7 @@ createNode parentConstraint -n "Body_joint_parentConstraint1" -p "Body_joint";
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
+	setAttr ".lr" -type "double3" 0 -3.975693351829396e-016 0 ;
 	setAttr ".rst" -type "double3" 0.083444416522979736 0.79112722933571988 0.10083965957164764 ;
 	setAttr -k on ".w0";
 createNode transform -n "L_Shoulder_ctrlGRP1" -p "topnurbsSquare1";
@@ -337,7 +337,7 @@ createNode parentConstraint -n "R_Elbow_joint_parentConstraint1" -p "R_Elbow_joi
 	setAttr ".tg[0].tot" -type "double3" -5.5511151231257827e-017 -6.4580369896205525e-007 
 		-1.9265537484769446e-008 ;
 	setAttr ".tg[0].tor" -type "double3" -90.000000000015646 8.2394375965477966 89.931574439976615 ;
-	setAttr ".lr" -type "double3" -1.5703988739726133e-014 1.5500545056487956e-014 -1.326712943086311e-013 ;
+	setAttr ".lr" -type "double3" -2.0723301596410741e-014 1.592140946990427e-014 -7.2339371192012194e-014 ;
 	setAttr ".rst" -type "double3" -0.26825394354483345 -2.1682873250356005e-008 -7.0934510709719234e-008 ;
 	setAttr ".rsrr" -type "double3" -9.988929546471372e-015 -1.3191226300952685e-014 
 		9.0485072381899964e-014 ;
@@ -356,8 +356,8 @@ createNode parentConstraint -n "R_Shoulder_joint_parentConstraint1" -p "R_Should
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".tg[0].tor" -type "double3" -90.000000000000043 -5.0845984569357539 93.485791183122245 ;
-	setAttr ".lr" -type "double3" 6.3611093629270335e-015 1.5902773407317584e-014 3.1805546814635176e-015 ;
+	setAttr ".tg[0].tor" -type "double3" -90.000000000000057 -5.0845984569357539 93.485791183122245 ;
+	setAttr ".lr" -type "double3" -13.149061815593132 12.680382992406081 17.908109577512338 ;
 	setAttr ".rst" -type "double3" -0.23767426773200442 1.0001505420670858 0.081980700000000073 ;
 	setAttr ".rsrr" -type "double3" 2.5444437451708134e-014 0 0 ;
 	setAttr -k on ".w0";
@@ -369,7 +369,7 @@ createNode joint -n "L_Shoulder_joint" -p "group1";
 createNode joint -n "L_Elbow_joint" -p "L_Shoulder_joint";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 0.50999631852004812 3.5174830857084092 13.339695836056961 ;
+	setAttr ".jo" -type "double3" 0.50999631852004812 3.5174830857084096 13.339695836056961 ;
 	setAttr ".radi" 0.05;
 createNode joint -n "L_Wrist_joint" -p "L_Elbow_joint";
 	setAttr ".t" -type "double3" 0.25170219927048243 8.3266726846886741e-017 -3.3306690738754696e-016 ;
@@ -394,7 +394,7 @@ createNode parentConstraint -n "L_Elbow_joint_parentConstraint1" -p "L_Elbow_joi
 	setAttr ".tg[0].tot" -type "double3" 1.1102230246251565e-016 -4.4408920985006262e-016 
 		-4.163336342344337e-017 ;
 	setAttr ".tg[0].tor" -type "double3" 89.999999999995481 -8.2394375965478073 -89.931574439976586 ;
-	setAttr ".lr" -type "double3" 4.4726550208080717e-015 4.9851467419423601e-016 -7.7862245989841613e-014 ;
+	setAttr ".lr" -type "double3" 1.5256723237645303e-014 1.2315331359378063e-015 -2.1443003038430858e-013 ;
 	setAttr ".rst" -type "double3" 0.26825357849157294 6.2450045135165055e-017 1.6653345369377348e-016 ;
 	setAttr ".rsrr" -type "double3" 4.4726550208080717e-015 4.9851467419423601e-016 
 		-7.7862245989841613e-014 ;
@@ -414,22 +414,22 @@ createNode parentConstraint -n "L_Shoulder_joint_parentConstraint1" -p "L_Should
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tor" -type "double3" 89.999999999999986 5.0845984569357645 -93.485791183122203 ;
-	setAttr ".lr" -type "double3" -1.2722218725854067e-014 -1.2722218725854067e-014 
-		1.4124500153760508e-030 ;
+	setAttr ".lr" -type "double3" 10.067004043560488 8.5427403347485811 -17.7290136065868 ;
 	setAttr ".rst" -type "double3" 0.40339336372849299 0.99005597749526197 0.081980652565994447 ;
 	setAttr ".rsrr" -type "double3" -1.2722218725854067e-014 -1.2722218725854067e-014 
 		1.4124500153760508e-030 ;
 	setAttr -k on ".w0";
 createNode joint -n "L_Hip_joint" -p "RootCircle";
 	setAttr ".t" -type "double3" 0.087253499715468502 0.4602119334027065 -0.0014653496710219094 ;
+	setAttr ".r" -type "double3" -0.3386729784933743 -0.88415629816886321 15.734972670260817 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 90.000000000000014 -1.4243758150262849 -89.074955765114751 ;
-	setAttr ".pa" -type "double3" -2.0547842060783388e-007 8.4764843224377123e-009 -3.3201282471249411e-009 ;
+	setAttr ".pa" -type "double3" -2.0547842060783388e-007 8.476484322437714e-009 -3.3201282471249411e-009 ;
 	setAttr ".radi" 0.1;
 createNode joint -n "L_Knee_joint" -p "L_Hip_joint";
 	setAttr ".t" -type "double3" 0.22209787170718415 -1.3877787807814457e-017 0 ;
-	setAttr ".r" -type "double3" -2.2322987539366053e-029 -4.4189539910152018e-014 -1.126509888764289e-013 ;
+	setAttr ".r" -type "double3" 9.111461088913009e-016 1.8268816398132306 4.6590765066998348 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0.10320503373945215 -1.8239685734649131 -4.6634208980405081 ;
@@ -447,14 +447,14 @@ createNode ikEffector -n "effector1" -p "L_Knee_joint";
 	setAttr ".hd" yes;
 createNode joint -n "L_Hip_joint1" -p "RootCircle";
 	setAttr ".t" -type "double3" -0.081695762536695721 0.45742759517479159 -0.0014653595716476453 ;
-	setAttr ".r" -type "double3" 2.0547841987576152e-007 -8.4765020704189895e-009 3.3201282120356467e-009 ;
+	setAttr ".r" -type "double3" 0.64501729787240458 -0.84304460444767171 -25.756239756590862 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" -90.000000000000014 1.424375815026288 89.074955765114751 ;
 	setAttr ".radi" 0.1;
 createNode joint -n "L_Knee_joint1" -p "L_Hip_joint1";
 	setAttr ".t" -type "double3" -0.22209755330533423 8.710672479150805e-008 -5.1640144840825464e-007 ;
-	setAttr ".r" -type "double3" -1.0532103100994107e-019 -1.8936837097300105e-014 -4.8281659140525247e-014 ;
+	setAttr ".r" -type "double3" 1.0163389525566127e-005 1.8266115522887358 4.659025562923726 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0.10320503371425542 -1.8239685734649123 -4.6634208980405107 ;
@@ -506,8 +506,8 @@ createNode parentConstraint -n "ikHandle1_parentConstraint1" -p "ikHandle1";
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".tg[0].tor" -type "double3" 89.999999999990465 3.2374022160378537 -90.901840829277802 ;
-	setAttr ".lr" -type "double3" 89.999999999990465 3.2374022160378502 -90.901840829277802 ;
+	setAttr ".tg[0].tor" -type "double3" 89.999999999990465 3.2374022160378542 -90.901840829277802 ;
+	setAttr ".lr" -type "double3" 89.999999999990465 3.2374022160378559 -90.901840829277802 ;
 	setAttr ".rst" -type "double3" 0.17069791623844827 0.010498505771513067 0.092013249907986761 ;
 	setAttr ".rsrr" -type "double3" 89.999999999990465 3.2374022160378502 -90.901840829277802 ;
 	setAttr -k on ".w0";
@@ -551,11 +551,11 @@ createNode parentConstraint -n "ikHandle2_parentConstraint1" -p "ikHandle2";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tor" -type "double3" -90.000000000034788 -3.2374022160378657 90.901840829277802 ;
-	setAttr ".lr" -type "double3" -90.000000000034788 -3.2374022160378688 90.901840829277802 ;
+	setAttr ".lr" -type "double3" -90.000000000034788 -3.2374022160378622 90.901840829277816 ;
 	setAttr ".rst" -type "double3" 0.0017486539862840065 0.0077140951747916575 0.092013199999999989 ;
-	setAttr ".rsrr" -type "double3" -90.000000000034788 -3.2374022160378688 90.901840829277802 ;
+	setAttr ".rsrr" -type "double3" -90.000000000034788 -3.2374022160378693 90.901840829277802 ;
 	setAttr -k on ".w0";
-createNode transform -n "polySurface1";
+createNode transform -n "knight";
 	setAttr -l on ".tx";
 	setAttr -l on ".ty";
 	setAttr -l on ".tz";
@@ -565,20 +565,19 @@ createNode transform -n "polySurface1";
 	setAttr -l on ".sx";
 	setAttr -l on ".sy";
 	setAttr -l on ".sz";
-createNode mesh -n "polySurface1Shape" -p "polySurface1";
+createNode mesh -n "knightShape" -p "knight";
 	setAttr -k off ".v";
 	setAttr -s 8 ".iog[0].og";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".pv" -type "double2" 0.42553117871284485 0.50670205056667328 ;
-	setAttr -s 2 ".uvst";
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
 	setAttr ".vcs" 2;
-createNode mesh -n "polySurface1ShapeOrig" -p "polySurface1";
+createNode mesh -n "knightShapeOrig" -p "knight";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
 	setAttr ".vir" yes;
@@ -4960,8 +4959,8 @@ createNode joint -n "Slave_Body_joint";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0 -16.3443796525636 0 ;
-	setAttr ".bps" -type "matrix" 0.95958760776468299 0 0.28141006205260849 0 -0 1 0 0
-		 -0.28141006205260849 -0 0.95958760776468299 0 0 0.79112722933571988 0 1;
+	setAttr ".bps" -type "matrix" 0.95958760776468299 0 0.28141006205260849 0 0 1 0 0
+		 -0.28141006205260849 0 0.95958760776468299 0 0 0.79112722933571988 0 1;
 	setAttr ".radi" 0.05;
 createNode parentConstraint -n "Slave_Body_joint_parentConstraint1" -p "Slave_Body_joint";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Body_jointW0" -dv 1 -min 0 -at "double";
@@ -4977,7 +4976,7 @@ createNode parentConstraint -n "Slave_Body_joint_parentConstraint1" -p "Slave_Bo
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 0 16.3443796525636 0 ;
+	setAttr ".lr" -type "double3" 0 3.4133876582151164 0 ;
 	setAttr ".rst" -type "double3" 0 0.79112722933571988 0 ;
 	setAttr -k on ".w0";
 createNode scaleConstraint -n "Slave_Body_joint_scaleConstraint1" -p "Slave_Body_joint";
@@ -5018,7 +5017,7 @@ createNode parentConstraint -n "Slave_L_Hip_joint_parentConstraint1" -p "Slave_L
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 16.426082120740617 0.50444090030361999 -15.529517755595126 ;
+	setAttr ".lr" -type "double3" 3.3485384218491809 -0.79249796320292665 -3.6757437758691975 ;
 	setAttr ".rst" -type "double3" 0.087253499715468502 0.4602119334027065 -0.0014653496710219094 ;
 	setAttr ".rsrr" -type "double3" -3.4986101496098681e-014 -1.5902773407317581e-014 
 		9.541664044390555e-015 ;
@@ -5061,7 +5060,7 @@ createNode parentConstraint -n "Slave_L_Knee_joint_parentConstraint1" -p "Slave_
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 0.1484415393503494 -1.8208428425016501 -4.6614390379723858 ;
+	setAttr ".lr" -type "double3" 1.153222142229915e-007 1.0858329151679182e-007 -3.6155803966210189e-006 ;
 	setAttr ".rst" -type "double3" 0.087252410617574563 0.24799768741993128 0.064052422098451842 ;
 	setAttr ".rsrr" -type "double3" -3.180554681463518e-014 -2.5444437451708134e-014 
 		1.5902773407317596e-014 ;
@@ -5146,7 +5145,7 @@ createNode parentConstraint -n "Slave_L_Hip_joint1_parentConstraint1" -p "Slave_
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -16.5587897035231 1.4015218138253116 25.430001450120827 ;
+	setAttr ".lr" -type "double3" -3.1173159866166973 -1.3939443998258629 0.24109068981326987 ;
 	setAttr ".rst" -type "double3" -0.081695762536695721 0.45742759517479159 -0.0014653595716476453 ;
 	setAttr ".rsrr" -type "double3" 6.3611093629270367e-015 5.0888874903416268e-014 
 		6.3611093629270367e-015 ;
@@ -5189,7 +5188,7 @@ createNode parentConstraint -n "Slave_L_Knee_joint1_parentConstraint1" -p "Slave
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 0.14836026714003978 -1.8201937710851233 -4.6608702995492495 ;
+	setAttr ".lr" -type "double3" -1.6311787612375686e-005 0.00038354699454037054 0.00051162301266857767 ;
 	setAttr ".rst" -type "double3" -0.081695392641410139 0.25505315978181553 -0.092963507551414831 ;
 	setAttr ".rsrr" -type "double3" 2.5444437451708128e-014 -4.2373500461281502e-030 
 		1.9083328088781097e-014 ;
@@ -5256,7 +5255,7 @@ createNode joint -n "Slave_L_Shoulder_joint" -p "Slave_Body_joint";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 89.346391473927596 27.295026317503471 -89.772202193076168 ;
+	setAttr ".jo" -type "double3" 89.346391473927596 27.295026317503471 -89.772202193076183 ;
 	setAttr ".bps" -type "matrix" 0.13243724196026491 -0.88865001979866054 -0.43904614706634054 0
 		 -0.2373650707566588 -0.45849359918844468 0.85641195851524188 0 -0.96235035206864483 -0.0092066180037070362 -0.2716561025603681 0
 		 0.31232615918747875 0.99005597749526197 0.071939983669398105 1;
@@ -5276,7 +5275,7 @@ createNode parentConstraint -n "Slave_L_Shoulder_joint_parentConstraint1" -p "Sl
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 0.93617440852075473 -3.9457017990115286 22.159347767014903 ;
+	setAttr ".lr" -type "double3" 0.24699363451152045 0.013177268767260868 4.0614635928726903 ;
 	setAttr ".rst" -type "double3" 0.31232615918747875 0.99005597749526197 0.071939983669398105 ;
 	setAttr ".rsrr" -type "double3" -3.4986101496098675e-014 6.3611093629270391e-015 
 		2.5444437451708128e-014 ;
@@ -5320,7 +5319,7 @@ createNode parentConstraint -n "Slave_L_Elbow_joint_parentConstraint1" -p "Slave
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 3.3097647153979723e-014 -1.2309119338515544e-014 -6.887578131001321e-015 ;
+	setAttr ".lr" -type "double3" 3.3097647153979723e-014 -1.190689098768593e-014 -6.8895193875207672e-015 ;
 	setAttr ".rst" -type "double3" 0.34785292326887407 0.75167242965766401 -0.04583571640408507 ;
 	setAttr -k on ".w0";
 createNode scaleConstraint -n "Slave_L_Elbow_joint_scaleConstraint1" -p "Slave_L_Elbow_joint";
@@ -5361,8 +5360,8 @@ createNode parentConstraint -n "Slave_L_Wrist_joint_parentConstraint1" -p "Slave
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -2.9038464241761903e-012 -3.1805546814635477e-014 
-		-1.2722218725853258e-014 ;
+	setAttr ".lr" -type "double3" -2.9006658694947265e-012 -2.8624992133172045e-014 
+		-1.5902773407316855e-014 ;
 	setAttr ".rst" -type "double3" 0.38132976296617743 0.50800810274967312 -0.099323977863534904 ;
 	setAttr ".rsrr" -type "double3" -6.7586786981099743e-015 -1.212586472307966e-014 
 		3.5781240166464575e-015 ;
@@ -5405,7 +5404,7 @@ createNode parentConstraint -n "Slave_Head_joint_parentConstraint1" -p "Slave_He
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -5.144464368803777 -20.786623666345651 1.9667391661570801 ;
+	setAttr ".lr" -type "double3" -0.051965818884391585 -4.7620734361420185 0.54949274865843067 ;
 	setAttr ".rst" -type "double3" -0.0030520038678159833 1.3024944561941938 -0.0042769083232753191 ;
 	setAttr ".rsrr" -type "double3" 6.8332229484567688e-017 6.311413196029166e-015 -1.0933156717530838e-015 ;
 	setAttr -k on ".w0";
@@ -5448,7 +5447,7 @@ createNode parentConstraint -n "Slave_R_Shoulder_joint_parentConstraint1" -p "Sl
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 0.17753217032592411 -9.2387922329001011 -19.713212803397035 ;
+	setAttr ".lr" -type "double3" -0.2207297689129907 -0.026750217873686723 -3.6507307634548241 ;
 	setAttr ".rst" -type "double3" -0.30283440904947789 1.0001505420670858 -0.10846285276273525 ;
 	setAttr ".rsrr" -type "double3" 4.4527765540489235e-014 1.9083328088781113e-014 
 		-1.9083328088781094e-014 ;
@@ -5624,15 +5623,8 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"renderWindowPanel\" -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"blendShapePanel\" (localizedPanelLabel(\"Blend Shape\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\tblendShapePanel -unParent -l (localizedPanelLabel(\"Blend Shape\")) -mbv $menusOkayInPanels ;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tblendShapePanel -edit -l (localizedPanelLabel(\"Blend Shape\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" == $panelName) {\n"
 		+ "\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynRelEdPanel\" -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"relationshipPanel\" -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n"
 		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"referenceEditorPanel\" -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"componentEditorPanel\" -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n"
-		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynPaintScriptedPanelType\" -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"scriptEditorPanel\" -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n"
-		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"Stereo\" -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels `;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n"
-		+ "                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n"
-		+ "                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n"
-		+ "                -shadows 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n"
-		+ "                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n"
-		+ "                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n"
-		+ "                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n"
-		+ "\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"vertical2\\\" -ps 1 23 100 -ps 2 77 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Outliner\")) \n\t\t\t\t\t\"outlinerPanel\"\n\t\t\t\t\t\"$panelName = `outlinerPanel -unParent -l (localizedPanelLabel(\\\"Outliner\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\noutlinerEditor -e \\n    -docTag \\\"isolOutln_fromSeln\\\" \\n    -showShapes 0\\n    -showReferenceNodes 1\\n    -showReferenceMembers 1\\n    -showAttributes 0\\n    -showConnected 0\\n    -showAnimCurvesOnly 0\\n    -showMuteInfo 0\\n    -organizeByLayer 1\\n    -showAnimLayerWeight 1\\n    -autoExpandLayers 1\\n    -autoExpand 0\\n    -showDagOnly 1\\n    -showAssets 1\\n    -showContainedOnly 1\\n    -showPublishedAsConnected 0\\n    -showContainerContents 1\\n    -ignoreDagHierarchy 0\\n    -expandConnections 0\\n    -showUpstreamCurves 1\\n    -showUnitlessCurves 1\\n    -showCompounds 1\\n    -showLeafs 1\\n    -showNumericAttrsOnly 0\\n    -highlightActive 1\\n    -autoSelectNewObjects 0\\n    -doNotSelectNewObjects 0\\n    -dropIsParent 1\\n    -transmitFilters 0\\n    -setFilter \\\"defaultSetFilter\\\" \\n    -showSetMembers 1\\n    -allowMultiSelection 1\\n    -alwaysToggleSelect 0\\n    -directSelect 0\\n    -displayMode \\\"DAG\\\" \\n    -expandObjects 0\\n    -setsIgnoreFilters 1\\n    -containersIgnoreFilters 0\\n    -editAttrName 0\\n    -showAttrValues 0\\n    -highlightSecondary 0\\n    -showUVAttrsOnly 0\\n    -showTextureNodesOnly 0\\n    -attrAlphaOrder \\\"default\\\" \\n    -animLayerFilterOptions \\\"allAffecting\\\" \\n    -sortOrder \\\"none\\\" \\n    -longNames 0\\n    -niceNames 1\\n    -showNamespace 1\\n    -showPinIcons 0\\n    -mapMotionTrails 0\\n    -ignoreHiddenAttribute 0\\n    $editorName\"\n"
+		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynPaintScriptedPanelType\" -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"scriptEditorPanel\" -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n"
+		+ "        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"vertical2\\\" -ps 1 31 100 -ps 2 69 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Outliner\")) \n\t\t\t\t\t\"outlinerPanel\"\n\t\t\t\t\t\"$panelName = `outlinerPanel -unParent -l (localizedPanelLabel(\\\"Outliner\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\noutlinerEditor -e \\n    -docTag \\\"isolOutln_fromSeln\\\" \\n    -showShapes 0\\n    -showReferenceNodes 1\\n    -showReferenceMembers 1\\n    -showAttributes 0\\n    -showConnected 0\\n    -showAnimCurvesOnly 0\\n    -showMuteInfo 0\\n    -organizeByLayer 1\\n    -showAnimLayerWeight 1\\n    -autoExpandLayers 1\\n    -autoExpand 0\\n    -showDagOnly 1\\n    -showAssets 1\\n    -showContainedOnly 1\\n    -showPublishedAsConnected 0\\n    -showContainerContents 1\\n    -ignoreDagHierarchy 0\\n    -expandConnections 0\\n    -showUpstreamCurves 1\\n    -showUnitlessCurves 1\\n    -showCompounds 1\\n    -showLeafs 1\\n    -showNumericAttrsOnly 0\\n    -highlightActive 1\\n    -autoSelectNewObjects 0\\n    -doNotSelectNewObjects 0\\n    -dropIsParent 1\\n    -transmitFilters 0\\n    -setFilter \\\"defaultSetFilter\\\" \\n    -showSetMembers 1\\n    -allowMultiSelection 1\\n    -alwaysToggleSelect 0\\n    -directSelect 0\\n    -displayMode \\\"DAG\\\" \\n    -expandObjects 0\\n    -setsIgnoreFilters 1\\n    -containersIgnoreFilters 0\\n    -editAttrName 0\\n    -showAttrValues 0\\n    -highlightSecondary 0\\n    -showUVAttrsOnly 0\\n    -showTextureNodesOnly 0\\n    -attrAlphaOrder \\\"default\\\" \\n    -animLayerFilterOptions \\\"allAffecting\\\" \\n    -sortOrder \\\"none\\\" \\n    -longNames 0\\n    -niceNames 1\\n    -showNamespace 1\\n    -showPinIcons 0\\n    -mapMotionTrails 0\\n    -ignoreHiddenAttribute 0\\n    $editorName\"\n"
 		+ "\t\t\t\t\t\"outlinerPanel -edit -l (localizedPanelLabel(\\\"Outliner\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\noutlinerEditor -e \\n    -docTag \\\"isolOutln_fromSeln\\\" \\n    -showShapes 0\\n    -showReferenceNodes 1\\n    -showReferenceMembers 1\\n    -showAttributes 0\\n    -showConnected 0\\n    -showAnimCurvesOnly 0\\n    -showMuteInfo 0\\n    -organizeByLayer 1\\n    -showAnimLayerWeight 1\\n    -autoExpandLayers 1\\n    -autoExpand 0\\n    -showDagOnly 1\\n    -showAssets 1\\n    -showContainedOnly 1\\n    -showPublishedAsConnected 0\\n    -showContainerContents 1\\n    -ignoreDagHierarchy 0\\n    -expandConnections 0\\n    -showUpstreamCurves 1\\n    -showUnitlessCurves 1\\n    -showCompounds 1\\n    -showLeafs 1\\n    -showNumericAttrsOnly 0\\n    -highlightActive 1\\n    -autoSelectNewObjects 0\\n    -doNotSelectNewObjects 0\\n    -dropIsParent 1\\n    -transmitFilters 0\\n    -setFilter \\\"defaultSetFilter\\\" \\n    -showSetMembers 1\\n    -allowMultiSelection 1\\n    -alwaysToggleSelect 0\\n    -directSelect 0\\n    -displayMode \\\"DAG\\\" \\n    -expandObjects 0\\n    -setsIgnoreFilters 1\\n    -containersIgnoreFilters 0\\n    -editAttrName 0\\n    -showAttrValues 0\\n    -highlightSecondary 0\\n    -showUVAttrsOnly 0\\n    -showTextureNodesOnly 0\\n    -attrAlphaOrder \\\"default\\\" \\n    -animLayerFilterOptions \\\"allAffecting\\\" \\n    -sortOrder \\\"none\\\" \\n    -longNames 0\\n    -niceNames 1\\n    -showNamespace 1\\n    -showPinIcons 0\\n    -mapMotionTrails 0\\n    -ignoreHiddenAttribute 0\\n    $editorName\"\n"
 		+ "\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
 		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
@@ -5928,7 +5920,7 @@ createNode animCurveTA -n "topnurbsSquare1_rotateX";
 createNode animCurveTA -n "topnurbsSquare1_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 15 ".ktv[0:14]"  1 -16.3443796525636 12 22.821302039029966
+	setAttr -s 15 ".ktv[0:14]"  1 -16.3443796525636 12 22.82130203902997
 		 24 -16.3443796525636 25 0 26 19.673754580078523 38 -15.245063051704863 50 19.673754580078523
 		 51 0 52 -17.751015099657163 56 10.961359742692853 57 0 58 0 78 0 79 0 118 0;
 	setAttr -s 15 ".kit[2:14]"  1 18 18 18 1 18 18 18 
@@ -6480,8 +6472,8 @@ createNode animCurveTU -n "Head_ctrl_visibility";
 createNode animCurveTA -n "Head_ctrl_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 20 ".ktv[0:19]"  1 9.2991256285465962 12 9.3569680452603663
-		 24 9.2991256285465962 25 4.4944908144381532 26 18.152053109470437 32 26.040762159750521
+	setAttr -s 20 ".ktv[0:19]"  1 9.299125628546598 12 9.3569680452603663
+		 24 9.299125628546598 25 4.4944908144381532 26 18.152053109470437 32 26.040762159750521
 		 38 13.480178031510619 44 26.078452229662769 50 18.152053109470437 51 4.4944908144381532
 		 52 -4.2771660700276515 56 11.657899835758302 57 4.4944908144381532 58 4.4944908144381532
 		 68 31.709500663378378 73 38.19279735769463 78 4.4944908144381532 79 4.4944908144381532
@@ -7008,7 +7000,7 @@ createNode animCurveTU -n "L_Elbow_ctrl_visibility";
 createNode animCurveTA -n "L_Elbow_ctrl_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 13 ".ktv[0:12]"  25 0 38 0 50 0 51 0 52 0 54 -49.823731527244
+	setAttr -s 13 ".ktv[0:12]"  25 0 38 0 50 0 51 0 52 0 54 -49.823731527244007
 		 56 0 57 0 58 0 78 0 79 0 99 -8.7328357796484521 118 0;
 	setAttr -s 13 ".kit[9:12]"  1 18 18 1;
 	setAttr -s 13 ".kot[9:12]"  1 18 18 1;
@@ -8603,46 +8595,46 @@ createNode skinCluster -n "skinCluster1";
 	setAttr ".wl[1097].w[1]" 0.96870315864593814;
 	setAttr ".wl[1097].w[8]" 0.031296841354061841;
 	setAttr -s 14 ".pm";
-	setAttr ".pm[0]" -type "matrix" 0.95958760776468299 -0 -0.28141006205260849 -0 -0 1 -0 0
-		 0.28141006205260849 -0 0.95958760776468299 -0 -0 -0.79112722933571988 -0 1;
+	setAttr ".pm[0]" -type "matrix" 0.95958760776468299 0 -0.28141006205260849 0 0 1 0 0
+		 0.28141006205260849 0 0.95958760776468299 0 0 -0.79112722933571988 0 1;
 	setAttr ".pm[1]" -type "matrix" -4.9036845127814733e-006 0.0011478622310397417 -0.99999934119390899 0
-		 -0.95549878236816421 0.29499484578321156 0.00034329913257473578 0 0.29499504549891842 0.95549815456317722 0.0010953344024283874 -0
+		 -0.95549878236816421 0.29499484578321156 0.00034329913257473578 0 0.29499504549891842 0.95549815456317722 0.0010953344024283874 0
 		 0.44016464075409484 -0.13446016441212325 0.087097056922699992 1;
-	setAttr ".pm[2]" -type "matrix" 4.7745387785445978e-006 0.0019388110348906864 -0.99999812049272119 -0
-		 -0.95551639576058534 0.2949374436062332 0.00056726688636351652 0 0.29493798909245988 0.95551459715212694 0.0018539739223814692 -0
+	setAttr ".pm[2]" -type "matrix" 4.7745387785445978e-006 0.0019388110348906864 -0.99999812049272119 0
+		 -0.95551639576058534 0.2949374436062332 0.00056726688636351652 0 0.29493798909245988 0.95551459715212694 0.0018539739223814692 0
 		 0.21807394728021628 -0.13451599418243859 0.086992814229829754 1;
-	setAttr ".pm[3]" -type "matrix" 0.99987244968232858 -0.015853656048526437 0.0019354472749333689 -0
-		 0.014185939696870096 0.93722823545572698 0.34842788892317594 -0 -0.0073378117430056428 -0.34835599069692952 0.93733359070524369 -0
+	setAttr ".pm[3]" -type "matrix" 0.99987244968232858 -0.015853656048526437 0.0019354472749333689 0
+		 0.014185939696870096 0.93722823545572698 0.34842788892317594 0 -0.0073378117430056428 -0.34835599069692952 0.93733359070524369 0
 		 -0.086704835730545618 0.018978999557455516 -0.1337348149377158 1;
-	setAttr ".pm[4]" -type "matrix" 6.5781712252940664e-007 -0.0046048578103722966 -0.99998939758585137 -0
-		 0.91119631551855518 0.41196805454780983 -0.001896475020283556 -0 0.41197241968968884 -0.91118665339031346 0.0041962004699382816 -0
+	setAttr ".pm[4]" -type "matrix" 6.5781712252940664e-007 -0.0046048578103722966 -0.99998939758585137 0
+		 0.91119631551855518 0.41196805454780983 -0.001896475020283556 0 0.41197241968968884 -0.91118665339031346 0.0041962004699382816 0
 		 -0.41620259787046476 -0.1901569699349365 -0.08082124741402659 1;
 	setAttr ".pm[5]" -type "matrix" -6.8901287518735966e-007 -0.0038144071590082802 -0.99999272512231374 0
-		 0.91116764775487713 0.41203282097057264 -0.0015723001865887705 0 0.41203582087528512 -0.91116102020502265 0.0034752805027342764 -0
+		 0.91116764775487713 0.41203282097057264 -0.0015723001865887705 0 0.41203582087528512 -0.91116102020502265 0.0034752805027342764 0
 		 -0.19409194879463007 -0.19010661679529353 -0.08097070392144691 1;
-	setAttr ".pm[6]" -type "matrix" 0.99987225462858742 -0.015523254191010603 -0.0038082808807687746 -0
-		 -0.013112516286248431 -0.93289154151120735 0.35991864871590945 0 -0.009139821693470114 -0.3598227346293793 -0.93297591785814438 -0
+	setAttr ".pm[6]" -type "matrix" 0.99987225462858742 -0.015523254191010603 -0.0038082808807687746 0
+		 -0.013112516286248431 -0.93289154151120735 0.35991864871590945 0 -0.009139821693470114 -0.3598227346293793 -0.93297591785814438 0
 		 0.080595675261613112 -0.024495126457934752 -0.19172402140631384 1;
-	setAttr ".pm[7]" -type "matrix" 0.13243724196026482 -0.23736507075665886 -0.96235035206864472 -0
-		 -0.88865001979866032 -0.45849359918844473 -0.0092066180037070882 0 -0.43904614706634032 0.85641195851524166 -0.27165610256036804 -0
+	setAttr ".pm[7]" -type "matrix" 0.13243724196026482 -0.23736507075665886 -0.96235035206864472 0
+		 -0.88865001979866032 -0.45849359918844473 -0.0092066180037070882 0 -0.43904614706634032 0.85641195851524166 -0.27165610256036804 0
 		 0.87003462153817912 0.46645938708466422 0.3292251920232887 1;
-	setAttr ".pm[8]" -type "matrix" 0.13300177668025998 -0.27001614009467234 -0.95362561390110978 -0
-		 -0.96806594306371563 -0.24169249645316543 -0.066581281441524739 0 -0.21250613468804405 0.93202790797626367 -0.29353896074173175 -0
+	setAttr ".pm[8]" -type "matrix" 0.13300177668025998 -0.27001614009467234 -0.95362561390110978 0
+		 -0.96806594306371563 -0.24169249645316543 -0.066581281441524739 0 -0.21250613468804405 0.93202790797626367 -0.29353896074173175 0
 		 0.67166305174966889 0.31831965657137951 0.36831420253233943 1;
-	setAttr ".pm[9]" -type "matrix" 0.95382834462455968 -0.16918598018268763 -0.24816847724962057 -0
-		 0.065478419088507808 0.92351525616018648 -0.37793140683602183 0 0.29312807034544103 0.34423200860612618 0.8919530585330987 -0
+	setAttr ".pm[9]" -type "matrix" 0.95382834462455968 -0.16918598018268763 -0.24816847724962057 0
+		 0.065478419088507808 0.92351525616018648 -0.37793140683602183 0 0.29312807034544103 0.34423200860612618 0.8919530585330987 0
 		 -0.36787205804813417 -0.37044709101933498 0.37521856940261106 1;
-	setAttr ".pm[10]" -type "matrix" 0.99315743129866807 -2.0816681711721685e-017 0.11678320365631155 -0
-		 0.018745066018208138 0.98703394400666744 -0.15941334912301308 0 -0.11526898609862303 0.16051166119208482 0.98028009643425518 -0
+	setAttr ".pm[10]" -type "matrix" 0.99315743129866807 -2.0816681711721685e-017 0.11678320365631155 0
+		 0.018745066018208138 0.98703394400666744 -0.15941334912301308 0 -0.11526898609862303 0.16051166119208482 0.98028009643425518 0
 		 -0.021877219134097257 -1.2849197464844397 0.21218399436890989 1;
-	setAttr ".pm[11]" -type "matrix" 0.16126750008309695 0.23762751649247726 -0.95787575228865973 -0
+	setAttr ".pm[11]" -type "matrix" 0.16126750008309695 0.23762751649247726 -0.95787575228865973 0
 		 0.96286306404090427 -0.25083585161097516 0.099880405747868398 0 -0.21653524729870244 -0.93841064516138917 -0.26925442935089372 0
 		 -0.93765669799603568 0.22105270585234713 -0.41917728286417166 1;
-	setAttr ".pm[12]" -type "matrix" 0.27011249005534604 0.18560583936889027 -0.94476966246184568 -0
+	setAttr ".pm[12]" -type "matrix" 0.27011249005534604 0.18560583936889027 -0.94476966246184568 0
 		 0.87122655010632855 -0.46483779603098813 0.15776603490890775 0 -0.4098823503225355 -0.86572299020715793 -0.28726322967071677 0
 		 -0.5734908283127943 0.36546923656864871 -0.45849143719569663 1;
-	setAttr ".pm[13]" -type "matrix" 0.94505647497034662 -0.23959667124156786 0.22239985217302288 -0
-		 -0.15665664283132144 -0.92903733260869081 -0.33518402538926034 0 0.28692674217200836 0.28192741929313747 -0.91552715682128649 -0
+	setAttr ".pm[13]" -type "matrix" 0.94505647497034662 -0.23959667124156786 0.22239985217302288 0
+		 -0.15665664283132144 -0.92903733260869081 -0.33518402538926034 0 0.28692674217200836 0.28192741929313747 -0.91552715682128649 0
 		 0.4580487383520821 0.37138972763204192 0.31558122527991056 1;
 	setAttr ".gm" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 	setAttr -s 14 ".ma";
@@ -8695,7 +8687,7 @@ createNode dagPose -n "bindPose1";
 		 1 1 yes;
 	setAttr ".xm[5]" -type "matrix" "xform" 1 1 1 7.93328427899406e-016 -5.0195992024840756e-016
 		 2.9183085028944351e-016 0 -0.22209755330533426 8.7106724805385838e-008 -5.1640144824172118e-007 0
-		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 -0.0003952288279276402 -8.198647981779293e-007 -3.4787484269569613e-005 0.99999992129166293 1
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 -0.0003952288279276402 -8.1986479817792941e-007 -3.4787484269569613e-005 0.99999992129166293 1
 		 1 1 yes;
 	setAttr ".xm[6]" -type "matrix" "xform" 0.99999999999999989 1 0.99999999999999989 -4.5519144009631418e-015
 		 5.5511151231257689e-016 -6.1062266354383738e-016 0 -0.22810572967202308 -7.5900339208123668e-008
@@ -8725,7 +8717,7 @@ createNode dagPose -n "bindPose1";
 		 -5.8221656662471379e-017 5.6158284402960093e-016 0 -0.26825394354483301 -2.1682873135864256e-008
 		 -7.0934510765230385e-008 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0.00085367265902614462 0.030999667396772467 0.11595652985171569 0.99277005144647112 1
 		 1 1 yes;
-	setAttr ".xm[13]" -type "matrix" "xform" 1 1.0000000000000002 1.0000000000000002 5.43454170554014e-014
+	setAttr ".xm[13]" -type "matrix" "xform" 1 1.0000000000000002 1.0000000000000002 5.4345417055401406e-014
 		 -3.8857805861881223e-016 2.7755575615627853e-016 0 -0.25170229385524634 6.9113081924143671e-010
 		 5.0707865262289431e-007 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 -0.46310685790842299 0.53435197965207593 0.46246837725603951 0.53490466443868345 1
 		 0.99999999999999978 0.99999999999999978 yes;
@@ -8763,9 +8755,3663 @@ createNode groupId -n "groupId6";
 createNode groupParts -n "groupParts5";
 	setAttr ".ihi" 0;
 	setAttr ".ic" -type "componentList" 1 "f[120:229]";
+createNode animCurveTU -n "Slave_R_Elbow_joint_visibility";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 1 2 1 3 1 4 1 5 1 6 1 7 1 8 1 9 1 10 1
+		 11 1 12 1 13 1 14 1 15 1 16 1 17 1 18 1 19 1 20 1 21 1 22 1 23 1 24 1 25 1 26 1 27 1
+		 28 1 29 1 30 1 31 1 32 1 33 1 34 1 35 1 36 1 37 1 38 1 39 1 40 1 41 1 42 1 43 1 44 1
+		 45 1 46 1 47 1 48 1 49 1 50 1 51 1 52 1 53 1 54 1 55 1 56 1 57 1 58 1 59 1 60 1 61 1
+		 62 1 63 1 64 1 65 1 66 1 67 1 68 1 69 1 70 1 71 1 72 1 73 1 74 1 75 1 76 1 77 1 78 1
+		 79 1 80 1 81 1 82 1 83 1 84 1 85 1 86 1 87 1 88 1 89 1 90 1 91 1 92 1 93 1 94 1 95 1
+		 96 1 97 1 98 1 99 1 100 1 101 1 102 1 103 1 104 1 105 1 106 1 107 1 108 1 109 1 110 1
+		 111 1 112 1 113 1 114 1 115 1 116 1 117 1 118 1 119 1 120 1;
+createNode animCurveTL -n "Slave_R_Elbow_joint_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 -0.26825394354483356 2 -0.26825394354483323
+		 3 -0.26825394354483334 4 -0.26825394354483389 5 -0.26825394354483367 6 -0.26825394354483389
+		 7 -0.26825394354483312 8 -0.26825394354483367 9 -0.26825394354483334 10 -0.26825394354483334
+		 11 -0.26825394354483378 12 -0.26825394354483345 13 -0.26825394354483334 14 -0.26825394354483323
+		 15 -0.26825394354483334 16 -0.26825394354483334 17 -0.26825394354483356 18 -0.26825394354483323
+		 19 -0.26825394354483278 20 -0.26825394354483378 21 -0.26825394354483334 22 -0.26825394354483345
+		 23 -0.26825394354483378 24 -0.26825394354483356 25 -0.26825394354483345 26 -0.26825394354483345
+		 27 -0.26825394354483317 28 -0.26825394354483301 29 -0.26825394354483345 30 -0.26825394354483334
+		 31 -0.26825394354483312 32 -0.26825394354483334 33 -0.26825394354483323 34 -0.26825394354483356
+		 35 -0.26825394354483356 36 -0.26825394354483334 37 -0.26825394354483312 38 -0.26825394354483356
+		 39 -0.26825394354483378 40 -0.26825394354483312 41 -0.26825394354483334 42 -0.26825394354483367
+		 43 -0.26825394354483334 44 -0.26825394354483323 45 -0.26825394354483323 46 -0.26825394354483323
+		 47 -0.26825394354483312 48 -0.26825394354483356 49 -0.26825394354483356 50 -0.26825394354483345
+		 51 -0.26825394354483345 52 -0.26825394354483356 53 -0.26825390114819603 54 -0.26825379975737434
+		 55 -0.26825390114819547 56 -0.26825394354483345 57 -0.26825394354483345 58 -0.26825394354483345
+		 59 -0.26825394354483323 60 -0.26825394354483345 61 -0.26825394354483323 62 -0.26825394354483345
+		 63 -0.26825394354483334 64 -0.26825394354483367 65 -0.26825394354483345 66 -0.26825394354483323
+		 67 -0.26825394354483356 68 -0.26825394354483334 69 -0.26825394354483312 70 -0.26825394354483345
+		 71 -0.26825394354483356 72 -0.26825394354483323 73 -0.26825394354483345 74 -0.26825394354483334
+		 75 -0.26825394354483345 76 -0.26825394354483334 77 -0.26825394354483334 78 -0.26825394354483345
+		 79 -0.26825394354483345 80 -0.26825394352112097 81 -0.26825394345082831 82 -0.26825394333257113
+		 83 -0.26825394316268647 84 -0.26825394293664084 85 -0.26825394265025826 86 -0.26825394230075694
+		 87 -0.26825394188758767 88 -0.26825394141309444 89 -0.26825394088297583 90 -0.26825394030654581
+		 91 -0.26825393969683275 92 -0.26825393907045791 93 -0.26825393844733536 94 -0.2682539378502129
+		 95 -0.26825393730400093 96 -0.26825393683492516 97 -0.26825393646953266 98 -0.26825393623347793
+		 99 -0.26825393615017179 100 -0.26825393624228466 101 -0.26825393650233587 102 -0.26825393690277355
+		 103 -0.2682539374134717 104 -0.26825393800346609 105 -0.26825393864242952 106 -0.26825393930196983
+		 107 -0.26825393995662739 108 -0.26825394058462471 109 -0.2682539411684336 110 -0.26825394169502981
+		 111 -0.26825394215588805 112 -0.26825394254678492 113 -0.26825394286727366 114 -0.26825394311991757
+		 115 -0.26825394330929242 116 -0.26825394344068942 117 -0.26825394351858112 118 -0.26825394354483345
+		 119 -0.26825394354483345 120 -0.26825394354483345;
+createNode animCurveTL -n "Slave_R_Elbow_joint_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 -2.1682873052597529e-008 2 -2.1682873163619831e-008
+		 3 -2.1682873246886558e-008 4 -2.1682873163619831e-008 5 -2.1682873191375407e-008
+		 6 -2.1682873260764346e-008 7 -2.1682873219130983e-008 8 -2.168287310810868e-008 9 -2.168287310810868e-008
+		 10 -2.1682873163619831e-008 11 -2.1682873330153285e-008 12 -2.1682873163619831e-008
+		 13 -2.1682873385664436e-008 14 -2.1682873274642134e-008 15 -2.168287310810868e-008
+		 16 -2.1682873219130983e-008 17 -2.1682873274642134e-008 18 -2.1682873163619831e-008
+		 19 -2.1682873226069876e-008 20 -2.1682873288519922e-008 21 -2.1682873205253195e-008
+		 22 -2.1682873163619831e-008 23 -2.1682873330153285e-008 24 -2.1682873052597529e-008
+		 25 -2.1682873260764346e-008 26 -2.1682873163619831e-008 27 -2.1682873496686739e-008
+		 28 -2.1682873163619831e-008 29 -2.1682873385664436e-008 30 -2.168287310810868e-008
+		 31 -2.1682873330153285e-008 32 -2.1682873274642134e-008 33 -2.1682873052597529e-008
+		 34 -2.1682873219130983e-008 35 -2.1682873441175587e-008 36 -2.1682873163619831e-008
+		 37 -2.1682873385664436e-008 38 -2.1682873274642134e-008 39 -2.1682873274642134e-008
+		 40 -2.1682873496686739e-008 41 -2.1682873163619831e-008 42 -2.1682873385664436e-008
+		 43 -2.1682873316275497e-008 44 -2.1682873094230892e-008 45 -2.1682873330153285e-008
+		 46 -2.1682873274642134e-008 47 -2.1682873385664436e-008 48 -2.1682873274642134e-008
+		 49 -2.1682873052597529e-008 50 -2.1682873163619831e-008 51 -2.1682873260764346e-008
+		 52 -2.1682873052597529e-008 53 -1.7138651586812159e-007 54 -2.8929181739023591e-007
+		 55 -1.713865162011885e-007 56 -2.1682873163619831e-008 57 -2.1682873260764346e-008
+		 58 -2.1682873260764346e-008 59 -2.1682873316275497e-008 60 -2.1682873191375407e-008
+		 61 -2.1682873163619831e-008 62 -2.1682873288519922e-008 63 -2.1682873219130983e-008
+		 64 -2.1682873052597529e-008 65 -2.1682873052597529e-008 66 -2.1682873274642134e-008
+		 67 -2.1682873274642134e-008 68 -2.1682873163619831e-008 69 -2.1682873219130983e-008
+		 70 -2.1682873219130983e-008 71 -2.1682873330153285e-008 72 -2.1682873052597529e-008
+		 73 -2.1682873302397709e-008 74 -2.1682873246886558e-008 75 -2.1682873208722642e-008
+		 76 -2.1682873246886558e-008 77 -2.1682873316275497e-008 78 -2.1682873260764346e-008
+		 79 -2.1682873260764346e-008 80 -2.2080755585074385e-008 81 -2.3219383610273425e-008
+		 82 -2.5016031163227481e-008 83 -2.7387745918372453e-008 84 -3.0251445251594511e-008
+		 85 -3.3523879727770378e-008 86 -3.7121730633860039e-008 87 -4.0961771335945585e-008
+		 88 -4.4960853207154372e-008 89 -4.903608760709055e-008 90 -5.310504555544604e-008
+		 91 -5.7085731586248301e-008 92 -6.0896745313065992e-008 93 -6.4457393061934098e-008
+		 94 -6.768755328456777e-008 95 -7.0507680555165209e-008 96 -7.2838707176892115e-008
+		 97 -7.4601724936451674e-008 98 -7.5717810549269515e-008 99 -7.6107585428308866e-008
+		 100 -7.5676480110198341e-008 101 -7.4445236447617802e-008 102 -7.250638878186777e-008
+		 103 -6.9951981152005516e-008 104 -6.6874007109696265e-008 105 -6.3364898328366337e-008
+		 106 -5.9517562045474648e-008 107 -5.5425623091132081e-008 108 -5.1183640992213952e-008
+		 109 -4.6886803967138846e-008 110 -4.2630978192015334e-008 111 -3.8512722871919536e-008
+		 112 -3.462883910176906e-008 113 -3.1076364689908154e-008 114 -2.7952535161523961e-008
+		 115 -2.5354412958034089e-008 116 -2.3378945210317248e-008 117 -2.2122938508895018e-008
+		 118 -2.1682873260764346e-008 119 -2.1682873260764346e-008 120 -2.1682873260764346e-008;
+createNode animCurveTL -n "Slave_R_Elbow_joint_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 -7.093451054318578e-008 2 -7.0934510654208083e-008
+		 3 -7.0934510709719234e-008 4 -7.0934510598696932e-008 5 -7.093451054318578e-008 6 -7.0934510432163478e-008
+		 7 -7.0934510765230385e-008 8 -7.0934510709719234e-008 9 -7.0934510487674629e-008
+		 10 -7.0934510432163478e-008 11 -7.0934510598696932e-008 12 -7.093451054318578e-008
+		 13 -7.0934510765230385e-008 14 -7.0934510487674629e-008 15 -7.0934510654208083e-008
+		 16 -7.0934510709719234e-008 17 -7.093451054318578e-008 18 -7.0934510709719234e-008
+		 19 -7.0934510598696932e-008 20 -7.0934510487674629e-008 21 -7.0934510598696932e-008
+		 22 -7.0934510487674629e-008 23 -7.0934510598696932e-008 24 -7.093451054318578e-008
+		 25 -7.0934510654208083e-008 26 -7.0934510432163478e-008 27 -7.0934510348896751e-008
+		 28 -7.0934510487674629e-008 29 -7.0934510709719234e-008 30 -7.0934510598696932e-008
+		 31 -7.0934510598696932e-008 32 -7.0934510654208083e-008 33 -7.0934510598696932e-008
+		 34 -7.0934510654208083e-008 35 -7.093451054318578e-008 36 -7.093451054318578e-008
+		 37 -7.093451054318578e-008 38 -7.0934510709719234e-008 39 -7.0934510709719234e-008
+		 40 -7.0934510598696932e-008 41 -7.0934510598696932e-008 42 -7.093451054318578e-008
+		 43 -7.0934510654208083e-008 44 -7.0934510598696932e-008 45 -7.0934510459919053e-008
+		 46 -7.0934510626452507e-008 47 -7.0934510515430205e-008 48 -7.0934510598696932e-008
+		 49 -7.0934510570941356e-008 50 -7.0934510432163478e-008 51 -7.0934510654208083e-008
+		 52 -7.0934510709719234e-008 53 -7.2698698616591173e-008 54 -7.8213965637452532e-008
+		 55 -7.2698698616591173e-008 56 -7.0934510432163478e-008 57 -7.0934510654208083e-008
+		 58 -7.0934510654208083e-008 59 -7.0934510654208083e-008 60 -7.093451054318578e-008
+		 61 -7.0934510598696932e-008 62 -7.0934510598696932e-008 63 -7.0934510709719234e-008
+		 64 -7.0934510487674629e-008 65 -7.0934510432163478e-008 66 -7.093451054318578e-008
+		 67 -7.093451054318578e-008 68 -7.0934510654208083e-008 69 -7.0934510487674629e-008
+		 70 -7.0934510487674629e-008 71 -7.0934510432163478e-008 72 -7.0934510654208083e-008
+		 73 -7.093451054318578e-008 74 -7.0934510709719234e-008 75 -7.0934510598696932e-008
+		 76 -7.0934510598696932e-008 77 -7.093451054318578e-008 78 -7.0934510654208083e-008
+		 79 -7.0934510654208083e-008 80 -7.093380133271765e-008 81 -7.0931919338157456e-008
+		 82 -7.0929394913044064e-008 83 -7.092689885412895e-008 84 -7.0925154083134601e-008
+		 85 -7.0924863482257905e-008 86 -7.0926645667768184e-008 87 -7.0930983697703454e-008
+		 88 -7.0938183771573904e-008 89 -7.0948347807853196e-008 90 -7.096135545836546e-008
+		 91 -7.097685922330399e-008 92 -7.099428994683521e-008 93 -7.1012874802711679e-008
+		 94 -7.1031666604159938e-008 95 -7.1049582717197524e-008 96 -7.1065459072983117e-008
+		 97 -7.1078111230082897e-008 98 -7.1086408315323979e-008 99 -7.1089358677500769e-008
+		 100 -7.1086097175321328e-008 101 -7.107696575747724e-008 102 -7.1063136541926752e-008
+		 103 -7.1045940686076392e-008 104 -7.1026760029013758e-008 105 -7.1006935664641446e-008
+		 106 -7.098768861624194e-008 107 -7.0970058663188951e-008 108 -7.0954856212779305e-008
+		 109 -7.0942631102965947e-008 110 -7.0933655504923365e-008 111 -7.0927926365538241e-008
+		 112 -7.0925176287595093e-008 113 -7.0924909278957671e-008 114 -7.0926444550867274e-008
+		 115 -7.0928980799855879e-008 116 -7.0931672924157141e-008 117 -7.0933727613908815e-008
+		 118 -7.0934510654208083e-008 119 -7.0934510654208083e-008 120 -7.0934510654208083e-008;
+createNode animCurveTA -n "Slave_R_Elbow_joint_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 -4.124781852522998e-014 2 -4.124781852522998e-014
+		 3 -4.124781852522998e-014 4 -4.124781852522998e-014 5 -4.124781852522998e-014 6 -4.124781852522998e-014
+		 7 -4.124781852522998e-014 8 -4.124781852522998e-014 9 -4.124781852522998e-014 10 -4.124781852522998e-014
+		 11 -4.124781852522998e-014 12 -4.124781852522998e-014 13 -4.124781852522998e-014
+		 14 -4.124781852522998e-014 15 -4.124781852522998e-014 16 -4.124781852522998e-014
+		 17 -4.124781852522998e-014 18 -4.124781852522998e-014 19 -4.124781852522998e-014
+		 20 -4.124781852522998e-014 21 -4.124781852522998e-014 22 -4.124781852522998e-014
+		 23 -4.124781852522998e-014 24 -4.124781852522998e-014 25 -4.124781852522998e-014
+		 26 -4.124781852522998e-014 27 -4.124781852522998e-014 28 -4.124781852522998e-014
+		 29 -4.124781852522998e-014 30 -4.124781852522998e-014 31 -4.124781852522998e-014
+		 32 -4.124781852522998e-014 33 -4.124781852522998e-014 34 -4.124781852522998e-014
+		 35 -4.124781852522998e-014 36 -4.124781852522998e-014 37 -4.124781852522998e-014
+		 38 -4.124781852522998e-014 39 -4.124781852522998e-014 40 -4.124781852522998e-014
+		 41 -4.124781852522998e-014 42 -4.124781852522998e-014 43 -4.124781852522998e-014
+		 44 -4.124781852522998e-014 45 -4.124781852522998e-014 46 -4.124781852522998e-014
+		 47 -4.124781852522998e-014 48 -4.124781852522998e-014 49 -4.124781852522998e-014
+		 50 -4.124781852522998e-014 51 -4.124781852522998e-014 52 -4.124781852522998e-014
+		 53 -0.027612453294103608 54 -0.04826203243838309 55 -0.02761245329412837 56 -4.1247818525229986e-014
+		 57 -4.124781852522998e-014 58 -4.124781852522998e-014 59 -4.124781852522998e-014
+		 60 -4.124781852522998e-014 61 -4.124781852522998e-014 62 -4.124781852522998e-014
+		 63 -4.124781852522998e-014 64 -4.124781852522998e-014 65 -4.124781852522998e-014
+		 66 -4.124781852522998e-014 67 -4.124781852522998e-014 68 -4.124781852522998e-014
+		 69 -4.124781852522998e-014 70 -4.124781852522998e-014 71 -4.124781852522998e-014
+		 72 -4.124781852522998e-014 73 -4.124781852522998e-014 74 -4.124781852522998e-014
+		 75 -4.124781852522998e-014 76 -4.124781852522998e-014 77 -4.124781852522998e-014
+		 78 -4.124781852522998e-014 79 -4.124781852522998e-014 80 -7.4824660138624402e-005
+		 81 -0.00028891263671148237 82 -0.00062660472032483375 83 -0.0010721622100843434 84 -0.0016098076360371162
+		 85 -0.0022237378957899131 86 -0.0028981591971211158 87 -0.0036173311862140356 88 -0.0043655750722999967
+		 89 -0.0051273152881365115 90 -0.0058871214852510723 91 -0.0066297052394012138 92 -0.007339948658227651
+		 93 -0.008002920625718184 94 -0.0086038437472165264 95 -0.0091280845839282979 96 -0.0095611211961943565
+		 97 -0.0098884669042171598 98 -0.010095617933705099 99 -0.010167948092351138 100 -0.010087947881077084
+		 101 -0.0098594171244568811 102 -0.009499401913553104 103 -0.0090248138747046434 104 -0.0084525418365983453
+		 105 -0.007799567480856349 106 -0.007082993763606652 107 -0.0063201066132193544 108 -0.0055284280053793516
+		 109 -0.0047256673884143799 110 -0.0039297350321730005 111 -0.0031587449519872445
+		 112 -0.0024309261880968614 113 -0.0017646135759374869 114 -0.0011782278501690363
+		 115 -0.0006901896385587094 116 -0.00031890918870720707 117 -8.2757053946577261e-005
+		 118 -4.1247818525229986e-014 119 -4.124781852522998e-014 120 -4.124781852522998e-014;
+createNode animCurveTA -n "Slave_R_Elbow_joint_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 -3.3358552030193405e-015 2 -3.3358552030193405e-015
+		 3 -3.3358552030193405e-015 4 -3.3358552030193405e-015 5 -3.3358552030193405e-015
+		 6 -3.3358552030193405e-015 7 -3.3358552030193405e-015 8 -3.3358552030193405e-015
+		 9 -3.3358552030193405e-015 10 -3.3358552030193405e-015 11 -3.3358552030193405e-015
+		 12 -3.3358552030193405e-015 13 -3.3358552030193405e-015 14 -3.3358552030193405e-015
+		 15 -3.3358552030193405e-015 16 -3.3358552030193405e-015 17 -3.3358552030193405e-015
+		 18 -3.3358552030193405e-015 19 -3.3358552030193405e-015 20 -3.3358552030193405e-015
+		 21 -3.3358552030193405e-015 22 -3.3358552030193405e-015 23 -3.3358552030193405e-015
+		 24 -3.3358552030193405e-015 25 -3.3358552030193405e-015 26 -3.3358552030193405e-015
+		 27 -3.3358552030193405e-015 28 -3.3358552030193405e-015 29 -3.3358552030193405e-015
+		 30 -3.3358552030193405e-015 31 -3.3358552030193405e-015 32 -3.3358552030193405e-015
+		 33 -3.3358552030193405e-015 34 -3.3358552030193405e-015 35 -3.3358552030193405e-015
+		 36 -3.3358552030193405e-015 37 -3.3358552030193405e-015 38 -3.3358552030193405e-015
+		 39 -3.3358552030193405e-015 40 -3.3358552030193405e-015 41 -3.3358552030193405e-015
+		 42 -3.3358552030193405e-015 43 -3.3358552030193405e-015 44 -3.3358552030193405e-015
+		 45 -3.3358552030193405e-015 46 -3.3358552030193405e-015 47 -3.3358552030193405e-015
+		 48 -3.3358552030193405e-015 49 -3.3358552030193405e-015 50 -3.3358552030193405e-015
+		 51 -3.3358552030193405e-015 52 -3.3358552030193405e-015 53 0.010431292343863722 54 0.03152321239701051
+		 55 0.0104312923438463 56 -3.3358552030193527e-015 57 -3.3358552030193405e-015 58 -3.3358552030193405e-015
+		 59 -3.3358552030193405e-015 60 -3.3358552030193405e-015 61 -3.3358552030193405e-015
+		 62 -3.3358552030193405e-015 63 -3.3358552030193405e-015 64 -3.3358552030193405e-015
+		 65 -3.3358552030193405e-015 66 -3.3358552030193405e-015 67 -3.3358552030193405e-015
+		 68 -3.3358552030193405e-015 69 -3.3358552030193405e-015 70 -3.3358552030193405e-015
+		 71 -3.3358552030193405e-015 72 -3.3358552030193405e-015 73 -3.3358552030193405e-015
+		 74 -3.3358552030193405e-015 75 -3.3358552030193405e-015 76 -3.3358552030193405e-015
+		 77 -3.3358552030193405e-015 78 -3.3358552030193405e-015 79 -3.3358552030193405e-015
+		 80 1.0877187277571758e-005 81 4.2465572275679536e-005 82 9.3699222428242598e-005
+		 83 0.00016394023656481877 84 0.00025271352825529276 85 0.00035947328191865722 86 0.00048340874249987046
+		 87 0.00062328826335850942 88 0.00077733302139944727 89 0.00094313324156466223 90 0.0011176021226547625
+		 91 0.001296956712054145 92 0.0014767425530062938 93 0.0016518934774567076 94 0.00181681591760527
+		 95 0.0019655160351786595 96 0.0020917584745963327 97 0.0021892495878511249 98 0.0022518645717048845
+		 99 0.002273896165446702 100 0.0022495334129442423 101 0.0021805259193796627 102 0.0020735761659664048
+		 103 0.0019358664370314211 104 0.001774736682942009 105 0.0015974134030980591 106 0.0014107643025616033
+		 107 0.0012211133085116691 108 0.0010341022317375947 109 0.00085457787983940264 110 0.00068654576186259818
+		 111 0.00053316989955542711 112 0.0003968041207764836 113 0.0002790907091571911 114 0.00018110513010099634
+		 115 0.00010353915970008634 116 4.6946796429179002e-005 117 1.2035261808192497e-005
+		 118 -3.3358552030193527e-015 119 -3.3358552030193405e-015 120 -3.3358552030193405e-015;
+createNode animCurveTA -n "Slave_R_Elbow_joint_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 3.2176326809849717e-014 2 3.2176326809849717e-014
+		 3 3.2176326809849717e-014 4 3.2176326809849717e-014 5 3.2176326809849717e-014 6 3.2176326809849717e-014
+		 7 3.2176326809849717e-014 8 3.2176326809849717e-014 9 3.2176326809849717e-014 10 3.2176326809849717e-014
+		 11 3.2176326809849717e-014 12 3.2176326809849717e-014 13 3.2176326809849717e-014
+		 14 3.2176326809849717e-014 15 3.2176326809849717e-014 16 3.2176326809849717e-014
+		 17 3.2176326809849717e-014 18 3.2176326809849717e-014 19 3.2176326809849717e-014
+		 20 3.2176326809849717e-014 21 3.2176326809849717e-014 22 3.2176326809849717e-014
+		 23 3.2176326809849717e-014 24 3.2176326809849717e-014 25 3.2176326809849717e-014
+		 26 3.2176326809849717e-014 27 3.2176326809849717e-014 28 3.2176326809849717e-014
+		 29 3.2176326809849717e-014 30 3.2176326809849717e-014 31 3.2176326809849717e-014
+		 32 3.2176326809849717e-014 33 3.2176326809849717e-014 34 3.2176326809849717e-014
+		 35 3.2176326809849717e-014 36 3.2176326809849717e-014 37 3.2176326809849717e-014
+		 38 3.2176326809849717e-014 39 3.2176326809849717e-014 40 3.2176326809849717e-014
+		 41 3.2176326809849717e-014 42 3.2176326809849717e-014 43 3.2176326809849717e-014
+		 44 3.2176326809849717e-014 45 3.2176326809849717e-014 46 3.2176326809849717e-014
+		 47 3.2176326809849717e-014 48 3.2176326809849717e-014 49 3.2176326809849717e-014
+		 50 3.2176326809849717e-014 51 3.2176326809849717e-014 52 3.2176326809849717e-014
+		 53 24.911739129261075 54 49.823687032146289 55 24.911739129261139 56 3.1805546814635168e-014
+		 57 3.2176326809849717e-014 58 3.2176326809849717e-014 59 3.2176326809849717e-014
+		 60 3.2176326809849717e-014 61 3.2176326809849717e-014 62 3.2176326809849717e-014
+		 63 3.2176326809849717e-014 64 3.2176326809849717e-014 65 3.2176326809849717e-014
+		 66 3.2176326809849717e-014 67 3.2176326809849717e-014 68 3.2176326809849717e-014
+		 69 3.2176326809849717e-014 70 3.2176326809849717e-014 71 3.2176326809849717e-014
+		 72 3.2176326809849717e-014 73 3.2176326809849717e-014 74 3.2176326809849717e-014
+		 75 3.2176326809849717e-014 76 3.2176326809849717e-014 77 3.2176326809849717e-014
+		 78 3.2176326809849717e-014 79 3.2176326809849717e-014 80 0.063312551402522885 81 0.24451882259847493
+		 82 0.53051949035048707 83 0.90821283278639153 84 1.364503911360057 85 1.8862914913308952
+		 86 2.4604728388833514 87 3.0739552641542724 88 3.7136362958100011 89 4.3664128630041068
+		 90 5.0191931756953485 91 5.6588742008496551 92 6.2723532054456372 93 6.8465379502869519
+		 94 7.3683255153477214 95 7.8246141800291884 96 8.2023099066778933 97 8.4883092134206173
+		 98 8.6695168258690867 99 8.7328293744222858 100 8.6628042694134084 101 8.4629114134911401
+		 102 8.1484336745584969 103 7.7346476258993704 104 7.2368252947694733 105 6.6702563679907483
+		 106 6.0502137472742898 107 5.3919678866867393 108 4.7108121454156402 109 4.0220173276968385
+		 110 3.340853888305515 111 2.6826157116470886 112 2.0625730780259524 113 1.4959980163365505
+		 114 0.99818178865602514 115 0.58439572460387668 116 0.26991500040572841 117 0.070025108157896698
+		 118 3.2178268066369175e-014 119 3.2176326809849717e-014 120 3.2176326809849717e-014;
+createNode animCurveTU -n "Slave_R_Elbow_joint_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 1 2 1 3 1 4 1 5 1 6 1 7 0.99999999999999978
+		 8 1 9 1 10 1 11 0.99999999999999978 12 1 13 1.0000000000000002 14 1 15 0.99999999999999989
+		 16 0.99999999999999989 17 1 18 1 19 1 20 0.99999999999999978 21 1 22 1 23 1 24 1
+		 25 1 26 0.99999999999999978 27 0.99999999999999989 28 1 29 0.99999999999999989 30 0.99999999999999978
+		 31 1 32 1 33 1.0000000000000002 34 0.99999999999999989 35 1 36 0.99999999999999989
+		 37 1.0000000000000002 38 0.99999999999999989 39 0.99999999999999978 40 1 41 0.99999999999999989
+		 42 0.99999999999999989 43 0.99999999999999989 44 0.99999999999999978 45 1 46 0.99999999999999989
+		 47 0.99999999999999978 48 1 49 1 50 0.99999999999999978 51 1 52 1 53 0.99999999999999989
+		 54 0.99999999999999989 55 1.0000000000000002 56 1 57 1 58 1 59 0.99999999999999989
+		 60 0.99999999999999989 61 1 62 1 63 1 64 1.0000000000000002 65 1 66 1 67 1 68 1 69 0.99999999999999989
+		 70 0.99999999999999989 71 0.99999999999999989 72 1 73 0.99999999999999989 74 1 75 1.0000000000000002
+		 76 0.99999999999999967 77 1 78 1 79 1 80 0.99999999999999989 81 0.99999999999999989
+		 82 1 83 1 84 1 85 0.99999999999999989 86 1 87 1 88 1 89 1 90 0.99999999999999989
+		 91 0.99999999999999989 92 1.0000000000000002 93 1.0000000000000002 94 1 95 1 96 1
+		 97 1 98 1 99 0.99999999999999989 100 1 101 1 102 1 103 1 104 1 105 1 106 0.99999999999999989
+		 107 0.99999999999999989 108 1 109 0.99999999999999989 110 0.99999999999999989 111 1
+		 112 1 113 1 114 1 115 1 116 1 117 1 118 1 119 1 120 1;
+createNode animCurveTU -n "Slave_R_Elbow_joint_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 1 2 1 3 1.0000000000000002 4 0.99999999999999989
+		 5 0.99999999999999989 6 1 7 0.99999999999999989 8 1 9 1 10 0.99999999999999989 11 0.99999999999999989
+		 12 1 13 1.0000000000000002 14 1 15 0.99999999999999978 16 0.99999999999999989 17 1
+		 18 0.99999999999999989 19 1 20 1 21 1.0000000000000002 22 1 23 0.99999999999999989
+		 24 1 25 1 26 0.99999999999999989 27 0.99999999999999989 28 0.99999999999999978 29 0.99999999999999989
+		 30 0.99999999999999989 31 1 32 1 33 1.0000000000000002 34 1 35 1 36 0.99999999999999989
+		 37 1 38 1 39 0.99999999999999989 40 1 41 1 42 0.99999999999999989 43 1 44 0.99999999999999989
+		 45 1 46 1 47 0.99999999999999989 48 0.99999999999999989 49 1.0000000000000002 50 0.99999999999999989
+		 51 1 52 1 53 0.99999999999999989 54 0.99999999999999978 55 1.0000000000000002 56 0.99999999999999978
+		 57 1 58 1 59 0.99999999999999989 60 1 61 1 62 1 63 0.99999999999999989 64 1.0000000000000002
+		 65 1 66 1 67 0.99999999999999989 68 1 69 0.99999999999999978 70 1 71 1 72 1 73 1
+		 74 1.0000000000000002 75 1.0000000000000002 76 0.99999999999999978 77 1 78 1 79 1
+		 80 0.99999999999999989 81 0.99999999999999978 82 0.99999999999999989 83 1.0000000000000002
+		 84 1 85 0.99999999999999989 86 1 87 1 88 0.99999999999999989 89 1 90 1 91 1 92 1
+		 93 1 94 1 95 1 96 1 97 1 98 1 99 0.99999999999999989 100 1.0000000000000002 101 0.99999999999999989
+		 102 1 103 1 104 1 105 1 106 1 107 0.99999999999999989 108 1 109 1 110 0.99999999999999989
+		 111 1 112 1.0000000000000002 113 0.99999999999999989 114 1 115 1 116 1 117 0.99999999999999989
+		 118 1 119 1 120 1;
+createNode animCurveTU -n "Slave_R_Elbow_joint_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 0.99999999999999989 2 1 3 1.0000000000000002
+		 4 0.99999999999999989 5 0.99999999999999978 6 1 7 1 8 1 9 1 10 1 11 0.99999999999999978
+		 12 1 13 1.0000000000000002 14 1 15 0.99999999999999978 16 0.99999999999999989 17 0.99999999999999989
+		 18 0.99999999999999989 19 1 20 1 21 1.0000000000000002 22 1 23 1 24 0.99999999999999989
+		 25 1 26 0.99999999999999989 27 1 28 1 29 0.99999999999999989 30 0.99999999999999989
+		 31 1 32 1 33 1 34 1 35 1.0000000000000002 36 0.99999999999999978 37 1 38 1 39 0.99999999999999978
+		 40 1 41 0.99999999999999989 42 1 43 0.99999999999999989 44 0.99999999999999989 45 1
+		 46 0.99999999999999989 47 1 48 0.99999999999999978 49 1 50 0.99999999999999989 51 1
+		 52 1.0000000000000002 53 1 54 1 55 1 56 0.99999999999999978 57 1 58 1 59 1 60 0.99999999999999989
+		 61 1 62 1 63 1 64 1 65 1 66 0.99999999999999989 67 1 68 1 69 0.99999999999999989
+		 70 0.99999999999999989 71 1 72 1 73 0.99999999999999989 74 1 75 1.0000000000000002
+		 76 0.99999999999999989 77 1 78 1 79 1 80 1 81 0.99999999999999978 82 1 83 1 84 1
+		 85 0.99999999999999989 86 1 87 0.99999999999999989 88 0.99999999999999989 89 0.99999999999999989
+		 90 0.99999999999999989 91 1 92 1 93 1.0000000000000002 94 1 95 1 96 1 97 0.99999999999999989
+		 98 1 99 1 100 1 101 1 102 1 103 1 104 0.99999999999999989 105 1 106 0.99999999999999989
+		 107 1 108 1 109 1 110 0.99999999999999989 111 1 112 1 113 1 114 1 115 0.99999999999999989
+		 116 1 117 1 118 1 119 1 120 1;
+createNode animCurveTU -n "Slave_R_Shoulder_joint_visibility";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 1 2 1 3 1 4 1 5 1 6 1 7 1 8 1 9 1 10 1
+		 11 1 12 1 13 1 14 1 15 1 16 1 17 1 18 1 19 1 20 1 21 1 22 1 23 1 24 1 25 1 26 1 27 1
+		 28 1 29 1 30 1 31 1 32 1 33 1 34 1 35 1 36 1 37 1 38 1 39 1 40 1 41 1 42 1 43 1 44 1
+		 45 1 46 1 47 1 48 1 49 1 50 1 51 1 52 1 53 1 54 1 55 1 56 1 57 1 58 1 59 1 60 1 61 1
+		 62 1 63 1 64 1 65 1 66 1 67 1 68 1 69 1 70 1 71 1 72 1 73 1 74 1 75 1 76 1 77 1 78 1
+		 79 1 80 1 81 1 82 1 83 1 84 1 85 1 86 1 87 1 88 1 89 1 90 1 91 1 92 1 93 1 94 1 95 1
+		 96 1 97 1 98 1 99 1 100 1 101 1 102 1 103 1 104 1 105 1 106 1 107 1 108 1 109 1 110 1
+		 111 1 112 1 113 1 114 1 115 1 116 1 117 1 118 1 119 1 120 1;
+createNode animCurveTL -n "Slave_R_Shoulder_joint_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 -0.32111868425498419 2 -0.32111868425498424
+		 3 -0.32111868425498424 4 -0.32111868425498413 5 -0.32111868425498413 6 -0.32111868425498413
+		 7 -0.3211186842549843 8 -0.32111868425498419 9 -0.32111868425498419 10 -0.32111868425498419
+		 11 -0.32111868425498413 12 -0.32111868425498419 13 -0.32111868425498413 14 -0.32111868425498419
+		 15 -0.32111868425498413 16 -0.32111868425498424 17 -0.32111868425498424 18 -0.32111868425498424
+		 19 -0.32111868425498419 20 -0.32111868425498419 21 -0.32111868425498413 22 -0.32111868425498419
+		 23 -0.32111868425498419 24 -0.32111868425498419 25 -0.32111868425498413 26 -0.32111868425498413
+		 27 -0.32111868425498413 28 -0.32111868425498424 29 -0.32111868425498419 30 -0.32111868425498419
+		 31 -0.32111868425498424 32 -0.32111868425498419 33 -0.32111868425498424 34 -0.32111868425498419
+		 35 -0.32111868425498424 36 -0.32111868425498424 37 -0.32111868425498408 38 -0.32111868425498419
+		 39 -0.32111868425498413 40 -0.32111868425498419 41 -0.32111868425498424 42 -0.32111868425498419
+		 43 -0.32111868425498419 44 -0.32111868425498413 45 -0.32111868425498413 46 -0.32111868425498424
+		 47 -0.32111868425498424 48 -0.32111868425498424 49 -0.32111868425498424 50 -0.32111868425498413
+		 51 -0.32111868425498413 52 -0.32111868425498424 53 -0.32111868425498408 54 -0.3211186842549843
+		 55 -0.32111868425498424 56 -0.32111868425498419 57 -0.32111868425498413 58 -0.32111868425498413
+		 59 -0.32111868425498413 60 -0.32111868425498413 61 -0.32111868425498413 62 -0.32111868425498413
+		 63 -0.32111868425498413 64 -0.32111868425498413 65 -0.32111868425498413 66 -0.32111868425498413
+		 67 -0.32111868425498413 68 -0.32111868425498413 69 -0.32111868425498413 70 -0.32111868425498413
+		 71 -0.32111868425498413 72 -0.32111868425498413 73 -0.32111868425498413 74 -0.32111868425498413
+		 75 -0.32111868425498413 76 -0.32111868425498413 77 -0.32111868425498413 78 -0.32111868425498413
+		 79 -0.32111868425498413 80 -0.32111868425498413 81 -0.32111868425498413 82 -0.32111868425498413
+		 83 -0.32111868425498413 84 -0.32111868425498413 85 -0.32111868425498413 86 -0.32111868425498413
+		 87 -0.32111868425498413 88 -0.32111868425498413 89 -0.32111868425498413 90 -0.32111868425498413
+		 91 -0.32111868425498413 92 -0.32111868425498413 93 -0.32111868425498413 94 -0.32111868425498413
+		 95 -0.32111868425498413 96 -0.32111868425498413 97 -0.32111868425498413 98 -0.32111868425498413
+		 99 -0.32111868425498413 100 -0.32111868425498413 101 -0.32111868425498413 102 -0.32111868425498413
+		 103 -0.32111868425498413 104 -0.32111868425498413 105 -0.32111868425498413 106 -0.32111868425498413
+		 107 -0.32111868425498413 108 -0.32111868425498413 109 -0.32111868425498413 110 -0.32111868425498413
+		 111 -0.32111868425498413 112 -0.32111868425498413 113 -0.32111868425498413 114 -0.32111868425498413
+		 115 -0.32111868425498413 116 -0.32111868425498413 117 -0.32111868425498413 118 -0.32111868425498413
+		 119 -0.32111868425498413 120 -0.32111868425498413;
+createNode animCurveTL -n "Slave_R_Shoulder_joint_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 0.20902331273136587 2 0.20902331273136587
+		 3 0.20902331273136576 4 0.20902331273136598 5 0.20902331273136598 6 0.20902331273136598
+		 7 0.20902331273136576 8 0.20902331273136587 9 0.20902331273136587 10 0.20902331273136587
+		 11 0.20902331273136587 12 0.20902331273136587 13 0.20902331273136587 14 0.20902331273136587
+		 15 0.20902331273136587 16 0.20902331273136587 17 0.20902331273136576 18 0.20902331273136576
+		 19 0.20902331273136576 20 0.20902331273136587 21 0.20902331273136587 22 0.20902331273136587
+		 23 0.20902331273136587 24 0.20902331273136587 25 0.20902331273136587 26 0.20902331273136598
+		 27 0.20902331273136587 28 0.20902331273136565 29 0.20902331273136587 30 0.2090233127313661
+		 31 0.20902331273136598 32 0.20902331273136576 33 0.20902331273136598 34 0.20902331273136576
+		 35 0.20902331273136587 36 0.20902331273136643 37 0.20902331273136587 38 0.20902331273136576
+		 39 0.20902331273136587 40 0.20902331273136598 41 0.20902331273136565 42 0.20902331273136576
+		 43 0.20902331273136587 44 0.2090233127313661 45 0.2090233127313661 46 0.20902331273136554
+		 47 0.20902331273136598 48 0.20902331273136587 49 0.20902331273136587 50 0.20902331273136598
+		 51 0.20902331273136587 52 0.20902331273136565 53 0.20902331273136576 54 0.20902331273136565
+		 55 0.20902331273136576 56 0.20902331273136576 57 0.20902331273136587 58 0.20902331273136587
+		 59 0.20902331273136576 60 0.20902331273136598 61 0.20902331273136587 62 0.20902331273136587
+		 63 0.20902331273136565 64 0.20902331273136576 65 0.20902331273136598 66 0.20902331273136598
+		 67 0.20902331273136598 68 0.20902331273136587 69 0.20902331273136576 70 0.20902331273136587
+		 71 0.2090233127313661 72 0.20902331273136587 73 0.20902331273136576 74 0.2090233127313661
+		 75 0.20902331273136576 76 0.20902331273136576 77 0.20902331273136587 78 0.20902331273136587
+		 79 0.20902331273136587 80 0.20902331273136587 81 0.20902331273136587 82 0.20902331273136587
+		 83 0.20902331273136587 84 0.20902331273136587 85 0.20902331273136587 86 0.20902331273136587
+		 87 0.20902331273136587 88 0.20902331273136587 89 0.20902331273136587 90 0.20902331273136587
+		 91 0.20902331273136587 92 0.20902331273136587 93 0.20902331273136587 94 0.20902331273136587
+		 95 0.20902331273136587 96 0.20902331273136587 97 0.20902331273136587 98 0.20902331273136587
+		 99 0.20902331273136587 100 0.20902331273136587 101 0.20902331273136587 102 0.20902331273136587
+		 103 0.20902331273136587 104 0.20902331273136587 105 0.20902331273136587 106 0.20902331273136587
+		 107 0.20902331273136587 108 0.20902331273136587 109 0.20902331273136587 110 0.20902331273136587
+		 111 0.20902331273136587 112 0.20902331273136587 113 0.20902331273136587 114 0.20902331273136587
+		 115 0.20902331273136587 116 0.20902331273136587 117 0.20902331273136587 118 0.20902331273136587
+		 119 0.20902331273136587 120 0.20902331273136587;
+createNode animCurveTL -n "Slave_R_Shoulder_joint_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 -0.018858959571647571 2 -0.018858959571647529
+		 3 -0.018858959571647554 4 -0.018858959571647581 5 -0.01885895957164754 6 -0.018858959571647568
+		 7 -0.018858959571647578 8 -0.018858959571647526 9 -0.018858959571647578 10 -0.018858959571647561
+		 11 -0.018858959571647543 12 -0.018858959571647644 13 -0.018858959571647557 14 -0.018858959571647474
+		 15 -0.018858959571647613 16 -0.018858959571647606 17 -0.018858959571647588 18 -0.018858959571647595
+		 19 -0.018858959571647578 20 -0.018858959571647571 21 -0.018858959571647557 22 -0.018858959571647585
+		 23 -0.018858959571647665 24 -0.018858959571647571 25 -0.018858959571647571 26 -0.018858959571647599
+		 27 -0.018858959571647654 28 -0.018858959571647516 29 -0.01885895957164746 30 -0.018858959571647599
+		 31 -0.018858959571647571 32 -0.018858959571647682 33 -0.018858959571647543 34 -0.018858959571647682
+		 35 -0.018858959571647571 36 -0.018858959571647627 37 -0.018858959571647627 38 -0.018858959571647516
+		 39 -0.018858959571647516 40 -0.018858959571647627 41 -0.018858959571647488 42 -0.018858959571647543
+		 43 -0.018858959571647627 44 -0.018858959571647488 45 -0.018858959571647571 46 -0.018858959571647516
+		 47 -0.018858959571647793 48 -0.018858959571647571 49 -0.018858959571647377 50 -0.018858959571647599
+		 51 -0.018858959571647571 52 -0.018858959571647543 53 -0.018858959571647557 54 -0.018858959571647592
+		 55 -0.018858959571647592 56 -0.018858959571647568 57 -0.018858959571647571 58 -0.018858959571647571
+		 59 -0.018858959571647564 60 -0.018858959571647564 61 -0.018858959571647557 62 -0.018858959571647571
+		 63 -0.018858959571647627 64 -0.01885895957164746 65 -0.01885895957164746 66 -0.018858959571647682
+		 67 -0.018858959571647627 68 -0.018858959571647571 69 -0.01885895957164746 70 -0.018858959571647516
+		 71 -0.018858959571647627 72 -0.018858959571647516 73 -0.018858959571647599 74 -0.018858959571647654
+		 75 -0.018858959571647613 76 -0.018858959571647585 77 -0.018858959571647595 78 -0.018858959571647571
+		 79 -0.018858959571647571 80 -0.018858959571647571 81 -0.018858959571647571 82 -0.018858959571647571
+		 83 -0.018858959571647571 84 -0.018858959571647571 85 -0.018858959571647571 86 -0.018858959571647571
+		 87 -0.018858959571647571 88 -0.018858959571647571 89 -0.018858959571647571 90 -0.018858959571647571
+		 91 -0.018858959571647571 92 -0.018858959571647571 93 -0.018858959571647571 94 -0.018858959571647571
+		 95 -0.018858959571647571 96 -0.018858959571647571 97 -0.018858959571647571 98 -0.018858959571647571
+		 99 -0.018858959571647571 100 -0.018858959571647571 101 -0.018858959571647571 102 -0.018858959571647571
+		 103 -0.018858959571647571 104 -0.018858959571647571 105 -0.018858959571647571 106 -0.018858959571647571
+		 107 -0.018858959571647571 108 -0.018858959571647571 109 -0.018858959571647571 110 -0.018858959571647571
+		 111 -0.018858959571647571 112 -0.018858959571647571 113 -0.018858959571647571 114 -0.018858959571647571
+		 115 -0.018858959571647571 116 -0.018858959571647571 117 -0.018858959571647571 118 -0.018858959571647571
+		 119 -0.018858959571647571 120 -0.018858959571647571;
+createNode animCurveTA -n "Slave_R_Shoulder_joint_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 4.7708320221952761e-014 2 -0.059148219926276432
+		 3 -0.2207297689129907 4 -0.45989186010043731 5 -0.75025266131568924 6 -1.0645301235238414
+		 7 -1.376212239858229 8 -1.6617790453110457 9 -1.9025767906963671 10 -2.0854304716699876
+		 11 -2.2013680477698201 12 -2.2423045344067498 13 -2.2077694753298513 14 -2.1096064944466848
+		 15 -1.9541262912655974 16 -1.7477790677923577 17 -1.4995679090614862 18 -1.2222618410426442
+		 19 -0.93241791586072187 20 -0.6494571254403072 21 -0.3942467292755964 22 -0.18772149501879287
+		 23 -0.049974758506856787 24 4.7708320221952748e-014 25 0.17753217032593679 26 -4.9558723874346908
+		 27 -4.8853232507154889 28 -4.6680432243420231 29 -4.280319331886262 30 -3.7006702500419251
+		 31 -2.9319680699578856 32 -2.0128266553110659 33 -1.0156605228210127 34 -0.032807384341891573
+		 35 0.84279797076426843 36 1.5333448245339811 37 1.9810706547460415 38 2.1404808367747448
+		 39 1.9810714700373535 40 1.5333462009039485 41 0.84279740262503844 42 -0.032805584115253118
+		 43 -1.0156588437095633 44 -2.0128280464804829 45 -2.9319670525472539 46 -3.7006696039576137
+		 47 -4.2803203651787802 48 -4.6680430823130052 49 -4.8853236208852708 50 -4.9558723874346908
+		 51 0.17753217032593677 52 178.25532043618696 53 177.16843030547986 54 355.17558035813545
+		 55 354.62337129731196 56 356.30569446650816 57 360.17753217032595 58 360.17753217032595
+		 59 360.02914271638087 60 359.62760603323795 61 359.0425914127938 62 358.35110256730144
+		 63 357.63408250455984 64 356.96689969429053 65 356.40820195587298 66 355.9934267307367
+		 67 355.7376362356481 68 355.64891778065316 69 355.73763713180603 70 355.99342827154965
+		 71 356.40820111357908 72 356.96690182586008 73 357.63408451758772 74 358.35110010337672
+		 75 359.04259253142465 76 359.62760661172166 77 360.02914124336337 78 360.17753217032595
+		 79 360.17753217032595 80 360.17977348256881 81 360.18618843041617 82 360.19631355383495
+		 83 360.20968535930268 84 360.22584054764684 85 360.24431547662141 86 360.2646462868471
+		 87 360.28636929965194 88 360.30902033539905 89 360.33213508492923 90 360.35524959485531
+		 91 360.37789954340963 92 360.39962072111416 93 360.41994945178971 94 360.43842188166298
+		 95 360.45457440984416 96 360.4679438934171 97 360.47806698078989 98 360.48448064269354
+		 99 360.48672147542879 100 360.48424306236001 101 360.47716803397213 102 360.46603686089117
+		 103 360.45138969924693 104 360.43376660327095 105 360.41370842504381 106 360.39175566217364
+		 107 360.3684489836287 108 360.34433010119596 109 360.31994009773649 110 360.29582012757612
+		 111 360.27251216325618 112 360.25055724016721 113 360.2304962840177 114 360.21287069136878
+		 115 360.19822094491821 116 360.1870875021167 117 360.18001111333041 118 360.17753217032595
+		 119 360.17753217032595 120 360.17753217032595;
+createNode animCurveTA -n "Slave_R_Shoulder_joint_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 -1.272221872585407e-014 2 -0.0057707864527023001
+		 3 -0.026750217873686727 4 -0.072086189071489629 5 -0.15098852429249834 6 -0.2680287792830332
+		 7 -0.42022246785351564 8 -0.59607908200622428 9 -0.77652145723752575 10 -0.93722554084497789
+		 11 -1.0517300875186113 12 -1.0948183958763242 13 -1.058371792240415 14 -0.96023296987189688
+		 15 -0.81957060558553085 16 -0.65683802595742558 17 -0.49156332008744019 18 -0.34025266191058562
+		 19 -0.21462632514847468 20 -0.12054034535087642 21 -0.057916141922329925 22 -0.021839824296486995
+		 23 -0.0048091220117235803 24 -1.2722218725854067e-014 25 -9.2387922329000975 26 -5.8675036314298321
+		 27 -6.017125058402776 28 -6.4196161702635921 29 -6.991949496831622 30 -7.6374323256612593
+		 31 -8.255611138360651 32 -8.7583749909685373 33 -9.0880401798788064 34 -9.2302564389616695
+		 35 -9.2158785250080282 36 -9.1106161280951099 37 -8.9958935869561607 38 -8.9457241189640957
+		 39 -8.9958933431841768 40 -9.1106158330582119 41 -9.2158785770900167 42 -9.2302565445219713
+		 43 -9.0880405710981425 44 -8.7583743865894164 45 -8.2556118216568368 46 -7.6374329437971333
+		 47 -6.9919481540488384 48 -6.419616409924835 49 -6.0171243018647846 50 -5.8675036314298321
+		 51 -9.2387922329000975 52 -181.91843174660903 53 -181.36699472959086 54 -360.83405505664916
+		 55 -364.52111949044354 56 -367.64351236729817 57 -369.2387922329001 58 -369.2387922329001
+		 59 -369.23355916910384 60 -369.20038196055873 61 -369.10129802552012 62 -368.90209103699925
+		 63 -368.59059300858678 64 -368.18611561775674 65 -367.73892189553561 66 -367.32140487436828
+		 67 -367.01515970801825 68 -366.8980099825506 69 -367.01516086031694 70 -367.32140659360238
+		 71 -367.73892113053967 72 -368.18611711620565 73 -368.59059404989398 74 -368.90209015877929
+		 75 -369.10129827409196 76 -369.20038202851072 77 -369.23355909841172 78 -369.2387922329001
+		 79 -369.2387922329001 80 -369.23884234908269 81 -369.23898103477973 82 -369.23918559543199
+		 83 -369.23942885654753 84 -369.23968192910468 85 -369.23991659303101 86 -369.2401073264848
+		 87 -369.24023296576985 88 -369.2402779878779 89 -369.24023343690658 90 -369.2400974739395
+		 91 -369.23987556260846 92 -369.23958028587083 93 -369.2392307856137 94 -369.23885185150175
+		 95 -369.23847262725013 96 -369.23812494643204 97 -369.23784132290456 98 -369.23765254360319
+		 99 -369.23758492580419 100 -369.23765966221924 101 -369.23786721935926 102 -369.23817641182109
+		 103 -369.23855093292696 104 -369.23895285368957 105 -369.23934560880014 106 -369.23969652846171
+		 107 -369.23997882641669 108 -369.24017309603602 109 -369.24026833302929 110 -369.24026242261181
+		 111 -369.24016214505554 112 -369.23998267402976 113 -369.23974657035058 114 -369.23948229060153
+		 115 -369.23922216647162 116 -369.23899990901589 117 -369.2388476121223 118 -369.2387922329001
+		 119 -369.2387922329001 120 -369.2387922329001;
+createNode animCurveTA -n "Slave_R_Shoulder_joint_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 -5.2966875576601928e-030 2 -0.97563606268690928
+		 3 -3.6507307634548241 4 -7.6475032583405511 5 -12.588087106872136 6 -18.094593190800751
+		 7 -23.789209504383582 8 -29.29433413373425 9 -34.232598897133599 10 -38.22684182709537
+		 11 -40.899971583818932 12 -41.874843334257335 13 -41.051276150009144 14 -38.774293555605382
+		 15 -35.33439236331111 16 -31.022031864914105 17 -26.127704674638615 18 -20.941994303402996
+		 19 -15.755674479510098 20 -10.859687455947267 21 -6.5450658746460419 22 -3.1028936438974437
+		 23 -0.82421396701835914 24 0 25 -19.713212803397035 26 44.673723447648655 27 43.030397546322682
+		 28 38.483720749218932 29 31.605545244656103 30 22.966522352299389 31 13.140112524194755
+		 32 2.7065102246069892 33 -7.7457657335577155 34 -17.622354603324002 35 -26.327945300032781
+		 36 -33.270798166600372 37 -37.86439799541143 38 -39.525286271354119 39 -37.864406451795233
+		 40 -33.270812151308391 41 -26.32793963349835 42 -17.622372513554456 43 -7.7457828630736447
+		 44 2.7065253045541882 45 13.140100332182755 46 22.966513455698966 47 31.605562097066098
+		 48 38.483717979988278 49 43.030405914008313 50 44.673723447648655 51 -19.713212803397031
+		 52 -41.874328954568632 53 -53.989521862280192 54 96.269887915530404 55 58.706272276406374
+		 56 22.878944241469771 57 -19.713212803397031 58 -19.713212803397035 59 -18.238505378803158
+		 60 -14.236015224752219 61 -8.3393170616662768 62 -1.1838326650049431 63 6.5943711261956217
+		 64 14.360874461669193 65 21.485559470976835 66 27.343575609293492 67 31.313668670633007
+		 68 32.775304259442713 69 31.31365415109898 70 27.34355264142647 71 21.485570792252215
+		 72 14.360848540210663 73 6.5943485877104004 74 -1.1838066657750601 75 -8.339328446464453
+		 76 -14.236021010112841 77 -18.238490732359264 78 -19.713212803397035 79 -19.713212803397035
+		 80 -19.735478146689342 81 -19.799203608957516 82 -19.899782574456498 83 -20.032607597158329
+		 84 -20.193073604803292 85 -20.376573280040859 86 -20.578498736152138 87 -20.794245573635596
+		 88 -21.019205913300983 89 -21.248771637236544 90 -21.478338583433004 91 -21.703298643578755
+		 92 -21.919043840946653 93 -22.120969930747819 94 -22.304468963518705 95 -22.46493346564257
+		 96 -22.597758713158214 97 -22.698336693097954 98 -22.762062287017617 99 -22.78432750705759
+		 100 -22.759701671695055 101 -22.689405000550433 102 -22.578811930360843 103 -22.433294660694184
+		 104 -22.258223807571564 105 -22.058976241768715 106 -21.840922992752542 107 -21.609434295477481
+		 108 -21.369888499580465 109 -21.127656066231999 110 -20.88810735518766 111 -20.656620962830743
+		 112 -20.438567158440634 113 -20.239316782068393 114 -20.06424738354098 115 -19.918729449422624
+		 116 -19.808134777537685 117 -19.737838774973977 118 -19.713212803397035 119 -19.713212803397035
+		 120 -19.713212803397035;
+createNode animCurveTU -n "Slave_R_Shoulder_joint_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 1 2 1 3 1 4 1 5 1 6 1 7 1 8 1 9 1 10 1
+		 11 1 12 1 13 1 14 1 15 1 16 1 17 1 18 1 19 1 20 1 21 1 22 1 23 1 24 1 25 1 26 1 27 1
+		 28 1 29 1 30 1 31 1 32 1 33 1 34 1 35 1 36 1 37 1 38 1 39 1 40 1 41 1 42 1 43 1 44 1
+		 45 1 46 1 47 1 48 1 49 1 50 1 51 1 52 1 53 1 54 1 55 1 56 1 57 1 58 1 59 1 60 1 61 1
+		 62 1 63 1 64 1 65 1 66 1 67 1 68 1 69 1 70 1 71 1 72 1 73 1 74 1 75 1 76 1 77 1 78 1
+		 79 1 80 1 81 1 82 1 83 1 84 1 85 1 86 1 87 1 88 1 89 1 90 1 91 1 92 1 93 1 94 1 95 1
+		 96 1 97 1 98 1 99 1 100 1 101 1 102 1 103 1 104 1 105 1 106 1 107 1 108 1 109 1 110 1
+		 111 1 112 1 113 1 114 1 115 1 116 1 117 1 118 1 119 1 120 1;
+createNode animCurveTU -n "Slave_R_Shoulder_joint_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 1 2 1 3 1 4 1 5 1 6 1 7 1 8 1 9 1 10 1
+		 11 1 12 1 13 1 14 1 15 1 16 1 17 1 18 1 19 1 20 1 21 1 22 1 23 1 24 1 25 1 26 1 27 1
+		 28 1 29 1 30 1 31 1 32 1 33 1 34 1 35 1 36 1 37 1 38 1 39 1 40 1 41 1 42 1 43 1 44 1
+		 45 1 46 1 47 1 48 1 49 1 50 1 51 1 52 1 53 1 54 1 55 1 56 1 57 1 58 1 59 1 60 1 61 1
+		 62 1 63 1 64 1 65 1 66 1 67 1 68 1 69 1 70 1 71 1 72 1 73 1 74 1 75 1 76 1 77 1 78 1
+		 79 1 80 1 81 1 82 1 83 1 84 1 85 1 86 1 87 1 88 1 89 1 90 1 91 1 92 1 93 1 94 1 95 1
+		 96 1 97 1 98 1 99 1 100 1 101 1 102 1 103 1 104 1 105 1 106 1 107 1 108 1 109 1 110 1
+		 111 1 112 1 113 1 114 1 115 1 116 1 117 1 118 1 119 1 120 1;
+createNode animCurveTU -n "Slave_R_Shoulder_joint_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 1 2 1 3 1 4 1 5 1 6 1 7 1 8 1 9 1 10 1
+		 11 1 12 1 13 1 14 1 15 1 16 1 17 1 18 1 19 1 20 1 21 1 22 1 23 1 24 1 25 1 26 1 27 1
+		 28 1 29 1 30 1 31 1 32 1 33 1 34 1 35 1 36 1 37 1 38 1 39 1 40 1 41 1 42 1 43 1 44 1
+		 45 1 46 1 47 1 48 1 49 1 50 1 51 1 52 1 53 1 54 1 55 1 56 1 57 1 58 1 59 1 60 1 61 1
+		 62 1 63 1 64 1 65 1 66 1 67 1 68 1 69 1 70 1 71 1 72 1 73 1 74 1 75 1 76 1 77 1 78 1
+		 79 1 80 1 81 1 82 1 83 1 84 1 85 1 86 1 87 1 88 1 89 1 90 1 91 1 92 1 93 1 94 1 95 1
+		 96 1 97 1 98 1 99 1 100 1 101 1 102 1 103 1 104 1 105 1 106 1 107 1 108 1 109 1 110 1
+		 111 1 112 1 113 1 114 1 115 1 116 1 117 1 118 1 119 1 120 1;
+createNode animCurveTU -n "Slave_Head_joint_visibility";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 1 2 1 3 1 4 1 5 1 6 1 7 1 8 1 9 1 10 1
+		 11 1 12 1 13 1 14 1 15 1 16 1 17 1 18 1 19 1 20 1 21 1 22 1 23 1 24 1 25 1 26 1 27 1
+		 28 1 29 1 30 1 31 1 32 1 33 1 34 1 35 1 36 1 37 1 38 1 39 1 40 1 41 1 42 1 43 1 44 1
+		 45 1 46 1 47 1 48 1 49 1 50 1 51 1 52 1 53 1 54 1 55 1 56 1 57 1 58 1 59 1 60 1 61 1
+		 62 1 63 1 64 1 65 1 66 1 67 1 68 1 69 1 70 1 71 1 72 1 73 1 74 1 75 1 76 1 77 1 78 1
+		 79 1 80 1 81 1 82 1 83 1 84 1 85 1 86 1 87 1 88 1 89 1 90 1 91 1 92 1 93 1 94 1 95 1
+		 96 1 97 1 98 1 99 1 100 1 101 1 102 1 103 1 104 1 105 1 106 1 107 1 108 1 109 1 110 1
+		 111 1 112 1 113 1 114 1 115 1 116 1 117 1 118 1 119 1 120 1;
+createNode animCurveTL -n "Slave_Head_joint_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 -0.0041322301270523398 2 -0.0040800421578657464
+		 3 -0.0039316811272911934 4 -0.0036961446596963684 5 -0.0033833580733539769 6 -0.0030088970356209528
+		 7 -0.0025960837316746947 8 -0.0021756010965285392 9 -0.0017833209175117137 10 -0.0014573992844288779
+		 11 -0.0012357138505056143 12 -0.0011542556024916736 13 -0.0012230912641022198 14 -0.0014122118633597663
+		 15 -0.0016941188921981128 16 -0.0020398425057964963 17 -0.0024198425898425521 18 -0.0028055201161090761
+		 19 -0.0031711039106537666 20 -0.0034953926692360715 21 -0.0037627279617477821 22 -0.0039626839537396635
+		 23 -0.0040882100671556102 24 -0.0041322301270523398 25 -0.0030520038678159972 26 0.029284593143059007
+		 27 0.024344179613239203 28 0.0190199649754524 29 0.013806688693481596 30 0.0089650278296789024
+		 31 0.004661431558975325 32 0.0010314498850682273 33 -0.001818673605434926 34 -0.0038452018707219524
+		 35 -0.0051019910813649844 36 -0.0057474984407489202 37 -0.0060042796040700522 38 -0.0060676105068118644
+		 39 -0.0065157858962488213 40 -0.0073690937720703453 41 -0.0076496901238496881 42 -0.0063993029264026065
+		 43 -0.0030106918912582029 44 0.0025754008729405326 45 0.009822736179817694 46 0.017693613058430945
+		 47 0.024847714241649735 48 0.029891303489324367 49 0.031626945812256654 50 0.029284593143059007
+		 51 -0.0030520038678159972 52 -0.0042106480030890993 53 -0.0039519165980293515 54 -0.0032999106508485162
+		 55 -0.0025502240900723665 56 -0.0021830809729205211 57 -0.0030520038678159972 58 -0.0030520038678159972
+		 59 -0.0030520038678159833 60 -0.0030520038678159694 61 -0.0030520038678159833 62 -0.0030520038678159833
+		 63 -0.0030520038678159924 64 -0.0030520038678160007 65 -0.0030520038678159838 66 -0.0030520038678159794
+		 67 -0.0030520038678159859 68 -0.0030520038678160059 69 -0.0030520038678160089 70 -0.0030520038678159903
+		 71 -0.0030520038678160041 72 -0.0030520038678159903 73 -0.0030520038678159933 74 -0.0030520038678159556
+		 75 -0.0030520038678159764 76 -0.003052003867815959 77 -0.0030520038678160111 78 -0.0030520038678159972
+		 79 -0.0030520038678159972 80 -0.0030520038678159694 81 -0.0030520038678159833 82 -0.0030520038678159972
+		 83 -0.0030520038678159694 84 -0.0030520038678159556 85 -0.0030520038678159694 86 -0.0030520038678159694
+		 87 -0.0030520038678159972 88 -0.0030520038678159694 89 -0.0030520038678159694 90 -0.0030520038678159972
+		 91 -0.0030520038678159833 92 -0.0030520038678159833 93 -0.0030520038678159972 94 -0.0030520038678159694
+		 95 -0.0030520038678159972 96 -0.0030520038678159833 97 -0.0030520038678159556 98 -0.0030520038678159833
+		 99 -0.0030520038678159833 100 -0.0030520038678159972 101 -0.0030520038678159972 102 -0.0030520038678159833
+		 103 -0.0030520038678159417 104 -0.0030520038678159972 105 -0.0030520038678159694
+		 106 -0.0030520038678159833 107 -0.003052003867816025 108 -0.0030520038678159556 109 -0.0030520038678159833
+		 110 -0.0030520038678159556 111 -0.0030520038678159833 112 -0.0030520038678159556
+		 113 -0.0030520038678159556 114 -0.0030520038678159833 115 -0.0030520038678159694
+		 116 -0.0030520038678159694 117 -0.0030520038678159833 118 -0.0030520038678159972
+		 119 -0.0030520038678159972 120 -0.0030520038678159972;
+createNode animCurveTL -n "Slave_Head_joint_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 0.51136722685847391 2 0.51185063075730208
+		 3 0.51317609290564914 4 0.51515648965888683 5 0.51760469576628665 6 0.5203335888881736
+		 7 0.52315604307115093 8 0.52588493718011975 9 0.52833314325405911 10 0.53031353935481929
+		 11 0.5316390022058346 12 0.53212240585370951 13 0.5317140281112156 14 0.53058498587467651
+		 15 0.52887940913570364 16 0.52674143242196236 17 0.52431519273532567 18 0.52174481635609216
+		 19 0.51917443997685753 20 0.51674820029022128 21 0.51461022357647979 22 0.51290464683750758
+		 23 0.51177560460096805 24 0.51136722685847391 25 0.51136722685847391 26 0.48103061695645144
+		 27 0.48480807827526062 28 0.48804106861849861 29 0.49084786635897504 30 0.49330963786529569
+		 31 0.49547380359123694 32 0.49736009775727252 33 0.49896783260244304 34 0.50028517343918188
+		 35 0.50129988299921657 36 0.50200865272984452 37 0.50242084041433177 38 0.50255417889622256
+		 39 0.50179252107743544 40 0.49970235394553575 41 0.49657342462751908 42 0.49273102183740558
+		 43 0.4885566224391954 44 0.48447173234631691 45 0.48089553200188995 46 0.47819706244285076
+		 47 0.47666453285531041 48 0.47650746136795674 49 0.47789615772963678 50 0.48103061695645144
+		 51 0.51136722685847391 52 0.51136722685847436 53 0.51136722685847402 54 0.51136722685847391
+		 55 0.51136722685847402 56 0.51136722685847424 57 0.51136722685847391 58 0.51136722685847391
+		 59 0.50973792984239596 60 0.50567731368869839 61 0.50069524240448249 62 0.49632117084680771
+		 63 0.49371265534096775 64 0.49336047081743539 65 0.49498475220366911 66 0.49766242025037799
+		 67 0.50013112104932322 68 0.50116716198305533 69 0.50386583018297515 70 0.51002219225268897
+		 71 0.51654932490498617 72 0.52089074472945784 73 0.52172651580916296 74 0.51670774719885482
+		 75 0.51042393352393922 76 0.50833391563103036 77 0.50995524122899483 78 0.51136722685847391
+		 79 0.51136722685847391 80 0.51146853389604197 81 0.51175848383684863 82 0.51221611632500064
+		 83 0.51282046716666696 84 0.51355058302216827 85 0.51438550047725662 86 0.51530425371897248
+		 87 0.51628589300570016 88 0.5173094529442569 89 0.51835396718197302 90 0.51939848741645911
+		 91 0.52042204735501585 92 0.52140368118468261 93 0.52232243988345939 94 0.52315735733854785
+		 95 0.52388746935611652 96 0.52449182403571537 97 0.52494945436502893 98 0.52523940646467449
+		 99 0.5253407135022421 100 0.52522866563644388 101 0.52490881509324905 102 0.52440561614206582
+		 103 0.52374351298044874 104 0.52294694253184615 105 0.52204036997683445 106 0.52104823363772623
+		 107 0.51999496792000532 108 0.51890504387949443 109 0.51780289648122202 110 0.51671296013067436
+		 111 0.51565970672298989 112 0.51466757038388156 113 0.51376098803679693 114 0.51296442738026748
+		 115 0.5123023242186503 116 0.51179912051131993 117 0.51147927472427279 118 0.51136722685847391
+		 119 0.51136722685847391 120 0.51136722685847391;
+createNode animCurveTL -n "Slave_Head_joint_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 -0.0032452036287337811 2 -0.0033105782583867514
+		 3 -0.0034854778622403792 4 -0.0037343255173408214 5 -0.0040198955909744099 6 -0.0043073438502047928
+		 7 -0.0045680435279231027 8 -0.0047826177229263927 9 -0.0049423110909807937 10 -0.0050480352356745513
+		 11 -0.0051068271651323787 12 -0.0051258527504194837 13 -0.0051098649859405041 14 -0.005060862581403593
+		 15 -0.0049735936297573471 16 -0.0048420775465095323 17 -0.0046638004090281231 18 -0.0044424913385365441
+		 19 -0.0041893642002936464 20 -0.0039228691671678506 21 -0.0036672265679593349 22 -0.0034501896031435904
+		 23 -0.0033004864583380971 24 -0.0032452036287337811 25 -0.0042769083232754301 26 -0.080073151498150891
+		 27 -0.069763238148261991 28 -0.061979886422723146 29 -0.055866713072774798 30 -0.05065293605425808
+		 31 -0.045741890429594367 32 -0.040767194824047392 33 -0.035619228464176977 34 -0.03043703476985668
+		 35 -0.025564712181675414 36 -0.021479114407953137 37 -0.018700583710356211 38 -0.017694645641670947
+		 39 -0.020567290142814748 40 -0.028320811033927917 41 -0.039554376583171652 42 -0.05273343171674752
+		 43 -0.06625059495765806 44 -0.078559269603611093 45 -0.088345907723772293 46 -0.094679007084353339
+		 47 -0.09707101836532675 48 -0.095412353359930646 49 -0.089769531752194431 50 -0.080073151498150891
+		 51 -0.0042769083232754301 52 -0.0031427879039074625 53 -0.0034625175258885922 54 -0.0040886748600594547
+		 55 -0.0045938033812169344 56 -0.0047792080808997765 57 -0.0042769083232754301 58 -0.0042769083232754301
+		 59 -0.0064343738266291299 60 -0.012039571034178978 61 -0.019736102543554901 62 -0.028435117380761682
+		 63 -0.037493751194916242 64 -0.046583616786847609 65 -0.055364126521041085 66 -0.063161382815494993
+		 67 -0.068849358790509463 68 -0.071039772039495908 69 -0.063149120919906432 70 -0.042290332429178679
+		 71 -0.012682288151114884 72 0.021029335039271874 73 0.053595979135513866 74 0.067190771733209004
+		 75 0.055324770004581844 76 0.030713042788850495 77 0.0065715435143686128 78 -0.0042769083232754301
+		 79 -0.0042769083232754301 80 -0.0042769083232753191 81 -0.0042769083232753746 82 -0.0042769083232752914
+		 83 -0.0042769083232753469 84 -0.0042769083232753191 85 -0.0042769083232753191 86 -0.0042769083232752636
+		 87 -0.0042769083232754301 88 -0.0042769083232754856 89 -0.0042769083232753191 90 -0.0042769083232753746
+		 91 -0.0042769083232753746 92 -0.0042769083232753191 93 -0.0042769083232753191 94 -0.0042769083232752081
+		 95 -0.0042769083232753191 96 -0.0042769083232754856 97 -0.0042769083232752636 98 -0.0042769083232753746
+		 99 -0.0042769083232753191 100 -0.0042769083232753191 101 -0.0042769083232754301 102 -0.0042769083232753191
+		 103 -0.0042769083232753191 104 -0.0042769083232753746 105 -0.0042769083232753746
+		 106 -0.0042769083232753746 107 -0.0042769083232754856 108 -0.0042769083232752636
+		 109 -0.0042769083232753746 110 -0.0042769083232753191 111 -0.0042769083232753191
+		 112 -0.0042769083232753191 113 -0.0042769083232753746 114 -0.0042769083232753469
+		 115 -0.0042769083232753746 116 -0.0042769083232753746 117 -0.0042769083232753191
+		 118 -0.0042769083232754301 119 -0.0042769083232754301 120 -0.0042769083232754301;
+createNode animCurveTA -n "Slave_Head_joint_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 3.255098931810318e-015 2 -0.01015976667990004
+		 3 -0.051965818884391585 4 -0.15388645271696866 5 -0.35091511135948139 6 -0.67826674069632553
+		 7 -1.1670278364349702 8 -1.8353770819707165 9 -2.6670551273569112 10 -3.5709424536488386
+		 11 -4.3368880724129486 12 -4.6570586195638954 13 -4.3850096380443313 14 -3.7157699222305371
+		 15 -2.8921929848333185 16 -2.0969293416773049 17 -1.4234816419314322 18 -0.90086456516794677
+		 19 -0.52388097080624618 20 -0.27245840490115714 21 -0.12089367433039604 22 -0.041720736761000965
+		 23 -0.0084062784629273576 24 3.255098931810318e-015 25 -5.144464368803777 26 -13.765423377060747
+		 27 -10.774851587696656 28 -8.0551606456274847 29 -5.7734246654884611 30 -4.0383085367473521
+		 31 -2.8706169923618647 32 -2.22634084031858 33 -2.8238632423332231 34 -4.94868658384038
+		 35 -7.8720617580767502 36 -10.861839468949952 37 -13.186383429774081 38 -14.12026370078973
+		 39 -13.183596581133278 40 -10.852075941525854 41 -7.8532167670697168 42 -4.9207757302233883
+		 43 -2.7889695927039249 44 -2.18865135315927 45 -3.2632222327782419 46 -5.3784037956845809
+		 47 -8.0631127191105687 48 -10.781420894258334 49 -12.909588852894004 50 -13.765423377060747
+		 51 -5.144464368803777 52 -13.62132698446856 53 -10.604700305440605 54 -3.9941702142077147
+		 55 2.6059207594578666 56 5.576815717177209 57 -5.144464368803777 58 -5.144464368803777
+		 59 -5.5283432860861108 60 -6.538604569572251 61 -7.9635307389769423 62 -9.5915932235878252
+		 63 -11.211071136010114 64 -12.609499919110267 65 -13.573265851386632 66 -13.887427063217929
+		 67 -13.335919761931905 68 -11.702367971963474 69 -8.6421315737328808 70 -4.2818233081101482
+		 71 0.88712601277848413 72 6.3737100279701142 73 11.687936053314974 74 13.179109576198838
+		 75 9.4098734031258431 76 3.211730092922811 77 -2.5835407536558015 78 -5.144464368803777
+		 79 -5.144464368803777 80 -5.071981175519559 81 -4.8645276944297553 82 -4.5371006480138556
+		 83 -4.1046995047191679 84 -3.5823159670606528 85 -2.9849489457100868 86 -2.3275990675692753
+		 87 -1.6252554608093706 88 -0.8929184519914789 89 -0.14558905416887824 90 0.60174463422507141
+		 91 1.334081643042961 92 2.0364213453830069 93 2.6937751279436823 94 3.2911421492942456
+		 95 3.8135229409873919 96 4.2459268302474484 97 4.5733523320568743 98 4.7808073577531642
+		 99 4.8532905510373743 100 4.7731225063609184 101 4.5442757322265432 102 4.1842467775278953
+		 103 3.7105249849462276 104 3.140594492682951 105 2.491959656358937 106 1.7821056150341346
+		 107 1.0285147053570129 108 0.2486954865697118 109 -0.53986930433612279 110 -1.3196973307120483
+		 111 -2.0732794328005402 112 -2.7831334741253415 113 -3.4317753164850227 114 -4.0016988027126343
+		 115 -4.4754205952943025 116 -4.8354529529226893 117 -5.0642963241273264 118 -5.144464368803777
+		 119 -5.144464368803777 120 -5.144464368803777;
+createNode animCurveTA -n "Slave_Head_joint_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 9.4919678774926828e-015 2 -1.2726870948952111
+		 3 -4.7620734361420185 4 -9.9747267352969029 5 -16.41653020978092 6 -23.592697082528083
+		 7 -31.008042719529662 8 -38.167729976426791 9 -44.578685346789442 10 -49.7520497695267
+		 11 -53.205684607461258 12 -54.462987306956478 13 -53.400909230613998 14 -50.459996632963282
+		 15 -46.00701298413081 16 -40.412158941143602 17 -34.050677888673789 18 -27.301421380760519
+		 19 -20.54513733299185 20 -14.163223691242425 21 -8.5370162011496493 22 -4.047502517144693
+		 23 -1.0751637750095508 24 9.5416640443905503e-015 25 -20.786623666345651 26 -52.121702518615166
+		 27 -50.971175752850804 28 -47.783789221183206 29 -42.953437708944719 30 -36.877960180957182
+		 31 -29.962390696405727 32 -22.618171120760255 33 -15.261029464651653 34 -8.3085667754177734
+		 35 -2.1784127254395935 36 2.7130032519175837 37 5.9509985636562499 38 7.1221316650995004
+		 39 5.9510045259160282 40 2.7130131074086083 41 -2.1784167165952191 42 -8.308554166243324
+		 43 -15.261017407516656 44 -22.618181735432088 45 -29.962382114649994 46 -36.877953921385256
+		 47 -42.953449553154336 48 -47.783787278250472 49 -50.971181613501258 50 -52.121702518615166
+		 51 -20.786623666345655 52 -20.835165847787231 53 -21.390199677348047 54 -22.34243684222044
+		 55 -23.220064553177178 56 -23.604244406366082 57 -20.786623666345651 58 -20.786623666345651
+		 59 -20.799874508932049 60 -20.838643021802412 61 -20.903103157247525 62 -20.992747902837515
+		 63 -21.10384310308196 64 -21.228236109906376 65 -21.353464805497023 66 -21.463871085450805
+		 67 -21.542271827512383 68 -21.571828757345624 69 -21.54227153571907 70 -21.463870640038653
+		 71 -21.353465012546987 72 -21.228235673185722 73 -21.103842761233306 74 -20.992748250774248
+		 75 -20.903103024478806 76 -20.838642962825354 77 -20.799874643314681 78 -20.786623666345651
+		 79 -20.786623666345651 80 -20.786623666345655 81 -20.786623666345655 82 -20.786623666345655
+		 83 -20.786623666345655 84 -20.786623666345651 85 -20.786623666345655 86 -20.786623666345655
+		 87 -20.786623666345648 88 -20.786623666345651 89 -20.786623666345655 90 -20.786623666345655
+		 91 -20.786623666345655 92 -20.786623666345648 93 -20.786623666345651 94 -20.786623666345651
+		 95 -20.786623666345655 96 -20.786623666345651 97 -20.786623666345655 98 -20.786623666345655
+		 99 -20.786623666345651 100 -20.786623666345655 101 -20.786623666345651 102 -20.786623666345658
+		 103 -20.786623666345655 104 -20.786623666345651 105 -20.786623666345651 106 -20.786623666345658
+		 107 -20.786623666345648 108 -20.786623666345648 109 -20.786623666345648 110 -20.786623666345651
+		 111 -20.786623666345651 112 -20.786623666345648 113 -20.786623666345651 114 -20.786623666345651
+		 115 -20.786623666345651 116 -20.786623666345655 117 -20.786623666345655 118 -20.786623666345651
+		 119 -20.786623666345651 120 -20.786623666345651;
+createNode animCurveTA -n "Slave_Head_joint_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 -7.951386703658789e-016 2 0.1460293687822192
+		 3 0.54949274865843067 4 1.1653410220237213 5 1.9610297578776064 6 2.9173360544765949
+		 7 4.0235328745927594 8 5.2645527564666557 9 6.5948614850773959 10 7.8944153797827461
+		 11 8.9223510566633362 12 9.3376319077884222 13 8.9852478744390893 14 8.0930566677115223
+		 15 6.9297281049443109 16 5.7019499094744095 17 4.5257639542160488 18 3.4523140550624518
+		 19 2.5001328155109697 20 1.6772533383768276 21 0.99348660881409212 22 0.46641992733872051
+		 23 0.12333376787240359 24 -7.9513867036587919e-016 25 1.9667391661570801 26 9.1139306796730555
+		 27 8.6930543488736323 28 7.611983375591123 29 6.1655881918103912 30 4.5888013167688513
+		 31 3.0269494947392435 32 1.5595661601534028 33 0.23081938120702683 34 -0.92965638845690601
+		 35 -1.8950448240700621 36 -2.635146538083025 37 -3.1131592037390514 38 -3.2840410104653519
+		 39 -3.1131600762676626 40 -2.6351480063617418 41 -1.8950442101987794 42 -0.929658424624069
+		 43 0.23081729664151762 44 1.5595681681605067 45 3.0269476779372266 46 4.5887998033428365
+		 47 6.1655915025760253 48 7.6119827507597631 49 8.6930564480021921 50 9.1139306796730555
+		 51 1.9667391661570801 52 -2.217789645613423 53 -3.2399579025714522 54 -3.8417930733397143
+		 55 -3.9857666850662188 56 -3.9376291736156124 57 1.9667391661570801 58 1.9667391661570801
+		 59 1.9303890001081396 60 1.8329368541677351 61 1.6928878840248938 62 1.5293218672830609
+		 63 1.360565938670901 64 1.2026962454975367 65 1.0682692754045264 66 0.96586263276444806
+		 67 0.90089622271987613 68 0.87791619466810578 69 0.90089645353816039 70 0.96586301919087536
+		 71 1.0682690702142383 72 1.2026967532931589 73 1.3605664128313768 74 1.5293212867989576
+		 75 1.692888150055339 76 1.8329369936956001 77 1.9303886402336325 78 1.9667391661570801
+		 79 1.9667391661570801 80 1.9667391661570801 81 1.9667391661570801 82 1.9667391661570806
+		 83 1.9667391661570806 84 1.9667391661570808 85 1.9667391661570806 86 1.9667391661570808
+		 87 1.9667391661570797 88 1.9667391661570806 89 1.9667391661570806 90 1.9667391661570806
+		 91 1.9667391661570806 92 1.9667391661570801 93 1.9667391661570806 94 1.9667391661570806
+		 95 1.9667391661570808 96 1.9667391661570806 97 1.9667391661570806 98 1.9667391661570812
+		 99 1.9667391661570806 100 1.9667391661570812 101 1.9667391661570806 102 1.9667391661570806
+		 103 1.9667391661570801 104 1.9667391661570801 105 1.9667391661570801 106 1.9667391661570806
+		 107 1.9667391661570801 108 1.9667391661570801 109 1.9667391661570801 110 1.9667391661570806
+		 111 1.9667391661570801 112 1.9667391661570797 113 1.9667391661570808 114 1.9667391661570806
+		 115 1.9667391661570806 116 1.9667391661570806 117 1.9667391661570806 118 1.9667391661570801
+		 119 1.9667391661570801 120 1.9667391661570801;
+createNode animCurveTU -n "Slave_Head_joint_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 1 2 0.99999999999999989 3 1 4 1 5 1 6 1
+		 7 1 8 0.99999999999999989 9 1 10 1 11 1 12 0.99999999999999989 13 0.99999999999999989
+		 14 1 15 1 16 1 17 1 18 1 19 1 20 1 21 1 22 1 23 1 24 1 25 1 26 0.99999999999999989
+		 27 1 28 1 29 1 30 1 31 1 32 1 33 1 34 0.99999999999999989 35 1 36 0.99999999999999989
+		 37 1 38 0.99999999999999989 39 1 40 1 41 1 42 1 43 1 44 0.99999999999999989 45 1
+		 46 1 47 0.99999999999999989 48 0.99999999999999989 49 1 50 0.99999999999999989 51 1
+		 52 1 53 1 54 1 55 1 56 1 57 1 58 1 59 1 60 1 61 1 62 1 63 1 64 1 65 1 66 1 67 1 68 1
+		 69 1 70 1 71 1 72 1 73 1 74 1 75 1 76 1 77 1 78 1 79 1 80 1 81 1 82 1 83 1 84 1 85 1
+		 86 1 87 1 88 1 89 1 90 1 91 1 92 1 93 1 94 1 95 1 96 1 97 1 98 1 99 1 100 1 101 1
+		 102 1 103 1 104 1 105 1 106 1 107 1 108 1 109 1 110 1 111 1 112 1 113 1 114 1 115 1
+		 116 1 117 1 118 1 119 1 120 1;
+createNode animCurveTU -n "Slave_Head_joint_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 1 2 0.99999999999999989 3 0.99999999999999989
+		 4 1 5 1 6 1 7 1 8 1 9 1 10 1 11 1 12 1 13 1 14 0.99999999999999989 15 1 16 1 17 1
+		 18 1 19 1 20 1 21 1 22 1 23 1 24 1 25 1 26 1 27 1 28 1 29 1 30 1 31 1 32 1 33 1 34 1
+		 35 1 36 1 37 1 38 1 39 1 40 1 41 1 42 0.99999999999999989 43 1 44 1 45 1 46 0.99999999999999989
+		 47 0.99999999999999989 48 0.99999999999999989 49 1 50 1 51 1 52 1 53 1 54 1 55 1
+		 56 0.99999999999999989 57 1 58 1 59 1 60 1 61 0.99999999999999989 62 1 63 1 64 1
+		 65 1 66 1 67 1 68 1 69 1 70 1 71 1 72 1 73 1 74 1 75 1 76 0.99999999999999989 77 0.99999999999999989
+		 78 1 79 1 80 1 81 1 82 1 83 1 84 1 85 0.99999999999999989 86 0.99999999999999989
+		 87 0.99999999999999989 88 0.99999999999999989 89 0.99999999999999989 90 1 91 1 92 1
+		 93 1 94 1 95 1 96 1 97 1 98 0.99999999999999989 99 0.99999999999999989 100 1 101 0.99999999999999989
+		 102 0.99999999999999989 103 1 104 1 105 1 106 1 107 1 108 1 109 0.99999999999999989
+		 110 1 111 1 112 0.99999999999999989 113 1 114 1 115 1 116 1 117 0.99999999999999989
+		 118 1 119 1 120 1;
+createNode animCurveTU -n "Slave_Head_joint_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 1 2 1 3 0.99999999999999989 4 1 5 0.99999999999999989
+		 6 1 7 1 8 1 9 1 10 0.99999999999999989 11 1 12 0.99999999999999989 13 1 14 0.99999999999999989
+		 15 1 16 1 17 0.99999999999999989 18 1 19 0.99999999999999989 20 1 21 1 22 1 23 0.99999999999999989
+		 24 1 25 1 26 1 27 1 28 1 29 1 30 1 31 1 32 0.99999999999999989 33 1 34 1 35 1 36 1
+		 37 1 38 1 39 1 40 1 41 0.99999999999999989 42 1 43 1 44 1 45 1 46 1 47 1 48 1 49 0.99999999999999989
+		 50 1 51 1 52 1 53 1 54 1 55 1 56 1 57 1 58 1 59 1 60 0.99999999999999989 61 1 62 1
+		 63 1 64 1 65 1 66 1 67 0.99999999999999989 68 1 69 0.99999999999999989 70 1 71 1
+		 72 1 73 1 74 1 75 1 76 1 77 1 78 1 79 1 80 1 81 1 82 1 83 1 84 0.99999999999999989
+		 85 0.99999999999999989 86 1 87 1 88 1 89 1 90 1 91 1 92 0.99999999999999989 93 1
+		 94 1 95 1 96 1 97 1 98 1 99 1 100 1 101 1 102 1 103 0.99999999999999989 104 0.99999999999999989
+		 105 1 106 0.99999999999999989 107 1 108 0.99999999999999989 109 1 110 1 111 0.99999999999999989
+		 112 1 113 1 114 1 115 1 116 1 117 0.99999999999999989 118 1 119 1 120 1;
+createNode animCurveTU -n "Slave_L_Wrist_joint_visibility";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 1 2 1 3 1 4 1 5 1 6 1 7 1 8 1 9 1 10 1
+		 11 1 12 1 13 1 14 1 15 1 16 1 17 1 18 1 19 1 20 1 21 1 22 1 23 1 24 1 25 1 26 1 27 1
+		 28 1 29 1 30 1 31 1 32 1 33 1 34 1 35 1 36 1 37 1 38 1 39 1 40 1 41 1 42 1 43 1 44 1
+		 45 1 46 1 47 1 48 1 49 1 50 1 51 1 52 1 53 1 54 1 55 1 56 1 57 1 58 1 59 1 60 1 61 1
+		 62 1 63 1 64 1 65 1 66 1 67 1 68 1 69 1 70 1 71 1 72 1 73 1 74 1 75 1 76 1 77 1 78 1
+		 79 1 80 1 81 1 82 1 83 1 84 1 85 1 86 1 87 1 88 1 89 1 90 1 91 1 92 1 93 1 94 1 95 1
+		 96 1 97 1 98 1 99 1 100 1 101 1 102 1 103 1 104 1 105 1 106 1 107 1 108 1 109 1 110 1
+		 111 1 112 1 113 1 114 1 115 1 116 1 117 1 118 1 119 1 120 1;
+createNode animCurveTL -n "Slave_L_Wrist_joint_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 0.25170219927048249 2 0.25170219927048254
+		 3 0.25170219927048243 4 0.25170219927048243 5 0.2517021992704826 6 0.25170219927048232
+		 7 0.25170219927048249 8 0.25170219927048249 9 0.25170219927048237 10 0.25170219927048232
+		 11 0.25170219927048243 12 0.25170219927048249 13 0.25170219927048237 14 0.25170219927048243
+		 15 0.25170219927048254 16 0.25170219927048232 17 0.25170219927048271 18 0.25170219927048221
+		 19 0.25170219927048221 20 0.25170219927048249 21 0.25170219927048232 22 0.25170219927048232
+		 23 0.2517021992704826 24 0.25170219927048249 25 0.25170219927048232 26 0.25170219927048254
+		 27 0.25170219927048254 28 0.25170219927048226 29 0.25170219927048276 30 0.25170219927048249
+		 31 0.25170219927048254 32 0.25170219927048232 33 0.25170219927048221 34 0.25170219927048237
+		 35 0.25170219927048226 36 0.25170219927048243 37 0.25170219927048249 38 0.25170219927048243
+		 39 0.25170219927048215 40 0.25170219927048243 41 0.25170219927048221 42 0.25170219927048232
+		 43 0.25170219927048265 44 0.25170219927048232 45 0.25170219927048249 46 0.25170219927048271
+		 47 0.25170219927048215 48 0.25170219927048232 49 0.25170219927048249 50 0.25170219927048254
+		 51 0.25170219927048232 52 0.25170219927048249 53 0.25170219927048271 54 0.25170219927048254
+		 55 0.25170219927048271 56 0.2517021992704826 57 0.25170219927048232 58 0.25170219927048232
+		 59 0.25170219927048265 60 0.25170219927048237 61 0.25170219927048265 62 0.25170219927048243
+		 63 0.25170219927048249 64 0.25170219927048243 65 0.25170219927048249 66 0.25170219927048232
+		 67 0.25170219927048243 68 0.25170219927048254 69 0.25170219927048265 70 0.25170219927048249
+		 71 0.2517021992704826 72 0.25170219927048254 73 0.25170219927048249 74 0.25170219927048254
+		 75 0.25170219927048221 76 0.25170219927048243 77 0.25170219927048243 78 0.25170219927048232
+		 79 0.25170219927048232 80 0.25170219927048232 81 0.25170219927048243 82 0.25170219927048221
+		 83 0.25170219927048221 84 0.25170219927048232 85 0.25170219927048237 86 0.2517021992704821
+		 87 0.25170219927048226 88 0.25170219927048232 89 0.25170219927048237 90 0.25170219927048204
+		 91 0.25170219927048215 92 0.25170219927048226 93 0.25170219927048232 94 0.25170219927048226
+		 95 0.25170219927048226 96 0.25170219927048226 97 0.25170219927048232 98 0.25170219927048226
+		 99 0.25170219927048226 100 0.2517021992704821 101 0.25170219927048226 102 0.25170219927048226
+		 103 0.25170219927048226 104 0.25170219927048221 105 0.25170219927048232 106 0.25170219927048226
+		 107 0.25170219927048226 108 0.25170219927048226 109 0.2517021992704821 110 0.25170219927048226
+		 111 0.25170219927048232 112 0.25170219927048215 113 0.25170219927048215 114 0.25170219927048221
+		 115 0.25170219927048243 116 0.25170219927048221 117 0.25170219927048226 118 0.25170219927048232
+		 119 0.25170219927048232 120 0.25170219927048232;
+createNode animCurveTL -n "Slave_L_Wrist_joint_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 1.1102230246251565e-016 2 0 3 1.6653345369377348e-016
+		 4 0 5 2.7755575615628914e-017 6 5.8980598183211441e-017 7 2.7755575615628914e-017
+		 8 2.7755575615628914e-017 9 1.1102230246251565e-016 10 -1.6653345369377348e-016 11 1.6653345369377348e-016
+		 12 -5.5511151231257827e-017 13 5.5511151231257827e-017 14 -5.5511151231257827e-017
+		 15 0 16 5.5511151231257827e-017 17 0 18 1.5265566588595902e-016 19 6.2450045135165055e-017
+		 20 5.5511151231257827e-017 21 1.1102230246251565e-016 22 1.1102230246251565e-016
+		 23 2.2204460492503131e-016 24 1.1102230246251565e-016 25 6.9388939039072284e-017
+		 26 5.5511151231257827e-017 27 1.1102230246251565e-016 28 0 29 2.7755575615628914e-016
+		 30 -5.5511151231257827e-017 31 1.2490009027033011e-016 32 1.2490009027033011e-016
+		 33 1.1102230246251565e-016 34 1.1102230246251565e-016 35 0 36 1.1102230246251565e-016
+		 37 1.1102230246251565e-016 38 2.2204460492503131e-016 39 1.1102230246251565e-016
+		 40 1.1102230246251565e-016 41 1.1102230246251565e-016 42 1.1102230246251565e-016
+		 43 0 44 9.7144514654701197e-017 45 1.4918621893400541e-016 46 1.1102230246251565e-016
+		 47 -1.1102230246251565e-016 48 1.6653345369377348e-016 49 5.5511151231257827e-017
+		 50 5.5511151231257827e-017 51 6.9388939039072284e-017 52 0 53 0 54 4.163336342344337e-017
+		 55 -8.3266726846886741e-017 56 5.5511151231257827e-017 57 6.9388939039072284e-017
+		 58 6.9388939039072284e-017 59 6.9388939039072284e-017 60 5.5511151231257827e-017
+		 61 -2.7755575615628914e-017 62 5.5511151231257827e-017 63 0 64 0 65 0 66 0 67 1.1102230246251565e-016
+		 68 -1.1102230246251565e-016 69 1.1102230246251565e-016 70 1.1102230246251565e-016
+		 71 -5.5511151231257827e-017 72 0 73 1.1102230246251565e-016 74 0 75 1.1102230246251565e-016
+		 76 2.7755575615628914e-017 77 -1.3877787807814457e-017 78 6.9388939039072284e-017
+		 79 6.9388939039072284e-017 80 6.2450045135165055e-017 81 2.0816681711721685e-017
+		 82 8.3266726846886741e-017 83 8.3266726846886741e-017 84 8.3266726846886741e-017
+		 85 4.163336342344337e-017 86 1.1102230246251565e-016 87 6.9388939039072284e-017 88 8.3266726846886741e-017
+		 89 6.2450045135165055e-017 90 1.1102230246251565e-016 91 6.9388939039072284e-017
+		 92 6.9388939039072284e-017 93 8.3266726846886741e-017 94 6.9388939039072284e-017
+		 95 5.5511151231257827e-017 96 8.3266726846886741e-017 97 5.5511151231257827e-017
+		 98 6.9388939039072284e-017 99 6.9388939039072284e-017 100 9.7144514654701197e-017
+		 101 6.9388939039072284e-017 102 5.5511151231257827e-017 103 6.9388939039072284e-017
+		 104 8.3266726846886741e-017 105 6.2450045135165055e-017 106 6.9388939039072284e-017
+		 107 4.163336342344337e-017 108 8.3266726846886741e-017 109 9.7144514654701197e-017
+		 110 6.9388939039072284e-017 111 8.3266726846886741e-017 112 8.3266726846886741e-017
+		 113 7.6327832942979512e-017 114 1.1796119636642288e-016 115 2.0816681711721685e-017
+		 116 8.3266726846886741e-017 117 8.3266726846886741e-017 118 6.9388939039072284e-017
+		 119 6.9388939039072284e-017 120 6.9388939039072284e-017;
+createNode animCurveTL -n "Slave_L_Wrist_joint_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 -3.3306690738754696e-016 2 -2.7755575615628914e-016
+		 3 -2.2204460492503131e-016 4 -2.2204460492503131e-016 5 -2.7755575615628914e-016
+		 6 -2.7755575615628914e-016 7 -3.3306690738754696e-016 8 -1.1102230246251565e-016
+		 9 -2.2204460492503131e-016 10 -3.3306690738754696e-016 11 -2.7755575615628914e-016
+		 12 -2.7755575615628914e-016 13 -3.3306690738754696e-016 14 -2.2204460492503131e-016
+		 15 -3.3306690738754696e-016 16 -3.8857805861880479e-016 17 -2.7755575615628914e-016
+		 18 -2.7755575615628914e-016 19 -4.4408920985006262e-016 20 -3.3306690738754696e-016
+		 21 -3.8857805861880479e-016 22 -2.2204460492503131e-016 23 -2.7755575615628914e-016
+		 24 -3.3306690738754696e-016 25 -3.3306690738754696e-016 26 -2.7755575615628914e-016
+		 27 -2.7755575615628914e-016 28 -2.7755575615628914e-016 29 -2.7755575615628914e-016
+		 30 -2.2204460492503131e-016 31 -3.3306690738754696e-016 32 -2.2204460492503131e-016
+		 33 -3.3306690738754696e-016 34 -3.3306690738754696e-016 35 -3.8857805861880479e-016
+		 36 -2.7755575615628914e-016 37 -2.7755575615628914e-016 38 -2.7755575615628914e-016
+		 39 -4.4408920985006262e-016 40 -2.2204460492503131e-016 41 -3.3306690738754696e-016
+		 42 -3.3306690738754696e-016 43 -2.2204460492503131e-016 44 -2.7755575615628914e-016
+		 45 -4.4408920985006262e-016 46 -3.3306690738754696e-016 47 -2.7755575615628914e-016
+		 48 -1.1102230246251565e-016 49 -3.8857805861880479e-016 50 -2.7755575615628914e-016
+		 51 -3.3306690738754696e-016 52 -4.9960036108132044e-016 53 -2.2204460492503131e-016
+		 54 -2.7755575615628914e-016 55 -2.2204460492503131e-016 56 -2.2204460492503131e-016
+		 57 -3.3306690738754696e-016 58 -3.3306690738754696e-016 59 -4.4408920985006262e-016
+		 60 -3.8857805861880479e-016 61 -2.2204460492503131e-016 62 -2.7755575615628914e-016
+		 63 -3.3306690738754696e-016 64 -2.7755575615628914e-016 65 -2.7755575615628914e-016
+		 66 -3.3306690738754696e-016 67 -1.6653345369377348e-016 68 -2.7755575615628914e-016
+		 69 -5.5511151231257827e-017 70 -4.4408920985006262e-016 71 -1.6653345369377348e-016
+		 72 -4.4408920985006262e-016 73 -1.1102230246251565e-016 74 -2.2204460492503131e-016
+		 75 -2.7755575615628914e-016 76 -3.8857805861880479e-016 77 -3.8857805861880479e-016
+		 78 -3.3306690738754696e-016 79 -3.3306690738754696e-016 80 -2.7755575615628914e-016
+		 81 -2.2204460492503131e-016 82 -2.2204460492503131e-016 83 -2.7755575615628914e-016
+		 84 -1.6653345369377348e-016 85 -2.7755575615628914e-016 86 -2.7755575615628914e-016
+		 87 -1.6653345369377348e-016 88 -2.7755575615628914e-016 89 -2.7755575615628914e-016
+		 90 -2.7755575615628914e-016 91 -2.7755575615628914e-016 92 -2.7755575615628914e-016
+		 93 -2.7755575615628914e-016 94 -3.3306690738754696e-016 95 -3.3306690738754696e-016
+		 96 -2.2204460492503131e-016 97 -2.7755575615628914e-016 98 -2.7755575615628914e-016
+		 99 -2.7755575615628914e-016 100 -1.6653345369377348e-016 101 -2.7755575615628914e-016
+		 102 -2.2204460492503131e-016 103 -3.3306690738754696e-016 104 -2.7755575615628914e-016
+		 105 -2.7755575615628914e-016 106 -2.7755575615628914e-016 107 -2.7755575615628914e-016
+		 108 -2.7755575615628914e-016 109 -2.2204460492503131e-016 110 -1.6653345369377348e-016
+		 111 -2.2204460492503131e-016 112 -2.2204460492503131e-016 113 -2.7755575615628914e-016
+		 114 -2.2204460492503131e-016 115 -2.7755575615628914e-016 116 -2.7755575615628914e-016
+		 117 -2.7755575615628914e-016 118 -3.3306690738754696e-016 119 -3.3306690738754696e-016
+		 120 -3.3306690738754696e-016;
+createNode animCurveTA -n "Slave_L_Wrist_joint_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 -2.9006658694947265e-012 2 -2.9006658694947265e-012
+		 3 -2.9006658694947265e-012 4 -2.9006658694947265e-012 5 -2.9006658694947265e-012
+		 6 -2.9006658694947265e-012 7 -2.9006658694947265e-012 8 -2.9006658694947265e-012
+		 9 -2.9006658694947265e-012 10 -2.9006658694947265e-012 11 -2.9006658694947265e-012
+		 12 -2.9006658694947265e-012 13 -2.9006658694947265e-012 14 -2.9006658694947265e-012
+		 15 -2.9006658694947265e-012 16 -2.9006658694947265e-012 17 -2.9006658694947265e-012
+		 18 -2.9006658694947265e-012 19 -2.9006658694947265e-012 20 -2.9006658694947265e-012
+		 21 -2.9006658694947265e-012 22 -2.9006658694947265e-012 23 -2.9006658694947265e-012
+		 24 -2.9006658694947265e-012 25 -2.9006658694947265e-012 26 -2.9006658694947265e-012
+		 27 -2.9006658694947265e-012 28 -2.9006658694947265e-012 29 -2.9006658694947265e-012
+		 30 -2.9006658694947265e-012 31 -2.9006658694947265e-012 32 -2.9006658694947265e-012
+		 33 -2.9006658694947265e-012 34 -2.9006658694947265e-012 35 -2.9006658694947265e-012
+		 36 -2.9006658694947265e-012 37 -2.9006658694947265e-012 38 -2.9006658694947265e-012
+		 39 -2.9006658694947265e-012 40 -2.9006658694947265e-012 41 -2.9006658694947265e-012
+		 42 -2.9006658694947265e-012 43 -2.9006658694947265e-012 44 -2.9006658694947265e-012
+		 45 -2.9006658694947265e-012 46 -2.9006658694947265e-012 47 -2.9006658694947265e-012
+		 48 -2.9006658694947265e-012 49 -2.9006658694947265e-012 50 -2.9006658694947265e-012
+		 51 -2.9006658694947265e-012 52 -2.9006658694947265e-012 53 -2.9006658694947265e-012
+		 54 -2.9006658694947265e-012 55 -2.9006658694947265e-012 56 -2.9006658694947265e-012
+		 57 -2.9006658694947265e-012 58 -2.9006658694947265e-012 59 -2.9006658694947265e-012
+		 60 -2.9006658694947265e-012 61 -2.9006658694947265e-012 62 -2.9006658694947265e-012
+		 63 -2.9006658694947265e-012 64 -2.9006658694947265e-012 65 -2.9006658694947265e-012
+		 66 -2.9006658694947265e-012 67 -2.9006658694947265e-012 68 -2.9006658694947265e-012
+		 69 -2.9006658694947265e-012 70 -2.9006658694947265e-012 71 -2.9006658694947265e-012
+		 72 -2.9006658694947265e-012 73 -2.9006658694947265e-012 74 -2.9006658694947265e-012
+		 75 -2.9006658694947265e-012 76 -2.9006658694947265e-012 77 -2.9006658694947265e-012
+		 78 -2.9006658694947265e-012 79 -2.9006658694947265e-012 80 -2.9006658694947265e-012
+		 81 -2.9006658694947265e-012 82 -2.9006658694947265e-012 83 -2.9006658694947265e-012
+		 84 -2.9006658694947265e-012 85 -2.9006658694947265e-012 86 -2.9006658694947265e-012
+		 87 -2.9006658694947265e-012 88 -2.9006658694947265e-012 89 -2.9006658694947265e-012
+		 90 -2.9006658694947265e-012 91 -2.9006658694947265e-012 92 -2.9006658694947265e-012
+		 93 -2.9006658694947265e-012 94 -2.9006658694947265e-012 95 -2.9006658694947265e-012
+		 96 -2.9006658694947265e-012 97 -2.9006658694947265e-012 98 -2.9006658694947265e-012
+		 99 -2.9006658694947265e-012 100 -2.9006658694947265e-012 101 -2.9006658694947265e-012
+		 102 -2.9006658694947265e-012 103 -2.9006658694947265e-012 104 -2.9006658694947265e-012
+		 105 -2.9006658694947265e-012 106 -2.9006658694947265e-012 107 -2.9006658694947265e-012
+		 108 -2.9006658694947265e-012 109 -2.9006658694947265e-012 110 -2.9006658694947265e-012
+		 111 -2.9006658694947265e-012 112 -2.9006658694947265e-012 113 -2.9006658694947265e-012
+		 114 -2.9006658694947265e-012 115 -2.9006658694947265e-012 116 -2.9006658694947265e-012
+		 117 -2.9006658694947265e-012 118 -2.9006658694947265e-012 119 -2.9006658694947265e-012
+		 120 -2.9006658694947265e-012;
+createNode animCurveTA -n "Slave_L_Wrist_joint_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 -2.8624992133172045e-014 2 -2.8624992133172045e-014
+		 3 -2.8624992133172045e-014 4 -2.8624992133172045e-014 5 -2.8624992133172045e-014
+		 6 -2.8624992133172045e-014 7 -2.8624992133172045e-014 8 -2.8624992133172045e-014
+		 9 -2.8624992133172045e-014 10 -2.8624992133172045e-014 11 -2.8624992133172045e-014
+		 12 -2.8624992133172045e-014 13 -2.8624992133172045e-014 14 -2.8624992133172045e-014
+		 15 -2.8624992133172045e-014 16 -2.8624992133172045e-014 17 -2.8624992133172045e-014
+		 18 -2.8624992133172045e-014 19 -2.8624992133172045e-014 20 -2.8624992133172045e-014
+		 21 -2.8624992133172045e-014 22 -2.8624992133172045e-014 23 -2.8624992133172045e-014
+		 24 -2.8624992133172045e-014 25 -2.8624992133172045e-014 26 -2.8624992133172045e-014
+		 27 -2.8624992133172045e-014 28 -2.8624992133172045e-014 29 -2.8624992133172045e-014
+		 30 -2.8624992133172045e-014 31 -2.8624992133172045e-014 32 -2.8624992133172045e-014
+		 33 -2.8624992133172045e-014 34 -2.8624992133172045e-014 35 -2.8624992133172045e-014
+		 36 -2.8624992133172045e-014 37 -2.8624992133172045e-014 38 -2.8624992133172045e-014
+		 39 -2.8624992133172045e-014 40 -2.8624992133172045e-014 41 -2.8624992133172045e-014
+		 42 -2.8624992133172045e-014 43 -2.8624992133172045e-014 44 -2.8624992133172045e-014
+		 45 -2.8624992133172045e-014 46 -2.8624992133172045e-014 47 -2.8624992133172045e-014
+		 48 -2.8624992133172045e-014 49 -2.8624992133172045e-014 50 -2.8624992133172045e-014
+		 51 -2.8624992133172045e-014 52 -2.8624992133172045e-014 53 -2.8624992133172045e-014
+		 54 -2.8624992133172045e-014 55 -2.8624992133172045e-014 56 -2.8624992133172045e-014
+		 57 -2.8624992133172045e-014 58 -2.8624992133172045e-014 59 -2.8624992133172045e-014
+		 60 -2.8624992133172045e-014 61 -2.8624992133172045e-014 62 -2.8624992133172045e-014
+		 63 -2.8624992133172045e-014 64 -2.8624992133172045e-014 65 -2.8624992133172045e-014
+		 66 -2.8624992133172045e-014 67 -2.8624992133172045e-014 68 -2.8624992133172045e-014
+		 69 -2.8624992133172045e-014 70 -2.8624992133172045e-014 71 -2.8624992133172045e-014
+		 72 -2.8624992133172045e-014 73 -2.8624992133172045e-014 74 -2.8624992133172045e-014
+		 75 -2.8624992133172045e-014 76 -2.8624992133172045e-014 77 -2.8624992133172045e-014
+		 78 -2.8624992133172045e-014 79 -2.8624992133172045e-014 80 -2.8624992133172045e-014
+		 81 -2.8624992133172045e-014 82 -2.8624992133172045e-014 83 -2.8624992133172045e-014
+		 84 -2.8624992133172045e-014 85 -2.8624992133172045e-014 86 -2.8624992133172045e-014
+		 87 -2.8624992133172045e-014 88 -2.8624992133172045e-014 89 -2.8624992133172045e-014
+		 90 -2.8624992133172045e-014 91 -2.8624992133172045e-014 92 -2.8624992133172045e-014
+		 93 -2.8624992133172045e-014 94 -2.8624992133172045e-014 95 -2.8624992133172045e-014
+		 96 -2.8624992133172045e-014 97 -2.8624992133172045e-014 98 -2.8624992133172045e-014
+		 99 -2.8624992133172045e-014 100 -2.8624992133172045e-014 101 -2.8624992133172045e-014
+		 102 -2.8624992133172045e-014 103 -2.8624992133172045e-014 104 -2.8624992133172045e-014
+		 105 -2.8624992133172045e-014 106 -2.8624992133172045e-014 107 -2.8624992133172045e-014
+		 108 -2.8624992133172045e-014 109 -2.8624992133172045e-014 110 -2.8624992133172045e-014
+		 111 -2.8624992133172045e-014 112 -2.8624992133172045e-014 113 -2.8624992133172045e-014
+		 114 -2.8624992133172045e-014 115 -2.8624992133172045e-014 116 -2.8624992133172045e-014
+		 117 -2.8624992133172045e-014 118 -2.8624992133172045e-014 119 -2.8624992133172045e-014
+		 120 -2.8624992133172045e-014;
+createNode animCurveTA -n "Slave_L_Wrist_joint_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 -1.5902773407316855e-014 2 -1.5902773407316855e-014
+		 3 -1.5902773407316855e-014 4 -1.5902773407316855e-014 5 -1.5902773407316855e-014
+		 6 -1.5902773407316855e-014 7 -1.5902773407316855e-014 8 -1.5902773407316855e-014
+		 9 -1.5902773407316855e-014 10 -1.5902773407316855e-014 11 -1.5902773407316855e-014
+		 12 -1.5902773407316855e-014 13 -1.5902773407316855e-014 14 -1.5902773407316855e-014
+		 15 -1.5902773407316855e-014 16 -1.5902773407316855e-014 17 -1.5902773407316855e-014
+		 18 -1.5902773407316855e-014 19 -1.5902773407316855e-014 20 -1.5902773407316855e-014
+		 21 -1.5902773407316855e-014 22 -1.5902773407316855e-014 23 -1.5902773407316855e-014
+		 24 -1.5902773407316855e-014 25 -1.5902773407316855e-014 26 -1.5902773407316855e-014
+		 27 -1.5902773407316855e-014 28 -1.5902773407316855e-014 29 -1.5902773407316855e-014
+		 30 -1.5902773407316855e-014 31 -1.5902773407316855e-014 32 -1.5902773407316855e-014
+		 33 -1.5902773407316855e-014 34 -1.5902773407316855e-014 35 -1.5902773407316855e-014
+		 36 -1.5902773407316855e-014 37 -1.5902773407316855e-014 38 -1.5902773407316855e-014
+		 39 -1.5902773407316855e-014 40 -1.5902773407316855e-014 41 -1.5902773407316855e-014
+		 42 -1.5902773407316855e-014 43 -1.5902773407316855e-014 44 -1.5902773407316855e-014
+		 45 -1.5902773407316855e-014 46 -1.5902773407316855e-014 47 -1.5902773407316855e-014
+		 48 -1.5902773407316855e-014 49 -1.5902773407316855e-014 50 -1.5902773407316855e-014
+		 51 -1.5902773407316855e-014 52 -1.5902773407316855e-014 53 -1.5902773407316855e-014
+		 54 -1.5902773407316855e-014 55 -1.5902773407316855e-014 56 -1.5902773407316855e-014
+		 57 -1.5902773407316855e-014 58 -1.5902773407316855e-014 59 -1.5902773407316855e-014
+		 60 -1.5902773407316855e-014 61 -1.5902773407316855e-014 62 -1.5902773407316855e-014
+		 63 -1.5902773407316855e-014 64 -1.5902773407316855e-014 65 -1.5902773407316855e-014
+		 66 -1.5902773407316855e-014 67 -1.5902773407316855e-014 68 -1.5902773407316855e-014
+		 69 -1.5902773407316855e-014 70 -1.5902773407316855e-014 71 -1.5902773407316855e-014
+		 72 -1.5902773407316855e-014 73 -1.5902773407316855e-014 74 -1.5902773407316855e-014
+		 75 -1.5902773407316855e-014 76 -1.5902773407316855e-014 77 -1.5902773407316855e-014
+		 78 -1.5902773407316855e-014 79 -1.5902773407316855e-014 80 -1.5902773407316855e-014
+		 81 -1.5902773407316855e-014 82 -1.5902773407316855e-014 83 -1.5902773407316855e-014
+		 84 -1.5902773407316855e-014 85 -1.5902773407316855e-014 86 -1.5902773407316855e-014
+		 87 -1.5902773407316855e-014 88 -1.5902773407316855e-014 89 -1.5902773407316855e-014
+		 90 -1.5902773407316855e-014 91 -1.5902773407316855e-014 92 -1.5902773407316855e-014
+		 93 -1.5902773407316855e-014 94 -1.5902773407316855e-014 95 -1.5902773407316855e-014
+		 96 -1.5902773407316855e-014 97 -1.5902773407316855e-014 98 -1.5902773407316855e-014
+		 99 -1.5902773407316855e-014 100 -1.5902773407316855e-014 101 -1.5902773407316855e-014
+		 102 -1.5902773407316855e-014 103 -1.5902773407316855e-014 104 -1.5902773407316855e-014
+		 105 -1.5902773407316855e-014 106 -1.5902773407316855e-014 107 -1.5902773407316855e-014
+		 108 -1.5902773407316855e-014 109 -1.5902773407316855e-014 110 -1.5902773407316855e-014
+		 111 -1.5902773407316855e-014 112 -1.5902773407316855e-014 113 -1.5902773407316855e-014
+		 114 -1.5902773407316855e-014 115 -1.5902773407316855e-014 116 -1.5902773407316855e-014
+		 117 -1.5902773407316855e-014 118 -1.5902773407316855e-014 119 -1.5902773407316855e-014
+		 120 -1.5902773407316855e-014;
+createNode animCurveTU -n "Slave_L_Wrist_joint_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 1 2 1 3 0.99999999999999989 4 0.99999999999999967
+		 5 1 6 1 7 0.99999999999999989 8 0.99999999999999989 9 0.99999999999999989 10 0.99999999999999989
+		 11 0.99999999999999989 12 0.99999999999999978 13 1 14 1 15 0.99999999999999989 16 0.99999999999999989
+		 17 1.0000000000000002 18 0.99999999999999978 19 0.99999999999999989 20 1 21 1 22 1
+		 23 1 24 1 25 0.99999999999999989 26 0.99999999999999989 27 0.99999999999999989 28 1
+		 29 1 30 0.99999999999999978 31 1 32 1 33 1 34 0.99999999999999989 35 0.99999999999999989
+		 36 0.99999999999999978 37 0.99999999999999978 38 0.99999999999999989 39 1 40 1 41 1
+		 42 0.99999999999999978 43 1 44 0.99999999999999989 45 1 46 1 47 1.0000000000000002
+		 48 1.0000000000000002 49 1 50 0.99999999999999989 51 0.99999999999999989 52 0.99999999999999989
+		 53 0.99999999999999978 54 1 55 0.99999999999999989 56 0.99999999999999989 57 0.99999999999999989
+		 58 0.99999999999999989 59 0.99999999999999989 60 0.99999999999999978 61 0.99999999999999978
+		 62 0.99999999999999978 63 1 64 0.99999999999999989 65 0.99999999999999989 66 0.99999999999999989
+		 67 1.0000000000000002 68 1 69 0.99999999999999989 70 0.99999999999999978 71 0.99999999999999989
+		 72 0.99999999999999989 73 0.99999999999999989 74 1 75 0.99999999999999989 76 0.99999999999999978
+		 77 0.99999999999999989 78 0.99999999999999989 79 0.99999999999999989 80 0.99999999999999989
+		 81 0.99999999999999989 82 0.99999999999999989 83 0.99999999999999989 84 0.99999999999999989
+		 85 0.99999999999999989 86 0.99999999999999989 87 0.99999999999999989 88 0.99999999999999989
+		 89 0.99999999999999989 90 0.99999999999999989 91 0.99999999999999989 92 0.99999999999999989
+		 93 0.99999999999999989 94 0.99999999999999989 95 0.99999999999999989 96 0.99999999999999989
+		 97 0.99999999999999989 98 0.99999999999999989 99 0.99999999999999989 100 0.99999999999999989
+		 101 0.99999999999999989 102 0.99999999999999989 103 0.99999999999999989 104 0.99999999999999989
+		 105 0.99999999999999989 106 0.99999999999999989 107 0.99999999999999989 108 0.99999999999999989
+		 109 0.99999999999999989 110 0.99999999999999989 111 0.99999999999999989 112 0.99999999999999989
+		 113 0.99999999999999989 114 0.99999999999999989 115 0.99999999999999989 116 0.99999999999999989
+		 117 0.99999999999999989 118 0.99999999999999989 119 0.99999999999999989 120 0.99999999999999989;
+createNode animCurveTU -n "Slave_L_Wrist_joint_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 0.99999999999999989 2 1.0000000000000002
+		 3 1 4 0.99999999999999978 5 1 6 0.99999999999999989 7 0.99999999999999989 8 0.99999999999999989
+		 9 1 10 1 11 0.99999999999999989 12 0.99999999999999978 13 1 14 1.0000000000000002
+		 15 1 16 1 17 1 18 0.99999999999999978 19 0.99999999999999989 20 0.99999999999999989
+		 21 1 22 1 23 1 24 0.99999999999999989 25 1 26 1 27 1 28 1.0000000000000002 29 1.0000000000000002
+		 30 0.99999999999999989 31 1 32 1 33 1 34 1 35 0.99999999999999989 36 0.99999999999999989
+		 37 0.99999999999999989 38 0.99999999999999989 39 1 40 1 41 0.99999999999999989 42 0.99999999999999989
+		 43 1 44 1 45 0.99999999999999989 46 1 47 1.0000000000000002 48 1 49 1 50 1 51 1 52 1
+		 53 0.99999999999999989 54 1 55 0.99999999999999989 56 1 57 1 58 1 59 0.99999999999999989
+		 60 0.99999999999999978 61 0.99999999999999989 62 1 63 1.0000000000000002 64 0.99999999999999989
+		 65 1 66 0.99999999999999989 67 1 68 1 69 1 70 0.99999999999999989 71 1 72 1 73 1
+		 74 1 75 1.0000000000000002 76 0.99999999999999989 77 1 78 1 79 1 80 1 81 1 82 1 83 1
+		 84 1 85 1 86 1 87 1 88 1 89 1 90 1 91 1 92 1 93 1 94 1 95 1 96 1 97 1 98 1 99 1 100 1
+		 101 1 102 1 103 1 104 1 105 1 106 1 107 1 108 1 109 1 110 1 111 1 112 1 113 1 114 1
+		 115 1 116 1 117 1 118 1 119 1 120 1;
+createNode animCurveTU -n "Slave_L_Wrist_joint_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 0.99999999999999989 2 1 3 0.99999999999999989
+		 4 0.99999999999999989 5 1 6 0.99999999999999989 7 0.99999999999999978 8 0.99999999999999978
+		 9 0.99999999999999989 10 0.99999999999999978 11 1 12 0.99999999999999978 13 0.99999999999999989
+		 14 1 15 0.99999999999999978 16 0.99999999999999989 17 1 18 0.99999999999999978 19 0.99999999999999978
+		 20 1 21 1 22 1.0000000000000002 23 0.99999999999999989 24 0.99999999999999989 25 0.99999999999999989
+		 26 1 27 0.99999999999999989 28 1 29 1 30 1 31 1 32 0.99999999999999989 33 1 34 0.99999999999999989
+		 35 0.99999999999999989 36 0.99999999999999978 37 1 38 0.99999999999999978 39 1 40 1
+		 41 1 42 0.99999999999999989 43 1.0000000000000002 44 0.99999999999999989 45 0.99999999999999989
+		 46 1 47 1 48 1 49 1 50 1 51 0.99999999999999989 52 0.99999999999999989 53 0.99999999999999978
+		 54 1.0000000000000002 55 1 56 1 57 0.99999999999999989 58 0.99999999999999989 59 0.99999999999999978
+		 60 0.99999999999999989 61 0.99999999999999978 62 0.99999999999999978 63 1.0000000000000002
+		 64 0.99999999999999989 65 1 66 1 67 1.0000000000000002 68 1 69 0.99999999999999989
+		 70 0.99999999999999978 71 0.99999999999999989 72 1 73 0.99999999999999978 74 1 75 1.0000000000000002
+		 76 0.99999999999999978 77 1 78 0.99999999999999989 79 0.99999999999999989 80 0.99999999999999989
+		 81 0.99999999999999989 82 0.99999999999999989 83 0.99999999999999989 84 0.99999999999999989
+		 85 0.99999999999999989 86 0.99999999999999989 87 0.99999999999999989 88 0.99999999999999989
+		 89 0.99999999999999989 90 0.99999999999999989 91 0.99999999999999989 92 0.99999999999999989
+		 93 0.99999999999999989 94 0.99999999999999989 95 0.99999999999999989 96 0.99999999999999989
+		 97 0.99999999999999989 98 0.99999999999999989 99 0.99999999999999989 100 0.99999999999999989
+		 101 0.99999999999999989 102 0.99999999999999989 103 0.99999999999999989 104 0.99999999999999989
+		 105 0.99999999999999989 106 0.99999999999999989 107 0.99999999999999989 108 0.99999999999999989
+		 109 0.99999999999999989 110 0.99999999999999989 111 0.99999999999999989 112 0.99999999999999989
+		 113 0.99999999999999989 114 0.99999999999999989 115 0.99999999999999989 116 0.99999999999999989
+		 117 0.99999999999999989 118 0.99999999999999989 119 0.99999999999999989 120 0.99999999999999989;
+createNode animCurveTU -n "Slave_L_Elbow_joint_visibility";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 1 2 1 3 1 4 1 5 1 6 1 7 1 8 1 9 1 10 1
+		 11 1 12 1 13 1 14 1 15 1 16 1 17 1 18 1 19 1 20 1 21 1 22 1 23 1 24 1 25 1 26 1 27 1
+		 28 1 29 1 30 1 31 1 32 1 33 1 34 1 35 1 36 1 37 1 38 1 39 1 40 1 41 1 42 1 43 1 44 1
+		 45 1 46 1 47 1 48 1 49 1 50 1 51 1 52 1 53 1 54 1 55 1 56 1 57 1 58 1 59 1 60 1 61 1
+		 62 1 63 1 64 1 65 1 66 1 67 1 68 1 69 1 70 1 71 1 72 1 73 1 74 1 75 1 76 1 77 1 78 1
+		 79 1 80 1 81 1 82 1 83 1 84 1 85 1 86 1 87 1 88 1 89 1 90 1 91 1 92 1 93 1 94 1 95 1
+		 96 1 97 1 98 1 99 1 100 1 101 1 102 1 103 1 104 1 105 1 106 1 107 1 108 1 109 1 110 1
+		 111 1 112 1 113 1 114 1 115 1 116 1 117 1 118 1 119 1 120 1;
+createNode animCurveTL -n "Slave_L_Elbow_joint_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 0.26825357849157316 2 0.26825357849157294
+		 3 0.26825357849157283 4 0.26825357849157316 5 0.26825357849157305 6 0.26825357849157316
+		 7 0.26825357849157239 8 0.26825357849157283 9 0.26825357849157305 10 0.26825357849157305
+		 11 0.26825357849157294 12 0.26825357849157316 13 0.26825357849157305 14 0.26825357849157283
+		 15 0.26825357849157272 16 0.26825357849157261 17 0.26825357849157228 18 0.26825357849157327
+		 19 0.26825357849157339 20 0.26825357849157261 21 0.26825357849157327 22 0.26825357849157305
+		 23 0.26825357849157272 24 0.26825357849157316 25 0.26825357849157294 26 0.2682535784915735
+		 27 0.26825357849157283 28 0.26825357849157283 29 0.26825357849157239 30 0.26825357849157316
+		 31 0.26825357849157305 32 0.26825357849157327 33 0.26825357849157316 34 0.26825357849157327
+		 35 0.26825357849157305 36 0.26825357849157272 37 0.26825357849157294 38 0.26825357849157327
+		 39 0.2682535784915735 40 0.26825357849157305 41 0.26825357849157294 42 0.26825357849157316
+		 43 0.26825357849157272 44 0.26825357849157305 45 0.26825357849157305 46 0.26825357849157294
+		 47 0.26825357849157305 48 0.26825357849157339 49 0.26825357849157339 50 0.2682535784915735
+		 51 0.26825357849157294 52 0.26825357849157272 53 0.26825357849157261 54 0.26825357849157228
+		 55 0.2682535784915725 56 0.26825357849157283 57 0.26825357849157294 58 0.26825357849157294
+		 59 0.26825357849157283 60 0.26825357849157305 61 0.26825357849157316 62 0.26825357849157283
+		 63 0.26825357849157305 64 0.26825357849157294 65 0.26825357849157316 66 0.26825357849157305
+		 67 0.26825357849157316 68 0.26825357849157294 69 0.26825357849157283 70 0.26825357849157305
+		 71 0.26825357849157283 72 0.26825357849157316 73 0.26825357849157261 74 0.26825357849157316
+		 75 0.26825357849157327 76 0.26825357849157305 77 0.26825357849157305 78 0.26825357849157294
+		 79 0.26825357849157294 80 0.26825357849157272 81 0.26825357849157272 82 0.26825357849157283
+		 83 0.26825357849157294 84 0.26825357849157294 85 0.26825357849157283 86 0.26825357849157327
+		 87 0.26825357849157316 88 0.26825357849157305 89 0.26825357849157294 90 0.26825357849157327
+		 91 0.26825357849157316 92 0.26825357849157316 93 0.26825357849157316 94 0.26825357849157316
+		 95 0.26825357849157316 96 0.26825357849157305 97 0.26825357849157316 98 0.26825357849157316
+		 99 0.26825357849157316 100 0.26825357849157327 101 0.26825357849157305 102 0.26825357849157316
+		 103 0.26825357849157305 104 0.26825357849157316 105 0.26825357849157294 106 0.26825357849157316
+		 107 0.26825357849157316 108 0.26825357849157305 109 0.26825357849157327 110 0.26825357849157316
+		 111 0.26825357849157316 112 0.26825357849157327 113 0.26825357849157316 114 0.26825357849157305
+		 115 0.26825357849157272 116 0.26825357849157305 117 0.26825357849157305 118 0.26825357849157294
+		 119 0.26825357849157294 120 0.26825357849157294;
+createNode animCurveTL -n "Slave_L_Elbow_joint_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 2.2204460492503131e-016 2 5.5511151231257827e-017
+		 3 -5.5511151231257827e-017 4 1.6653345369377348e-016 5 1.1102230246251565e-016 6 1.3877787807814457e-016
+		 7 -3.4694469519536142e-017 8 0 9 1.9428902930940239e-016 10 2.7755575615628914e-017
+		 11 5.5511151231257827e-017 12 2.2204460492503131e-016 13 1.1102230246251565e-016
+		 14 -8.3266726846886741e-017 15 -2.7755575615628914e-017 16 1.1102230246251565e-016
+		 17 4.163336342344337e-017 18 6.9388939039072284e-017 19 8.3266726846886741e-017 20 0
+		 21 2.7755575615628914e-016 22 1.1102230246251565e-016 23 -2.7755575615628914e-016
+		 24 2.2204460492503131e-016 25 6.9388939039072284e-017 26 5.5511151231257827e-016
+		 27 0 28 2.2204460492503131e-016 29 -5.5511151231257827e-017 30 1.6653345369377348e-016
+		 31 2.7755575615628914e-017 32 -6.9388939039072284e-017 33 -1.1102230246251565e-016
+		 34 2.7755575615628914e-017 35 1.1102230246251565e-016 36 2.2204460492503131e-016
+		 37 1.1102230246251565e-016 38 1.1102230246251565e-016 39 -2.2204460492503131e-016
+		 40 5.5511151231257827e-017 41 1.1102230246251565e-016 42 1.1102230246251565e-016
+		 43 2.7755575615628914e-017 44 -4.163336342344337e-017 45 2.7755575615628914e-017
+		 46 1.6653345369377348e-016 47 -1.6653345369377348e-016 48 0 49 4.4408920985006262e-016
+		 50 5.5511151231257827e-016 51 6.9388939039072284e-017 52 0 53 -1.1102230246251565e-016
+		 54 5.5511151231257827e-017 55 -1.3877787807814457e-017 56 1.6653345369377348e-016
+		 57 6.9388939039072284e-017 58 6.9388939039072284e-017 59 2.2204460492503131e-016
+		 60 5.5511151231257827e-017 61 -9.0205620750793969e-017 62 1.2490009027033011e-016
+		 63 5.5511151231257827e-017 64 -5.5511151231257827e-017 65 5.5511151231257827e-017
+		 66 2.2204460492503131e-016 67 1.6653345369377348e-016 68 0 69 2.2204460492503131e-016
+		 70 5.5511151231257827e-017 71 5.5511151231257827e-017 72 0 73 8.3266726846886741e-017
+		 74 -2.7755575615628914e-017 75 5.5511151231257827e-017 76 3.4694469519536142e-017
+		 77 4.163336342344337e-017 78 6.9388939039072284e-017 79 6.9388939039072284e-017 80 5.5511151231257827e-017
+		 81 6.9388939039072284e-017 82 6.9388939039072284e-017 83 5.5511151231257827e-017
+		 84 5.5511151231257827e-017 85 6.9388939039072284e-017 86 5.5511151231257827e-017
+		 87 9.7144514654701197e-017 88 8.3266726846886741e-017 89 8.3266726846886741e-017
+		 90 9.7144514654701197e-017 91 9.7144514654701197e-017 92 8.3266726846886741e-017
+		 93 8.3266726846886741e-017 94 9.7144514654701197e-017 95 8.3266726846886741e-017
+		 96 8.3266726846886741e-017 97 9.7144514654701197e-017 98 6.9388939039072284e-017
+		 99 9.7144514654701197e-017 100 9.7144514654701197e-017 101 8.3266726846886741e-017
+		 102 8.3266726846886741e-017 103 8.3266726846886741e-017 104 8.3266726846886741e-017
+		 105 8.3266726846886741e-017 106 9.7144514654701197e-017 107 8.3266726846886741e-017
+		 108 8.3266726846886741e-017 109 9.7144514654701197e-017 110 9.7144514654701197e-017
+		 111 5.5511151231257827e-017 112 1.1102230246251565e-016 113 8.3266726846886741e-017
+		 114 4.163336342344337e-017 115 6.9388939039072284e-017 116 8.3266726846886741e-017
+		 117 8.3266726846886741e-017 118 6.9388939039072284e-017 119 6.9388939039072284e-017
+		 120 6.9388939039072284e-017;
+createNode animCurveTL -n "Slave_L_Elbow_joint_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 -5.5511151231257827e-017 2 0 3 -5.5511151231257827e-017
+		 4 -2.2204460492503131e-016 5 -5.5511151231257827e-017 6 -1.1102230246251565e-016
+		 7 0 8 1.6653345369377348e-016 9 -5.5511151231257827e-017 10 -5.5511151231257827e-017
+		 11 5.5511151231257827e-017 12 5.5511151231257827e-017 13 -5.5511151231257827e-017
+		 14 5.5511151231257827e-017 15 5.5511151231257827e-017 16 1.1102230246251565e-016
+		 17 2.2204460492503131e-016 18 1.6653345369377348e-016 19 0 20 1.1102230246251565e-016
+		 21 5.5511151231257827e-017 22 1.6653345369377348e-016 23 1.6653345369377348e-016
+		 24 -5.5511151231257827e-017 25 1.6653345369377348e-016 26 -5.5511151231257827e-017
+		 27 -1.1102230246251565e-016 28 5.5511151231257827e-017 29 1.6653345369377348e-016
+		 30 2.7755575615628914e-016 31 2.2204460492503131e-016 32 2.2204460492503131e-016
+		 33 3.8857805861880479e-016 34 3.3306690738754696e-016 35 5.5511151231257827e-017
+		 36 1.1102230246251565e-016 37 -1.6653345369377348e-016 38 1.1102230246251565e-016
+		 39 1.6653345369377348e-016 40 -1.6653345369377348e-016 41 5.5511151231257827e-017
+		 42 5.5511151231257827e-017 43 1.1102230246251565e-016 44 0 45 5.5511151231257827e-017
+		 46 0 47 2.7755575615628914e-016 48 5.5511151231257827e-017 49 5.5511151231257827e-017
+		 50 -5.5511151231257827e-017 51 1.6653345369377348e-016 52 2.2204460492503131e-016
+		 53 -5.5511151231257827e-017 54 1.6653345369377348e-016 55 5.5511151231257827e-017
+		 56 1.6653345369377348e-016 57 1.6653345369377348e-016 58 1.6653345369377348e-016
+		 59 -5.5511151231257827e-017 60 2.2204460492503131e-016 61 5.5511151231257827e-017
+		 62 1.1102230246251565e-016 63 1.6653345369377348e-016 64 0 65 1.6653345369377348e-016
+		 66 0 67 1.6653345369377348e-016 68 1.1102230246251565e-016 69 1.1102230246251565e-016
+		 70 3.3306690738754696e-016 71 1.6653345369377348e-016 72 3.3306690738754696e-016
+		 73 1.6653345369377348e-016 74 1.6653345369377348e-016 75 0 76 1.6653345369377348e-016
+		 77 1.6653345369377348e-016 78 1.6653345369377348e-016 79 1.6653345369377348e-016
+		 80 2.2204460492503131e-016 81 1.1102230246251565e-016 82 1.6653345369377348e-016
+		 83 1.6653345369377348e-016 84 1.1102230246251565e-016 85 1.6653345369377348e-016
+		 86 1.6653345369377348e-016 87 1.1102230246251565e-016 88 1.1102230246251565e-016
+		 89 1.6653345369377348e-016 90 2.2204460492503131e-016 91 1.6653345369377348e-016
+		 92 1.6653345369377348e-016 93 1.6653345369377348e-016 94 2.2204460492503131e-016
+		 95 2.2204460492503131e-016 96 1.6653345369377348e-016 97 1.6653345369377348e-016
+		 98 2.2204460492503131e-016 99 1.6653345369377348e-016 100 5.5511151231257827e-017
+		 101 1.6653345369377348e-016 102 1.6653345369377348e-016 103 2.2204460492503131e-016
+		 104 1.6653345369377348e-016 105 1.6653345369377348e-016 106 2.2204460492503131e-016
+		 107 1.6653345369377348e-016 108 2.2204460492503131e-016 109 1.6653345369377348e-016
+		 110 5.5511151231257827e-017 111 1.6653345369377348e-016 112 1.6653345369377348e-016
+		 113 1.6653345369377348e-016 114 1.1102230246251565e-016 115 1.6653345369377348e-016
+		 116 2.2204460492503131e-016 117 1.6653345369377348e-016 118 1.6653345369377348e-016
+		 119 1.6653345369377348e-016 120 1.6653345369377348e-016;
+createNode animCurveTA -n "Slave_L_Elbow_joint_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 3.3097647153979723e-014 2 3.3097647153979723e-014
+		 3 3.3097647153979723e-014 4 3.3097647153979723e-014 5 3.3097647153979723e-014 6 3.3097647153979723e-014
+		 7 3.3097647153979723e-014 8 3.3097647153979723e-014 9 3.3097647153979723e-014 10 3.3097647153979723e-014
+		 11 3.3097647153979723e-014 12 3.3097647153979723e-014 13 3.3097647153979723e-014
+		 14 3.3097647153979723e-014 15 3.3097647153979723e-014 16 3.3097647153979723e-014
+		 17 3.3097647153979723e-014 18 3.3097647153979723e-014 19 3.3097647153979723e-014
+		 20 3.3097647153979723e-014 21 3.3097647153979723e-014 22 3.3097647153979723e-014
+		 23 3.3097647153979723e-014 24 3.3097647153979723e-014 25 3.3097647153979723e-014
+		 26 3.3097647153979723e-014 27 3.3097647153979723e-014 28 3.3097647153979723e-014
+		 29 3.3097647153979723e-014 30 3.3097647153979723e-014 31 3.3097647153979723e-014
+		 32 3.3097647153979723e-014 33 3.3097647153979723e-014 34 3.3097647153979723e-014
+		 35 3.3097647153979723e-014 36 3.3097647153979723e-014 37 3.3097647153979723e-014
+		 38 3.3097647153979723e-014 39 3.3097647153979723e-014 40 3.3097647153979723e-014
+		 41 3.3097647153979723e-014 42 3.3097647153979723e-014 43 3.3097647153979723e-014
+		 44 3.3097647153979723e-014 45 3.3097647153979723e-014 46 3.3097647153979723e-014
+		 47 3.3097647153979723e-014 48 3.3097647153979723e-014 49 3.3097647153979723e-014
+		 50 3.3097647153979723e-014 51 3.3097647153979723e-014 52 3.3097647153979723e-014
+		 53 3.3097647153979723e-014 54 3.3097647153979723e-014 55 3.3097647153979723e-014
+		 56 3.3097647153979723e-014 57 3.3097647153979723e-014 58 3.3097647153979723e-014
+		 59 3.3097647153979723e-014 60 3.3097647153979723e-014 61 3.3097647153979723e-014
+		 62 3.3097647153979723e-014 63 3.3097647153979723e-014 64 3.3097647153979723e-014
+		 65 3.3097647153979723e-014 66 3.3097647153979723e-014 67 3.3097647153979723e-014
+		 68 3.3097647153979723e-014 69 3.3097647153979723e-014 70 3.3097647153979723e-014
+		 71 3.3097647153979723e-014 72 3.3097647153979723e-014 73 3.3097647153979723e-014
+		 74 3.3097647153979723e-014 75 3.3097647153979723e-014 76 3.3097647153979723e-014
+		 77 3.3097647153979723e-014 78 3.3097647153979723e-014 79 3.3097647153979723e-014
+		 80 3.3097647153979723e-014 81 3.3097647153979723e-014 82 3.3097647153979723e-014
+		 83 3.3097647153979723e-014 84 3.3097647153979723e-014 85 3.3097647153979723e-014
+		 86 3.3097647153979723e-014 87 3.3097647153979723e-014 88 3.3097647153979723e-014
+		 89 3.3097647153979723e-014 90 3.3097647153979723e-014 91 3.3097647153979723e-014
+		 92 3.3097647153979723e-014 93 3.3097647153979723e-014 94 3.3097647153979723e-014
+		 95 3.3097647153979723e-014 96 3.3097647153979723e-014 97 3.3097647153979723e-014
+		 98 3.3097647153979723e-014 99 3.3097647153979723e-014 100 3.3097647153979723e-014
+		 101 3.3097647153979723e-014 102 3.3097647153979723e-014 103 3.3097647153979723e-014
+		 104 3.3097647153979723e-014 105 3.3097647153979723e-014 106 3.3097647153979723e-014
+		 107 3.3097647153979723e-014 108 3.3097647153979723e-014 109 3.3097647153979723e-014
+		 110 3.3097647153979723e-014 111 3.3097647153979723e-014 112 3.3097647153979723e-014
+		 113 3.3097647153979723e-014 114 3.3097647153979723e-014 115 3.3097647153979723e-014
+		 116 3.3097647153979723e-014 117 3.3097647153979723e-014 118 3.3097647153979723e-014
+		 119 3.3097647153979723e-014 120 3.3097647153979723e-014;
+createNode animCurveTA -n "Slave_L_Elbow_joint_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 -1.190689098768593e-014 2 -1.190689098768593e-014
+		 3 -1.190689098768593e-014 4 -1.190689098768593e-014 5 -1.190689098768593e-014 6 -1.190689098768593e-014
+		 7 -1.190689098768593e-014 8 -1.190689098768593e-014 9 -1.190689098768593e-014 10 -1.190689098768593e-014
+		 11 -1.190689098768593e-014 12 -1.190689098768593e-014 13 -1.190689098768593e-014
+		 14 -1.190689098768593e-014 15 -1.190689098768593e-014 16 -1.190689098768593e-014
+		 17 -1.190689098768593e-014 18 -1.190689098768593e-014 19 -1.190689098768593e-014
+		 20 -1.190689098768593e-014 21 -1.190689098768593e-014 22 -1.190689098768593e-014
+		 23 -1.190689098768593e-014 24 -1.190689098768593e-014 25 -1.190689098768593e-014
+		 26 -1.190689098768593e-014 27 -1.190689098768593e-014 28 -1.190689098768593e-014
+		 29 -1.190689098768593e-014 30 -1.190689098768593e-014 31 -1.190689098768593e-014
+		 32 -1.190689098768593e-014 33 -1.190689098768593e-014 34 -1.190689098768593e-014
+		 35 -1.190689098768593e-014 36 -1.190689098768593e-014 37 -1.190689098768593e-014
+		 38 -1.190689098768593e-014 39 -1.190689098768593e-014 40 -1.190689098768593e-014
+		 41 -1.190689098768593e-014 42 -1.190689098768593e-014 43 -1.190689098768593e-014
+		 44 -1.190689098768593e-014 45 -1.190689098768593e-014 46 -1.190689098768593e-014
+		 47 -1.190689098768593e-014 48 -1.190689098768593e-014 49 -1.190689098768593e-014
+		 50 -1.190689098768593e-014 51 -1.190689098768593e-014 52 -1.190689098768593e-014
+		 53 -1.190689098768593e-014 54 -1.190689098768593e-014 55 -1.190689098768593e-014
+		 56 -1.190689098768593e-014 57 -1.190689098768593e-014 58 -1.190689098768593e-014
+		 59 -1.190689098768593e-014 60 -1.190689098768593e-014 61 -1.190689098768593e-014
+		 62 -1.190689098768593e-014 63 -1.190689098768593e-014 64 -1.190689098768593e-014
+		 65 -1.190689098768593e-014 66 -1.190689098768593e-014 67 -1.190689098768593e-014
+		 68 -1.190689098768593e-014 69 -1.190689098768593e-014 70 -1.190689098768593e-014
+		 71 -1.190689098768593e-014 72 -1.190689098768593e-014 73 -1.190689098768593e-014
+		 74 -1.190689098768593e-014 75 -1.190689098768593e-014 76 -1.190689098768593e-014
+		 77 -1.190689098768593e-014 78 -1.190689098768593e-014 79 -1.190689098768593e-014
+		 80 -1.190689098768593e-014 81 -1.190689098768593e-014 82 -1.190689098768593e-014
+		 83 -1.190689098768593e-014 84 -1.190689098768593e-014 85 -1.190689098768593e-014
+		 86 -1.190689098768593e-014 87 -1.190689098768593e-014 88 -1.190689098768593e-014
+		 89 -1.190689098768593e-014 90 -1.190689098768593e-014 91 -1.190689098768593e-014
+		 92 -1.190689098768593e-014 93 -1.190689098768593e-014 94 -1.190689098768593e-014
+		 95 -1.190689098768593e-014 96 -1.190689098768593e-014 97 -1.190689098768593e-014
+		 98 -1.190689098768593e-014 99 -1.190689098768593e-014 100 -1.190689098768593e-014
+		 101 -1.190689098768593e-014 102 -1.190689098768593e-014 103 -1.190689098768593e-014
+		 104 -1.190689098768593e-014 105 -1.190689098768593e-014 106 -1.190689098768593e-014
+		 107 -1.190689098768593e-014 108 -1.190689098768593e-014 109 -1.190689098768593e-014
+		 110 -1.190689098768593e-014 111 -1.190689098768593e-014 112 -1.190689098768593e-014
+		 113 -1.190689098768593e-014 114 -1.190689098768593e-014 115 -1.190689098768593e-014
+		 116 -1.190689098768593e-014 117 -1.190689098768593e-014 118 -1.190689098768593e-014
+		 119 -1.190689098768593e-014 120 -1.190689098768593e-014;
+createNode animCurveTA -n "Slave_L_Elbow_joint_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 -6.8895193875207672e-015 2 -6.8895193875207672e-015
+		 3 -6.8895193875207672e-015 4 -6.8895193875207672e-015 5 -6.8895193875207672e-015
+		 6 -6.8895193875207672e-015 7 -6.8895193875207672e-015 8 -6.8895193875207672e-015
+		 9 -6.8895193875207672e-015 10 -6.8895193875207672e-015 11 -6.8895193875207672e-015
+		 12 -6.8895193875207672e-015 13 -6.8895193875207672e-015 14 -6.8895193875207672e-015
+		 15 -6.8895193875207672e-015 16 -6.8895193875207672e-015 17 -6.8895193875207672e-015
+		 18 -6.8895193875207672e-015 19 -6.8895193875207672e-015 20 -6.8895193875207672e-015
+		 21 -6.8895193875207672e-015 22 -6.8895193875207672e-015 23 -6.8895193875207672e-015
+		 24 -6.8895193875207672e-015 25 -6.8895193875207672e-015 26 -6.8895193875207672e-015
+		 27 -6.8895193875207672e-015 28 -6.8895193875207672e-015 29 -6.8895193875207672e-015
+		 30 -6.8895193875207672e-015 31 -6.8895193875207672e-015 32 -6.8895193875207672e-015
+		 33 -6.8895193875207672e-015 34 -6.8895193875207672e-015 35 -6.8895193875207672e-015
+		 36 -6.8895193875207672e-015 37 -6.8895193875207672e-015 38 -6.8895193875207672e-015
+		 39 -6.8895193875207672e-015 40 -6.8895193875207672e-015 41 -6.8895193875207672e-015
+		 42 -6.8895193875207672e-015 43 -6.8895193875207672e-015 44 -6.8895193875207672e-015
+		 45 -6.8895193875207672e-015 46 -6.8895193875207672e-015 47 -6.8895193875207672e-015
+		 48 -6.8895193875207672e-015 49 -6.8895193875207672e-015 50 -6.8895193875207672e-015
+		 51 -6.8895193875207672e-015 52 -6.8895193875207672e-015 53 -6.8895193875207672e-015
+		 54 -6.8895193875207672e-015 55 -6.8895193875207672e-015 56 -6.8895193875207672e-015
+		 57 -6.8895193875207672e-015 58 -6.8895193875207672e-015 59 -6.8895193875207672e-015
+		 60 -6.8895193875207672e-015 61 -6.8895193875207672e-015 62 -6.8895193875207672e-015
+		 63 -6.8895193875207672e-015 64 -6.8895193875207672e-015 65 -6.8895193875207672e-015
+		 66 -6.8895193875207672e-015 67 -6.8895193875207672e-015 68 -6.8895193875207672e-015
+		 69 -6.8895193875207672e-015 70 -6.8895193875207672e-015 71 -6.8895193875207672e-015
+		 72 -6.8895193875207672e-015 73 -6.8895193875207672e-015 74 -6.8895193875207672e-015
+		 75 -6.8895193875207672e-015 76 -6.8895193875207672e-015 77 -6.8895193875207672e-015
+		 78 -6.8895193875207672e-015 79 -6.8895193875207672e-015 80 -6.8895193875207672e-015
+		 81 -6.8895193875207672e-015 82 -6.8895193875207672e-015 83 -6.8895193875207672e-015
+		 84 -6.8895193875207672e-015 85 -6.8895193875207672e-015 86 -6.8895193875207672e-015
+		 87 -6.8895193875207672e-015 88 -6.8895193875207672e-015 89 -6.8895193875207672e-015
+		 90 -6.8895193875207672e-015 91 -6.8895193875207672e-015 92 -6.8895193875207672e-015
+		 93 -6.8895193875207672e-015 94 -6.8895193875207672e-015 95 -6.8895193875207672e-015
+		 96 -6.8895193875207672e-015 97 -6.8895193875207672e-015 98 -6.8895193875207672e-015
+		 99 -6.8895193875207672e-015 100 -6.8895193875207672e-015 101 -6.8895193875207672e-015
+		 102 -6.8895193875207672e-015 103 -6.8895193875207672e-015 104 -6.8895193875207672e-015
+		 105 -6.8895193875207672e-015 106 -6.8895193875207672e-015 107 -6.8895193875207672e-015
+		 108 -6.8895193875207672e-015 109 -6.8895193875207672e-015 110 -6.8895193875207672e-015
+		 111 -6.8895193875207672e-015 112 -6.8895193875207672e-015 113 -6.8895193875207672e-015
+		 114 -6.8895193875207672e-015 115 -6.8895193875207672e-015 116 -6.8895193875207672e-015
+		 117 -6.8895193875207672e-015 118 -6.8895193875207672e-015 119 -6.8895193875207672e-015
+		 120 -6.8895193875207672e-015;
+createNode animCurveTU -n "Slave_L_Elbow_joint_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 1 2 1 3 0.99999999999999989 4 0.99999999999999978
+		 5 1 6 1 7 0.99999999999999978 8 0.99999999999999989 9 0.99999999999999989 10 0.99999999999999989
+		 11 0.99999999999999989 12 0.99999999999999978 13 1 14 1 15 1 16 1 17 1.0000000000000002
+		 18 0.99999999999999978 19 0.99999999999999989 20 1 21 1 22 1.0000000000000002 23 0.99999999999999989
+		 24 1 25 1 26 0.99999999999999989 27 1 28 1.0000000000000002 29 1.0000000000000002
+		 30 0.99999999999999989 31 1 32 1 33 1 34 0.99999999999999989 35 0.99999999999999989
+		 36 0.99999999999999989 37 0.99999999999999989 38 0.99999999999999989 39 1 40 1 41 1
+		 42 0.99999999999999989 43 1 44 0.99999999999999978 45 1 46 1 47 1.0000000000000002
+		 48 1.0000000000000002 49 1 50 0.99999999999999989 51 1 52 1 53 0.99999999999999978
+		 54 1 55 0.99999999999999989 56 1 57 1 58 1 59 0.99999999999999989 60 0.99999999999999989
+		 61 0.99999999999999989 62 0.99999999999999989 63 1.0000000000000002 64 1 65 1 66 1
+		 67 1.0000000000000002 68 1 69 0.99999999999999989 70 0.99999999999999989 71 1 72 1
+		 73 1 74 1 75 1 76 1 77 1 78 1 79 1 80 1 81 1 82 1 83 1 84 1 85 1 86 1 87 1 88 1 89 1
+		 90 1 91 1 92 1 93 1 94 1 95 1 96 1 97 1 98 1 99 1 100 1 101 1 102 1 103 1 104 1 105 1
+		 106 1 107 1 108 1 109 1 110 1 111 1 112 1 113 1 114 1 115 1 116 1 117 1 118 1 119 1
+		 120 1;
+createNode animCurveTU -n "Slave_L_Elbow_joint_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 1 2 1.0000000000000002 3 1 4 0.99999999999999989
+		 5 1 6 1 7 0.99999999999999989 8 0.99999999999999989 9 0.99999999999999989 10 0.99999999999999989
+		 11 0.99999999999999989 12 0.99999999999999989 13 1 14 1.0000000000000002 15 1 16 0.99999999999999989
+		 17 1 18 0.99999999999999978 19 0.99999999999999989 20 1 21 1 22 1.0000000000000002
+		 23 1 24 1 25 1 26 0.99999999999999989 27 1 28 1.0000000000000002 29 1.0000000000000002
+		 30 0.99999999999999989 31 1 32 1 33 1 34 0.99999999999999989 35 0.99999999999999989
+		 36 0.99999999999999989 37 0.99999999999999989 38 0.99999999999999989 39 1 40 1 41 1
+		 42 0.99999999999999989 43 1.0000000000000002 44 1 45 0.99999999999999989 46 1.0000000000000002
+		 47 1.0000000000000002 48 1 49 1 50 0.99999999999999989 51 1 52 0.99999999999999989
+		 53 0.99999999999999978 54 1 55 0.99999999999999989 56 1 57 1 58 1 59 0.99999999999999989
+		 60 0.99999999999999989 61 1 62 0.99999999999999989 63 1 64 0.99999999999999989 65 1
+		 66 1 67 1 68 1 69 1 70 0.99999999999999989 71 1 72 1 73 1 74 1 75 1.0000000000000002
+		 76 0.99999999999999989 77 0.99999999999999989 78 1 79 1 80 1 81 1 82 1 83 1 84 1
+		 85 1 86 1 87 1 88 1 89 1 90 1 91 1 92 1 93 1 94 1 95 1 96 1 97 1 98 1 99 1 100 1
+		 101 1 102 1 103 1 104 1 105 1 106 1 107 1 108 1 109 1 110 1 111 1 112 1 113 1 114 1
+		 115 1 116 1 117 1 118 1 119 1 120 1;
+createNode animCurveTU -n "Slave_L_Elbow_joint_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 1 2 1 3 1 4 1 5 0.99999999999999989 6 1
+		 7 0.99999999999999978 8 0.99999999999999978 9 0.99999999999999989 10 0.99999999999999989
+		 11 1 12 0.99999999999999989 13 1 14 1 15 1 16 1 17 1 18 0.99999999999999989 19 0.99999999999999978
+		 20 1.0000000000000002 21 1 22 1.0000000000000002 23 1 24 1 25 1 26 1 27 0.99999999999999989
+		 28 1 29 1 30 1 31 1 32 1 33 1 34 0.99999999999999989 35 0.99999999999999989 36 0.99999999999999989
+		 37 1 38 0.99999999999999989 39 1 40 1 41 1 42 0.99999999999999989 43 1 44 0.99999999999999989
+		 45 0.99999999999999989 46 1 47 1 48 1 49 1 50 1 51 1 52 0.99999999999999989 53 0.99999999999999989
+		 54 1.0000000000000002 55 1 56 0.99999999999999989 57 1 58 1 59 0.99999999999999989
+		 60 0.99999999999999989 61 0.99999999999999989 62 0.99999999999999989 63 1 64 0.99999999999999989
+		 65 1 66 1 67 1 68 1 69 0.99999999999999989 70 0.99999999999999989 71 1 72 1 73 0.99999999999999989
+		 74 1 75 1 76 0.99999999999999989 77 1 78 1 79 1 80 1 81 1 82 1 83 1 84 1 85 1 86 1
+		 87 1 88 1 89 1 90 1 91 1 92 1 93 1 94 1 95 1 96 1 97 1 98 1 99 1 100 1 101 1 102 1
+		 103 1 104 1 105 1 106 1 107 1 108 1 109 1 110 1 111 1 112 1 113 1 114 1 115 1 116 1
+		 117 1 118 1 119 1 120 1;
+createNode animCurveTU -n "Slave_L_Shoulder_joint_visibility";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 1 2 1 3 1 4 1 5 1 6 1 7 1 8 1 9 1 10 1
+		 11 1 12 1 13 1 14 1 15 1 16 1 17 1 18 1 19 1 20 1 21 1 22 1 23 1 24 1 25 1 26 1 27 1
+		 28 1 29 1 30 1 31 1 32 1 33 1 34 1 35 1 36 1 37 1 38 1 39 1 40 1 41 1 42 1 43 1 44 1
+		 45 1 46 1 47 1 48 1 49 1 50 1 51 1 52 1 53 1 54 1 55 1 56 1 57 1 58 1 59 1 60 1 61 1
+		 62 1 63 1 64 1 65 1 66 1 67 1 68 1 69 1 70 1 71 1 72 1 73 1 74 1 75 1 76 1 77 1 78 1
+		 79 1 80 1 81 1 82 1 83 1 84 1 85 1 86 1 87 1 88 1 89 1 90 1 91 1 92 1 93 1 94 1 95 1
+		 96 1 97 1 98 1 99 1 100 1 101 1 102 1 103 1 104 1 105 1 106 1 107 1 108 1 109 1 110 1
+		 111 1 112 1 113 1 114 1 115 1 116 1 117 1 118 1 119 1 120 1;
+createNode animCurveTL -n "Slave_L_Shoulder_joint_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 0.31994894720551326 2 0.31994894720551331
+		 3 0.3199489472055132 4 0.31994894720551326 5 0.3199489472055132 6 0.31994894720551326
+		 7 0.31994894720551331 8 0.31994894720551326 9 0.31994894720551326 10 0.31994894720551331
+		 11 0.31994894720551326 12 0.31994894720551326 13 0.31994894720551326 14 0.31994894720551326
+		 15 0.31994894720551326 16 0.31994894720551326 17 0.31994894720551337 18 0.31994894720551331
+		 19 0.31994894720551326 20 0.31994894720551331 21 0.31994894720551326 22 0.31994894720551331
+		 23 0.31994894720551331 24 0.31994894720551326 25 0.31994894720551326 26 0.31994894720551326
+		 27 0.3199489472055132 28 0.3199489472055132 29 0.31994894720551331 30 0.31994894720551331
+		 31 0.31994894720551326 32 0.31994894720551342 33 0.31994894720551337 34 0.31994894720551331
+		 35 0.31994894720551331 36 0.31994894720551326 37 0.31994894720551331 38 0.31994894720551326
+		 39 0.31994894720551326 40 0.31994894720551331 41 0.31994894720551337 42 0.31994894720551326
+		 43 0.31994894720551326 44 0.31994894720551326 45 0.31994894720551326 46 0.31994894720551326
+		 47 0.31994894720551331 48 0.31994894720551326 49 0.31994894720551326 50 0.31994894720551326
+		 51 0.31994894720551326 52 0.31994894720551331 53 0.31994894720551326 54 0.31994894720551331
+		 55 0.31994894720551331 56 0.31994894720551326 57 0.31994894720551326 58 0.31994894720551326
+		 59 0.31994894720551326 60 0.31994894720551326 61 0.31994894720551326 62 0.31994894720551326
+		 63 0.31994894720551326 64 0.31994894720551326 65 0.31994894720551326 66 0.31994894720551326
+		 67 0.31994894720551326 68 0.31994894720551331 69 0.31994894720551326 70 0.31994894720551326
+		 71 0.31994894720551326 72 0.31994894720551326 73 0.31994894720551326 74 0.31994894720551326
+		 75 0.31994894720551326 76 0.31994894720551326 77 0.31994894720551326 78 0.31994894720551326
+		 79 0.31994894720551326 80 0.31994894720551326 81 0.31994894720551326 82 0.31994894720551326
+		 83 0.31994894720551326 84 0.31994894720551326 85 0.31994894720551326 86 0.31994894720551326
+		 87 0.31994894720551326 88 0.31994894720551326 89 0.31994894720551326 90 0.31994894720551326
+		 91 0.31994894720551326 92 0.31994894720551326 93 0.31994894720551326 94 0.31994894720551326
+		 95 0.31994894720551326 96 0.31994894720551326 97 0.31994894720551326 98 0.31994894720551326
+		 99 0.31994894720551326 100 0.31994894720551326 101 0.31994894720551326 102 0.31994894720551326
+		 103 0.31994894720551326 104 0.31994894720551326 105 0.31994894720551326 106 0.31994894720551326
+		 107 0.31994894720551326 108 0.31994894720551326 109 0.31994894720551326 110 0.31994894720551326
+		 111 0.31994894720551326 112 0.31994894720551326 113 0.31994894720551326 114 0.31994894720551326
+		 115 0.31994894720551326 116 0.31994894720551326 117 0.31994894720551326 118 0.31994894720551326
+		 119 0.31994894720551326 120 0.31994894720551326;
+createNode animCurveTL -n "Slave_L_Shoulder_joint_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 0.19892874815954209 2 0.19892874815954209
+		 3 0.19892874815954209 4 0.1989287481595422 5 0.1989287481595422 6 0.1989287481595422
+		 7 0.19892874815954198 8 0.19892874815954209 9 0.19892874815954209 10 0.19892874815954209
+		 11 0.19892874815954209 12 0.19892874815954209 13 0.19892874815954209 14 0.19892874815954209
+		 15 0.19892874815954209 16 0.19892874815954209 17 0.19892874815954198 18 0.19892874815954198
+		 19 0.19892874815954198 20 0.19892874815954209 21 0.19892874815954209 22 0.19892874815954209
+		 23 0.19892874815954209 24 0.19892874815954209 25 0.19892874815954209 26 0.1989287481595422
+		 27 0.19892874815954209 28 0.19892874815954187 29 0.19892874815954187 30 0.19892874815954231
+		 31 0.1989287481595422 32 0.19892874815954209 33 0.19892874815954231 34 0.19892874815954187
+		 35 0.19892874815954165 36 0.1989287481595422 37 0.19892874815954231 38 0.19892874815954176
+		 39 0.19892874815954209 40 0.19892874815954198 41 0.19892874815954209 42 0.19892874815954198
+		 43 0.19892874815954187 44 0.1989287481595422 45 0.19892874815954231 46 0.19892874815954187
+		 47 0.1989287481595422 48 0.19892874815954209 49 0.19892874815954209 50 0.1989287481595422
+		 51 0.19892874815954209 52 0.19892874815954187 53 0.19892874815954198 54 0.19892874815954187
+		 55 0.19892874815954198 56 0.19892874815954198 57 0.19892874815954209 58 0.19892874815954209
+		 59 0.19892874815954187 60 0.1989287481595422 61 0.19892874815954231 62 0.19892874815954209
+		 63 0.19892874815954198 64 0.19892874815954198 65 0.1989287481595422 66 0.1989287481595422
+		 67 0.1989287481595422 68 0.1989287481595422 69 0.19892874815954198 70 0.19892874815954209
+		 71 0.1989287481595422 72 0.1989287481595422 73 0.19892874815954198 74 0.19892874815954242
+		 75 0.1989287481595422 76 0.19892874815954209 77 0.19892874815954209 78 0.19892874815954209
+		 79 0.19892874815954209 80 0.19892874815954209 81 0.19892874815954209 82 0.19892874815954209
+		 83 0.19892874815954209 84 0.19892874815954209 85 0.19892874815954209 86 0.19892874815954209
+		 87 0.19892874815954209 88 0.19892874815954209 89 0.19892874815954209 90 0.19892874815954209
+		 91 0.19892874815954209 92 0.19892874815954209 93 0.19892874815954209 94 0.19892874815954209
+		 95 0.19892874815954209 96 0.19892874815954209 97 0.19892874815954209 98 0.19892874815954209
+		 99 0.19892874815954209 100 0.19892874815954209 101 0.19892874815954209 102 0.19892874815954209
+		 103 0.19892874815954209 104 0.19892874815954209 105 0.19892874815954209 106 0.19892874815954209
+		 107 0.19892874815954209 108 0.19892874815954209 109 0.19892874815954209 110 0.19892874815954209
+		 111 0.19892874815954209 112 0.19892874815954209 113 0.19892874815954209 114 0.19892874815954209
+		 115 0.19892874815954209 116 0.19892874815954209 117 0.19892874815954209 118 0.19892874815954209
+		 119 0.19892874815954209 120 0.19892874815954209;
+createNode animCurveTL -n "Slave_L_Shoulder_joint_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 -0.018859007005653183 2 -0.018859007005653183
+		 3 -0.018859007005653201 4 -0.018859007005653187 5 -0.018859007005653204 6 -0.018859007005653173
+		 7 -0.01885900700565326 8 -0.018859007005653201 9 -0.018859007005653246 10 -0.018859007005653201
+		 11 -0.018859007005653211 12 -0.018859007005653131 13 -0.018859007005653197 14 -0.018859007005653197
+		 15 -0.018859007005653156 16 -0.018859007005653128 17 -0.018859007005653225 18 -0.018859007005653239
+		 19 -0.018859007005653232 20 -0.018859007005653235 21 -0.018859007005653211 22 -0.018859007005653176
+		 23 -0.018859007005653166 24 -0.018859007005653183 25 -0.018859007005653197 26 -0.018859007005653183
+		 27 -0.018859007005653211 28 -0.0188590070056531 29 -0.018859007005653267 30 -0.01885900700565335
+		 31 -0.018859007005653267 32 -0.018859007005653322 33 -0.018859007005653183 34 -0.018859007005653211
+		 35 -0.018859007005653045 36 -0.018859007005653128 37 -0.018859007005653239 38 -0.018859007005653156
+		 39 -0.018859007005653267 40 -0.018859007005653156 41 -0.018859007005653128 42 -0.018859007005653128
+		 43 -0.018859007005653072 44 -0.018859007005653128 45 -0.01885900700565335 46 -0.018859007005653183
+		 47 -0.018859007005653183 48 -0.0188590070056531 49 -0.018859007005653211 50 -0.018859007005653183
+		 51 -0.018859007005653197 52 -0.018859007005653239 53 -0.018859007005653197 54 -0.018859007005653242
+		 55 -0.018859007005653221 56 -0.018859007005653194 57 -0.018859007005653197 58 -0.018859007005653197
+		 59 -0.018859007005653218 60 -0.018859007005653169 61 -0.018859007005653211 62 -0.018859007005653183
+		 63 -0.018859007005653294 64 -0.018859007005653072 65 -0.018859007005653267 66 -0.01885900700565335
+		 67 -0.018859007005653183 68 -0.018859007005653239 69 -0.018859007005653128 70 -0.018859007005653183
+		 71 -0.018859007005653128 72 -0.018859007005653211 73 -0.018859007005653211 74 -0.018859007005653267
+		 75 -0.018859007005653197 76 -0.01885900700565319 77 -0.018859007005653211 78 -0.018859007005653197
+		 79 -0.018859007005653197 80 -0.018859007005653197 81 -0.018859007005653197 82 -0.018859007005653197
+		 83 -0.018859007005653197 84 -0.018859007005653197 85 -0.018859007005653197 86 -0.018859007005653197
+		 87 -0.018859007005653197 88 -0.018859007005653197 89 -0.018859007005653197 90 -0.018859007005653197
+		 91 -0.018859007005653197 92 -0.018859007005653197 93 -0.018859007005653197 94 -0.018859007005653197
+		 95 -0.018859007005653197 96 -0.018859007005653197 97 -0.018859007005653197 98 -0.018859007005653197
+		 99 -0.018859007005653197 100 -0.018859007005653197 101 -0.018859007005653197 102 -0.018859007005653197
+		 103 -0.018859007005653197 104 -0.018859007005653197 105 -0.018859007005653197 106 -0.018859007005653197
+		 107 -0.018859007005653197 108 -0.018859007005653197 109 -0.018859007005653197 110 -0.018859007005653197
+		 111 -0.018859007005653197 112 -0.018859007005653197 113 -0.018859007005653197 114 -0.018859007005653197
+		 115 -0.018859007005653197 116 -0.018859007005653197 117 -0.018859007005653197 118 -0.018859007005653197
+		 119 -0.018859007005653197 120 -0.018859007005653197;
+createNode animCurveTA -n "Slave_L_Shoulder_joint_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 -5.4069429584879788e-014 2 0.065906030132392435
+		 3 0.24699363451152045 4 0.51772302065860865 5 0.850493098667778 6 1.215413256540296
+		 7 1.5819078731175515 8 1.921519348667563 9 2.2106456340994312 10 2.431863309786559
+		 11 2.5728728832511423 12 2.6228021304176603 13 2.5806756998586851 14 2.4612193857021438
+		 15 2.2728651804593389 16 2.0244928584988422 17 1.7281687121676685 18 1.4003279450774131
+		 19 1.0614313819619197 20 0.73448490305395153 21 0.44310206232146532 22 0.20987838880646142
+		 23 0.055670835431946945 24 -5.4069429584879788e-014 25 0.93617440852075029 26 1.299865338622936
+		 27 1.2652019220659854 28 1.3721104786850677 29 1.5997261537560259 30 1.9141650786650402
+		 31 2.2743845580185562 32 2.6384494420646512 33 2.9700558001952575 34 3.2438775943255678
+		 35 3.4481173126278715 36 3.5834306670741238 37 3.6584023507527759 38 3.682367385675644
+		 39 3.6322937260450425 40 3.4954587503012431 41 3.2927433119530831 42 3.0468603582204503
+		 43 2.7810102357507542 44 2.5152228326902901 45 2.2626794202998717 46 2.0285572151137194
+		 47 1.8124843084730196 48 1.613713242210717 49 1.4372207530994925 50 1.299865338622936
+		 51 0.93617440852075029 52 1.0543441202979309 53 1.0274227402231557 54 0.94613218643190089
+		 55 0.83749203028749053 56 0.78028965780609272 57 0.93617440852075029 58 0.93617440852075029
+		 59 0.923894833214704 60 0.88857803743561881 61 0.83153791427419499 62 0.75505133380441691
+		 63 0.66410947896194894 64 0.56674000818989456 65 0.4731097792362064 66 0.39405499705002617
+		 67 0.33985897206486115 68 0.31984153320924502 69 0.33985917079896244 70 0.39405530950336348
+		 71 0.473109627947218 72 0.5667403422455517 73 0.66410975280977103 74 0.75505104262518874
+		 75 0.83153802986139858 76 0.88857809053151715 77 0.92389470926170381 78 0.93617440852075029
+		 79 0.93617440852075029 80 0.93617440852075029 81 0.93617440852075029 82 0.93617440852075029
+		 83 0.93617440852075029 84 0.93617440852075029 85 0.93617440852075029 86 0.93617440852075029
+		 87 0.93617440852075029 88 0.93617440852075029 89 0.93617440852075029 90 0.93617440852075029
+		 91 0.93617440852075029 92 0.93617440852075029 93 0.93617440852075029 94 0.93617440852075029
+		 95 0.93617440852075029 96 0.93617440852075029 97 0.93617440852075029 98 0.93617440852075029
+		 99 0.93617440852075029 100 0.93617440852075029 101 0.93617440852075029 102 0.93617440852075029
+		 103 0.93617440852075029 104 0.93617440852075029 105 0.93617440852075029 106 0.93617440852075029
+		 107 0.93617440852075029 108 0.93617440852075029 109 0.93617440852075029 110 0.93617440852075029
+		 111 0.93617440852075029 112 0.93617440852075029 113 0.93617440852075029 114 0.93617440852075029
+		 115 0.93617440852075029 116 0.93617440852075029 117 0.93617440852075029 118 0.93617440852075029
+		 119 0.93617440852075029 120 0.93617440852075029;
+createNode animCurveTA -n "Slave_L_Shoulder_joint_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 2.5444437451708147e-014 2 0.0052354224270945143
+		 3 0.013177268767260868 4 0.0075054529703506515 5 -0.028480109587474406 6 -0.10593833036091194
+		 7 -0.22654343869602178 8 -0.38092527473800042 9 -0.549574135856989 10 -0.70576364339819742
+		 11 -0.8196743865425834 12 -0.86301741143890087 13 -0.8263392972417074 14 -0.72849340286327979
+		 15 -0.59093609666031766 16 -0.436763822868737 17 -0.28767800791784132 18 -0.16117341829038992
+		 19 -0.068270823027819921 20 -0.012261161158443968 21 0.011168367219629993 22 0.012316938528045508
+		 23 0.0045047276516890057 24 2.5444437451708134e-014 25 -3.9457017990115224 26 -0.37521201435814411
+		 27 -0.19590802141276756 28 -0.10139601689691037 29 -0.088858085252323846 30 -0.16258412635390357
+		 31 -0.32421565973977973 32 -0.5658095492635683 33 -0.86710966315893756 34 -1.1970028300698696
+		 35 -1.5177977893908055 36 -1.7902539146936547 37 -1.9774468988389162 38 -2.0464750777753249
+		 39 -2.0055102151848541 40 -1.8983536573501638 41 -1.7533793588644402 42 -1.5970445791937051
+		 43 -1.4466975768546344 44 -1.3081075683359913 45 -1.1776136435273397 46 -1.047015567780553
+		 47 -0.90819804512101632 48 -0.754883382116605 49 -0.58072473832736993 50 -0.37521201435814405
+		 51 -3.9457017990115224 52 -3.7225813473008866 53 -3.7914888778604765 54 -3.9322769347119051
+		 55 -4.0533306329838679 56 -4.100387237243746 57 -3.9457017990115224 58 -3.9457017990115224
+		 59 -3.9614717624257136 60 -4.0026494108340254 61 -4.0586641888990451 62 -4.1184612216490617
+		 63 -4.1722919817458974 64 -4.213460201584776 65 -4.2394820958303123 66 -4.2521214431564243
+		 67 -4.2560980185763313 68 -4.2566198109299522 69 -4.2560980108688273 70 -4.2521214093671711
+		 71 -4.2394821279752524 72 -4.2134600861112501 73 -4.1722918435951364 74 -4.1184614215912489
+		 75 -4.0586640864144439 76 -4.0026493530928731 77 -3.9614719174937862 78 -3.9457017990115224
+		 79 -3.9457017990115224 80 -3.9457017990115224 81 -3.9457017990115224 82 -3.9457017990115224
+		 83 -3.9457017990115224 84 -3.9457017990115224 85 -3.9457017990115224 86 -3.9457017990115224
+		 87 -3.9457017990115224 88 -3.9457017990115224 89 -3.9457017990115224 90 -3.9457017990115224
+		 91 -3.9457017990115224 92 -3.9457017990115224 93 -3.9457017990115224 94 -3.9457017990115224
+		 95 -3.9457017990115224 96 -3.9457017990115224 97 -3.9457017990115224 98 -3.9457017990115224
+		 99 -3.9457017990115224 100 -3.9457017990115224 101 -3.9457017990115224 102 -3.9457017990115224
+		 103 -3.9457017990115224 104 -3.9457017990115224 105 -3.9457017990115224 106 -3.9457017990115224
+		 107 -3.9457017990115224 108 -3.9457017990115224 109 -3.9457017990115224 110 -3.9457017990115224
+		 111 -3.9457017990115224 112 -3.9457017990115224 113 -3.9457017990115224 114 -3.9457017990115224
+		 115 -3.9457017990115224 116 -3.9457017990115224 117 -3.9457017990115224 118 -3.9457017990115224
+		 119 -3.9457017990115224 120 -3.9457017990115224;
+createNode animCurveTA -n "Slave_L_Shoulder_joint_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 1.9083328088781088e-014 2 1.0853850807595813
+		 3 4.0614635928726903 4 8.5080857994599501 5 14.004973264700537 6 20.13172334738184
+		 7 26.467912142284504 8 32.593292167361845 9 38.087892739944571 10 42.532041245455929
+		 11 45.50621517793185 12 46.590863536533249 13 45.674558017705472 14 43.141150010014051
+		 15 39.313798995162848 16 34.515638274695881 17 29.069884640906803 18 23.299910257536993
+		 19 17.529330298623744 20 12.08193309599074 21 7.2815476828470826 22 3.4519801666649208
+		 23 0.91692873034232625 24 1.9083328088781101e-014 25 22.159347767014911 26 1.8388651185506879
+		 27 3.2143162004022816 28 7.0113685974867588 29 12.745617077135154 30 19.932305940291961
+		 31 28.086569589834365 32 36.72369181760773 33 45.359313789368905 34 53.509658821266491
+		 35 60.691222587745436 36 66.420331628270702 37 70.212998485675513 38 71.584874943632116
+		 39 70.213524298688327 40 66.421761807304307 41 60.692792105792066 42 53.509956533556753
+		 43 45.356964588563677 44 36.718066105999981 45 28.078080588727769 46 19.922064813849634
+		 47 12.735169930283854 48 7.0025022967784274 49 3.2088701539583098 50 1.8388651185506879
+		 51 22.159347767014911 52 3.6444540587366867 53 9.0485294096725237 54 20.939184693716129
+		 55 32.831929677026871 56 38.238307766212564 57 22.159347767014911 58 22.159347767014911
+		 59 23.618330967800297 60 27.578613097654387 61 33.415221372686325 62 40.503076079989668
+		 63 48.217013487198322 64 55.931496037771794 65 63.020797829611858 66 68.859249595735633
+		 67 72.821099443731882 68 74.28072166560176 69 72.821084946921246 70 68.859226687313608
+		 71 63.020809104630928 72 55.931470267322055 73 48.21699111840514 74 40.503101846807638
+		 75 33.415210100670343 76 27.578607372644626 77 23.618345458425349 78 22.159347767014911
+		 79 22.159347767014911 80 22.159347767014911 81 22.159347767014911 82 22.159347767014911
+		 83 22.159347767014911 84 22.159347767014911 85 22.159347767014911 86 22.159347767014911
+		 87 22.159347767014911 88 22.159347767014911 89 22.159347767014911 90 22.159347767014911
+		 91 22.159347767014911 92 22.159347767014911 93 22.159347767014911 94 22.159347767014911
+		 95 22.159347767014911 96 22.159347767014911 97 22.159347767014911 98 22.159347767014911
+		 99 22.159347767014911 100 22.159347767014911 101 22.159347767014911 102 22.159347767014911
+		 103 22.159347767014911 104 22.159347767014911 105 22.159347767014911 106 22.159347767014911
+		 107 22.159347767014911 108 22.159347767014911 109 22.159347767014911 110 22.159347767014911
+		 111 22.159347767014911 112 22.159347767014911 113 22.159347767014911 114 22.159347767014911
+		 115 22.159347767014911 116 22.159347767014911 117 22.159347767014911 118 22.159347767014911
+		 119 22.159347767014911 120 22.159347767014911;
+createNode animCurveTU -n "Slave_L_Shoulder_joint_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 1 2 1 3 1 4 1 5 1 6 1 7 1 8 1 9 1 10 1
+		 11 1 12 1 13 1 14 1 15 1 16 1 17 1 18 1 19 1 20 1 21 1 22 1 23 1 24 1 25 1 26 1 27 1
+		 28 1 29 1 30 1 31 1 32 1 33 1 34 1 35 1 36 1 37 1 38 1 39 1 40 1 41 1 42 1 43 1 44 1
+		 45 1 46 1 47 1 48 1 49 1 50 1 51 1 52 1 53 1 54 1 55 1 56 1 57 1 58 1 59 1 60 1 61 1
+		 62 1 63 1 64 1 65 1 66 1 67 1 68 1 69 1 70 1 71 1 72 1 73 1 74 1 75 1 76 1 77 1 78 1
+		 79 1 80 1 81 1 82 1 83 1 84 1 85 1 86 1 87 1 88 1 89 1 90 1 91 1 92 1 93 1 94 1 95 1
+		 96 1 97 1 98 1 99 1 100 1 101 1 102 1 103 1 104 1 105 1 106 1 107 1 108 1 109 1 110 1
+		 111 1 112 1 113 1 114 1 115 1 116 1 117 1 118 1 119 1 120 1;
+createNode animCurveTU -n "Slave_L_Shoulder_joint_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 1 2 1 3 1 4 1 5 1 6 1 7 1 8 1 9 1 10 1
+		 11 1 12 1 13 1 14 1 15 1 16 1 17 1 18 1 19 1 20 1 21 1 22 1 23 1 24 1 25 1 26 1 27 1
+		 28 1 29 1 30 1 31 1 32 1 33 1 34 1 35 1 36 1 37 1 38 1 39 1 40 1 41 1 42 1 43 1 44 1
+		 45 1 46 1 47 1 48 1 49 1 50 1 51 1 52 1 53 1 54 1 55 1 56 1 57 1 58 1 59 1 60 1 61 1
+		 62 1 63 1 64 1 65 1 66 1 67 1 68 1 69 1 70 1 71 1 72 1 73 1 74 1 75 1 76 1 77 1 78 1
+		 79 1 80 1 81 1 82 1 83 1 84 1 85 1 86 1 87 1 88 1 89 1 90 1 91 1 92 1 93 1 94 1 95 1
+		 96 1 97 1 98 1 99 1 100 1 101 1 102 1 103 1 104 1 105 1 106 1 107 1 108 1 109 1 110 1
+		 111 1 112 1 113 1 114 1 115 1 116 1 117 1 118 1 119 1 120 1;
+createNode animCurveTU -n "Slave_L_Shoulder_joint_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 1 2 1 3 1 4 1 5 1 6 1 7 1 8 1 9 1 10 1
+		 11 1 12 1 13 1 14 1 15 1 16 1 17 1 18 1 19 1 20 1 21 1 22 1 23 1 24 1 25 1 26 1 27 1
+		 28 1 29 1 30 1 31 1 32 1 33 1 34 1 35 1 36 1 37 1 38 1 39 1 40 1 41 1 42 1 43 1 44 1
+		 45 1 46 1 47 1 48 1 49 1 50 1 51 1 52 1 53 1 54 1 55 1 56 1 57 1 58 1 59 1 60 1 61 1
+		 62 1 63 1 64 1 65 1 66 1 67 1 68 1 69 1 70 1 71 1 72 1 73 1 74 1 75 1 76 1 77 1 78 1
+		 79 1 80 1 81 1 82 1 83 1 84 1 85 1 86 1 87 1 88 1 89 1 90 1 91 1 92 1 93 1 94 1 95 1
+		 96 1 97 1 98 1 99 1 100 1 101 1 102 1 103 1 104 1 105 1 106 1 107 1 108 1 109 1 110 1
+		 111 1 112 1 113 1 114 1 115 1 116 1 117 1 118 1 119 1 120 1;
+createNode animCurveTU -n "Slave_L_Ankle_joint1_visibility";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 1 2 1 3 1 4 1 5 1 6 1 7 1 8 1 9 1 10 1
+		 11 1 12 1 13 1 14 1 15 1 16 1 17 1 18 1 19 1 20 1 21 1 22 1 23 1 24 1 25 1 26 1 27 1
+		 28 1 29 1 30 1 31 1 32 1 33 1 34 1 35 1 36 1 37 1 38 1 39 1 40 1 41 1 42 1 43 1 44 1
+		 45 1 46 1 47 1 48 1 49 1 50 1 51 1 52 1 53 1 54 1 55 1 56 1 57 1 58 1 59 1 60 1 61 1
+		 62 1 63 1 64 1 65 1 66 1 67 1 68 1 69 1 70 1 71 1 72 1 73 1 74 1 75 1 76 1 77 1 78 1
+		 79 1 80 1 81 1 82 1 83 1 84 1 85 1 86 1 87 1 88 1 89 1 90 1 91 1 92 1 93 1 94 1 95 1
+		 96 1 97 1 98 1 99 1 100 1 101 1 102 1 103 1 104 1 105 1 106 1 107 1 108 1 109 1 110 1
+		 111 1 112 1 113 1 114 1 115 1 116 1 117 1 118 1 119 1 120 1;
+createNode animCurveTL -n "Slave_L_Ankle_joint1_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 -0.22810572967202303 2 -0.22810572967202303
+		 3 -0.22810572967202306 4 -0.22810572967202308 5 -0.22810572967202303 6 -0.22810572967202308
+		 7 -0.22810572967202311 8 -0.22810572967202281 9 -0.22810572967202303 10 -0.22810572967202306
+		 11 -0.22810572967202308 12 -0.22810572967202303 13 -0.228105729672023 14 -0.228105729672023
+		 15 -0.22810572967202294 16 -0.228105729672023 17 -0.22810572967202294 18 -0.228105729672023
+		 19 -0.228105729672023 20 -0.22810572967202308 21 -0.22810572967202303 22 -0.22810572967202306
+		 23 -0.22810572967202297 24 -0.22810572967202303 25 -0.22810572967202306 26 -0.228105729672023
+		 27 -0.22810572967202306 28 -0.22810572967202303 29 -0.22810572967202311 30 -0.22810572967202292
+		 31 -0.22810572967202303 32 -0.22810572967202292 33 -0.22810572967202303 34 -0.22810572967202292
+		 35 -0.22810572967202311 36 -0.22810572967202319 37 -0.22810572967202306 38 -0.22810572967202308
+		 39 -0.228105729672023 40 -0.22810572967202306 41 -0.22810572967202303 42 -0.22810572967202303
+		 43 -0.22810572967202292 44 -0.22810572967202306 45 -0.22810572967202314 46 -0.22810572967202292
+		 47 -0.22810572967202294 48 -0.22810572967202294 49 -0.22810572967202303 50 -0.228105729672023
+		 51 -0.22810572967202306 52 -0.22810572967202297 53 -0.22810572967202297 54 -0.22810572967202308
+		 55 -0.22810572967202297 56 -0.22810572967202303 57 -0.22810572967202306 58 -0.22810572967202306
+		 59 -0.22810572967202306 60 -0.228105729672023 61 -0.22810572967202311 62 -0.228105729672023
+		 63 -0.22810572967202311 64 -0.22810572967202306 65 -0.22810572967202303 66 -0.22810572967202314
+		 67 -0.22810572967202311 68 -0.22810572967202303 69 -0.22810572967202311 70 -0.22810572967202306
+		 71 -0.22810572967202308 72 -0.22810572967202306 73 -0.22810572967202306 74 -0.22810572967202294
+		 75 -0.22810572967202303 76 -0.22810572967202303 77 -0.22810572967202289 78 -0.22810572967202306
+		 79 -0.22810572967202306 80 -0.22810572967202314 81 -0.22810572967202294 82 -0.22810572967202297
+		 83 -0.22810572967202303 84 -0.22810572967202292 85 -0.22810572967202308 86 -0.22810572967202303
+		 87 -0.228105729672023 88 -0.22810572967202308 89 -0.228105729672023 90 -0.22810572967202297
+		 91 -0.22810572967202314 92 -0.22810572967202297 93 -0.22810572967202303 94 -0.22810572967202297
+		 95 -0.22810572967202308 96 -0.22810572967202303 97 -0.22810572967202308 98 -0.22810572967202297
+		 99 -0.228105729672023 100 -0.22810572967202308 101 -0.228105729672023 102 -0.22810572967202308
+		 103 -0.22810572967202311 104 -0.22810572967202314 105 -0.22810572967202311 106 -0.228105729672023
+		 107 -0.22810572967202303 108 -0.22810572967202325 109 -0.22810572967202303 110 -0.22810572967202306
+		 111 -0.22810572967202303 112 -0.228105729672023 113 -0.22810572967202306 114 -0.22810572967202303
+		 115 -0.22810572967202303 116 -0.228105729672023 117 -0.22810572967202311 118 -0.22810572967202306
+		 119 -0.22810572967202306 120 -0.22810572967202306;
+createNode animCurveTL -n "Slave_L_Ankle_joint1_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 -7.590033906934579e-008 2 -7.590033906934579e-008
+		 3 -7.5900339097101366e-008 4 -7.5900339152612517e-008 5 -7.5900338958323488e-008
+		 6 -7.5900339208123668e-008 7 -7.5900339097101366e-008 8 -7.5900339138734729e-008
+		 9 -7.5900339154780921e-008 10 -7.5900339110979154e-008 11 -7.5900339097101366e-008
+		 12 -7.5900339097101366e-008 13 -7.5900339222001456e-008 14 -7.5900339124856941e-008
+		 15 -7.5900339110979154e-008 16 -7.590033910404026e-008 17 -7.5900339065876343e-008
+		 18 -7.5900339083223578e-008 19 -7.5900339166490305e-008 20 -7.5900339110979154e-008
+		 21 -7.5900339041590215e-008 22 -7.5900339124856941e-008 23 -7.5900339041590215e-008
+		 24 -7.590033906934579e-008 25 -7.5900339091897195e-008 26 -7.5900339124856941e-008
+		 27 -7.5900339124856941e-008 28 -7.5900339013834639e-008 29 -7.5900339180368093e-008
+		 30 -7.5900339041590215e-008 31 -7.5900339166490305e-008 32 -7.5900339078019408e-008
+		 33 -7.590033906934579e-008 34 -7.5900339152612517e-008 35 -7.590033906934579e-008
+		 36 -7.590033906934579e-008 37 -7.5900339291390395e-008 38 -7.5900339124856941e-008
+		 39 -7.5900339124856941e-008 40 -7.5900339013834639e-008 41 -7.5900339291390395e-008
+		 42 -7.5900339124856941e-008 43 -7.5900339152612517e-008 44 -7.5900339105774983e-008
+		 45 -7.5900339222001456e-008 46 -7.5900339152612517e-008 47 -7.590033906934579e-008
+		 48 -7.5900339124856941e-008 49 -7.5900339291390395e-008 50 -7.5900339124856941e-008
+		 51 -7.5900339091897195e-008 52 -7.5900339055468002e-008 53 -7.5900339124856941e-008
+		 54 -7.5900339110979154e-008 55 -7.5900339110979154e-008 56 -7.5900339083223578e-008
+		 57 -7.5900339091897195e-008 58 -7.5900339091897195e-008 59 -7.5900339159551411e-008
+		 60 -7.5900339130061112e-008 61 -7.5900339076284684e-008 62 -7.5900339050263832e-008
+		 63 -7.5900339215062562e-008 64 -7.5900339182102816e-008 65 -7.5900338986079063e-008
+		 66 -7.5900339142204176e-008 67 -7.590033926363482e-008 68 -7.5900339201184774e-008
+		 69 -7.5900339090162472e-008 70 -7.5900339142204176e-008 71 -7.5900339131795835e-008
+		 72 -7.5900339036386044e-008 73 -7.5900339126591665e-008 74 -7.5900339124856941e-008
+		 75 -7.5900339038120768e-008 76 -7.590033910924443e-008 77 -7.5900339142204176e-008
+		 78 -7.5900339091897195e-008 79 -7.5900339091897195e-008 80 -7.5900339175163922e-008
+		 81 -7.5900339102305536e-008 82 -7.5900339079754131e-008 83 -7.5900339140469453e-008
+		 84 -7.5900339100570813e-008 85 -7.5900339173429199e-008 86 -7.5900339110979154e-008
+		 87 -7.59003391439389e-008 88 -7.5900339102305536e-008 89 -7.5900339036386044e-008
+		 90 -7.5900339058937449e-008 91 -7.5900339126591665e-008 92 -7.5900339090162472e-008
+		 93 -7.5900339140469453e-008 94 -7.5900339057202726e-008 95 -7.5900339098836089e-008
+		 96 -7.5900339010365192e-008 97 -7.5900339088427748e-008 98 -7.5900339071080514e-008
+		 99 -7.5900339048529109e-008 100 -7.5900339190776434e-008 101 -7.5900339123122218e-008
+		 102 -7.5900339065876343e-008 103 -7.5900339230675073e-008 104 -7.5900339208123668e-008
+		 105 -7.5900339107509707e-008 106 -7.5900339034651321e-008 107 -7.5900339081488855e-008
+		 108 -7.5900339065876343e-008 109 -7.5900339152612517e-008 110 -7.5900339142204176e-008
+		 111 -7.5900339025977703e-008 112 -7.5900339048529109e-008 113 -7.5900339110979154e-008
+		 114 -7.5900339053733279e-008 115 -7.5900339159551411e-008 116 -7.5900339071080514e-008
+		 117 -7.5900339123122218e-008 118 -7.5900339091897195e-008 119 -7.5900339091897195e-008
+		 120 -7.5900339091897195e-008;
+createNode animCurveTL -n "Slave_L_Ankle_joint1_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 5.2735642146195527e-007 2 5.2735642140644412e-007
+		 3 5.27356421545222e-007 4 5.2735642139256633e-007 5 5.2735642147583306e-007 6 5.2735642151746642e-007
+		 7 5.2735642146195527e-007 8 5.2735642150358863e-007 9 5.2735642147583306e-007 10 5.2735642133705518e-007
+		 11 5.2735642148971085e-007 12 5.2735642146195527e-007 13 5.2735642144807748e-007
+		 14 5.2735642148971085e-007 15 5.273564214341997e-007 16 5.2735642148971085e-007 17 5.2735642157297757e-007
+		 18 5.2735642146195527e-007 19 5.2735642147583306e-007 20 5.27356421545222e-007 21 5.2735642150358863e-007
+		 22 5.2735642137868854e-007 23 5.2735642153134421e-007 24 5.2735642146195527e-007
+		 25 5.2735642146195527e-007 26 5.2735642153134421e-007 27 5.2735642150358863e-007
+		 28 5.2735642151746642e-007 29 5.273564214341997e-007 30 5.2735642137868854e-007 31 5.2735642146195527e-007
+		 32 5.2735642153134421e-007 33 5.2735642148971085e-007 34 5.2735642142032191e-007
+		 35 5.2735642148971085e-007 36 5.2735642150358863e-007 37 5.2735642140644412e-007
+		 38 5.2735642142032191e-007 39 5.2735642146195527e-007 40 5.2735642144807748e-007
+		 41 5.2735642140644412e-007 42 5.2735642150358863e-007 43 5.273564214341997e-007 44 5.2735642150358863e-007
+		 45 5.2735642139256633e-007 46 5.2735642137868854e-007 47 5.2735642147583306e-007
+		 48 5.2735642151746642e-007 49 5.2735642137868854e-007 50 5.2735642153134421e-007
+		 51 5.2735642146195527e-007 52 5.2735642137868854e-007 53 5.2735642137868854e-007
+		 54 5.2735642140644412e-007 55 5.2735642142032191e-007 56 5.2735642144807748e-007
+		 57 5.2735642146195527e-007 58 5.2735642146195527e-007 59 5.2735642150358863e-007
+		 60 5.273564214341997e-007 61 5.2735642137868854e-007 62 5.2735642147583306e-007 63 5.2735642153134421e-007
+		 64 5.2735642140644412e-007 65 5.2735642153134421e-007 66 5.27356421545222e-007 67 5.2735642144807748e-007
+		 68 5.2735642144807748e-007 69 5.2735642133705518e-007 70 5.2735642142032191e-007
+		 71 5.2735642153134421e-007 72 5.273564214341997e-007 73 5.2735642148971085e-007 74 5.2735642146195527e-007
+		 75 5.2735642146195527e-007 76 5.2735642147583306e-007 77 5.2735642146195527e-007
+		 78 5.2735642146195527e-007 79 5.2735642146195527e-007 80 5.2735642144807748e-007
+		 81 5.273564214341997e-007 82 5.2735642148971085e-007 83 5.2735642147583306e-007 84 5.2735642150358863e-007
+		 85 5.273564214341997e-007 86 5.2735642142032191e-007 87 5.2735642157297757e-007 88 5.2735642142032191e-007
+		 89 5.2735642144807748e-007 90 5.2735642148971085e-007 91 5.2735642147583306e-007
+		 92 5.2735642147583306e-007 93 5.2735642155909979e-007 94 5.2735642151746642e-007
+		 95 5.2735642142032191e-007 96 5.2735642147583306e-007 97 5.2735642151746642e-007
+		 98 5.2735642142032191e-007 99 5.2735642153134421e-007 100 5.2735642148971085e-007
+		 101 5.2735642144807748e-007 102 5.2735642151746642e-007 103 5.2735642146195527e-007
+		 104 5.2735642139256633e-007 105 5.2735642148971085e-007 106 5.2735642148971085e-007
+		 107 5.2735642146195527e-007 108 5.2735642137868854e-007 109 5.2735642147583306e-007
+		 110 5.273564214341997e-007 111 5.2735642148971085e-007 112 5.273564214341997e-007
+		 113 5.2735642157297757e-007 114 5.2735642142032191e-007 115 5.273564214341997e-007
+		 116 5.273564214341997e-007 117 5.2735642142032191e-007 118 5.2735642146195527e-007
+		 119 5.2735642146195527e-007 120 5.2735642146195527e-007;
+createNode animCurveTA -n "Slave_L_Ankle_joint1_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 -2.6080548388000838e-013 2 -2.6080548388000838e-013
+		 3 -2.6080548388000838e-013 4 -2.6080548388000838e-013 5 -2.6080548388000838e-013
+		 6 -2.6080548388000838e-013 7 -2.6080548388000838e-013 8 -2.6080548388000838e-013
+		 9 -2.6080548388000838e-013 10 -2.6080548388000838e-013 11 -2.6080548388000838e-013
+		 12 -2.6080548388000838e-013 13 -2.6080548388000838e-013 14 -2.6080548388000838e-013
+		 15 -2.6080548388000838e-013 16 -2.6080548388000838e-013 17 -2.6080548388000838e-013
+		 18 -2.6080548388000838e-013 19 -2.6080548388000838e-013 20 -2.6080548388000838e-013
+		 21 -2.6080548388000838e-013 22 -2.6080548388000838e-013 23 -2.6080548388000838e-013
+		 24 -2.6080548388000838e-013 25 -2.6080548388000838e-013 26 -2.6080548388000838e-013
+		 27 -2.6080548388000838e-013 28 -2.6080548388000838e-013 29 -2.6080548388000838e-013
+		 30 -2.6080548388000838e-013 31 -2.6080548388000838e-013 32 -2.6080548388000838e-013
+		 33 -2.6080548388000838e-013 34 -2.6080548388000838e-013 35 -2.6080548388000838e-013
+		 36 -2.6080548388000838e-013 37 -2.6080548388000838e-013 38 -2.6080548388000838e-013
+		 39 -2.6080548388000838e-013 40 -2.6080548388000838e-013 41 -2.6080548388000838e-013
+		 42 -2.6080548388000838e-013 43 -2.6080548388000838e-013 44 -2.6080548388000838e-013
+		 45 -2.6080548388000838e-013 46 -2.6080548388000838e-013 47 -2.6080548388000838e-013
+		 48 -2.6080548388000838e-013 49 -2.6080548388000838e-013 50 -2.6080548388000838e-013
+		 51 -2.6080548388000838e-013 52 -2.6080548388000838e-013 53 -2.6080548388000838e-013
+		 54 -2.6080548388000838e-013 55 -2.6080548388000838e-013 56 -2.6080548388000838e-013
+		 57 -2.6080548388000838e-013 58 -2.6080548388000838e-013 59 -2.6080548388000838e-013
+		 60 -2.6080548388000838e-013 61 -2.6080548388000838e-013 62 -2.6080548388000838e-013
+		 63 -2.6080548388000838e-013 64 -2.6080548388000838e-013 65 -2.6080548388000838e-013
+		 66 -2.6080548388000838e-013 67 -2.6080548388000838e-013 68 -2.6080548388000838e-013
+		 69 -2.6080548388000838e-013 70 -2.6080548388000838e-013 71 -2.6080548388000838e-013
+		 72 -2.6080548388000838e-013 73 -2.6080548388000838e-013 74 -2.6080548388000838e-013
+		 75 -2.6080548388000838e-013 76 -2.6080548388000838e-013 77 -2.6080548388000838e-013
+		 78 -2.6080548388000838e-013 79 -2.6080548388000838e-013 80 -2.6080548388000838e-013
+		 81 -2.6080548388000838e-013 82 -2.6080548388000838e-013 83 -2.6080548388000838e-013
+		 84 -2.6080548388000838e-013 85 -2.6080548388000838e-013 86 -2.6080548388000838e-013
+		 87 -2.6080548388000838e-013 88 -2.6080548388000838e-013 89 -2.6080548388000838e-013
+		 90 -2.6080548388000838e-013 91 -2.6080548388000838e-013 92 -2.6080548388000838e-013
+		 93 -2.6080548388000838e-013 94 -2.6080548388000838e-013 95 -2.6080548388000838e-013
+		 96 -2.6080548388000838e-013 97 -2.6080548388000838e-013 98 -2.6080548388000838e-013
+		 99 -2.6080548388000838e-013 100 -2.6080548388000838e-013 101 -2.6080548388000838e-013
+		 102 -2.6080548388000838e-013 103 -2.6080548388000838e-013 104 -2.6080548388000838e-013
+		 105 -2.6080548388000838e-013 106 -2.6080548388000838e-013 107 -2.6080548388000838e-013
+		 108 -2.6080548388000838e-013 109 -2.6080548388000838e-013 110 -2.6080548388000838e-013
+		 111 -2.6080548388000838e-013 112 -2.6080548388000838e-013 113 -2.6080548388000838e-013
+		 114 -2.6080548388000838e-013 115 -2.6080548388000838e-013 116 -2.6080548388000838e-013
+		 117 -2.6080548388000838e-013 118 -2.6080548388000838e-013 119 -2.6080548388000838e-013
+		 120 -2.6080548388000838e-013;
+createNode animCurveTA -n "Slave_L_Ankle_joint1_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 3.1805546814635086e-014 2 3.1805546814635086e-014
+		 3 3.1805546814635086e-014 4 3.1805546814635086e-014 5 3.1805546814635086e-014 6 3.1805546814635086e-014
+		 7 3.1805546814635086e-014 8 3.1805546814635086e-014 9 3.1805546814635086e-014 10 3.1805546814635086e-014
+		 11 3.1805546814635086e-014 12 3.1805546814635086e-014 13 3.1805546814635086e-014
+		 14 3.1805546814635086e-014 15 3.1805546814635086e-014 16 3.1805546814635086e-014
+		 17 3.1805546814635086e-014 18 3.1805546814635086e-014 19 3.1805546814635086e-014
+		 20 3.1805546814635086e-014 21 3.1805546814635086e-014 22 3.1805546814635086e-014
+		 23 3.1805546814635086e-014 24 3.1805546814635086e-014 25 3.1805546814635086e-014
+		 26 3.1805546814635086e-014 27 3.1805546814635086e-014 28 3.1805546814635086e-014
+		 29 3.1805546814635086e-014 30 3.1805546814635086e-014 31 3.1805546814635086e-014
+		 32 3.1805546814635086e-014 33 3.1805546814635086e-014 34 3.1805546814635086e-014
+		 35 3.1805546814635086e-014 36 3.1805546814635086e-014 37 3.1805546814635086e-014
+		 38 3.1805546814635086e-014 39 3.1805546814635086e-014 40 3.1805546814635086e-014
+		 41 3.1805546814635086e-014 42 3.1805546814635086e-014 43 3.1805546814635086e-014
+		 44 3.1805546814635086e-014 45 3.1805546814635086e-014 46 3.1805546814635086e-014
+		 47 3.1805546814635086e-014 48 3.1805546814635086e-014 49 3.1805546814635086e-014
+		 50 3.1805546814635086e-014 51 3.1805546814635086e-014 52 3.1805546814635086e-014
+		 53 3.1805546814635086e-014 54 3.1805546814635086e-014 55 3.1805546814635086e-014
+		 56 3.1805546814635086e-014 57 3.1805546814635086e-014 58 3.1805546814635086e-014
+		 59 3.1805546814635086e-014 60 3.1805546814635086e-014 61 3.1805546814635086e-014
+		 62 3.1805546814635086e-014 63 3.1805546814635086e-014 64 3.1805546814635086e-014
+		 65 3.1805546814635086e-014 66 3.1805546814635086e-014 67 3.1805546814635086e-014
+		 68 3.1805546814635086e-014 69 3.1805546814635086e-014 70 3.1805546814635086e-014
+		 71 3.1805546814635086e-014 72 3.1805546814635086e-014 73 3.1805546814635086e-014
+		 74 3.1805546814635086e-014 75 3.1805546814635086e-014 76 3.1805546814635086e-014
+		 77 3.1805546814635086e-014 78 3.1805546814635086e-014 79 3.1805546814635086e-014
+		 80 3.1805546814635086e-014 81 3.1805546814635086e-014 82 3.1805546814635086e-014
+		 83 3.1805546814635086e-014 84 3.1805546814635086e-014 85 3.1805546814635086e-014
+		 86 3.1805546814635086e-014 87 3.1805546814635086e-014 88 3.1805546814635086e-014
+		 89 3.1805546814635086e-014 90 3.1805546814635086e-014 91 3.1805546814635086e-014
+		 92 3.1805546814635086e-014 93 3.1805546814635086e-014 94 3.1805546814635086e-014
+		 95 3.1805546814635086e-014 96 3.1805546814635086e-014 97 3.1805546814635086e-014
+		 98 3.1805546814635086e-014 99 3.1805546814635086e-014 100 3.1805546814635086e-014
+		 101 3.1805546814635086e-014 102 3.1805546814635086e-014 103 3.1805546814635086e-014
+		 104 3.1805546814635086e-014 105 3.1805546814635086e-014 106 3.1805546814635086e-014
+		 107 3.1805546814635086e-014 108 3.1805546814635086e-014 109 3.1805546814635086e-014
+		 110 3.1805546814635086e-014 111 3.1805546814635086e-014 112 3.1805546814635086e-014
+		 113 3.1805546814635086e-014 114 3.1805546814635086e-014 115 3.1805546814635086e-014
+		 116 3.1805546814635086e-014 117 3.1805546814635086e-014 118 3.1805546814635086e-014
+		 119 3.1805546814635086e-014 120 3.1805546814635086e-014;
+createNode animCurveTA -n "Slave_L_Ankle_joint1_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 -3.4986101496098757e-014 2 -3.4986101496098757e-014
+		 3 -3.4986101496098757e-014 4 -3.4986101496098757e-014 5 -3.4986101496098757e-014
+		 6 -3.4986101496098757e-014 7 -3.4986101496098757e-014 8 -3.4986101496098757e-014
+		 9 -3.4986101496098757e-014 10 -3.4986101496098757e-014 11 -3.4986101496098757e-014
+		 12 -3.4986101496098757e-014 13 -3.4986101496098757e-014 14 -3.4986101496098757e-014
+		 15 -3.4986101496098757e-014 16 -3.4986101496098757e-014 17 -3.4986101496098757e-014
+		 18 -3.4986101496098757e-014 19 -3.4986101496098757e-014 20 -3.4986101496098757e-014
+		 21 -3.4986101496098757e-014 22 -3.4986101496098757e-014 23 -3.4986101496098757e-014
+		 24 -3.4986101496098757e-014 25 -3.4986101496098757e-014 26 -3.4986101496098757e-014
+		 27 -3.4986101496098757e-014 28 -3.4986101496098757e-014 29 -3.4986101496098757e-014
+		 30 -3.4986101496098757e-014 31 -3.4986101496098757e-014 32 -3.4986101496098757e-014
+		 33 -3.4986101496098757e-014 34 -3.4986101496098757e-014 35 -3.4986101496098757e-014
+		 36 -3.4986101496098757e-014 37 -3.4986101496098757e-014 38 -3.4986101496098757e-014
+		 39 -3.4986101496098757e-014 40 -3.4986101496098757e-014 41 -3.4986101496098757e-014
+		 42 -3.4986101496098757e-014 43 -3.4986101496098757e-014 44 -3.4986101496098757e-014
+		 45 -3.4986101496098757e-014 46 -3.4986101496098757e-014 47 -3.4986101496098757e-014
+		 48 -3.4986101496098757e-014 49 -3.4986101496098757e-014 50 -3.4986101496098757e-014
+		 51 -3.4986101496098757e-014 52 -3.4986101496098757e-014 53 -3.4986101496098757e-014
+		 54 -3.4986101496098757e-014 55 -3.4986101496098757e-014 56 -3.4986101496098757e-014
+		 57 -3.4986101496098757e-014 58 -3.4986101496098757e-014 59 -3.4986101496098757e-014
+		 60 -3.4986101496098757e-014 61 -3.4986101496098757e-014 62 -3.4986101496098757e-014
+		 63 -3.4986101496098757e-014 64 -3.4986101496098757e-014 65 -3.4986101496098757e-014
+		 66 -3.4986101496098757e-014 67 -3.4986101496098757e-014 68 -3.4986101496098757e-014
+		 69 -3.4986101496098757e-014 70 -3.4986101496098757e-014 71 -3.4986101496098757e-014
+		 72 -3.4986101496098757e-014 73 -3.4986101496098757e-014 74 -3.4986101496098757e-014
+		 75 -3.4986101496098757e-014 76 -3.4986101496098757e-014 77 -3.4986101496098757e-014
+		 78 -3.4986101496098757e-014 79 -3.4986101496098757e-014 80 -3.4986101496098757e-014
+		 81 -3.4986101496098757e-014 82 -3.4986101496098757e-014 83 -3.4986101496098757e-014
+		 84 -3.4986101496098757e-014 85 -3.4986101496098757e-014 86 -3.4986101496098757e-014
+		 87 -3.4986101496098757e-014 88 -3.4986101496098757e-014 89 -3.4986101496098757e-014
+		 90 -3.4986101496098757e-014 91 -3.4986101496098757e-014 92 -3.4986101496098757e-014
+		 93 -3.4986101496098757e-014 94 -3.4986101496098757e-014 95 -3.4986101496098757e-014
+		 96 -3.4986101496098757e-014 97 -3.4986101496098757e-014 98 -3.4986101496098757e-014
+		 99 -3.4986101496098757e-014 100 -3.4986101496098757e-014 101 -3.4986101496098757e-014
+		 102 -3.4986101496098757e-014 103 -3.4986101496098757e-014 104 -3.4986101496098757e-014
+		 105 -3.4986101496098757e-014 106 -3.4986101496098757e-014 107 -3.4986101496098757e-014
+		 108 -3.4986101496098757e-014 109 -3.4986101496098757e-014 110 -3.4986101496098757e-014
+		 111 -3.4986101496098757e-014 112 -3.4986101496098757e-014 113 -3.4986101496098757e-014
+		 114 -3.4986101496098757e-014 115 -3.4986101496098757e-014 116 -3.4986101496098757e-014
+		 117 -3.4986101496098757e-014 118 -3.4986101496098757e-014 119 -3.4986101496098757e-014
+		 120 -3.4986101496098757e-014;
+createNode animCurveTU -n "Slave_L_Ankle_joint1_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 1 2 1.0000000000000002 3 1 4 1.0000000000000002
+		 5 0.99999999999999989 6 1 7 1 8 0.99999999999999967 9 0.99999999999999989 10 1.0000000000000002
+		 11 1 12 1 13 1.0000000000000002 14 1.0000000000000002 15 1.0000000000000002 16 0.99999999999999989
+		 17 0.99999999999999978 18 1 19 1 20 1 21 1 22 1.0000000000000002 23 0.99999999999999978
+		 24 1 25 1 26 0.99999999999999989 27 1 28 1 29 1.0000000000000002 30 1 31 0.99999999999999989
+		 32 1 33 1 34 1.0000000000000002 35 1 36 1 37 1 38 1 39 1 40 1.0000000000000002 41 1.0000000000000002
+		 42 1.0000000000000002 43 1 44 0.99999999999999989 45 0.99999999999999989 46 0.99999999999999989
+		 47 1 48 1.0000000000000002 49 1 50 0.99999999999999989 51 1 52 1 53 0.99999999999999989
+		 54 1 55 1.0000000000000002 56 1 57 1 58 1 59 1 60 0.99999999999999978 61 1 62 1 63 1
+		 64 0.99999999999999978 65 1 66 1 67 1 68 1 69 1 70 1 71 1.0000000000000002 72 1 73 1.0000000000000002
+		 74 1 75 1 76 1 77 1.0000000000000002 78 1 79 1 80 0.99999999999999989 81 0.99999999999999989
+		 82 0.99999999999999978 83 0.99999999999999989 84 0.99999999999999989 85 1 86 0.99999999999999989
+		 87 1 88 0.99999999999999989 89 0.99999999999999978 90 1 91 1 92 0.99999999999999989
+		 93 0.99999999999999989 94 1.0000000000000002 95 1.0000000000000002 96 0.99999999999999989
+		 97 0.99999999999999989 98 0.99999999999999989 99 0.99999999999999956 100 1.0000000000000002
+		 101 1.0000000000000002 102 1 103 0.99999999999999989 104 1.0000000000000002 105 1
+		 106 0.99999999999999989 107 0.99999999999999989 108 1 109 1.0000000000000002 110 1
+		 111 0.99999999999999989 112 1.0000000000000002 113 1 114 1 115 1 116 1 117 1 118 1
+		 119 1 120 1;
+createNode animCurveTU -n "Slave_L_Ankle_joint1_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 0.99999999999999989 2 1 3 1 4 1 5 0.99999999999999989
+		 6 1 7 1.0000000000000002 8 0.99999999999999978 9 0.99999999999999989 10 1 11 0.99999999999999989
+		 12 0.99999999999999989 13 1.0000000000000002 14 1 15 1 16 0.99999999999999989 17 0.99999999999999978
+		 18 0.99999999999999989 19 1 20 0.99999999999999989 21 0.99999999999999989 22 1 23 0.99999999999999978
+		 24 0.99999999999999989 25 1 26 1 27 1 28 0.99999999999999989 29 0.99999999999999978
+		 30 0.99999999999999978 31 1 32 0.99999999999999989 33 1 34 1 35 1 36 1 37 0.99999999999999978
+		 38 1 39 1.0000000000000002 40 1.0000000000000002 41 0.99999999999999989 42 0.99999999999999989
+		 43 0.99999999999999989 44 0.99999999999999978 45 0.99999999999999989 46 0.99999999999999989
+		 47 0.99999999999999989 48 1 49 1 50 1 51 1 52 1 53 1 54 1 55 0.99999999999999989
+		 56 0.99999999999999978 57 1 58 1 59 1.0000000000000002 60 1 61 0.99999999999999989
+		 62 0.99999999999999978 63 0.99999999999999978 64 0.99999999999999989 65 1 66 1 67 1
+		 68 1.0000000000000002 69 0.99999999999999989 70 0.99999999999999978 71 1.0000000000000002
+		 72 1 73 1 74 1 75 1 76 0.99999999999999978 77 1.0000000000000002 78 1 79 1 80 0.99999999999999967
+		 81 0.99999999999999989 82 0.99999999999999989 83 1 84 0.99999999999999978 85 1 86 1
+		 87 1 88 0.99999999999999978 89 0.99999999999999989 90 0.99999999999999989 91 1 92 1
+		 93 0.99999999999999989 94 1.0000000000000002 95 1 96 1 97 0.99999999999999978 98 1
+		 99 1 100 1.0000000000000002 101 1 102 1 103 1 104 1 105 0.99999999999999989 106 0.99999999999999989
+		 107 0.99999999999999978 108 1.0000000000000002 109 1 110 0.99999999999999989 111 0.99999999999999989
+		 112 1.0000000000000002 113 0.99999999999999989 114 1 115 1 116 1.0000000000000002
+		 117 1.0000000000000002 118 1 119 1 120 1;
+createNode animCurveTU -n "Slave_L_Ankle_joint1_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 1.0000000000000002 2 1.0000000000000002
+		 3 1 4 1 5 1 6 1 7 1.0000000000000002 8 0.99999999999999989 9 0.99999999999999978
+		 10 1.0000000000000002 11 1 12 1 13 1 14 1 15 1 16 1 17 0.99999999999999978 18 1 19 1
+		 20 1 21 0.99999999999999978 22 1 23 0.99999999999999978 24 1.0000000000000002 25 1
+		 26 1 27 1 28 1 29 1 30 1 31 1.0000000000000002 32 0.99999999999999989 33 1 34 1.0000000000000002
+		 35 1 36 1 37 0.99999999999999989 38 1 39 1 40 1 41 1 42 1.0000000000000002 43 1 44 0.99999999999999978
+		 45 0.99999999999999989 46 1.0000000000000002 47 1 48 1.0000000000000002 49 1 50 1
+		 51 1 52 1.0000000000000002 53 1 54 1 55 1.0000000000000002 56 1 57 1 58 1 59 0.99999999999999989
+		 60 0.99999999999999978 61 1 62 1 63 0.99999999999999989 64 0.99999999999999989 65 1
+		 66 1 67 0.99999999999999989 68 1.0000000000000002 69 1 70 1 71 1 72 1 73 1 74 1 75 1
+		 76 0.99999999999999989 77 1.0000000000000004 78 1 79 1 80 0.99999999999999989 81 0.99999999999999989
+		 82 0.99999999999999989 83 1 84 0.99999999999999978 85 1 86 1 87 0.99999999999999989
+		 88 0.99999999999999989 89 0.99999999999999989 90 0.99999999999999989 91 1 92 0.99999999999999989
+		 93 0.99999999999999978 94 0.99999999999999989 95 1.0000000000000002 96 1 97 0.99999999999999978
+		 98 1 99 1 100 1 101 1 102 1 103 1 104 1.0000000000000002 105 0.99999999999999989
+		 106 0.99999999999999989 107 1 108 1.0000000000000002 109 1 110 0.99999999999999989
+		 111 1 112 1 113 1 114 1 115 1.0000000000000002 116 1 117 1.0000000000000002 118 1
+		 119 1 120 1;
+createNode animCurveTU -n "Slave_L_Knee_joint1_visibility";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 1 2 1 3 1 4 1 5 1 6 1 7 1 8 1 9 1 10 1
+		 11 1 12 1 13 1 14 1 15 1 16 1 17 1 18 1 19 1 20 1 21 1 22 1 23 1 24 1 25 1 26 1 27 1
+		 28 1 29 1 30 1 31 1 32 1 33 1 34 1 35 1 36 1 37 1 38 1 39 1 40 1 41 1 42 1 43 1 44 1
+		 45 1 46 1 47 1 48 1 49 1 50 1 51 1 52 1 53 1 54 1 55 1 56 1 57 1 58 1 59 1 60 1 61 1
+		 62 1 63 1 64 1 65 1 66 1 67 1 68 1 69 1 70 1 71 1 72 1 73 1 74 1 75 1 76 1 77 1 78 1
+		 79 1 80 1 81 1 82 1 83 1 84 1 85 1 86 1 87 1 88 1 89 1 90 1 91 1 92 1 93 1 94 1 95 1
+		 96 1 97 1 98 1 99 1 100 1 101 1 102 1 103 1 104 1 105 1 106 1 107 1 108 1 109 1 110 1
+		 111 1 112 1 113 1 114 1 115 1 116 1 117 1 118 1 119 1 120 1;
+createNode animCurveTL -n "Slave_L_Knee_joint1_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 -0.22209755330533432 2 -0.22209755330533423
+		 3 -0.22209755330533415 4 -0.22209755330533446 5 -0.22209755330533443 6 -0.22209755330533434
+		 7 -0.22209755330533404 8 -0.22209755330533426 9 -0.22209755330533426 10 -0.22209755330533426
+		 11 -0.22209755330533423 12 -0.22209755330533432 13 -0.22209755330533432 14 -0.22209755330533426
+		 15 -0.22209755330533432 16 -0.22209755330533415 17 -0.22209755330533415 18 -0.22209755330533409
+		 19 -0.22209755330533415 20 -0.22209755330533415 21 -0.22209755330533418 22 -0.22209755330533429
+		 23 -0.22209755330533418 24 -0.22209755330533432 25 -0.22209755330533429 26 -0.22209755330533415
+		 27 -0.22209755330533421 28 -0.22209755330533415 29 -0.22209755330533407 30 -0.22209755330533426
+		 31 -0.22209755330533415 32 -0.22209755330533421 33 -0.22209755330533429 34 -0.22209755330533429
+		 35 -0.22209755330533415 36 -0.22209755330533412 37 -0.22209755330533418 38 -0.22209755330533421
+		 39 -0.22209755330533421 40 -0.22209755330533432 41 -0.22209755330533423 42 -0.22209755330533415
+		 43 -0.22209755330533407 44 -0.22209755330533421 45 -0.22209755330533429 46 -0.22209755330533454
+		 47 -0.22209755330533421 48 -0.22209755330533434 49 -0.22209755330533432 50 -0.22209755330533415
+		 51 -0.22209755330533429 52 -0.22209755330533407 53 -0.22209755330533418 54 -0.22209755330533396
+		 55 -0.22209755330533423 56 -0.22209755330533407 57 -0.22209755330533429 58 -0.22209755330533429
+		 59 -0.22209755330533421 60 -0.22209755330533426 61 -0.22209755330533432 62 -0.22209755330533418
+		 63 -0.22209755330533401 64 -0.22209755330533423 65 -0.22209755330533429 66 -0.22209755330533429
+		 67 -0.22209755330533418 68 -0.22209755330533423 69 -0.22209755330533426 70 -0.22209755330533426
+		 71 -0.22209755330533421 72 -0.22209755330533437 73 -0.22209755330533409 74 -0.22209755330533437
+		 75 -0.22209755330533421 76 -0.22209755330533412 77 -0.22209755330533418 78 -0.22209755330533429
+		 79 -0.22209755330533429 80 -0.22209755330533418 81 -0.22209755330533432 82 -0.22209755330533418
+		 83 -0.22209755330533421 84 -0.22209755330533423 85 -0.22209755330533415 86 -0.22209755330533432
+		 87 -0.22209755330533421 88 -0.22209755330533415 89 -0.22209755330533429 90 -0.22209755330533437
+		 91 -0.22209755330533418 92 -0.22209755330533421 93 -0.22209755330533418 94 -0.22209755330533423
+		 95 -0.22209755330533421 96 -0.22209755330533415 97 -0.22209755330533418 98 -0.22209755330533421
+		 99 -0.22209755330533412 100 -0.22209755330533423 101 -0.22209755330533426 102 -0.22209755330533415
+		 103 -0.22209755330533418 104 -0.22209755330533432 105 -0.22209755330533421 106 -0.22209755330533423
+		 107 -0.22209755330533429 108 -0.22209755330533421 109 -0.22209755330533415 110 -0.22209755330533429
+		 111 -0.22209755330533421 112 -0.22209755330533429 113 -0.22209755330533415 114 -0.22209755330533426
+		 115 -0.22209755330533421 116 -0.22209755330533432 117 -0.22209755330533412 118 -0.22209755330533429
+		 119 -0.22209755330533429 120 -0.22209755330533429;
+createNode animCurveTL -n "Slave_L_Knee_joint1_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 8.7106724749874687e-008 2 8.7106724860896989e-008
+		 3 8.7106724833141413e-008 4 8.7106724763752474e-008 5 8.7106724847019201e-008 6 8.7106724860896989e-008
+		 7 8.7106724749874687e-008 8 8.7106724833141413e-008 9 8.7106724833141413e-008 10 8.7106724777630262e-008
+		 11 8.7106724777630262e-008 12 8.7106724805385838e-008 13 8.7106724708241323e-008
+		 14 8.710672479150805e-008 15 8.7106724819263626e-008 16 8.7106724784569156e-008 17 8.7106724833141413e-008
+		 18 8.7106724833141413e-008 19 8.710672479150805e-008 20 8.7106724805385838e-008 21 8.7106724777630262e-008
+		 22 8.7106724805385838e-008 23 8.7106724805385838e-008 24 8.7106724749874687e-008
+		 25 8.7106724815794179e-008 26 8.7106724777630262e-008 27 8.7106724833141413e-008
+		 28 8.7106724777630262e-008 29 8.7106724944163716e-008 30 8.7106724860896989e-008
+		 31 8.7106724735996899e-008 32 8.7106724749874687e-008 33 8.7106724722119111e-008
+		 34 8.7106724722119111e-008 35 8.710672466660796e-008 36 8.7106724888652565e-008 37 8.7106724944163716e-008
+		 38 8.7106724722119111e-008 39 8.7106724833141413e-008 40 8.7106724777630262e-008
+		 41 8.7106724777630262e-008 42 8.7106724638852384e-008 43 8.710672466660796e-008 44 8.7106724805385838e-008
+		 45 8.710672466660796e-008 46 8.7106724805385838e-008 47 8.7106724833141413e-008 48 8.7106724611096809e-008
+		 49 8.7106724888652565e-008 50 8.7106724777630262e-008 51 8.7106724815794179e-008
+		 52 8.7106724888652565e-008 53 8.7106724777630262e-008 54 8.7106724847019201e-008
+		 55 8.710672479150805e-008 56 8.7106724812324732e-008 57 8.7106724815794179e-008 58 8.7106724815794179e-008
+		 59 8.7106724742935793e-008 60 8.7106724777630262e-008 61 8.7106724833141413e-008
+		 62 8.7106724819263626e-008 63 8.7106724638852384e-008 64 8.7106724694363535e-008
+		 65 8.7106724971919292e-008 66 8.7106724860896989e-008 67 8.7106724583341233e-008
+		 68 8.7106724722119111e-008 69 8.710672466660796e-008 70 8.7106724805385838e-008 71 8.7106724944163716e-008
+		 72 8.7106724777630262e-008 73 8.7106724833141413e-008 74 8.7106724735996899e-008
+		 75 8.7106724874774777e-008 76 8.710672479150805e-008 77 8.7106724739466346e-008 78 8.7106724815794179e-008
+		 79 8.7106724815794179e-008 80 8.7106724730792728e-008 81 8.7106724777630262e-008
+		 82 8.7106724798446944e-008 83 8.7106724770691368e-008 84 8.7106724805385838e-008
+		 85 8.7106724770691368e-008 86 8.7106724798446944e-008 87 8.710672479150805e-008 88 8.7106724805385838e-008
+		 89 8.7106724860896989e-008 90 8.7106724833141413e-008 91 8.7106724833141413e-008
+		 92 8.7106724805385838e-008 93 8.710672479150805e-008 94 8.7106724833141413e-008 95 8.7106724777630262e-008
+		 96 8.7106724777630262e-008 97 8.7106724819263626e-008 98 8.7106724763752474e-008
+		 99 8.7106724847019201e-008 100 8.7106724749874687e-008 101 8.7106724819263626e-008
+		 102 8.7106724819263626e-008 103 8.710672479150805e-008 104 8.7106724763752474e-008
+		 105 8.7106724777630262e-008 106 8.7106724819263626e-008 107 8.710672479150805e-008
+		 108 8.7106724833141413e-008 109 8.7106724763752474e-008 110 8.7106724749874687e-008
+		 111 8.7106724847019201e-008 112 8.7106724847019201e-008 113 8.7106724798446944e-008
+		 114 8.7106724833141413e-008 115 8.7106724749874687e-008 116 8.7106724815794179e-008
+		 117 8.7106724777630262e-008 118 8.7106724815794179e-008 119 8.7106724815794179e-008
+		 120 8.7106724815794179e-008;
+createNode animCurveTL -n "Slave_L_Knee_joint1_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 -5.1640144839437685e-007 2 -5.1640144846376579e-007
+		 3 -5.1640144836662127e-007 4 -5.1640144846376579e-007 5 -5.1640144846376579e-007
+		 6 -5.1640144840825464e-007 7 -5.1640144843601021e-007 8 -5.1640144832498791e-007
+		 9 -5.1640144835274349e-007 10 -5.1640144849152136e-007 11 -5.164014483388657e-007
+		 12 -5.1640144847764358e-007 13 -5.1640144842213243e-007 14 -5.1640144840825464e-007
+		 15 -5.1640144838049906e-007 16 -5.164014483388657e-007 17 -5.1640144828335455e-007
+		 18 -5.1640144843601021e-007 19 -5.1640144839437685e-007 20 -5.1640144832498791e-007
+		 21 -5.164014483388657e-007 22 -5.1640144847764358e-007 23 -5.1640144835274349e-007
+		 24 -5.1640144839437685e-007 25 -5.1640144839437685e-007 26 -5.164014483388657e-007
+		 27 -5.1640144835274349e-007 28 -5.1640144836662127e-007 29 -5.1640144843601021e-007
+		 30 -5.1640144843601021e-007 31 -5.1640144836662127e-007 32 -5.1640144836662127e-007
+		 33 -5.1640144839437685e-007 34 -5.1640144843601021e-007 35 -5.1640144835274349e-007
+		 36 -5.1640144838049906e-007 37 -5.1640144842213243e-007 38 -5.1640144842213243e-007
+		 39 -5.1640144838049906e-007 40 -5.1640144843601021e-007 41 -5.1640144849152136e-007
+		 42 -5.1640144842213243e-007 43 -5.1640144840825464e-007 44 -5.1640144835274349e-007
+		 45 -5.16401448449888e-007 46 -5.1640144842213243e-007 47 -5.1640144836662127e-007
+		 48 -5.1640144832498791e-007 49 -5.1640144846376579e-007 50 -5.164014483388657e-007
+		 51 -5.1640144839437685e-007 52 -5.16401448449888e-007 53 -5.1640144843601021e-007
+		 54 -5.1640144842213243e-007 55 -5.16401448449888e-007 56 -5.1640144843601021e-007
+		 57 -5.1640144839437685e-007 58 -5.1640144839437685e-007 59 -5.1640144840825464e-007
+		 60 -5.1640144835274349e-007 61 -5.1640144851927694e-007 62 -5.1640144838049906e-007
+		 63 -5.1640144835274349e-007 64 -5.1640144838049906e-007 65 -5.1640144838049906e-007
+		 66 -5.1640144835274349e-007 67 -5.1640144832498791e-007 68 -5.1640144843601021e-007
+		 69 -5.1640144849152136e-007 70 -5.1640144843601021e-007 71 -5.1640144843601021e-007
+		 72 -5.1640144840825464e-007 73 -5.1640144832498791e-007 74 -5.1640144840825464e-007
+		 75 -5.164014483388657e-007 76 -5.1640144840825464e-007 77 -5.1640144840825464e-007
+		 78 -5.1640144839437685e-007 79 -5.1640144839437685e-007 80 -5.1640144840825464e-007
+		 81 -5.1640144839437685e-007 82 -5.1640144835274349e-007 83 -5.1640144838049906e-007
+		 84 -5.1640144835274349e-007 85 -5.1640144843601021e-007 86 -5.1640144843601021e-007
+		 87 -5.1640144829723233e-007 88 -5.1640144840825464e-007 89 -5.1640144839437685e-007
+		 90 -5.1640144843601021e-007 91 -5.1640144835274349e-007 92 -5.1640144835274349e-007
+		 93 -5.1640144829723233e-007 94 -5.1640144832498791e-007 95 -5.1640144838049906e-007
+		 96 -5.1640144835274349e-007 97 -5.1640144843601021e-007 98 -5.1640144840825464e-007
+		 99 -5.1640144835274349e-007 100 -5.1640144835274349e-007 101 -5.1640144843601021e-007
+		 102 -5.1640144835274349e-007 103 -5.1640144840825464e-007 104 -5.1640144849152136e-007
+		 105 -5.1640144838049906e-007 106 -5.1640144835274349e-007 107 -5.1640144840825464e-007
+		 108 -5.1640144847764358e-007 109 -5.164014483388657e-007 110 -5.1640144839437685e-007
+		 111 -5.1640144836662127e-007 112 -5.1640144842213243e-007 113 -5.1640144832498791e-007
+		 114 -5.16401448449888e-007 115 -5.1640144840825464e-007 116 -5.1640144839437685e-007
+		 117 -5.1640144842213243e-007 118 -5.1640144839437685e-007 119 -5.1640144839437685e-007
+		 120 -5.1640144839437685e-007;
+createNode animCurveTA -n "Slave_L_Knee_joint1_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 -1.6311787612375686e-005 2 -1.6311787612375686e-005
+		 3 -1.6311787612375686e-005 4 1.1446388769306071 5 1.6174594568479135 6 1.8173761799539039
+		 7 1.8475998510550593 8 1.746213746069754 9 1.4649347230298144 10 0.91128795038883992
+		 11 -1.6311787612299646e-005 12 -1.6311787612375686e-005 13 -1.6311787612375686e-005
+		 14 -1.6311787612375686e-005 15 -1.6311787612375686e-005 16 -1.6311787612375686e-005
+		 17 0.14779021796286107 18 -1.6311787612374188e-005 19 -1.6311787612375686e-005 20 -1.6311787612375686e-005
+		 21 -1.6311787612375686e-005 22 -1.6311787612375686e-005 23 -1.6311787612375686e-005
+		 24 -1.6311787612375686e-005 25 0.14836026714003978 26 -1.6311787612374188e-005 27 -1.6311787612375686e-005
+		 28 -1.6311787612375686e-005 29 -1.6311787612375686e-005 30 -1.6311787612375686e-005
+		 31 -1.6311787612375686e-005 32 0.098551775117634785 33 -1.6311787612374188e-005 34 -1.6311787612375686e-005
+		 35 -1.6311787612375686e-005 36 -1.6311787612375686e-005 37 -1.6311787612375686e-005
+		 38 -1.6311787612375686e-005 39 -1.6311787612375686e-005 40 -1.6311787612375686e-005
+		 41 -1.6311787612375686e-005 42 -1.6311787612375686e-005 43 -1.6311787612375686e-005
+		 44 0.098553389413087014 45 -1.6311787612374188e-005 46 -1.6311787612375686e-005 47 -1.6311787612375686e-005
+		 48 -1.6311787612375686e-005 49 -1.6311787612375686e-005 50 -1.6311787612375686e-005
+		 51 0.14836026714003978 52 -1.6311787612374188e-005 53 -1.6311787612375686e-005 54 -1.6311787612375686e-005
+		 55 -1.6311787612375686e-005 56 -1.6311787612375686e-005 57 0.14836026714003978 58 0.14836026714003978
+		 59 0.30570695575864115 60 0.53415288495438795 61 0.74998903313500398 62 0.94353205845004784
+		 63 1.1116916631168781 64 1.2528623570964523 65 1.3659342591454726 66 1.449802219154662
+		 67 1.5026601300665265 68 1.5213974912870747 69 1.5026599420633528 70 1.4498019046769768
+		 71 1.3659344285271553 72 1.2528619200731708 73 1.1116912200259272 74 0.94353268052528416
+		 75 0.74998868049976419 76 0.53415262743006819 77 0.30570811303469225 78 0.14836026714003978
+		 79 0.14836026714003978 80 0.17265491794324159 81 0.22824556851132169 82 0.29528194168363597
+		 83 0.36522724229152653 84 0.43471345312169474 85 0.50221768718216153 86 0.56694629270788566
+		 87 0.62842838260204092 88 0.68634404938657045 89 0.74044885467233579 90 0.79053705074709213
+		 91 0.83641886622774697 92 0.87790786264206633 93 0.91481077046065706 94 0.94691610055214581
+		 95 0.97398452946949055 96 0.99573723328134056 97 1.0118401560618147 98 1.0218860682811479
+		 99 1.0253681778815762 100 1.0215160483913439 101 1.0104225552457746 102 0.99266887262952708
+		 103 0.96871771953782415 104 0.93894510514469609 105 0.90366505049898715 106 0.86314562207520129
+		 107 0.81762450774416595 108 0.76732401138750728 109 0.71246101663032013 110 0.65326354729993485
+		 111 0.58999454363466186 112 0.5229848690806751 113 0.45271015844363882 114 0.37996180997444601
+		 115 0.3062544803450768 116 0.23498174159788818 117 0.17503386068526949 118 0.14836026714003978
+		 119 0.14836026714003978 120 0.14836026714003978;
+createNode animCurveTA -n "Slave_L_Knee_joint1_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 0.00038354699454037054 2 0.00038354699454037054
+		 3 0.00038354699454037054 4 -14.292810784139055 5 -21.060159934331555 6 -24.421865304200114
+		 7 -24.976988312206601 8 -23.170191479809443 9 -18.745647246132414 10 -11.258859645588515
+		 11 0.00038354699454096631 12 0.00038354699454037054 13 0.00038354699454037054 14 0.00038354699454037054
+		 15 0.00038354699454037054 16 0.00038354699454037054 17 -1.813214559905614 18 0.00038354699454056879
+		 19 0.00038354699454037054 20 0.00038354699454037054 21 0.00038354699454037054 22 0.00038354699454037054
+		 23 0.00038354699454037054 24 0.00038354699454037054 25 -1.8201937710851233 26 0.00038354699454056879
+		 27 0.00038354699454037054 28 0.00038354699454037054 29 0.00038354699454037054 30 0.00038354699454037054
+		 31 0.00038354699454037054 32 -1.2099877520754867 33 0.00038354699454037 34 0.00038354699454037054
+		 35 0.00038354699454037054 36 0.00038354699454037054 37 0.00038354699454037054 38 0.00038354699454037054
+		 39 0.00038354699454037054 40 0.00038354699454037054 41 0.00038354699454037054 42 0.00038354699454037054
+		 43 0.00038354699454037054 44 -1.2100075416874563 45 0.00038354699454037 46 0.00038354699454037054
+		 47 0.00038354699454037054 48 0.00038354699454037054 49 0.00038354699454037054 50 0.00038354699454037054
+		 51 -1.8201937710851233 52 0.00038354699454056879 53 0.00038354699454037054 54 0.00038354699454037054
+		 55 0.00038354699454037054 56 0.00038354699454037054 57 -1.8201937710851233 58 -1.8201937710851233
+		 59 -3.7457314756323332 60 -6.5471717680058532 61 -9.2231542153474724 62 -11.670934991124419
+		 63 -13.856242227289099 64 -15.75081112307743 65 -17.321145567240837 66 -18.524452927778569
+		 67 -19.303108395186992 68 -19.583367494634746 69 -19.303105594775175 70 -18.524448344797051
+		 71 -17.321147961565366 72 -15.750805153614344 73 -13.856236376832953 74 -11.670942960191452
+		 75 -9.2231498049260505 76 -6.5471685974909546 77 -3.7457456346926441 78 -1.8201937710851233
+		 79 -1.8201937710851233 80 -2.1177066083924494 81 -2.7980693224001292 82 -3.6181870895317476
+		 83 -4.4741633711091806 84 -5.3255271014599508 85 -6.1542982222168385 86 -6.9512513025737706
+		 87 -7.7109198602272242 88 -8.4294917111172882 89 -9.1038901994704595 90 -9.7313340565275954
+		 91 -10.309072291802192 92 -10.834246418012629 93 -11.303786838906564 94 -11.714297260457636
+		 95 -12.061966113251289 96 -12.342457734601817 97 -12.550758373476581 98 -12.681002552125905
+		 99 -12.726201657129662 100 -12.676201196344639 101 -12.532397737861384 102 -12.302831297171565
+		 103 -11.994202384949096 104 -11.61219440199825 105 -11.161719950660951 106 -10.647066953490176
+		 107 -10.07204823694957 108 -9.4401504595151469 109 -8.7546253524273627 110 -8.0186688467901863
+		 111 -7.2356928974884154 112 -6.4097139889794672 113 -5.5462848681009627 114 -4.6545859544538821
+		 115 -3.7524303500650218 116 -2.8804864797938055 117 -2.1468323039354078 118 -1.8201937710851233
+		 119 -1.8201937710851233 120 -1.8201937710851233;
+createNode animCurveTA -n "Slave_L_Knee_joint1_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 0.00051162301266857767 2 0.00051162301266857767
+		 3 0.00051162301266857767 4 -37.676219977244827 5 -56.320231284031259 6 -65.723456225281325
+		 7 -67.282894002827476 8 -62.21366933734943 9 -49.895441917873399 10 -29.472777253095369
+		 11 0.00051162301266552759 12 0.00051162301266857767 13 0.00051162301266857767 14 0.00051162301266857767
+		 15 0.00051162301266857767 16 0.00051162301266857767 17 -4.6429235542654865 18 0.0005116230126687081
+		 19 0.00051162301266857767 20 0.00051162301266857767 21 0.00051162301266857767 22 0.00051162301266857767
+		 23 0.00051162301266857767 24 0.00051162301266857767 25 -4.6608702995492495 26 0.0005116230126687081
+		 27 0.00051162301266857767 28 0.00051162301266857767 29 0.00051162301266857767 30 0.00051162301266857767
+		 31 0.00051162301266857767 32 -3.0940067010740875 33 0.0005116230126687081 34 0.00051162301266857767
+		 35 0.00051162301266857767 36 0.00051162301266857767 37 0.00051162301266857767 38 0.00051162301266857767
+		 39 0.00051162301266857767 40 0.00051162301266857767 41 0.00051162301266857767 42 0.00051162301266857767
+		 43 0.00051162301266857767 44 -3.0940574422220726 45 0.0005116230126687081 46 0.00051162301266857767
+		 47 0.00051162301266857767 48 0.00051162301266857767 49 0.00051162301266857767 50 0.00051162301266857767
+		 51 -4.6608702995492495 52 0.0005116230126687081 53 0.00051162301266857767 54 0.00051162301266857767
+		 55 0.00051162301266857767 56 0.00051162301266857767 57 -4.6608702995492495 58 -4.6608702995492495
+		 59 -9.6332260134614316 60 -16.949512374536457 61 -24.028891141057642 62 -30.580755622011782
+		 63 -36.489371410175053 64 -41.654899951221587 65 -45.964876814054151 66 -49.28386795528133
+		 67 -51.438703184161085 68 -52.215599353432118 69 -51.438695424657368 70 -49.283855288553248
+		 71 -45.964883404356264 72 -41.654883615177113 73 -36.489355519345494 74 -30.580777068331056
+		 75 -24.028879400819687 76 -16.949504039213107 77 -9.6332627451961557 78 -4.6608702995492495
+		 79 -4.6608702995492495 80 -5.4261593143478466 81 -7.1803405119232835 82 -9.3024484937574616
+		 83 -11.526230994281432 84 -13.747056565803605 85 -15.917600293047066 86 -18.0128543817913
+		 87 -20.017403641536994 88 -21.920057113758933 89 -23.711505070658454 90 -25.383198035456079
+		 91 -26.926669036697021 92 -28.333184133364696 93 -29.593479343642962 94 -30.697462982334383
+		 95 -31.633989968219502 96 -32.390583471798244 97 -32.953038393620226 98 -33.304978230946439
+		 99 -33.427158639292379 100 -33.292000773503645 101 -32.903440793725927 102 -32.283640528119967
+		 103 -31.451342084663608 104 -30.42269341509294 105 -29.211881723684854 106 -27.831504716545723
+		 107 -26.292955483229999 108 -24.606806274315552 109 -22.783036629177872 110 -20.83149221156674
+		 111 -18.76257962635195 112 -16.588251318178468 113 -14.324385190649137 114 -11.996120338310988
+		 115 -9.6506046532534366 116 -7.3932244349777809 117 -5.5011374418695409 118 -4.6608702995492495
+		 119 -4.6608702995492495 120 -4.6608702995492495;
+createNode animCurveTU -n "Slave_L_Knee_joint1_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 1 2 1.0000000000000002 3 0.99999999999999989
+		 4 1 5 0.99999999999999989 6 1 7 1 8 0.99999999999999989 9 0.99999999999999978 10 1
+		 11 1 12 1 13 1.0000000000000002 14 1 15 1 16 0.99999999999999989 17 0.99999999999999978
+		 18 0.99999999999999989 19 1 20 0.99999999999999989 21 0.99999999999999989 22 1 23 0.99999999999999978
+		 24 1 25 1 26 0.99999999999999989 27 1 28 1 29 1 30 1 31 1 32 1 33 1 34 1 35 0.99999999999999989
+		 36 0.99999999999999989 37 1 38 1 39 1 40 1 41 1 42 1 43 1 44 0.99999999999999989
+		 45 0.99999999999999989 46 0.99999999999999989 47 0.99999999999999989 48 1 49 1.0000000000000002
+		 50 0.99999999999999989 51 1 52 1.0000000000000002 53 1 54 1 55 1.0000000000000002
+		 56 1 57 1 58 1 59 1 60 0.99999999999999989 61 1 62 1 63 1 64 0.99999999999999989
+		 65 1 66 1 67 1 68 1 69 0.99999999999999989 70 1 71 1 72 1 73 1.0000000000000002 74 1
+		 75 1 76 0.99999999999999989 77 1.0000000000000002 78 1 79 1 80 0.99999999999999989
+		 81 0.99999999999999978 82 0.99999999999999989 83 1 84 0.99999999999999989 85 1 86 0.99999999999999989
+		 87 1 88 0.99999999999999989 89 0.99999999999999989 90 1 91 1 92 1 93 0.99999999999999989
+		 94 1 95 1 96 1 97 0.99999999999999989 98 1 99 0.99999999999999989 100 1.0000000000000002
+		 101 1 102 0.99999999999999989 103 1 104 1.0000000000000002 105 0.99999999999999978
+		 106 1 107 0.99999999999999978 108 1 109 1.0000000000000002 110 0.99999999999999989
+		 111 0.99999999999999989 112 1 113 0.99999999999999989 114 0.99999999999999989 115 1
+		 116 1 117 1 118 1 119 1 120 1;
+createNode animCurveTU -n "Slave_L_Knee_joint1_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 1 2 1 3 0.99999999999999989 4 1 5 1 6 1
+		 7 1.0000000000000002 8 0.99999999999999989 9 0.99999999999999989 10 1 11 1 12 1 13 1.0000000000000002
+		 14 1 15 1 16 0.99999999999999978 17 0.99999999999999978 18 0.99999999999999989 19 1
+		 20 0.99999999999999989 21 0.99999999999999989 22 1 23 0.99999999999999989 24 1 25 1
+		 26 1 27 1 28 0.99999999999999989 29 0.99999999999999989 30 0.99999999999999989 31 1
+		 32 0.99999999999999989 33 1 34 1 35 1 36 1 37 1 38 1 39 1.0000000000000002 40 1.0000000000000002
+		 41 1 42 0.99999999999999989 43 1 44 0.99999999999999989 45 0.99999999999999989 46 0.99999999999999989
+		 47 0.99999999999999989 48 1 49 1 50 1 51 1 52 1 53 1 54 1 55 1 56 0.99999999999999989
+		 57 1 58 1 59 1 60 0.99999999999999989 61 1 62 0.99999999999999989 63 1 64 0.99999999999999989
+		 65 1 66 0.99999999999999989 67 0.99999999999999989 68 1.0000000000000002 69 1 70 0.99999999999999989
+		 71 1.0000000000000002 72 0.99999999999999989 73 1 74 1 75 0.99999999999999989 76 0.99999999999999978
+		 77 1.0000000000000002 78 1 79 1 80 0.99999999999999978 81 0.99999999999999989 82 1
+		 83 1 84 0.99999999999999989 85 1 86 0.99999999999999989 87 1 88 0.99999999999999989
+		 89 0.99999999999999989 90 1 91 1 92 1 93 0.99999999999999978 94 1 95 1 96 1 97 0.99999999999999978
+		 98 0.99999999999999989 99 0.99999999999999978 100 1 101 1 102 1 103 0.99999999999999978
+		 104 1.0000000000000002 105 1 106 1 107 0.99999999999999989 108 1 109 1.0000000000000002
+		 110 0.99999999999999989 111 0.99999999999999989 112 1.0000000000000002 113 0.99999999999999978
+		 114 1 115 1 116 1.0000000000000002 117 1 118 1 119 1 120 1;
+createNode animCurveTU -n "Slave_L_Knee_joint1_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 1 2 1.0000000000000002 3 0.99999999999999989
+		 4 1 5 1 6 1 7 1 8 0.99999999999999989 9 0.99999999999999989 10 1 11 0.99999999999999989
+		 12 1 13 1 14 1 15 1 16 0.99999999999999989 17 0.99999999999999978 18 0.99999999999999989
+		 19 1 20 0.99999999999999989 21 0.99999999999999978 22 1 23 0.99999999999999978 24 1
+		 25 1 26 0.99999999999999989 27 1 28 0.99999999999999989 29 1 30 1 31 1.0000000000000002
+		 32 0.99999999999999989 33 1 34 1.0000000000000002 35 1 36 1 37 0.99999999999999989
+		 38 1 39 1 40 1 41 1 42 1 43 1 44 0.99999999999999978 45 0.99999999999999989 46 1
+		 47 0.99999999999999989 48 1 49 1 50 0.99999999999999989 51 1 52 1.0000000000000002
+		 53 1 54 1 55 1.0000000000000002 56 1 57 1 58 1 59 1 60 0.99999999999999989 61 1 62 1
+		 63 0.99999999999999989 64 0.99999999999999989 65 1 66 1 67 0.99999999999999978 68 1.0000000000000002
+		 69 1 70 0.99999999999999989 71 1 72 1 73 1 74 1 75 1 76 0.99999999999999989 77 1.0000000000000002
+		 78 1 79 1 80 0.99999999999999989 81 0.99999999999999989 82 1 83 0.99999999999999989
+		 84 0.99999999999999989 85 1 86 0.99999999999999989 87 0.99999999999999989 88 0.99999999999999989
+		 89 0.99999999999999989 90 1 91 1 92 1 93 0.99999999999999989 94 1 95 1 96 0.99999999999999989
+		 97 0.99999999999999978 98 1 99 0.99999999999999989 100 1 101 1 102 1 103 1 104 1.0000000000000002
+		 105 0.99999999999999978 106 0.99999999999999989 107 0.99999999999999989 108 1 109 1
+		 110 1 111 1 112 1 113 0.99999999999999989 114 1 115 1 116 1.0000000000000002 117 1.0000000000000002
+		 118 1 119 1 120 1;
+createNode animCurveTU -n "Slave_L_Hip_joint1_visibility";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 1 2 1 3 1 4 1 5 1 6 1 7 1 8 1 9 1 10 1
+		 11 1 12 1 13 1 14 1 15 1 16 1 17 1 18 1 19 1 20 1 21 1 22 1 23 1 24 1 25 1 26 1 27 1
+		 28 1 29 1 30 1 31 1 32 1 33 1 34 1 35 1 36 1 37 1 38 1 39 1 40 1 41 1 42 1 43 1 44 1
+		 45 1 46 1 47 1 48 1 49 1 50 1 51 1 52 1 53 1 54 1 55 1 56 1 57 1 58 1 59 1 60 1 61 1
+		 62 1 63 1 64 1 65 1 66 1 67 1 68 1 69 1 70 1 71 1 72 1 73 1 74 1 75 1 76 1 77 1 78 1
+		 79 1 80 1 81 1 82 1 83 1 84 1 85 1 86 1 87 1 88 1 89 1 90 1 91 1 92 1 93 1 94 1 95 1
+		 96 1 97 1 98 1 99 1 100 1 101 1 102 1 103 1 104 1 105 1 106 1 107 1 108 1 109 1 110 1
+		 111 1 112 1 113 1 114 1 115 1 116 1 117 1 118 1 119 1 120 1;
+createNode animCurveTL -n "Slave_L_Hip_joint1_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 -0.078806608265086217 2 -0.079140240155707239
+		 3 -0.079951896196098562 4 -0.08088036533412514 5 -0.081552425904154999 6 -0.081676925874841225
+		 7 -0.081112120656346279 8 -0.079899989855445996 9 -0.078263266907194651 10 -0.07656661919062048
+		 11 -0.075248670298383266 12 -0.074732185754196018 13 -0.075169757267500789 14 -0.076308512562701783
+		 15 -0.07782822988786213 16 -0.079385960268962621 17 -0.08067678914208111 18 -0.081482519250339544
+		 19 -0.081704654226832249 20 -0.081377423359978565 21 -0.080658471479820817 22 -0.079798032305982397
+		 23 -0.079089772180743964 24 -0.078806608265086217 25 -0.081695762536695721 26 -0.08387178590830488
+		 27 -0.084200229698448995 28 -0.084945399763357715 29 -0.08562864388415195 30 -0.085765052020576354
+		 31 -0.085009814865880565 32 -0.083242588959726208 33 -0.080586088513517215 34 -0.077367363593251734
+		 35 -0.074042805897421377 36 -0.071114436611840415 37 -0.06906168705298546 38 -0.06829946118445207
+		 39 -0.069061683197978507 40 -0.07111443049385141 41 -0.07404280819345857 42 -0.0773673571956629
+		 43 -0.08058608349712594 44 -0.083242592180415353 45 -0.085009813361611258 46 -0.085765051764086248
+		 47 -0.085628642848003533 48 -0.084945400144978755 49 -0.084200228106681499 50 -0.08387178590830488
+		 51 -0.081695762536695721 52 -0.078253020363057549 53 -0.079852372034649469 54 -0.081639174100064923
+		 55 -0.081009376001637101 56 -0.079926642133824929 57 -0.081695762536695721 58 -0.081695762536695721
+		 59 -0.081695762536695721 60 -0.081695762536695707 61 -0.081695762536695735 62 -0.081695762536695721
+		 63 -0.081695762536695721 64 -0.081695762536695721 65 -0.081695762536695721 66 -0.081695762536695721
+		 67 -0.081695762536695735 68 -0.081695762536695735 69 -0.081695762536695707 70 -0.081695762536695707
+		 71 -0.081695762536695707 72 -0.081695762536695721 73 -0.081695762536695735 74 -0.081695762536695707
+		 75 -0.081695762536695721 76 -0.081695762536695721 77 -0.081695762536695735 78 -0.081695762536695721
+		 79 -0.081695762536695721 80 -0.081695762536695721 81 -0.081695762536695721 82 -0.081695762536695721
+		 83 -0.081695762536695721 84 -0.081695762536695721 85 -0.081695762536695721 86 -0.081695762536695721
+		 87 -0.081695762536695721 88 -0.081695762536695721 89 -0.081695762536695721 90 -0.081695762536695721
+		 91 -0.081695762536695721 92 -0.081695762536695721 93 -0.081695762536695721 94 -0.081695762536695721
+		 95 -0.081695762536695721 96 -0.081695762536695721 97 -0.081695762536695721 98 -0.081695762536695721
+		 99 -0.081695762536695721 100 -0.081695762536695721 101 -0.081695762536695721 102 -0.081695762536695721
+		 103 -0.081695762536695721 104 -0.081695762536695721 105 -0.081695762536695721 106 -0.081695762536695721
+		 107 -0.081695762536695721 108 -0.081695762536695721 109 -0.081695762536695721 110 -0.081695762536695721
+		 111 -0.081695762536695721 112 -0.081695762536695721 113 -0.081695762536695721 114 -0.081695762536695721
+		 115 -0.081695762536695721 116 -0.081695762536695721 117 -0.081695762536695721 118 -0.081695762536695721
+		 119 -0.081695762536695721 120 -0.081695762536695721;
+createNode animCurveTL -n "Slave_L_Hip_joint1_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 -0.33369963416092829 2 -0.33321623026210079
+		 3 -0.33189076811375345 4 -0.32991037136051565 5 -0.327462165253116 6 -0.32473327213122904
+		 7 -0.32191081794825133 8 -0.31918192383928246 9 -0.31673371776534331 10 -0.31475332166458331
+		 11 -0.31342785881356772 12 -0.31294445516569314 13 -0.31335283290818716 14 -0.31448187514472636
+		 15 -0.31618745188369873 16 -0.31832542859744017 17 -0.32075166828407653 18 -0.32332204466331083
+		 19 -0.32589242104254512 20 -0.32831866072918126 21 -0.33045663744292281 22 -0.33216221418189507
+		 23 -0.33329125641843427 24 -0.33369963416092829 25 -0.33369963416092829 26 -0.34388957826337752
+		 27 -0.34376989126097135 28 -0.34343226514800096 29 -0.34290952022098348 30 -0.34224759776005437
+		 31 -0.34151102898960994 32 -0.34077563613834433 33 -0.34011308194184503 34 -0.33957499054655294
+		 35 -0.33918365132393963 36 -0.33893284665707823 37 -0.33879847055879664 38 -0.33875623922156461
+		 39 -0.33879847033511812 40 -0.33893284620913644 41 -0.3391836515514261 42 -0.33957498965801663
+		 43 -0.340113080929414 44 -0.34077563715358772 45 -0.34151102809690986 46 -0.34224759708163649
+		 47 -0.34290952151184168 48 -0.34343226493993584 49 -0.34376989187395768 50 -0.34388957826337752
+		 51 -0.33369963416092829 52 -0.33369963416092852 53 -0.3336996341609284 54 -0.33369963416092852
+		 55 -0.3336996341609284 56 -0.3336996341609284 57 -0.33369963416092829 58 -0.33369963416092829
+		 59 -0.3337523523879935 60 -0.33417963684358382 61 -0.33555999724982938 62 -0.33840830292341006
+		 63 -0.34289254313030887 64 -0.34869484356050678 65 -0.35504442728786606 66 -0.36088988880658573
+		 67 -0.3651178405739603 68 -0.36672053352621048 69 -0.36511782476853982 70 -0.36088986492259173
+		 71 -0.3550444380766663 72 -0.348694822153928 73 -0.34289252814460136 74 -0.33840831554729434
+		 75 -0.33555999373067752 76 -0.33417963592654759 77 -0.33375235319195445 78 -0.33369963416092829
+		 79 -0.33369963416092829 80 -0.33359832712336079 81 -0.33330837718255379 82 -0.33285074469440173
+		 83 -0.33224639385273563 84 -0.33151627799723399 85 -0.3306813605421457 86 -0.32976260730043006
+		 87 -0.32878096801370194 88 -0.32775740807514558 89 -0.32671289383742957 90 -0.3256683736029431
+		 91 -0.32464481366438674 92 -0.32366317983471976 93 -0.32274442113594298 94 -0.32190950368085486
+		 95 -0.32117939166328591 96 -0.32057503698368695 97 -0.32011740665437355 98 -0.31982745455472794
+		 99 -0.31972614751716044 100 -0.31983819538295877 101 -0.32015804592615321 102 -0.32066124487733655
+		 103 -0.32132334803895379 104 -0.32211991848755639 105 -0.32302649104256764 106 -0.32401862738167636
+		 107 -0.32507189309939655 108 -0.32616181713990811 109 -0.32726396453818063 110 -0.32835390088872807
+		 111 -0.32940715429641249 112 -0.33039929063552104 113 -0.33130587298260528 114 -0.33210243363913489
+		 115 -0.3327645368007523 116 -0.33326774050808256 117 -0.33358758629512991 118 -0.33369963416092829
+		 119 -0.33369963416092829 120 -0.33369963416092829;
+createNode animCurveTL -n "Slave_L_Hip_joint1_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 0.021583868719014267 2 0.020326516750869539
+		 3 0.01685346224888758 4 0.011606523964772564 5 0.0050543767443375224 6 -0.0022857547467054311
+		 7 -0.0098574224702364238 8 -0.017097851216630138 9 -0.023477775621630202 10 -0.028528892737800161
+		 11 -0.03184309208370955 12 -0.033037029338709327 13 -0.032028932037634475 14 -0.029212254373710694
+		 15 -0.02488195184563461 16 -0.019344617010969279 17 -0.012946064608620786 18 -0.0060781536460051558
+		 19 0.00083329034566467439 20 0.0073525412217281365 21 0.013059704195169448 22 0.01756755347849507
+		 23 0.020522008467116885 24 0.021583868719014267 25 -0.0014653595716476453 26 -0.0091837596775219132
+		 27 -0.0074335628832100376 28 -0.0026493782980051839 29 0.0044068322304168794 30 0.012913881578462905
+		 31 0.022036660331905544 32 0.030993540282181736 33 0.039132780431326397 34 0.045994422542828706
+		 35 0.051334382847910032 36 0.055097675762541626 37 0.057339436571761743 38 0.058100614874378786
+		 39 0.057339440514345807 40 0.055097682890594996 41 0.051334379594817792 42 0.045994434223291775
+		 43 0.039132793046986136 44 0.030993527919318642 45 0.0220366712535707 46 0.012913890115950899
+		 47 0.0044068152325882626 48 -0.0026493754115985702 49 -0.0074335717678298829 50 -0.0091837596775219132
+		 51 -0.0014653595716476453 52 0.023511905477551089 53 0.017318879165994769 54 0.0033749292415824785
+		 55 -0.010668921920784127 56 -0.016972824524453162 57 -0.0014653595716476453 58 -0.0014653595716476453
+		 59 -0.00036713917796326115 60 0.002633197881775233 61 0.0071819945976366803 62 0.013088940630422985
+		 63 0.020262559338059899 64 0.028505559099613581 65 0.037266094962915108 66 0.045482148649358539
+		 67 0.051630008150922085 68 0.054018961003506394 69 0.051629984762101899 70 0.045482114483593544
+		 71 0.037266109913769524 72 0.028505529457478473 73 0.0202625371280033 74 0.013088963138161963
+		 75 0.0071819855914481562 76 0.0026331935096244145 77 -0.00036712826125813273 78 -0.0014653595716476453
+		 79 -0.0014653595716476453 80 -0.0014653595716476453 81 -0.0014653595716476453 82 -0.0014653595716476453
+		 83 -0.0014653595716476453 84 -0.0014653595716476453 85 -0.0014653595716476453 86 -0.0014653595716476453
+		 87 -0.0014653595716476453 88 -0.0014653595716476453 89 -0.0014653595716476453 90 -0.0014653595716476453
+		 91 -0.0014653595716476453 92 -0.0014653595716476453 93 -0.0014653595716476453 94 -0.0014653595716476453
+		 95 -0.0014653595716476453 96 -0.0014653595716476453 97 -0.0014653595716476453 98 -0.0014653595716476453
+		 99 -0.0014653595716476453 100 -0.0014653595716476453 101 -0.0014653595716476453 102 -0.0014653595716476453
+		 103 -0.0014653595716476453 104 -0.0014653595716476453 105 -0.0014653595716476453
+		 106 -0.0014653595716476453 107 -0.0014653595716476453 108 -0.0014653595716476453
+		 109 -0.0014653595716476453 110 -0.0014653595716476453 111 -0.0014653595716476453
+		 112 -0.0014653595716476453 113 -0.0014653595716476453 114 -0.0014653595716476453
+		 115 -0.0014653595716476453 116 -0.0014653595716476453 117 -0.0014653595716476453
+		 118 -0.0014653595716476453 119 -0.0014653595716476453 120 -0.0014653595716476453;
+createNode animCurveTA -n "Slave_L_Hip_joint1_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 5.3401656106242496e-005 2 -0.83107541013344799
+		 3 -3.1173159866166973 4 -3.5862018163220246 5 -1.4995186677978212 6 -1.4536271846026572
+		 7 -4.8415731426867712 8 -11.216667712013482 9 -20.400822948779886 10 -30.677634071032887
+		 11 -37.528718885640231 12 -38.242961447835 13 -37.58451586363293 14 -35.735275471981126
+		 15 -32.854489388943541 16 -29.086022224233329 17 -24.621806208461074 18 -19.672740138054142
+		 19 -14.642747418012299 20 -9.9155773705433372 21 -5.8510219632445066 22 -2.7188180529375972
+		 23 -0.71173259362454633 24 5.3401656106269601e-005 25 -16.5587897035231 26 -33.439105955197292
+		 27 -33.0600962215903 28 -31.967506317814038 29 -30.133656143377362 30 -27.341011198003617
+		 31 -23.20583824077179 32 -17.548678436100925 33 -11.726997233972769 34 -6.8479373417719334
+		 35 -3.5952250098504175 36 -1.7053331172152817 37 -0.75172041304034698 38 -0.45776414127219145
+		 39 -0.75171885111789294 40 -1.7053298778472241 41 -3.5952267955293915 42 -6.8479295864942253
+		 43 -11.726987881042495 44 -17.5486845842413 45 -23.205832399066896 46 -27.341007956613023
+		 47 -30.133660988242628 48 -31.967505628575868 49 -33.060098169827235 50 -33.439105955197292
+		 51 -16.5587897035231 52 1.2857149739584222 53 -3.0915691535204388 54 -12.827855979337219
+		 55 -22.724924528742093 56 -27.329866685804397 57 -16.5587897035231 58 -16.5587897035231
+		 59 -16.37237124574602 60 -15.578163715786941 61 -14.116110612276108 62 -12.03674591478887
+		 63 -9.4623847562302483 64 -6.6001370725191748 65 -3.7406089802987781 66 -1.2360690488585784
+		 67 0.53209507225685015 68 1.1966495610378354 69 0.53208850601756985 70 -1.2360791161073501
+		 71 -3.7406042697370134 72 -6.6001470822138604 73 -9.4623926530741045 74 -12.036737832832754
+		 75 -14.116113675699896 76 -15.578165010436969 77 -16.372368873971404 78 -16.5587897035231
+		 79 -16.5587897035231 80 -16.548042662021203 81 -16.50285580654721 82 -16.409979717090767
+		 83 -16.267796294715971 84 -16.079987378657012 85 -15.852152279410372 86 -15.590631769250352
+		 87 -15.302104895335718 88 -14.993476295685069 89 -14.671836982814973 90 -14.344443722793157
+		 91 -14.018717721556721 92 -13.702223975677674 93 -13.402645986869702 94 -13.127770187801501
+		 95 -12.885445134603204 96 -12.683533591992965 97 -12.529866271774866 98 -12.432164586788634
+		 99 -12.3979671456225 100 -12.43578843430288 101 -12.543539122440775 102 -12.712407059572788
+		 103 -12.9333648986499 104 -13.197272823722463 105 -13.494951389544541 106 -13.817267882976047
+		 107 -14.155182151573202 108 -14.49977481071803 109 -14.842301266761407 110 -15.174202698614726
+		 111 -15.487112187253823 112 -15.772894146704049 113 -16.023662305652238 114 -16.231878561712275
+		 115 -16.390749927009406 116 -16.495426049986865 117 -16.546696621736292 118 -16.5587897035231
+		 119 -16.5587897035231 120 -16.5587897035231;
+createNode animCurveTA -n "Slave_L_Hip_joint1_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 -0.00019453929682996003 2 -0.37607198227639421
+		 3 -1.3939443998258629 4 6.298268500620396 5 9.5571467994389359 6 12.035397544057245
+		 7 15.458005397096491 8 19.632343114323088 9 22.06775697408974 10 19.501365848592823
+		 11 9.5102323293395781 12 10.592317158391669 13 9.9428222955983401 14 8.200879966183436
+		 15 5.7428184648435714 16 3.0181462046230672 17 2.3243790853519259 18 -1.3727152271697538
+		 19 -2.3673458829589675 20 -2.4718640904406897 21 -1.9120978518533498 22 -1.0564851257402084
+		 23 -0.3057052717392979 24 -0.00019453929682996119 25 1.4015218138253118 26 -16.624841652515222
+		 27 -15.650849282694157 28 -12.909051613555448 29 -8.6535590782841307 30 -3.2667660833265142
+		 31 2.3999552418155745 32 7.8460484997338691 33 8.4648123400651016 34 7.5547972613046124
+		 35 5.3182811450373899 36 2.9452072613354794 37 1.1967598702893767 38 0.53977576478595157
+		 39 1.1967565548640755 40 2.9452021182742247 41 5.3182829084839618 42 7.5547938172720741
+		 43 8.4648127096609027 44 7.8460615123533621 45 2.3999615958080831 46 -3.2667606192600829
+		 47 -8.6535696129037358 48 -12.909049923817996 49 -15.650854265902531 50 -16.624841652515222
+		 51 1.4015218138253118 52 0.37735629585513419 53 -0.62527494924282145 54 -2.3464451573767784
+		 55 -3.1121884109517839 56 -2.4651989376386845 57 1.4015218138253118 58 1.4015218138253116
+		 59 3.3266436380792808 60 6.4353262692136441 61 9.6780253147628965 62 12.780282974432005
+		 63 15.549805063625316 64 17.846535908597041 65 19.595504688155327 66 20.791879479590509
+		 67 21.481047464374438 68 21.710239519327725 69 21.481045122123753 70 20.791875210310256
+		 71 19.595507208251775 72 17.846528941354993 73 15.549797763769577 74 12.780293150263905
+		 75 9.6780198068090684 76 6.4353225671414878 77 3.3266584641791006 78 1.4015218138253118
+		 79 1.4015218138253116 80 1.657024170639144 81 2.2413166463545462 82 2.9448219809984386
+		 83 3.6768810891451458 84 4.4013486274298481 85 5.1016979082946543 86 5.7692924418450406
+		 87 6.399105288035833 88 6.9879057180786628 89 7.5334574530299028 90 8.0341224252311143
+		 91 8.4886111683549696 92 8.8958344393593212 93 9.2547762864419632 94 9.5643504159488923
+		 95 9.8232673701742304 96 10.029873076824703 97 10.181938109545715 98 10.276413126912169
+		 99 10.309088314287282 100 10.272938774859675 101 10.168582051183758 102 10.00081160712851
+		 103 9.7730443147646433 104 9.487735298628456 105 9.1467055086481022 106 8.7513695883890019
+		 107 8.3029455637100593 108 7.8026488537651204 109 7.2518284362798875 110 6.6521623452257925
+		 111 6.0059241259927871 112 5.3163444786291763 113 4.5884287402557682 114 3.830764317240194
+		 115 3.0598152524444115 116 2.3120719606424016 117 1.6820394165008687 118 1.4015218138253116
+		 119 1.4015218138253116 120 1.4015218138253116;
+createNode animCurveTA -n "Slave_L_Hip_joint1_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 -0.00025907185779556503 2 -0.0011782718285073825
+		 3 0.24109068981326987 4 19.279985753631887 5 29.952723534946063 6 37.468907753527134
+		 7 43.156795812112506 8 46.979329335308819 9 47.014550823840658 10 43.000261067691085
+		 11 36.352878714257109 12 37.353223407858422 13 36.861529048092216 14 35.41083965674234
+		 15 32.974493410376347 16 29.536653185729282 17 26.94717970313787 18 20.216098983600748
+		 19 15.030614513977129 20 10.126411270598066 21 5.9293251866689909 22 2.7320136715665702
+		 23 0.71024897778728291 24 -0.00025907185779557853 25 25.430001450120827 26 1.1159432060248966
+		 27 2.0165527337300757 28 4.7884454931486262 29 9.8561176960552181 30 17.934243024214208
+		 31 29.592556060643911 32 45.515837749342722 33 59.169036919754305 34 71.635226901056996
+		 35 80.530766133132374 36 86.232024960346209 37 89.404506672317737 38 90.446491462317965
+		 39 89.404512113694736 40 86.232035305516902 41 80.530760995961117 42 71.635247297391345
+		 43 59.16906041165953 44 45.515837284623935 45 29.592572040404747 46 17.934252396661144
+		 47 9.8561038722486778 48 4.7884473136952188 49 2.0165480165328469 50 1.1159432060248966
+		 51 25.430001450120827 52 10.850660996759816 53 11.621150132450522 54 13.79662112425024
+		 55 16.735960533539401 56 19.386009946272008 57 25.430001450120827 58 25.430001450120827
+		 59 28.480661461520544 60 34.146956209495833 61 40.98983411208215 62 48.542598696349387
+		 63 56.384655374626149 64 64.056337531578919 65 71.041609388093988 66 76.775568833785641
+		 67 80.660917618249059 68 82.091701596892634 69 80.660903406148535 70 76.775546359598266
+		 71 71.041620471935019 72 64.056312059941007 73 56.384632949805194 74 48.542625371465228
+		 75 40.989821637984271 76 34.14694894603673 77 28.480686375355038 78 25.430001450120827
+		 79 25.430001450120827 80 25.75780578432056 81 26.509510207953323 82 27.420019807618562
+		 83 28.376332896428977 84 29.334507683061755 85 30.27487858822445 86 31.187054175637353
+		 87 32.064477985460904 88 32.902146397140257 89 33.695626193811606 90 34.440598728678538
+		 91 35.132594991593535 92 35.766874703036592 93 36.338344457223847 94 36.841461124138789
+		 95 37.270169678830882 96 37.617820629534656 97 37.877038353709231 98 38.039575761293143
+		 99 38.096064274801776 100 38.033577672740201 101 37.85415363646176 102 37.568608922670265
+		 103 37.186420361521549 104 36.716015990681555 105 36.164992701461486 106 35.540223493956425
+		 107 34.847977407751465 108 34.094042149227121 109 33.283779053127297 110 32.42228286565701
+		 111 31.514644739093765 112 30.566340113949185 113 29.584220522547614 114 28.578774703831755
+		 115 27.569570486400103 116 26.600782165218842 117 25.789924979693026 118 25.430001450120827
+		 119 25.430001450120827 120 25.430001450120827;
+createNode animCurveTU -n "Slave_L_Hip_joint1_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 1 2 1 3 1 4 1 5 1 6 1 7 1 8 1 9 1 10 1
+		 11 1 12 1 13 1 14 1 15 1 16 1 17 1 18 1 19 1 20 1 21 1 22 1 23 1 24 1 25 1 26 1 27 1
+		 28 1 29 1 30 1 31 1 32 1 33 1 34 1 35 1 36 1 37 1 38 1 39 1 40 1 41 1 42 1 43 1 44 1
+		 45 1 46 1 47 1 48 1 49 1 50 1 51 1 52 1 53 1 54 1 55 1 56 1 57 1 58 1 59 1 60 1 61 1
+		 62 1 63 1 64 1 65 1 66 1 67 1 68 1 69 1 70 1 71 1 72 1 73 1 74 1 75 1 76 1 77 1 78 1
+		 79 1 80 1 81 1 82 1 83 1 84 1 85 1 86 1 87 1 88 1 89 1 90 1 91 1 92 1 93 1 94 1 95 1
+		 96 1 97 1 98 1 99 1 100 1 101 1 102 1 103 1 104 1 105 1 106 1 107 1 108 1 109 1 110 1
+		 111 1 112 1 113 1 114 1 115 1 116 1 117 1 118 1 119 1 120 1;
+createNode animCurveTU -n "Slave_L_Hip_joint1_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 1 2 1 3 1 4 1 5 1 6 1 7 1 8 1 9 1 10 1
+		 11 1 12 1 13 1 14 1 15 1 16 1 17 1 18 1 19 1 20 1 21 1 22 1 23 1 24 1 25 1 26 1 27 1
+		 28 1 29 1 30 1 31 1 32 1 33 1 34 1 35 1 36 1 37 1 38 1 39 1 40 1 41 1 42 1 43 1 44 1
+		 45 1 46 1 47 1 48 1 49 1 50 1 51 1 52 1 53 1 54 1 55 1 56 1 57 1 58 1 59 1 60 1 61 1
+		 62 1 63 1 64 1 65 1 66 1 67 1 68 1 69 1 70 1 71 1 72 1 73 1 74 1 75 1 76 1 77 1 78 1
+		 79 1 80 1 81 1 82 1 83 1 84 1 85 1 86 1 87 1 88 1 89 1 90 1 91 1 92 1 93 1 94 1 95 1
+		 96 1 97 1 98 1 99 1 100 1 101 1 102 1 103 1 104 1 105 1 106 1 107 1 108 1 109 1 110 1
+		 111 1 112 1 113 1 114 1 115 1 116 1 117 1 118 1 119 1 120 1;
+createNode animCurveTU -n "Slave_L_Hip_joint1_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 1 2 1 3 1 4 1 5 1 6 1 7 1 8 1 9 1 10 1
+		 11 1 12 1 13 1 14 1 15 1 16 1 17 1 18 1 19 1 20 1 21 1 22 1 23 1 24 1 25 1 26 1 27 1
+		 28 1 29 1 30 1 31 1 32 1 33 1 34 1 35 1 36 1 37 1 38 1 39 1 40 1 41 1 42 1 43 1 44 1
+		 45 1 46 1 47 1 48 1 49 1 50 1 51 1 52 1 53 1 54 1 55 1 56 1 57 1 58 1 59 1 60 1 61 1
+		 62 1 63 1 64 1 65 1 66 1 67 1 68 1 69 1 70 1 71 1 72 1 73 1 74 1 75 1 76 1 77 1 78 1
+		 79 1 80 1 81 1 82 1 83 1 84 1 85 1 86 1 87 1 88 1 89 1 90 1 91 1 92 1 93 1 94 1 95 1
+		 96 1 97 1 98 1 99 1 100 1 101 1 102 1 103 1 104 1 105 1 106 1 107 1 108 1 109 1 110 1
+		 111 1 112 1 113 1 114 1 115 1 116 1 117 1 118 1 119 1 120 1;
+createNode animCurveTU -n "Slave_L_Ankle_joint_visibility";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 1 2 1 3 1 4 1 5 1 6 1 7 1 8 1 9 1 10 1
+		 11 1 12 1 13 1 14 1 15 1 16 1 17 1 18 1 19 1 20 1 21 1 22 1 23 1 24 1 25 1 26 1 27 1
+		 28 1 29 1 30 1 31 1 32 1 33 1 34 1 35 1 36 1 37 1 38 1 39 1 40 1 41 1 42 1 43 1 44 1
+		 45 1 46 1 47 1 48 1 49 1 50 1 51 1 52 1 53 1 54 1 55 1 56 1 57 1 58 1 59 1 60 1 61 1
+		 62 1 63 1 64 1 65 1 66 1 67 1 68 1 69 1 70 1 71 1 72 1 73 1 74 1 75 1 76 1 77 1 78 1
+		 79 1 80 1 81 1 82 1 83 1 84 1 85 1 86 1 87 1 88 1 89 1 90 1 91 1 92 1 93 1 94 1 95 1
+		 96 1 97 1 98 1 99 1 100 1 101 1 102 1 103 1 104 1 105 1 106 1 107 1 108 1 109 1 110 1
+		 111 1 112 1 113 1 114 1 115 1 116 1 117 1 118 1 119 1 120 1;
+createNode animCurveTL -n "Slave_L_Ankle_joint_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 0.22810536149618468 2 0.22810536149618482
+		 3 0.22810536149618485 4 0.22810536149618477 5 0.22810536149618485 6 0.22810536149618474
+		 7 0.22810536149618479 8 0.22810536149618479 9 0.22810536149618477 10 0.22810536149618477
+		 11 0.22810536149618477 12 0.22810536149618471 13 0.22810536149618468 14 0.22810536149618482
+		 15 0.22810536149618466 16 0.22810536149618477 17 0.22810536149618468 18 0.22810536149618471
+		 19 0.22810536149618466 20 0.22810536149618482 21 0.22810536149618488 22 0.22810536149618471
+		 23 0.22810536149618479 24 0.22810536149618468 25 0.22810536149618474 26 0.22810536149618466
+		 27 0.22810536149618479 28 0.22810536149618477 29 0.22810536149618479 30 0.22810536149618477
+		 31 0.22810536149618463 32 0.22810536149618485 33 0.22810536149618482 34 0.22810536149618471
+		 35 0.22810536149618452 36 0.22810536149618479 37 0.22810536149618485 38 0.22810536149618485
+		 39 0.22810536149618474 40 0.22810536149618493 41 0.22810536149618466 42 0.22810536149618477
+		 43 0.22810536149618466 44 0.22810536149618471 45 0.22810536149618466 46 0.22810536149618482
+		 47 0.22810536149618482 48 0.22810536149618468 49 0.22810536149618474 50 0.22810536149618466
+		 51 0.22810536149618474 52 0.22810536149618485 53 0.22810536149618477 54 0.22810536149618471
+		 55 0.22810536149618479 56 0.22810536149618485 57 0.22810536149618474 58 0.22810536149618474
+		 59 0.22810536149618468 60 0.22810536149618479 61 0.22810536149618471 62 0.22810536149618482
+		 63 0.22810536149618479 64 0.22810536149618477 65 0.22810536149618485 66 0.22810536149618493
+		 67 0.22810536149618468 68 0.22810536149618491 69 0.22810536149618477 70 0.22810536149618474
+		 71 0.22810536149618488 72 0.22810536149618477 73 0.22810536149618468 74 0.2281053614961846
+		 75 0.22810536149618485 76 0.22810536149618479 77 0.22810536149618482 78 0.22810536149618474
+		 79 0.22810536149618474 80 0.22810536149618479 81 0.22810536149618466 82 0.22810536149618488
+		 83 0.22810536149618488 84 0.22810536149618477 85 0.22810536149618485 86 0.22810536149618482
+		 87 0.22810536149618482 88 0.22810536149618474 89 0.22810536149618471 90 0.22810536149618488
+		 91 0.22810536149618485 92 0.22810536149618493 93 0.22810536149618477 94 0.22810536149618482
+		 95 0.22810536149618479 96 0.22810536149618482 97 0.22810536149618488 98 0.22810536149618479
+		 99 0.22810536149618477 100 0.22810536149618485 101 0.22810536149618482 102 0.22810536149618466
+		 103 0.22810536149618474 104 0.22810536149618479 105 0.22810536149618482 106 0.22810536149618468
+		 107 0.22810536149618466 108 0.22810536149618466 109 0.22810536149618493 110 0.22810536149618474
+		 111 0.22810536149618468 112 0.22810536149618463 113 0.2281053614961846 114 0.22810536149618466
+		 115 0.22810536149618477 116 0.22810536149618479 117 0.22810536149618477 118 0.22810536149618474
+		 119 0.22810536149618474 120 0.22810536149618474;
+createNode animCurveTL -n "Slave_L_Ankle_joint_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 -1.7399970353437766e-013 2 1.1102230246251565e-016
+		 3 4.163336342344337e-017 4 9.7144514654701197e-017 5 1.0755285551056204e-016 6 9.0205620750793969e-017
+		 7 1.1102230246251565e-016 8 1.1102230246251565e-016 9 1.6653345369377348e-016 10 1.6653345369377348e-016
+		 11 1.1102230246251565e-016 12 1.9428902930940239e-016 13 2.7755575615628914e-017
+		 14 1.1102230246251565e-016 15 1.1102230246251565e-016 16 1.3877787807814457e-016
+		 17 1.1102230246251565e-016 18 1.6653345369377348e-016 19 1.6653345369377348e-016
+		 20 1.8041124150158794e-016 21 9.6710833785706996e-017 22 9.7144514654701197e-017
+		 23 6.9388939039072284e-017 24 -1.7399970353437766e-013 25 1.2663481374630692e-016
+		 26 0 27 1.1102230246251565e-016 28 3.8857805861880479e-016 29 1.1102230246251565e-016
+		 30 1.1102230246251565e-016 31 1.5265566588595902e-016 32 1.1102230246251565e-016
+		 33 1.1102230246251565e-016 34 5.5511151231257827e-017 35 5.5511151231257827e-017
+		 36 2.2204460492503131e-016 37 0 38 1.6653345369377348e-016 39 3.3306690738754696e-016
+		 40 1.1102230246251565e-016 41 5.5511151231257827e-017 42 1.1102230246251565e-016
+		 43 -2.7755575615628914e-017 44 5.5511151231257827e-017 45 1.2490009027033011e-016
+		 46 8.3266726846886741e-017 47 5.5511151231257827e-017 48 2.2204460492503131e-016
+		 49 1.1102230246251565e-016 50 0 51 1.2663481374630692e-016 52 9.7144514654701197e-017
+		 53 4.163336342344337e-017 54 6.9388939039072284e-017 55 5.5511151231257827e-017 56 1.3877787807814457e-016
+		 57 1.2663481374630692e-016 58 1.2663481374630692e-016 59 9.0205620750793969e-017
+		 60 1.4051260155412137e-016 61 1.2836953722228372e-016 62 1.6653345369377348e-016
+		 63 1.3183898417423734e-016 64 1.1275702593849246e-016 65 2.7755575615628914e-017
+		 66 1.4224732503009818e-016 67 3.4694469519536142e-018 68 2.1857515797307769e-016
+		 69 9.0205620750793969e-017 70 1.6306400674181987e-016 71 1.3877787807814457e-016
+		 72 2.2898349882893854e-016 73 1.9081958235744878e-016 74 5.8980598183211441e-017
+		 75 1.3010426069826053e-016 76 8.8470897274817162e-017 77 1.0234868508263162e-016
+		 78 1.2663481374630692e-016 79 1.2663481374630692e-016 80 1.3357370765021415e-016
+		 81 5.7245874707234634e-017 82 9.8879238130678004e-017 83 6.4184768611141862e-017
+		 84 1.1449174941446927e-016 85 1.0928757898653885e-016 86 8.8470897274817162e-017
+		 87 7.9797279894933126e-017 88 6.0715321659188248e-017 89 7.4593109467002705e-017
+		 90 1.6653345369377348e-016 91 1.2490009027033011e-016 92 7.1123662515049091e-017
+		 93 8.8470897274817162e-017 94 7.2858385991025898e-017 95 1.1275702593849246e-016
+		 96 1.5265566588595902e-016 97 1.214306433183765e-016 98 1.8214596497756474e-016 99 9.3675067702747583e-017
+		 100 8.3266726846886741e-017 101 1.231653667943533e-016 102 4.6837533851373792e-017
+		 103 1.0928757898653885e-016 104 1.1796119636642288e-016 105 9.540979117872439e-017
+		 106 5.8980598183211441e-017 107 5.0306980803327406e-017 108 7.4593109467002705e-017
+		 109 8.1532003370909933e-017 110 1.0928757898653885e-016 111 5.7245874707234634e-017
+		 112 1.3010426069826053e-016 113 1.0061396160665481e-016 114 1.1449174941446927e-016
+		 115 7.4593109467002705e-017 116 1.2663481374630692e-016 117 1.3010426069826053e-016
+		 118 1.2663481374630692e-016 119 1.2663481374630692e-016 120 1.2663481374630692e-016;
+createNode animCurveTL -n "Slave_L_Ankle_joint_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 -2.1901343238983628e-010 2 -4.3229075874506862e-010
+		 3 -4.32290730989493e-010 4 -1.8041124150158794e-016 5 -8.3266726846886741e-017 6 -6.9388939039072284e-017
+		 7 -9.7144514654701197e-017 8 -1.1102230246251565e-016 9 -1.2490009027033011e-016
+		 10 -4.3229064772276615e-010 11 -4.3229077262285642e-010 12 -4.32290730989493e-010
+		 13 -4.3229081425621985e-010 14 -9.7144514654701197e-017 15 -1.3877787807814457e-016
+		 16 -1.2490009027033011e-016 17 -1.9428902930940239e-016 18 -1.5265566588595902e-016
+		 19 -5.5511151231257827e-017 20 -1.5265566588595902e-016 21 4.163336342344337e-017
+		 22 -8.3266726846886741e-017 23 -4.3229078650064423e-010 24 -2.1901343238983628e-010
+		 25 -5.5511151231257827e-017 26 -4.3229082813400765e-010 27 -4.3229080037843204e-010
+		 28 -4.3229070323391738e-010 29 -4.32290730989493e-010 30 -4.3229081425621985e-010
+		 31 -4.3229068935612958e-010 32 -4.3229071711170519e-010 33 -4.3229075874506862e-010
+		 34 -4.3229074486728081e-010 35 -4.3229074486728081e-010 36 -4.32290730989493e-010
+		 37 -4.3229082813400765e-010 38 -4.3229082813400765e-010 39 -4.3229080037843204e-010
+		 40 -4.3229070323391738e-010 41 -4.3229078650064423e-010 42 -4.3229074486728081e-010
+		 43 -4.3229078650064423e-010 44 -4.3229074486728081e-010 45 -4.3229078650064423e-010
+		 46 -4.3229077262285642e-010 47 -4.3229077262285642e-010 48 -4.32290730989493e-010
+		 49 -4.3229070323391738e-010 50 -4.3229082813400765e-010 51 -5.5511151231257827e-017
+		 52 -1.3877787807814457e-016 53 -1.1102230246251565e-016 54 -8.3266726846886741e-017
+		 55 -4.32290730989493e-010 56 -4.3229070323391738e-010 57 -5.5511151231257827e-017
+		 58 -5.5511151231257827e-017 59 -6.9388939039072284e-017 60 -4.163336342344337e-017
+		 61 -1.1102230246251565e-016 62 -1.2490009027033011e-016 63 -1.1102230246251565e-016
+		 64 -1.6653345369377348e-016 65 -5.5511151231257827e-017 66 -8.3266726846886741e-017
+		 67 -6.9388939039072284e-017 68 -1.8041124150158794e-016 69 -8.3266726846886741e-017
+		 70 -2.7755575615628914e-017 71 -5.5511151231257827e-017 72 -1.3877787807814457e-016
+		 73 -6.9388939039072284e-017 74 -2.7755575615628914e-017 75 -1.5265566588595902e-016
+		 76 -1.8041124150158794e-016 77 0 78 -5.5511151231257827e-017 79 -5.5511151231257827e-017
+		 80 -2.7755575615628914e-017 81 -9.7144514654701197e-017 82 -8.3266726846886741e-017
+		 83 4.163336342344337e-017 84 -6.9388939039072284e-017 85 -8.3266726846886741e-017
+		 86 -1.2490009027033011e-016 87 0 88 -8.3266726846886741e-017 89 -1.1102230246251565e-016
+		 90 -1.8041124150158794e-016 91 -5.5511151231257827e-017 92 -5.5511151231257827e-017
+		 93 -1.9428902930940239e-016 94 -1.2490009027033011e-016 95 -5.5511151231257827e-017
+		 96 -1.2490009027033011e-016 97 -8.3266726846886741e-017 98 -8.3266726846886741e-017
+		 99 -5.5511151231257827e-017 100 -9.7144514654701197e-017 101 -1.3877787807814457e-017
+		 102 -1.2490009027033011e-016 103 -5.5511151231257827e-017 104 -1.3877787807814457e-017
+		 105 -9.7144514654701197e-017 106 -2.7755575615628914e-017 107 1.3877787807814457e-017
+		 108 -1.8041124150158794e-016 109 -5.5511151231257827e-017 110 -1.5265566588595902e-016
+		 111 -4.163336342344337e-017 112 -1.5265566588595902e-016 113 -1.3877787807814457e-016
+		 114 -1.1102230246251565e-016 115 -1.2490009027033011e-016 116 -6.9388939039072284e-017
+		 117 -8.3266726846886741e-017 118 -5.5511151231257827e-017 119 -5.5511151231257827e-017
+		 120 -5.5511151231257827e-017;
+createNode animCurveTA -n "Slave_L_Ankle_joint_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 3.8166656177562189e-014 2 3.8166656177562189e-014
+		 3 3.8166656177562189e-014 4 3.8166656177562189e-014 5 3.8166656177562189e-014 6 3.8166656177562189e-014
+		 7 3.8166656177562189e-014 8 3.8166656177562189e-014 9 3.8166656177562189e-014 10 3.8166656177562189e-014
+		 11 3.8166656177562189e-014 12 3.8166656177562189e-014 13 3.8166656177562189e-014
+		 14 3.8166656177562189e-014 15 3.8166656177562189e-014 16 3.8166656177562189e-014
+		 17 3.8166656177562189e-014 18 3.8166656177562189e-014 19 3.8166656177562189e-014
+		 20 3.8166656177562189e-014 21 3.8166656177562189e-014 22 3.8166656177562189e-014
+		 23 3.8166656177562189e-014 24 3.8166656177562189e-014 25 3.8166656177562189e-014
+		 26 3.8166656177562189e-014 27 3.8166656177562189e-014 28 3.8166656177562189e-014
+		 29 3.8166656177562189e-014 30 3.8166656177562189e-014 31 3.8166656177562189e-014
+		 32 3.8166656177562189e-014 33 3.8166656177562189e-014 34 3.8166656177562189e-014
+		 35 3.8166656177562189e-014 36 3.8166656177562189e-014 37 3.8166656177562189e-014
+		 38 3.8166656177562189e-014 39 3.8166656177562189e-014 40 3.8166656177562189e-014
+		 41 3.8166656177562189e-014 42 3.8166656177562189e-014 43 3.8166656177562189e-014
+		 44 3.8166656177562189e-014 45 3.8166656177562189e-014 46 3.8166656177562189e-014
+		 47 3.8166656177562189e-014 48 3.8166656177562189e-014 49 3.8166656177562189e-014
+		 50 3.8166656177562189e-014 51 3.8166656177562189e-014 52 3.8166656177562189e-014
+		 53 3.8166656177562189e-014 54 3.8166656177562189e-014 55 3.8166656177562189e-014
+		 56 3.8166656177562189e-014 57 3.8166656177562189e-014 58 3.8166656177562189e-014
+		 59 3.8166656177562189e-014 60 3.8166656177562189e-014 61 3.8166656177562189e-014
+		 62 3.8166656177562189e-014 63 3.8166656177562189e-014 64 3.8166656177562189e-014
+		 65 3.8166656177562189e-014 66 3.8166656177562189e-014 67 3.8166656177562189e-014
+		 68 3.8166656177562189e-014 69 3.8166656177562189e-014 70 3.8166656177562189e-014
+		 71 3.8166656177562189e-014 72 3.8166656177562189e-014 73 3.8166656177562189e-014
+		 74 3.8166656177562189e-014 75 3.8166656177562189e-014 76 3.8166656177562189e-014
+		 77 3.8166656177562189e-014 78 3.8166656177562189e-014 79 3.8166656177562189e-014
+		 80 3.8166656177562189e-014 81 3.8166656177562189e-014 82 3.8166656177562189e-014
+		 83 3.8166656177562189e-014 84 3.8166656177562189e-014 85 3.8166656177562189e-014
+		 86 3.8166656177562189e-014 87 3.8166656177562189e-014 88 3.8166656177562189e-014
+		 89 3.8166656177562189e-014 90 3.8166656177562189e-014 91 3.8166656177562189e-014
+		 92 3.8166656177562189e-014 93 3.8166656177562189e-014 94 3.8166656177562189e-014
+		 95 3.8166656177562189e-014 96 3.8166656177562189e-014 97 3.8166656177562189e-014
+		 98 3.8166656177562189e-014 99 3.8166656177562189e-014 100 3.8166656177562189e-014
+		 101 3.8166656177562189e-014 102 3.8166656177562189e-014 103 3.8166656177562189e-014
+		 104 3.8166656177562189e-014 105 3.8166656177562189e-014 106 3.8166656177562189e-014
+		 107 3.8166656177562189e-014 108 3.8166656177562189e-014 109 3.8166656177562189e-014
+		 110 3.8166656177562189e-014 111 3.8166656177562189e-014 112 3.8166656177562189e-014
+		 113 3.8166656177562189e-014 114 3.8166656177562189e-014 115 3.8166656177562189e-014
+		 116 3.8166656177562189e-014 117 3.8166656177562189e-014 118 3.8166656177562189e-014
+		 119 3.8166656177562189e-014 120 3.8166656177562189e-014;
+createNode animCurveTA -n "Slave_L_Ankle_joint_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 -5.0888874903416281e-014 2 -5.0888874903416281e-014
+		 3 -5.0888874903416281e-014 4 -5.0888874903416281e-014 5 -5.0888874903416281e-014
+		 6 -5.0888874903416281e-014 7 -5.0888874903416281e-014 8 -5.0888874903416281e-014
+		 9 -5.0888874903416281e-014 10 -5.0888874903416281e-014 11 -5.0888874903416281e-014
+		 12 -5.0888874903416281e-014 13 -5.0888874903416281e-014 14 -5.0888874903416281e-014
+		 15 -5.0888874903416281e-014 16 -5.0888874903416281e-014 17 -5.0888874903416281e-014
+		 18 -5.0888874903416281e-014 19 -5.0888874903416281e-014 20 -5.0888874903416281e-014
+		 21 -5.0888874903416281e-014 22 -5.0888874903416281e-014 23 -5.0888874903416281e-014
+		 24 -5.0888874903416281e-014 25 -5.0888874903416281e-014 26 -5.0888874903416281e-014
+		 27 -5.0888874903416281e-014 28 -5.0888874903416281e-014 29 -5.0888874903416281e-014
+		 30 -5.0888874903416281e-014 31 -5.0888874903416281e-014 32 -5.0888874903416281e-014
+		 33 -5.0888874903416281e-014 34 -5.0888874903416281e-014 35 -5.0888874903416281e-014
+		 36 -5.0888874903416281e-014 37 -5.0888874903416281e-014 38 -5.0888874903416281e-014
+		 39 -5.0888874903416281e-014 40 -5.0888874903416281e-014 41 -5.0888874903416281e-014
+		 42 -5.0888874903416281e-014 43 -5.0888874903416281e-014 44 -5.0888874903416281e-014
+		 45 -5.0888874903416281e-014 46 -5.0888874903416281e-014 47 -5.0888874903416281e-014
+		 48 -5.0888874903416281e-014 49 -5.0888874903416281e-014 50 -5.0888874903416281e-014
+		 51 -5.0888874903416281e-014 52 -5.0888874903416281e-014 53 -5.0888874903416281e-014
+		 54 -5.0888874903416281e-014 55 -5.0888874903416281e-014 56 -5.0888874903416281e-014
+		 57 -5.0888874903416281e-014 58 -5.0888874903416281e-014 59 -5.0888874903416281e-014
+		 60 -5.0888874903416281e-014 61 -5.0888874903416281e-014 62 -5.0888874903416281e-014
+		 63 -5.0888874903416281e-014 64 -5.0888874903416281e-014 65 -5.0888874903416281e-014
+		 66 -5.0888874903416281e-014 67 -5.0888874903416281e-014 68 -5.0888874903416281e-014
+		 69 -5.0888874903416281e-014 70 -5.0888874903416281e-014 71 -5.0888874903416281e-014
+		 72 -5.0888874903416281e-014 73 -5.0888874903416281e-014 74 -5.0888874903416281e-014
+		 75 -5.0888874903416281e-014 76 -5.0888874903416281e-014 77 -5.0888874903416281e-014
+		 78 -5.0888874903416281e-014 79 -5.0888874903416281e-014 80 -5.0888874903416281e-014
+		 81 -5.0888874903416281e-014 82 -5.0888874903416281e-014 83 -5.0888874903416281e-014
+		 84 -5.0888874903416281e-014 85 -5.0888874903416281e-014 86 -5.0888874903416281e-014
+		 87 -5.0888874903416281e-014 88 -5.0888874903416281e-014 89 -5.0888874903416281e-014
+		 90 -5.0888874903416281e-014 91 -5.0888874903416281e-014 92 -5.0888874903416281e-014
+		 93 -5.0888874903416281e-014 94 -5.0888874903416281e-014 95 -5.0888874903416281e-014
+		 96 -5.0888874903416281e-014 97 -5.0888874903416281e-014 98 -5.0888874903416281e-014
+		 99 -5.0888874903416281e-014 100 -5.0888874903416281e-014 101 -5.0888874903416281e-014
+		 102 -5.0888874903416281e-014 103 -5.0888874903416281e-014 104 -5.0888874903416281e-014
+		 105 -5.0888874903416281e-014 106 -5.0888874903416281e-014 107 -5.0888874903416281e-014
+		 108 -5.0888874903416281e-014 109 -5.0888874903416281e-014 110 -5.0888874903416281e-014
+		 111 -5.0888874903416281e-014 112 -5.0888874903416281e-014 113 -5.0888874903416281e-014
+		 114 -5.0888874903416281e-014 115 -5.0888874903416281e-014 116 -5.0888874903416281e-014
+		 117 -5.0888874903416281e-014 118 -5.0888874903416281e-014 119 -5.0888874903416281e-014
+		 120 -5.0888874903416281e-014;
+createNode animCurveTA -n "Slave_L_Ankle_joint_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 1.9083328088781085e-014 2 1.9083328088781085e-014
+		 3 1.9083328088781085e-014 4 1.9083328088781085e-014 5 1.9083328088781085e-014 6 1.9083328088781085e-014
+		 7 1.9083328088781085e-014 8 1.9083328088781085e-014 9 1.9083328088781085e-014 10 1.9083328088781085e-014
+		 11 1.9083328088781085e-014 12 1.9083328088781085e-014 13 1.9083328088781085e-014
+		 14 1.9083328088781085e-014 15 1.9083328088781085e-014 16 1.9083328088781085e-014
+		 17 1.9083328088781085e-014 18 1.9083328088781085e-014 19 1.9083328088781085e-014
+		 20 1.9083328088781085e-014 21 1.9083328088781085e-014 22 1.9083328088781085e-014
+		 23 1.9083328088781085e-014 24 1.9083328088781085e-014 25 1.9083328088781085e-014
+		 26 1.9083328088781085e-014 27 1.9083328088781085e-014 28 1.9083328088781085e-014
+		 29 1.9083328088781085e-014 30 1.9083328088781085e-014 31 1.9083328088781085e-014
+		 32 1.9083328088781085e-014 33 1.9083328088781085e-014 34 1.9083328088781085e-014
+		 35 1.9083328088781085e-014 36 1.9083328088781085e-014 37 1.9083328088781085e-014
+		 38 1.9083328088781085e-014 39 1.9083328088781085e-014 40 1.9083328088781085e-014
+		 41 1.9083328088781085e-014 42 1.9083328088781085e-014 43 1.9083328088781085e-014
+		 44 1.9083328088781085e-014 45 1.9083328088781085e-014 46 1.9083328088781085e-014
+		 47 1.9083328088781085e-014 48 1.9083328088781085e-014 49 1.9083328088781085e-014
+		 50 1.9083328088781085e-014 51 1.9083328088781085e-014 52 1.9083328088781085e-014
+		 53 1.9083328088781085e-014 54 1.9083328088781085e-014 55 1.9083328088781085e-014
+		 56 1.9083328088781085e-014 57 1.9083328088781085e-014 58 1.9083328088781085e-014
+		 59 1.9083328088781085e-014 60 1.9083328088781085e-014 61 1.9083328088781085e-014
+		 62 1.9083328088781085e-014 63 1.9083328088781085e-014 64 1.9083328088781085e-014
+		 65 1.9083328088781085e-014 66 1.9083328088781085e-014 67 1.9083328088781085e-014
+		 68 1.9083328088781085e-014 69 1.9083328088781085e-014 70 1.9083328088781085e-014
+		 71 1.9083328088781085e-014 72 1.9083328088781085e-014 73 1.9083328088781085e-014
+		 74 1.9083328088781085e-014 75 1.9083328088781085e-014 76 1.9083328088781085e-014
+		 77 1.9083328088781085e-014 78 1.9083328088781085e-014 79 1.9083328088781085e-014
+		 80 1.9083328088781085e-014 81 1.9083328088781085e-014 82 1.9083328088781085e-014
+		 83 1.9083328088781085e-014 84 1.9083328088781085e-014 85 1.9083328088781085e-014
+		 86 1.9083328088781085e-014 87 1.9083328088781085e-014 88 1.9083328088781085e-014
+		 89 1.9083328088781085e-014 90 1.9083328088781085e-014 91 1.9083328088781085e-014
+		 92 1.9083328088781085e-014 93 1.9083328088781085e-014 94 1.9083328088781085e-014
+		 95 1.9083328088781085e-014 96 1.9083328088781085e-014 97 1.9083328088781085e-014
+		 98 1.9083328088781085e-014 99 1.9083328088781085e-014 100 1.9083328088781085e-014
+		 101 1.9083328088781085e-014 102 1.9083328088781085e-014 103 1.9083328088781085e-014
+		 104 1.9083328088781085e-014 105 1.9083328088781085e-014 106 1.9083328088781085e-014
+		 107 1.9083328088781085e-014 108 1.9083328088781085e-014 109 1.9083328088781085e-014
+		 110 1.9083328088781085e-014 111 1.9083328088781085e-014 112 1.9083328088781085e-014
+		 113 1.9083328088781085e-014 114 1.9083328088781085e-014 115 1.9083328088781085e-014
+		 116 1.9083328088781085e-014 117 1.9083328088781085e-014 118 1.9083328088781085e-014
+		 119 1.9083328088781085e-014 120 1.9083328088781085e-014;
+createNode animCurveTU -n "Slave_L_Ankle_joint_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 1.0000000000000002 2 0.99999999999999989
+		 3 1 4 0.99999999999999989 5 1 6 0.99999999999999989 7 1.0000000000000002 8 1 9 1.0000000000000002
+		 10 0.99999999999999989 11 1 12 0.99999999999999989 13 1 14 1 15 1.0000000000000002
+		 16 1 17 0.99999999999999989 18 0.99999999999999989 19 1 20 1.0000000000000002 21 1
+		 22 0.99999999999999989 23 0.99999999999999989 24 1.0000000000000002 25 1 26 1 27 1
+		 28 1 29 1.0000000000000002 30 0.99999999999999978 31 1 32 1 33 1 34 1.0000000000000002
+		 35 0.99999999999999978 36 0.99999999999999978 37 1.0000000000000002 38 1 39 1.0000000000000002
+		 40 1 41 1 42 1 43 0.99999999999999989 44 0.99999999999999989 45 1 46 0.99999999999999978
+		 47 0.99999999999999989 48 0.99999999999999989 49 1 50 1 51 1 52 0.99999999999999989
+		 53 1 54 0.99999999999999989 55 1 56 0.99999999999999989 57 1 58 1 59 0.99999999999999989
+		 60 1 61 0.99999999999999989 62 1 63 1 64 1 65 0.99999999999999978 66 0.99999999999999989
+		 67 1.0000000000000002 68 0.99999999999999978 69 1 70 1.0000000000000002 71 1 72 0.99999999999999978
+		 73 1 74 1 75 0.99999999999999978 76 0.99999999999999989 77 1 78 1 79 1 80 1.0000000000000002
+		 81 1 82 0.99999999999999989 83 1 84 1 85 1 86 1 87 1 88 0.99999999999999989 89 1
+		 90 0.99999999999999989 91 1 92 1 93 1 94 1 95 1 96 0.99999999999999989 97 1 98 1
+		 99 0.99999999999999989 100 1 101 1 102 1 103 1 104 1 105 1 106 1 107 1.0000000000000002
+		 108 1 109 0.99999999999999989 110 1 111 0.99999999999999989 112 0.99999999999999978
+		 113 1 114 1 115 0.99999999999999989 116 0.99999999999999989 117 1 118 1 119 1 120 1;
+createNode animCurveTU -n "Slave_L_Ankle_joint_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 1 2 0.99999999999999978 3 1.0000000000000002
+		 4 1 5 0.99999999999999989 6 1 7 0.99999999999999989 8 1 9 1 10 0.99999999999999967
+		 11 1 12 0.99999999999999989 13 1.0000000000000002 14 1 15 1 16 1.0000000000000002
+		 17 1 18 0.99999999999999978 19 1 20 1 21 1 22 1 23 0.99999999999999989 24 1 25 1.0000000000000002
+		 26 0.99999999999999989 27 1 28 0.99999999999999989 29 1 30 0.99999999999999989 31 0.99999999999999989
+		 32 1 33 1 34 1 35 0.99999999999999989 36 0.99999999999999978 37 1.0000000000000002
+		 38 1 39 1 40 1.0000000000000002 41 0.99999999999999989 42 0.99999999999999978 43 1.0000000000000002
+		 44 0.99999999999999989 45 0.99999999999999989 46 0.99999999999999967 47 0.99999999999999989
+		 48 0.99999999999999989 49 0.99999999999999989 50 0.99999999999999989 51 1.0000000000000002
+		 52 1 53 0.99999999999999989 54 0.99999999999999989 55 1 56 0.99999999999999989 57 1.0000000000000002
+		 58 1.0000000000000002 59 1 60 1.0000000000000002 61 1 62 0.99999999999999989 63 1
+		 64 1 65 1 66 1 67 1.0000000000000002 68 1 69 1 70 1 71 1 72 0.99999999999999978 73 1
+		 74 1.0000000000000002 75 1 76 0.99999999999999978 77 1 78 1.0000000000000002 79 1.0000000000000002
+		 80 1 81 1.0000000000000002 82 0.99999999999999989 83 1 84 1 85 1 86 0.99999999999999989
+		 87 1.0000000000000002 88 0.99999999999999989 89 0.99999999999999989 90 1 91 1.0000000000000002
+		 92 0.99999999999999989 93 0.99999999999999989 94 1 95 1 96 0.99999999999999978 97 0.99999999999999989
+		 98 1 99 1 100 1 101 1 102 1 103 1 104 1 105 1.0000000000000002 106 1 107 1 108 1
+		 109 0.99999999999999989 110 0.99999999999999967 111 1 112 0.99999999999999978 113 1
+		 114 1 115 1 116 1 117 1.0000000000000002 118 1.0000000000000002 119 1.0000000000000002
+		 120 1.0000000000000002;
+createNode animCurveTU -n "Slave_L_Ankle_joint_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 1 2 0.99999999999999978 3 0.99999999999999989
+		 4 0.99999999999999989 5 1 6 1.0000000000000002 7 0.99999999999999989 8 0.99999999999999989
+		 9 1 10 0.99999999999999989 11 1 12 1 13 1 14 1.0000000000000002 15 1 16 1 17 0.99999999999999978
+		 18 1 19 1 20 1.0000000000000002 21 1 22 0.99999999999999989 23 1 24 1 25 1 26 0.99999999999999989
+		 27 1 28 0.99999999999999989 29 1.0000000000000002 30 0.99999999999999989 31 1 32 1
+		 33 1 34 1 35 1 36 0.99999999999999989 37 1 38 0.99999999999999989 39 1.0000000000000002
+		 40 1 41 1 42 1 43 1 44 0.99999999999999989 45 0.99999999999999989 46 0.99999999999999989
+		 47 1 48 1 49 1 50 0.99999999999999989 51 1 52 0.99999999999999989 53 0.99999999999999989
+		 54 1 55 1.0000000000000002 56 1 57 1 58 1 59 1 60 1.0000000000000002 61 0.99999999999999989
+		 62 0.99999999999999989 63 1 64 1 65 0.99999999999999989 66 1 67 1 68 1 69 0.99999999999999989
+		 70 1.0000000000000002 71 1 72 0.99999999999999989 73 1 74 1.0000000000000002 75 0.99999999999999978
+		 76 0.99999999999999989 77 1 78 1 79 1 80 1.0000000000000002 81 0.99999999999999989
+		 82 0.99999999999999989 83 1 84 1 85 1 86 1 87 1.0000000000000002 88 0.99999999999999989
+		 89 1 90 0.99999999999999989 91 1.0000000000000002 92 0.99999999999999989 93 0.99999999999999989
+		 94 1 95 1.0000000000000002 96 0.99999999999999989 97 0.99999999999999978 98 0.99999999999999989
+		 99 1 100 1 101 1 102 0.99999999999999989 103 1 104 1 105 1 106 1 107 1 108 0.99999999999999989
+		 109 1 110 0.99999999999999989 111 1 112 0.99999999999999989 113 1 114 1 115 0.99999999999999989
+		 116 0.99999999999999989 117 1 118 1 119 1 120 1;
+createNode animCurveTU -n "Slave_L_Knee_joint_visibility";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 1 2 1 3 1 4 1 5 1 6 1 7 1 8 1 9 1 10 1
+		 11 1 12 1 13 1 14 1 15 1 16 1 17 1 18 1 19 1 20 1 21 1 22 1 23 1 24 1 25 1 26 1 27 1
+		 28 1 29 1 30 1 31 1 32 1 33 1 34 1 35 1 36 1 37 1 38 1 39 1 40 1 41 1 42 1 43 1 44 1
+		 45 1 46 1 47 1 48 1 49 1 50 1 51 1 52 1 53 1 54 1 55 1 56 1 57 1 58 1 59 1 60 1 61 1
+		 62 1 63 1 64 1 65 1 66 1 67 1 68 1 69 1 70 1 71 1 72 1 73 1 74 1 75 1 76 1 77 1 78 1
+		 79 1 80 1 81 1 82 1 83 1 84 1 85 1 86 1 87 1 88 1 89 1 90 1 91 1 92 1 93 1 94 1 95 1
+		 96 1 97 1 98 1 99 1 100 1 101 1 102 1 103 1 104 1 105 1 106 1 107 1 108 1 109 1 110 1
+		 111 1 112 1 113 1 114 1 115 1 116 1 117 1 118 1 119 1 120 1;
+createNode animCurveTL -n "Slave_L_Knee_joint_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 0.22209787170718423 2 0.2220978717071842
+		 3 0.22209787170718417 4 0.22209787170718426 5 0.22209787170718434 6 0.22209787170718437
+		 7 0.22209787170718387 8 0.22209787170718415 9 0.2220978717071842 10 0.22209787170718415
+		 11 0.2220978717071842 12 0.22209787170718409 13 0.22209787170718423 14 0.22209787170718415
+		 15 0.22209787170718415 16 0.22209787170718404 17 0.22209787170718409 18 0.22209787170718412
+		 19 0.22209787170718398 20 0.22209787170718406 21 0.2220978717071842 22 0.22209787170718409
+		 23 0.22209787170718412 24 0.22209787170718423 25 0.2220978717071842 26 0.22209787170718404
+		 27 0.22209787170718398 28 0.22209787170718409 29 0.22209787170718409 30 0.22209787170718412
+		 31 0.22209787170718412 32 0.22209787170718401 33 0.22209787170718406 34 0.22209787170718415
+		 35 0.22209787170718406 36 0.22209787170718398 37 0.2220978717071842 38 0.22209787170718415
+		 39 0.22209787170718426 40 0.22209787170718404 41 0.22209787170718417 42 0.22209787170718395
+		 43 0.2220978717071839 44 0.2220978717071842 45 0.22209787170718434 46 0.22209787170718404
+		 47 0.22209787170718415 48 0.2220978717071842 49 0.22209787170718417 50 0.22209787170718404
+		 51 0.2220978717071842 52 0.22209787170718387 53 0.22209787170718406 54 0.2220978717071839
+		 55 0.22209787170718404 56 0.22209787170718406 57 0.2220978717071842 58 0.2220978717071842
+		 59 0.22209787170718415 60 0.22209787170718429 61 0.2220978717071842 62 0.22209787170718401
+		 63 0.22209787170718401 64 0.22209787170718412 65 0.22209787170718417 66 0.22209787170718409
+		 67 0.22209787170718415 68 0.22209787170718406 69 0.22209787170718401 70 0.22209787170718415
+		 71 0.22209787170718417 72 0.22209787170718406 73 0.22209787170718406 74 0.22209787170718431
+		 75 0.22209787170718404 76 0.22209787170718401 77 0.22209787170718412 78 0.2220978717071842
+		 79 0.2220978717071842 80 0.22209787170718417 81 0.22209787170718429 82 0.22209787170718412
+		 83 0.2220978717071842 84 0.22209787170718412 85 0.22209787170718409 86 0.22209787170718409
+		 87 0.22209787170718415 88 0.2220978717071842 89 0.2220978717071842 90 0.22209787170718395
+		 91 0.22209787170718423 92 0.22209787170718409 93 0.22209787170718404 94 0.22209787170718415
+		 95 0.22209787170718406 96 0.22209787170718415 97 0.22209787170718409 98 0.22209787170718409
+		 99 0.22209787170718417 100 0.22209787170718417 101 0.22209787170718417 102 0.22209787170718423
+		 103 0.2220978717071842 104 0.22209787170718415 105 0.22209787170718406 106 0.2220978717071842
+		 107 0.22209787170718426 108 0.22209787170718415 109 0.22209787170718415 110 0.22209787170718423
+		 111 0.2220978717071842 112 0.22209787170718415 113 0.2220978717071842 114 0.22209787170718415
+		 115 0.22209787170718417 116 0.22209787170718417 117 0.22209787170718417 118 0.2220978717071842
+		 119 0.2220978717071842 120 0.2220978717071842;
+createNode animCurveTL -n "Slave_L_Knee_joint_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 -8.3266726846886741e-017 2 -1.1102230246251565e-016
+		 3 -4.163336342344337e-017 4 -4.163336342344337e-017 5 -9.7144514654701197e-017 6 0
+		 7 6.9388939039072284e-018 8 0 9 2.7755575615628914e-017 10 8.3266726846886741e-017
+		 11 -2.7755575615628914e-017 12 -2.7755575615628914e-017 13 -5.5511151231257827e-017
+		 14 -2.7755575615628914e-017 15 -1.3877787807814457e-017 16 1.3877787807814457e-017
+		 17 2.0816681711721685e-017 18 -2.0816681711721685e-017 19 0 20 -2.7755575615628914e-017
+		 21 2.7755575615628914e-017 22 5.5511151231257827e-017 23 -1.3877787807814457e-017
+		 24 -8.3266726846886741e-017 25 1.214306433183765e-017 26 0 27 1.6653345369377348e-016
+		 28 5.5511151231257827e-017 29 1.6653345369377348e-016 30 0 31 4.163336342344337e-017
+		 32 0 33 -2.7755575615628914e-017 34 0 35 1.1102230246251565e-016 36 -1.1102230246251565e-016
+		 37 1.1102230246251565e-016 38 5.5511151231257827e-017 39 0 40 1.6653345369377348e-016
+		 41 0 42 -5.5511151231257827e-017 43 -1.1102230246251565e-016 44 -5.5511151231257827e-017
+		 45 -5.5511151231257827e-017 46 -1.1102230246251565e-016 47 -5.5511151231257827e-017
+		 48 0 49 -1.6653345369377348e-016 50 0 51 1.214306433183765e-017 52 5.5511151231257827e-017
+		 53 0 54 5.5511151231257827e-017 55 -4.163336342344337e-017 56 2.7755575615628914e-017
+		 57 1.214306433183765e-017 58 1.214306433183765e-017 59 -2.0816681711721685e-017 60 4.163336342344337e-017
+		 61 -2.7755575615628914e-017 62 1.3877787807814457e-017 63 8.3266726846886741e-017
+		 64 8.3266726846886741e-017 65 -8.3266726846886741e-017 66 5.5511151231257827e-017
+		 67 -5.5511151231257827e-017 68 8.3266726846886741e-017 69 5.5511151231257827e-017
+		 70 5.5511151231257827e-017 71 -8.3266726846886741e-017 72 5.5511151231257827e-017
+		 73 0 74 -2.7755575615628914e-017 75 -2.7755575615628914e-017 76 -2.7755575615628914e-017
+		 77 3.4694469519536142e-018 78 1.214306433183765e-017 79 1.214306433183765e-017 80 2.0816681711721685e-017
+		 81 -3.6429192995512949e-017 82 -1.3877787807814457e-017 83 -4.8572257327350599e-017
+		 84 -1.3877787807814457e-017 85 -1.0408340855860843e-017 86 -3.1225022567582528e-017
+		 87 -3.4694469519536142e-017 88 -5.5511151231257827e-017 89 -2.0816681711721685e-017
+		 90 2.0816681711721685e-017 91 -1.3877787807814457e-017 92 -3.4694469519536142e-017
+		 93 -6.9388939039072284e-018 94 -4.163336342344337e-017 95 6.9388939039072284e-018
+		 96 -3.4694469519536142e-017 97 6.9388939039072284e-018 98 3.4694469519536142e-017
+		 99 -1.3877787807814457e-017 100 -3.4694469519536142e-017 101 -2.0816681711721685e-017
+		 102 0 103 2.0816681711721685e-017 104 -1.3877787807814457e-017 105 -6.9388939039072284e-018
+		 106 -2.0816681711721685e-017 107 -4.8572257327350599e-017 108 -2.0816681711721685e-017
+		 109 -4.8572257327350599e-017 110 -6.9388939039072284e-018 111 -3.1225022567582528e-017
+		 112 1.7347234759768071e-017 113 -3.4694469519536142e-017 114 0 115 -3.8163916471489756e-017
+		 116 8.6736173798840355e-018 117 2.4286128663675299e-017 118 1.214306433183765e-017
+		 119 1.214306433183765e-017 120 1.214306433183765e-017;
+createNode animCurveTL -n "Slave_L_Knee_joint_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 2.0762828956133461e-010 2 5.5511151231257827e-017
+		 3 -1.3877787807814457e-017 4 -4.163336342344337e-017 5 1.3877787807814457e-017 6 2.7755575615628914e-017
+		 7 -5.5511151231257827e-017 8 -1.3877787807814457e-017 9 -2.7755575615628914e-017
+		 10 5.5511151231257827e-017 11 -2.7755575615628914e-017 12 -1.3877787807814457e-017
+		 13 -4.163336342344337e-017 14 1.3877787807814457e-017 15 1.3877787807814457e-017
+		 16 2.7755575615628914e-017 17 -2.7755575615628914e-017 18 -8.3266726846886741e-017
+		 19 -5.5511151231257827e-017 20 -5.5511151231257827e-017 21 5.5511151231257827e-017
+		 22 0 23 -2.7755575615628914e-017 24 2.0762828956133461e-010 25 0 26 -1.3877787807814457e-017
+		 27 -4.163336342344337e-017 28 2.7755575615628914e-017 29 4.163336342344337e-017 30 -1.3877787807814457e-017
+		 31 6.9388939039072284e-017 32 1.3877787807814457e-017 33 -4.163336342344337e-017
+		 34 0 35 5.5511151231257827e-017 36 -2.7755575615628914e-017 37 -9.7144514654701197e-017
+		 38 -4.163336342344337e-017 39 -4.163336342344337e-017 40 8.3266726846886741e-017
+		 41 -5.5511151231257827e-017 42 2.7755575615628914e-017 43 -1.3877787807814457e-017
+		 44 0 45 -4.163336342344337e-017 46 -1.3877787807814457e-017 47 0 48 2.7755575615628914e-017
+		 49 2.7755575615628914e-017 50 -1.3877787807814457e-017 51 0 52 -5.5511151231257827e-017
+		 53 -4.163336342344337e-017 54 0 55 2.7755575615628914e-017 56 2.7755575615628914e-017
+		 57 0 58 0 59 4.163336342344337e-017 60 4.163336342344337e-017 61 0 62 0 63 2.7755575615628914e-017
+		 64 -2.7755575615628914e-017 65 2.7755575615628914e-017 66 5.5511151231257827e-017
+		 67 -5.5511151231257827e-017 68 -2.7755575615628914e-017 69 -2.7755575615628914e-017
+		 70 2.7755575615628914e-017 71 2.7755575615628914e-017 72 2.7755575615628914e-017
+		 73 -5.5511151231257827e-017 74 5.5511151231257827e-017 75 -4.163336342344337e-017
+		 76 -6.9388939039072284e-017 77 2.7755575615628914e-017 78 0 79 0 80 5.5511151231257827e-017
+		 81 1.3877787807814457e-017 82 1.3877787807814457e-017 83 8.3266726846886741e-017
+		 84 0 85 0 86 -5.5511151231257827e-017 87 1.1102230246251565e-016 88 0 89 0 90 -1.1102230246251565e-016
+		 91 6.9388939039072284e-017 92 2.7755575615628914e-017 93 -1.2490009027033011e-016
+		 94 -1.3877787807814457e-017 95 -2.7755575615628914e-017 96 -6.9388939039072284e-017
+		 97 -2.7755575615628914e-017 98 4.163336342344337e-017 99 -1.3877787807814457e-017
+		 100 6.9388939039072284e-017 101 9.7144514654701197e-017 102 -2.7755575615628914e-017
+		 103 2.7755575615628914e-017 104 4.163336342344337e-017 105 1.3877787807814457e-017
+		 106 1.3877787807814457e-017 107 4.163336342344337e-017 108 -6.9388939039072284e-017
+		 109 5.5511151231257827e-017 110 -5.5511151231257827e-017 111 8.3266726846886741e-017
+		 112 -1.1102230246251565e-016 113 0 114 -2.7755575615628914e-017 115 2.7755575615628914e-017
+		 116 1.3877787807814457e-017 117 0 118 0 119 0 120 0;
+createNode animCurveTA -n "Slave_L_Knee_joint_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 1.153222142229915e-007 2 1.153222142229915e-007
+		 3 1.153222142229915e-007 4 0.072746647924246538 5 0.66958437422321937 6 0.84240679693841913
+		 7 0.856322041496694 8 0.72542293592113583 9 0.3982898007522031 10 1.1532221422576777e-007
+		 11 1.153222142229915e-007 12 1.153222142229915e-007 13 1.153222142229915e-007 14 0.47242208655403706
+		 15 0.814637191864794 16 1.0695165808907621 17 1.2769425479902707 18 1.4430894850101856
+		 19 1.5388726116148248 20 1.4995164238957506 21 1.2660813003393769 22 0.72454626222932317
+		 23 1.1532221417607159e-007 24 1.153222142229915e-007 25 0.1484415393503494 26 1.1532221422576777e-007
+		 27 1.153222142229915e-007 28 1.153222142229915e-007 29 1.153222142229915e-007 30 1.153222142229915e-007
+		 31 1.153222142229915e-007 32 1.153222142229915e-007 33 1.153222142229915e-007 34 1.153222142229915e-007
+		 35 1.153222142229915e-007 36 1.153222142229915e-007 37 1.153222142229915e-007 38 1.153222142229915e-007
+		 39 1.153222142229915e-007 40 1.153222142229915e-007 41 1.153222142229915e-007 42 1.153222142229915e-007
+		 43 1.153222142229915e-007 44 1.153222142229915e-007 45 1.153222142229915e-007 46 1.153222142229915e-007
+		 47 1.153222142229915e-007 48 1.153222142229915e-007 49 1.153222142229915e-007 50 1.153222142229915e-007
+		 51 0.1484415393503494 52 0.85241434308764841 53 0.74457136792457701 54 0.41301695553156625
+		 55 1.1532221422576777e-007 56 1.153222142229915e-007 57 0.1484415393503494 58 0.1484415393503494
+		 59 0.30585045098699049 60 0.53438956408710647 61 0.75031562183241862 62 0.9439411645118333
+		 63 1.1121743949465261 64 1.25340869165441 65 1.366533012684618 66 1.4504408548947443
+		 67 1.5033244443589007 68 1.5220710130206583 69 1.5033242562636218 70 1.4504405402655214
+		 71 1.3665331821459594 72 1.2534082544312628 73 1.1121739516587428 74 0.94394178685578234
+		 75 0.75031526904862689 76 0.53438930645663152 77 0.30585160872946526 78 0.1484415393503494
+		 79 0.1484415393503494 80 0.15431012349023485 81 0.16971321876439355 82 0.19164183604792204
+		 83 0.21733092786780084 84 0.24442883228971868 85 0.27227732234513319 86 0.29991735189284002
+		 87 0.32684378625796601 88 0.35270415804099337 89 0.37723731170958896 90 0.40023722957845648
+		 91 0.42152967893867282 92 0.44095800301920368 93 0.45837312292403237 94 0.47362497582406105
+		 95 0.48655615501280947 96 0.49699557696038782 97 0.50475098187345524 98 0.50960107285039069
+		 99 0.51128433557686037 100 0.50942226846721828 101 0.5040673075071348 102 0.4955204541722763
+		 103 0.48403492826228084 104 0.4698296154445592 105 0.4531001224100395 106 0.43402664170367189
+		 107 0.41278272895312806 108 0.38954526354450819 109 0.36450421941121885 110 0.33787880210109383
+		 111 0.30994188276051454 112 0.28105621364617556 113 0.25174048115940789 114 0.22303524963756027
+		 115 0.19550389075065391 116 0.171771922919499 117 0.1549282874160462 118 0.1484415393503494
+		 119 0.1484415393503494 120 0.1484415393503494;
+createNode animCurveTA -n "Slave_L_Knee_joint_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 1.0858329151679182e-007 2 1.0858329151679182e-007
+		 3 1.0858329151679182e-007 4 -0.89344306928458428 5 -8.2189232911633283 6 -10.381658347980494
+		 7 -10.557560923452398 8 -8.9137371155076046 9 -4.8778346591181938 10 1.0858329159275786e-007
+		 11 1.0858329151679182e-007 12 1.0858329151679182e-007 13 1.0858329151679182e-007
+		 14 -5.7867099915572497 15 -10.03150468500918 16 -13.297598947572268 17 -16.075376639879067
+		 18 -18.419993677376695 19 -19.839200633413501 20 -19.249023601438299 21 -15.926323771959046
+		 22 -8.9028022308418144 23 1.085832907976192e-007 24 1.0858329151679182e-007 25 -1.8208428425016501
+		 26 1.0858329159275786e-007 27 1.0858329151679182e-007 28 1.0858329151679182e-007
+		 29 1.0858329151679182e-007 30 1.0858329151679182e-007 31 1.0858329151679182e-007
+		 32 1.0858329151679182e-007 33 1.0858329151679182e-007 34 1.0858329151679182e-007
+		 35 1.0858329151679182e-007 36 1.0858329151679182e-007 37 1.0858329151679182e-007
+		 38 1.0858329151679182e-007 39 1.0858329151679182e-007 40 1.0858329151679182e-007
+		 41 1.0858329151679182e-007 42 1.0858329151679182e-007 43 1.0858329151679182e-007
+		 44 1.0858329151679182e-007 45 1.0858329151679182e-007 46 1.0858329151679182e-007
+		 47 1.0858329151679182e-007 48 1.0858329151679182e-007 49 1.0858329151679182e-007
+		 50 1.0858329151679182e-007 51 -1.8208428425016501 52 -10.508133027479266 53 -9.1528017646693609
+		 54 -5.058239225947661 55 1.0858329159275786e-007 56 1.0858329151679182e-007 57 -1.8208428425016501
+		 58 -1.8208428425016501 59 -3.746576441233112 60 -6.5483242324109305 61 -9.2246029440346238
+		 62 -11.672654359290725 63 -13.858203207307442 64 -15.752982249354304 65 -17.323491929011215
+		 66 -18.52693426430239 67 -19.305678039792159 68 -19.585969044230723 69 -19.305675239061873
+		 70 -18.526929680802393 71 -17.323494323604002 72 -15.75297627922729 73 -13.858197356203769
+		 74 -11.672662329238385 75 -9.2245985331251088 76 -6.5483210615453471 77 -3.7465906018206097
+		 78 -1.8208428425016501 79 -1.8208428425016501 80 -1.8927011424451596 81 -2.0812672226544002
+		 82 -2.3496358065298346 83 -2.6639275987817377 84 -2.9953769308867431 85 -3.335965947379135
+		 86 -3.6740087459556903 87 -4.0033703882316445 88 -4.3197746770803471 89 -4.6200501976213202
+		 90 -4.9016865968697045 91 -5.1625490023159921 92 -5.4007051329829157 93 -5.6143045084407026
+		 94 -5.8014756392308025 95 -5.9602505539489918 96 -6.0884900154296924 97 -6.183794794386027
+		 98 -6.2434129537827143 99 -6.2641069013137622 100 -6.2412148328377155 101 -6.1753919678756795
+		 102 -6.0703660389308141 103 -5.9292875221399415 104 -5.7548892509019511 105 -5.5496173520290739
+		 106 -5.3157235994760965 107 -5.0553694840600212 108 -4.7707452392137544 109 -4.4641870345478942
+		 110 -4.1383727676191961 111 -3.7966202509906197 112 -3.443330951546101 113 -3.084801149060334
+		 114 -2.7337056612794011 115 -2.3968919508473983 116 -2.1064661541077645 117 -1.9002698071756838
+		 118 -1.8208428425016501 119 -1.8208428425016501 120 -1.8208428425016501;
+createNode animCurveTA -n "Slave_L_Knee_joint_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 -3.6155803966210189e-006 2 -3.6155803966210189e-006
+		 3 -3.6155803966210189e-006 4 -2.2822125928760135 5 -21.358526503202754 6 -27.116799324297617
+		 7 -27.58762463452495 8 -23.202261664515213 9 -12.575940620720168 10 -3.6155803961233862e-006
+		 11 -3.6155803966210189e-006 12 -3.6155803966210189e-006 13 -3.6155803966210189e-006
+		 14 -14.951356535866898 15 -26.180673213610952 16 -34.968669965802206 17 -42.537633284631028
+		 18 -48.988397121853346 19 -52.918092479123793 20 -51.28176865402164 21 -42.12939849046618
+		 22 -23.173199483467211 23 -3.6155803977136635e-006 24 -3.6155803966210189e-006 25 -4.6614390379723858
+		 26 -3.6155803969185248e-006 27 -3.6155803966210189e-006 28 -3.6155803966210189e-006
+		 29 -3.6155803966210189e-006 30 -3.6155803966210189e-006 31 -3.6155803966210189e-006
+		 32 -3.6155803966210189e-006 33 -3.6155803966210189e-006 34 -3.6155803966210189e-006
+		 35 -3.6155803966210189e-006 36 -3.6155803966210189e-006 37 -3.6155803966210189e-006
+		 38 -3.6155803966210189e-006 39 -3.6155803966210189e-006 40 -3.6155803966210189e-006
+		 41 -3.6155803966210189e-006 42 -3.6155803966210189e-006 43 -3.6155803966210189e-006
+		 44 -3.6155803966210189e-006 45 -3.6155803966210189e-006 46 -3.6155803966210189e-006
+		 47 -3.6155803966210189e-006 48 -3.6155803966210189e-006 49 -3.6155803966210189e-006
+		 50 -3.6155803966210189e-006 51 -4.6614390379723858 52 -27.455287288985719 53 -23.837999894749316
+		 54 -13.046625190313039 55 -3.6155803961233862e-006 56 -3.6155803966210189e-006 57 -4.6614390379723858
+		 58 -4.6614390379723858 59 -9.633647310930149 60 -16.949797038343458 61 -24.029074766529337
+		 62 -30.580865617928115 63 -36.489431417730209 64 -41.654930179003131 65 -45.964893174892211
+		 66 -49.28388025672902 67 -51.438717588976374 68 -52.215615233227268 69 -51.438709829459832
+		 70 -49.283867589996859 71 -45.964899765181414 72 -41.654913843030897 73 -36.489415527013009
+		 74 -30.580887064036947 75 -24.029063026439811 76 -16.949788703154027 77 -9.6336840418437628
+		 78 -4.6614390379723858 79 -4.6614390379723858 80 -4.8461553654625709 81 -5.3311777983192838
+		 82 -6.0222186259813073 83 -6.8326374808032186 84 -7.688617948398667 85 -8.5696161741098038
+		 86 -9.4454478138686877 87 -10.300149746914647 88 -11.12249458174378 89 -11.904069926279657
+		 90 -12.63814831870002 91 -13.318959195979874 92 -13.941248762605204 93 -14.499972468868235
+		 94 -14.99003244175152 95 -15.406085359811385 96 -15.742351924493473 97 -15.992390197931908
+		 98 -16.148859640841245 99 -16.203181770667175 100 -16.143089830672171 101 -15.970340304211183
+		 102 -15.694815258465763 103 -15.32492542107256 104 -14.868017150998044 105 -14.330706836770482
+		 106 -13.719115544046737 107 -13.0391347235376 108 -12.29673026673586 109 -11.498240034265864
+		 110 -10.650873241049995 111 -9.7634706418349086 112 -8.8476336981269128 113 -7.919791815177355
+		 114 -7.0127292831780572 115 -6.143993492883042 116 -5.396026600369467 117 -4.8656147864297621
+		 118 -4.6614390379723858 119 -4.6614390379723858 120 -4.6614390379723858;
+createNode animCurveTU -n "Slave_L_Knee_joint_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 1.0000000000000002 2 1 3 1 4 1 5 1 6 1
+		 7 1 8 0.99999999999999989 9 1 10 0.99999999999999978 11 1 12 1 13 1 14 1 15 1.0000000000000002
+		 16 1 17 1 18 0.99999999999999989 19 1 20 1 21 1 22 0.99999999999999989 23 0.99999999999999989
+		 24 1.0000000000000002 25 1 26 1 27 1 28 0.99999999999999989 29 1.0000000000000002
+		 30 0.99999999999999978 31 1 32 1 33 1 34 1 35 0.99999999999999989 36 0.99999999999999989
+		 37 1.0000000000000002 38 1 39 1.0000000000000002 40 1 41 1 42 1 43 1 44 0.99999999999999989
+		 45 0.99999999999999989 46 0.99999999999999978 47 0.99999999999999989 48 0.99999999999999989
+		 49 1 50 1 51 1 52 0.99999999999999978 53 0.99999999999999989 54 0.99999999999999989
+		 55 1 56 0.99999999999999989 57 1 58 1 59 1 60 1 61 1 62 0.99999999999999989 63 1
+		 64 1 65 0.99999999999999989 66 1 67 1.0000000000000002 68 0.99999999999999989 69 1
+		 70 1 71 0.99999999999999989 72 0.99999999999999978 73 1.0000000000000002 74 1.0000000000000002
+		 75 0.99999999999999978 76 0.99999999999999989 77 1 78 1 79 1 80 1 81 1.0000000000000002
+		 82 0.99999999999999989 83 1 84 1 85 1 86 1 87 1 88 1 89 1 90 0.99999999999999989
+		 91 1 92 0.99999999999999978 93 0.99999999999999989 94 1 95 0.99999999999999989 96 0.99999999999999989
+		 97 0.99999999999999989 98 1 99 0.99999999999999989 100 1 101 1 102 1 103 1 104 1
+		 105 1 106 1 107 1.0000000000000002 108 1 109 1 110 0.99999999999999989 111 1 112 0.99999999999999989
+		 113 1 114 1 115 0.99999999999999989 116 1 117 1 118 1 119 1 120 1;
+createNode animCurveTU -n "Slave_L_Knee_joint_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 1 2 0.99999999999999989 3 1 4 1 5 0.99999999999999989
+		 6 1 7 0.99999999999999989 8 1 9 1 10 0.99999999999999978 11 1 12 0.99999999999999989
+		 13 1.0000000000000002 14 1 15 1 16 1 17 0.99999999999999978 18 1 19 1 20 1 21 1 22 1
+		 23 0.99999999999999978 24 1 25 1 26 1 27 1 28 0.99999999999999989 29 1 30 0.99999999999999989
+		 31 1 32 1 33 1 34 1 35 1 36 0.99999999999999978 37 1 38 1 39 1.0000000000000002 40 1.0000000000000002
+		 41 1 42 0.99999999999999989 43 1 44 0.99999999999999989 45 1 46 0.99999999999999978
+		 47 1 48 1 49 1 50 1 51 1 52 0.99999999999999989 53 0.99999999999999989 54 1 55 1
+		 56 0.99999999999999989 57 1 58 1 59 1 60 1 61 1 62 0.99999999999999989 63 1 64 1
+		 65 0.99999999999999989 66 0.99999999999999989 67 1 68 0.99999999999999989 69 1 70 1
+		 71 1 72 0.99999999999999978 73 1 74 1.0000000000000002 75 0.99999999999999989 76 0.99999999999999989
+		 77 1.0000000000000002 78 1 79 1 80 1 81 1 82 0.99999999999999989 83 1 84 1 85 1 86 0.99999999999999989
+		 87 1.0000000000000002 88 1 89 1 90 1 91 1 92 1 93 0.99999999999999989 94 0.99999999999999989
+		 95 1 96 0.99999999999999978 97 0.99999999999999989 98 1 99 1 100 1 101 1 102 1 103 0.99999999999999989
+		 104 1 105 1 106 1 107 1 108 1 109 0.99999999999999989 110 0.99999999999999978 111 1
+		 112 0.99999999999999989 113 1 114 1 115 0.99999999999999989 116 1 117 1 118 1 119 1
+		 120 1;
+createNode animCurveTU -n "Slave_L_Knee_joint_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 1 2 0.99999999999999989 3 1 4 0.99999999999999989
+		 5 1 6 1 7 0.99999999999999989 8 1 9 1 10 0.99999999999999989 11 1 12 1 13 1 14 1.0000000000000002
+		 15 1.0000000000000002 16 1 17 0.99999999999999978 18 1 19 1 20 1.0000000000000002
+		 21 1 22 1 23 1 24 1 25 1 26 0.99999999999999989 27 0.99999999999999989 28 0.99999999999999989
+		 29 1 30 0.99999999999999989 31 0.99999999999999989 32 1 33 1 34 1 35 1 36 0.99999999999999989
+		 37 1 38 1 39 1 40 1 41 1 42 1 43 1 44 0.99999999999999989 45 0.99999999999999989
+		 46 0.99999999999999978 47 0.99999999999999989 48 1 49 1 50 0.99999999999999989 51 1
+		 52 0.99999999999999989 53 0.99999999999999989 54 1 55 1 56 1 57 1 58 1 59 1 60 1.0000000000000002
+		 61 0.99999999999999989 62 0.99999999999999989 63 1 64 1 65 0.99999999999999978 66 1
+		 67 1.0000000000000002 68 1 69 1 70 1 71 1 72 0.99999999999999989 73 1 74 1.0000000000000002
+		 75 0.99999999999999978 76 0.99999999999999989 77 1.0000000000000002 78 1 79 1 80 1
+		 81 1 82 0.99999999999999989 83 1 84 1 85 1 86 1 87 1.0000000000000002 88 0.99999999999999989
+		 89 1 90 1 91 1 92 0.99999999999999978 93 0.99999999999999989 94 1 95 1 96 0.99999999999999978
+		 97 0.99999999999999978 98 1 99 0.99999999999999989 100 0.99999999999999989 101 1
+		 102 0.99999999999999989 103 1 104 1 105 1 106 1 107 1 108 1 109 0.99999999999999989
+		 110 0.99999999999999989 111 1 112 0.99999999999999989 113 1 114 1 115 0.99999999999999989
+		 116 0.99999999999999989 117 1 118 1 119 1 120 1;
+createNode animCurveTU -n "Slave_L_Hip_joint_visibility";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 1 2 1 3 1 4 1 5 1 6 1 7 1 8 1 9 1 10 1
+		 11 1 12 1 13 1 14 1 15 1 16 1 17 1 18 1 19 1 20 1 21 1 22 1 23 1 24 1 25 1 26 1 27 1
+		 28 1 29 1 30 1 31 1 32 1 33 1 34 1 35 1 36 1 37 1 38 1 39 1 40 1 41 1 42 1 43 1 44 1
+		 45 1 46 1 47 1 48 1 49 1 50 1 51 1 52 1 53 1 54 1 55 1 56 1 57 1 58 1 59 1 60 1 61 1
+		 62 1 63 1 64 1 65 1 66 1 67 1 68 1 69 1 70 1 71 1 72 1 73 1 74 1 75 1 76 1 77 1 78 1
+		 79 1 80 1 81 1 82 1 83 1 84 1 85 1 86 1 87 1 88 1 89 1 90 1 91 1 92 1 93 1 94 1 95 1
+		 96 1 97 1 98 1 99 1 100 1 101 1 102 1 103 1 104 1 105 1 106 1 107 1 108 1 109 1 110 1
+		 111 1 112 1 113 1 114 1 115 1 116 1 117 1 118 1 119 1 120 1;
+createNode animCurveTL -n "Slave_L_Hip_joint_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 0.083315012919211826 2 0.083717744597387789
+		 3 0.084712864458174206 4 0.08589844520967177 5 0.086858743985595829 6 0.087263815826020122
+		 7 0.086941733507406971 8 0.085916435879788242 9 0.084406034627518556 10 0.082782397290186729
+		 11 0.081498561691271648 12 0.080991557686269408 13 0.081421223991122296 14 0.082532243674153211
+		 15 0.083993760854714619 16 0.085451092943376508 17 0.086591608359554165 18 0.087196941905360065
+		 19 0.087177752409058229 20 0.086586732491721163 21 0.085607717095077862 22 0.084522155836259785
+		 23 0.083656627692884469 24 0.083315012919211826 25 0.087253499715468502 26 0.074451661343726216
+		 27 0.074852979433714217 28 0.075995183136014818 29 0.077795004689071648 30 0.080133197025650249
+		 31 0.082820322989073908 32 0.08560283847358148 33 0.088205633447922788 34 0.090393753793834089
+		 35 0.092027971931592942 36 0.093089465590793119 37 0.093657051324818386 38 0.093833744170785424
+		 39 0.093657052264004767 40 0.093089467488980449 41 0.092027970972277634 42 0.090393757464424088
+		 43 0.088205637500318068 44 0.085602834557833338 45 0.08282032630401473 46 0.080133199457968998
+		 47 0.077795000195335431 48 0.075995183844656422 49 0.074852977373639704 50 0.074451661343726216
+		 51 0.087253499715468502 52 0.082652637818283192 53 0.084589377417646147 54 0.087013612802400844
+		 55 0.086862159331004885 56 0.085940247367546144 57 0.087253499715468502 58 0.087253499715468502
+		 59 0.087253499715468502 60 0.087253499715468516 61 0.087253499715468488 62 0.087253499715468502
+		 63 0.087253499715468502 64 0.087253499715468502 65 0.087253499715468502 66 0.087253499715468502
+		 67 0.087253499715468488 68 0.087253499715468488 69 0.087253499715468516 70 0.087253499715468516
+		 71 0.087253499715468516 72 0.087253499715468502 73 0.087253499715468488 74 0.087253499715468516
+		 75 0.087253499715468502 76 0.087253499715468502 77 0.087253499715468488 78 0.087253499715468502
+		 79 0.087253499715468502 80 0.087253499715468502 81 0.087253499715468502 82 0.087253499715468502
+		 83 0.087253499715468502 84 0.087253499715468502 85 0.087253499715468502 86 0.087253499715468502
+		 87 0.087253499715468502 88 0.087253499715468502 89 0.087253499715468502 90 0.087253499715468502
+		 91 0.087253499715468502 92 0.087253499715468502 93 0.087253499715468502 94 0.087253499715468502
+		 95 0.087253499715468502 96 0.087253499715468502 97 0.087253499715468502 98 0.087253499715468502
+		 99 0.087253499715468502 100 0.087253499715468502 101 0.087253499715468502 102 0.087253499715468502
+		 103 0.087253499715468502 104 0.087253499715468502 105 0.087253499715468502 106 0.087253499715468502
+		 107 0.087253499715468502 108 0.087253499715468502 109 0.087253499715468502 110 0.087253499715468502
+		 111 0.087253499715468502 112 0.087253499715468502 113 0.087253499715468502 114 0.087253499715468502
+		 115 0.087253499715468502 116 0.087253499715468502 117 0.087253499715468502 118 0.087253499715468502
+		 119 0.087253499715468502 120 0.087253499715468502;
+createNode animCurveTL -n "Slave_L_Hip_joint_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 -0.33091529593301339 2 -0.33043189203418588
+		 3 -0.32910642988583855 4 -0.32712603313260075 5 -0.32467782702520109 6 -0.32194893390331414
+		 7 -0.31912647972033642 8 -0.31639758561136755 9 -0.31394937953742841 10 -0.3119689834366684
+		 11 -0.31064352058565281 12 -0.31016011693777823 13 -0.31056849468027226 14 -0.31169753691681146
+		 15 -0.31340311365578383 16 -0.31554109036952527 17 -0.31796733005616162 18 -0.32053770643539592
+		 19 -0.32310808281463022 20 -0.32553432250126635 21 -0.3276722992150079 22 -0.32937787595398016
+		 23 -0.33050691819051936 24 -0.33091529593301339 25 -0.33091529593301339 26 -0.34124026128313067
+		 27 -0.34110619131524478 28 -0.34074114241183973 29 -0.34020704219124143 30 -0.33957063728217096
+		 31 -0.33889705302376183 32 -0.33824185161759052 33 -0.33764496892674484 34 -0.33712975195811334
+		 35 -0.33670786054141055 36 -0.33638754390525183 37 -0.33618094179003633 38 -0.33610692224131777
+		 39 -0.33618094141242771 40 -0.33638754327096321 41 -0.33670786080792747 42 -0.33712975106181164
+		 43 -0.33764496799427962 44 -0.33824185252059025 45 -0.33889705222209771 46 -0.33957063664767756
+		 47 -0.34020704347119163 48 -0.34074114219227292 49 -0.34110619199515613 50 -0.34124026128313067
+		 51 -0.33091529593301339 52 -0.33091529593301361 53 -0.3309152959330135 54 -0.33091529593301361
+		 55 -0.3309152959330135 56 -0.3309152959330135 57 -0.33091529593301339 58 -0.33091529593301339
+		 59 -0.33096840262552202 60 -0.33140065798502805 61 -0.33279875412414811 62 -0.33568515880412209
+		 63 -0.34023121554556274 64 -0.34611607622275004 65 -0.35255926527051357 66 -0.35849412749378257
+		 67 -0.36278886241356817 68 -0.36441737433949711 69 -0.36278884635493325 70 -0.35849410323774594
+		 71 -0.35255927622136946 72 -0.34611605450641048 73 -0.34023120035025994 74 -0.33568517159927158
+		 75 -0.3327987505588062 76 -0.33140065705667182 77 -0.33096840343720085 78 -0.33091529593301339
+		 79 -0.33091529593301339 80 -0.33081398889544589 81 -0.33052403895463889 82 -0.33006640646648683
+		 83 -0.32946205562482073 84 -0.32873193976931908 85 -0.32789702231423079 86 -0.32697826907251515
+		 87 -0.32599662978578703 88 -0.32497306984723068 89 -0.32392855560951467 90 -0.32288403537502819
+		 91 -0.32186047543647184 92 -0.32087884160680485 93 -0.31996008290802808 94 -0.31912516545293995
+		 95 -0.318395053435371 96 -0.31779069875577204 97 -0.31733306842645864 98 -0.31704311632681303
+		 99 -0.31694180928924554 100 -0.31705385715504386 101 -0.31737370769823831 102 -0.31787690664942164
+		 103 -0.31853900981103889 104 -0.31933558025964148 105 -0.32024215281465274 106 -0.32123428915376145
+		 107 -0.32228755487148164 108 -0.3233774789119932 109 -0.32447962631026572 110 -0.32556956266081316
+		 111 -0.32662281606849758 112 -0.32761495240760613 113 -0.32852153475469037 114 -0.32931809541121998
+		 115 -0.32998019857283739 116 -0.33048340228016765 117 -0.33080324806721501 118 -0.33091529593301339
+		 119 -0.33091529593301339 120 -0.33091529593301339;
+createNode animCurveTL -n "Slave_L_Hip_joint_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 -0.025960144154591927 2 -0.024630462882012049
+		 3 -0.020953545226205236 4 -0.015387578523492436 5 -0.008418969978586828 6 -0.00058899043970642205
+		 7 0.0075136833166336856 8 0.015286808298983318 9 0.022157206067412019 10 0.02761150414492676
+		 11 0.031197834933046481 12 0.032491353400671365 13 0.031399120147595161 14 0.028350471184194172
+		 15 0.023672105942155568 16 0.01770398760274234 17 0.010826533330721394 18 0.0034660906809963936
+		 19 -0.0039191768473197152 20 -0.010865459891911846 21 -0.016930423385867876 22 -0.021710035353417579
+		 23 -0.024837252370375894 24 -0.025960144154591927 25 -0.0014653496710219094 26 0.049793124986637821
+		 27 0.04954526759160377 28 0.048755800325818444 29 0.047267227170645354 30 0.044885909992595702
+		 31 0.041474193924289082 32 0.037027388621683588 33 0.031725434728935659 34 0.025948623576458718
+		 35 0.020254277214476119 36 0.015320726530007406 37 0.01187113465934575 38 0.010588399648263969
+		 39 0.011871128175860252 40 0.015320716250153882 41 0.020254281100800992 42 0.025948612435925028
+		 43 0.031725425351338071 44 0.037027395661519247 45 0.041474189224249419 46 0.044885907243698148
+		 47 0.04726723125718163 48 0.048755799798201938 49 0.049545268904023831 50 0.049793124986637821
+		 51 -0.0014653496710219094 52 -0.027997534247417803 53 -0.021446624218059197 54 -0.0066296040100065215
+		 55 0.0083836590228102276 56 0.015152370925389878 57 -0.0014653496710219094 58 -0.0014653496710219094
+		 59 -0.00041364818312629101 60 0.0024605251531048949 61 0.0068241178473377739 62 0.012508401679866457
+		 63 0.019444100509409395 64 0.027455559868544588 65 0.036010503821247153 66 0.044063393173738391
+		 67 0.050104098554667131 68 0.052454353344000615 69 0.050104075552325406 70 0.044063359636218102
+		 71 0.036010518451348783 72 0.027455530987173321 73 0.019444078980880297 74 0.012508423384248957
+		 75 0.0068241091975351012 76 0.0024605209631378758 77 -0.00041363772839914971 78 -0.0014653496710219094
+		 79 -0.0014653496710219094 80 -0.0014653496710219094 81 -0.0014653496710219094 82 -0.0014653496710219094
+		 83 -0.0014653496710219094 84 -0.0014653496710219094 85 -0.0014653496710219094 86 -0.0014653496710219094
+		 87 -0.0014653496710219094 88 -0.0014653496710219094 89 -0.0014653496710219094 90 -0.0014653496710219094
+		 91 -0.0014653496710219094 92 -0.0014653496710219094 93 -0.0014653496710219094 94 -0.0014653496710219094
+		 95 -0.0014653496710219094 96 -0.0014653496710219094 97 -0.0014653496710219094 98 -0.0014653496710219094
+		 99 -0.0014653496710219094 100 -0.0014653496710219094 101 -0.0014653496710219094 102 -0.0014653496710219094
+		 103 -0.0014653496710219094 104 -0.0014653496710219094 105 -0.0014653496710219094
+		 106 -0.0014653496710219094 107 -0.0014653496710219094 108 -0.0014653496710219094
+		 109 -0.0014653496710219094 110 -0.0014653496710219094 111 -0.0014653496710219094
+		 112 -0.0014653496710219094 113 -0.0014653496710219094 114 -0.0014653496710219094
+		 115 -0.0014653496710219094 116 -0.0014653496710219094 117 -0.0014653496710219094
+		 118 -0.0014653496710219094 119 -0.0014653496710219094 120 -0.0014653496710219094;
+createNode animCurveTA -n "Slave_L_Hip_joint_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 -1.3878564489526394e-007 2 0.88375775407807988
+		 3 3.3485384218491805 4 7.0830570843138636 5 12.915938491754705 6 18.940050020891054
+		 7 24.404440874197288 8 28.765415245629089 9 31.582636626995107 10 33.494548490235033
+		 11 35.265869690379212 12 35.837829415685952 13 35.077066157090215 14 34.950604877460144
+		 15 34.020217728287925 16 32.250101346870615 17 29.956097261413529 18 27.316592099127234
+		 19 23.971886115536545 20 18.899254745160864 21 12.097035999234397 22 4.7161145717053436
+		 23 0.75685085208130931 24 -1.3878564493349218e-007 25 16.426082120740617 26 16.49968527889342
+		 27 16.827433378750207 28 17.726575755385841 29 18.998079170453021 30 20.182404382868409
+		 31 20.341553878774125 32 18.391452799979199 33 14.424384270766954 34 9.8864603661932993
+		 35 5.9849268806944327 36 3.1374060412013289 37 1.4003542074040389 38 0.80044320751296094
+		 39 1.4003511156489141 40 3.1374005751258616 41 5.9849293113083561 42 9.8864520783018381
+		 43 14.424376721224995 44 18.391457277538265 45 20.341552970164223 46 20.182405213217244
+		 47 18.998076296761088 48 17.726576295182682 49 16.827431710402401 50 16.49968527889342
+		 51 16.426082120740617 52 1.3690755998719579 53 4.8113750007563665 54 12.899238134062681
+		 55 22.528740210902733 56 26.99626647985021 57 16.426082120740617 58 16.426082120740617
+		 59 16.517053548789111 60 16.856265891644092 61 17.307204825898001 62 17.724289785662275
+		 63 18.023582038850325 64 18.18295102378724 65 18.226636726646337 66 18.203038097264649
+		 67 18.161869538237259 68 18.142512210627181 69 18.161869720068101 70 18.203038282703965
+		 71 18.226636728448739 72 18.182950698625181 73 18.023581385212626 74 17.724291044655327
+		 75 17.307204047413027 76 16.856265406820246 77 16.517054708554817 78 16.426082120740617
+		 79 16.426082120740617 80 16.427086945970753 81 16.43090343786589 82 16.439285952914783
+		 83 16.453520710723392 84 16.47371157065874 85 16.500015636624425 86 16.531710671890053
+		 87 16.567963655170711 88 16.607799924564809 89 16.650159777968884 90 16.693932938791324
+		 91 16.737977984827708 92 16.78113663932303 93 16.822243917578604 94 16.860133793833878
+		 95 16.893646201005048 96 16.921633608543992 97 16.942966487291041 98 16.956542720370006
+		 99 16.961296802642927 100 16.956039001113368 101 16.941067321188193 102 16.917628238455631
+		 103 16.887012001110527 104 16.850539756682331 105 16.809555079920131 106 16.765413010961176
+		 107 16.719473327012913 108 16.673093984946355 109 16.627617738873965 110 16.584359518101188
+		 111 16.544586130294213 112 16.509478094327726 113 16.480071904389227 114 16.457328980676031
+		 115 16.441121511331264 116 16.431542971875462 117 16.427207213469181 118 16.426082120740617
+		 119 16.426082120740617 120 16.426082120740617;
+createNode animCurveTA -n "Slave_L_Hip_joint_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 -5.3562978102542471e-008 2 -0.25334372718294335
+		 3 -0.79249796320292665 4 -0.83958046992720259 5 0.97922391578008727 6 1.4805673990702057
+		 7 2.7910453648850848 8 5.4674792997749133 9 9.5744647747156915 10 14.209874791654814
+		 11 16.759431791303253 12 17.837418987016878 13 17.573155156849047 14 14.715325043497222
+		 15 12.007199745612192 16 9.5106798817329423 17 7.281305898787747 18 5.5088402685401991
+		 19 4.1661473251052543 20 3.7983041843647301 21 4.1640400337178374 22 3.1879573073889027
+		 23 -0.20296826479462293 24 -5.3562978109806877e-008 25 0.50444090030361999 26 -33.591213353158089
+		 27 -32.617684362763875 28 -29.829044670381005 29 -25.313604134134682 30 -19.10968025472873
+		 31 -11.60731753162322 32 -4.291262738180663 33 0.69091676505659538 34 2.6407933371842502
+		 35 2.5213243685337212 36 1.5555974632401108 37 0.61294471377759119 38 0.22481093560121626
+		 39 0.61294279658555306 40 1.5555949187972775 41 2.5213248842131373 42 2.6407946606524653
+		 43 0.69092243516863161 44 -4.2912719669501289 45 -11.607308268229158 46 -19.109673592868138
+		 47 -25.31361566455239 48 -29.829042926747867 49 -32.617689364224816 50 -33.591213353158089
+		 51 0.50444090030362165 52 4.6625923834065217 53 2.4398165874295672 54 -1.8030919300833457
+		 55 -4.1792248401679428 56 -4.6585048664463313 57 0.5044409003036201 58 0.50444090030361999
+		 59 0.46249183631412516 60 0.029917336228188159 61 -0.80597629502940049 62 -1.9116165610846714
+		 63 -3.129004774338878 64 -4.3086242989207797 65 -5.3310590167367522 66 -6.115854254902751
+		 67 -6.6147291705172497 68 -6.7912212568185462 69 -6.6147273977059342 70 -6.1158512888743122
+		 71 -5.3310605854427404 72 -4.3086204614932146 73 -3.1290012797507609 74 -1.9116206398753572
+		 75 -0.80597458458271853 76 0.029918082543026234 77 0.46249078109579678 78 0.50444090030361999
+		 79 0.50444090030361999 80 0.51314006085623831 81 0.53592164608533666 82 0.56820267457636342
+		 83 0.60574464669107198 84 0.64495970574334271 85 0.68476757137071464 86 0.72370324726545665
+		 87 0.76100565430405065 88 0.79617613431450329 89 0.82888519257282345 90 0.85891590455402966
+		 91 0.88612609124261699 92 0.91042349714432291 93 0.9317468193007804 94 0.95004870833749888
+		 95 0.96528133192769006 96 0.97738144322028775 97 0.98625325950422715 98 0.9917496720086133
+		 99 0.99364780076145531 100 0.99154775640615189 101 0.98547524987002488 102 0.97568256345694815
+		 103 0.96233236173304881 104 0.94552778058089748 105 0.92533744115476413 106 0.90181513920505074
+		 107 0.8750195829536509 108 0.84503514247901046 109 0.81199221757245987 110 0.77609602080278262
+		 111 0.7376672461049818 112 0.69720000829871742 113 0.65546289716490236 114 0.6140346777538036
+		 115 0.57386697820164545 116 0.53896027656317613 117 0.51405575178019713 118 0.50444090030361999
+		 119 0.50444090030361999 120 0.50444090030361999;
+createNode animCurveTA -n "Slave_L_Hip_joint_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 1.8319568707940168e-006 2 -0.96196273208460703
+		 3 -3.6757437758691975 4 -6.6980217651671934 5 -1.8650303578704215 6 -4.676191747187052
+		 7 -10.338958635966733 8 -17.955813584550146 9 -27.843403502004008 10 -37.67331962447421
+		 11 -39.534331602822803 12 -40.346528201368848 13 -40.63321620389604 14 -32.585996137346193
+		 15 -26.364341656412265 16 -20.940382302255117 17 -15.372654799199122 18 -9.3689237232606093
+		 19 -2.2180483758283178 20 4.7240237444829054 21 8.2906185326006234 22 5.4334349357710545
+		 23 -1.7341126484746154 24 1.8319568707291446e-006 25 -15.529517755595126 26 44.185375597190863
+		 27 43.07707560856408 28 39.714217781245921 29 33.705198407727835 30 24.380151819397209
+		 31 11.328535335786883 32 -4.4429129904364428 33 -20.045435853594441 34 -32.761097858504435
+		 35 -41.819251832490387 36 -47.695116635185073 37 -51.017540030906261 38 -52.120902806056556
+		 39 -51.017545775087257 40 -47.695127392993136 41 -41.819246575037923 42 -32.761118581346658
+		 43 -20.04545998492636 44 -4.4428897363643056 45 11.328517739800352 46 24.380141146090853
+		 47 33.705214605159838 48 39.714215593199611 49 43.077081391038817 50 44.185375597190863
+		 51 -15.529517755595126 52 7.2184523829124529 53 5.561475654911467 54 -0.24132695359217363
+		 55 -7.93584794294188 56 -8.2598489100542167 57 -15.529517755595126 58 -15.529517755595126
+		 59 -11.924701589015372 60 -5.4948167744071226 61 1.969126465401877 62 9.9253600170362919
+		 63 17.932262835798838 64 25.555247125014795 65 32.344773063824675 66 37.828497185094541
+		 67 41.50607922530471 68 42.853644037575549 69 41.506065822898009 70 37.828475829797732
+		 71 32.344783736510905 72 25.555222120840426 73 17.932240267601081 74 9.9253876665696179
+		 75 1.969113099361232 76 -5.4948248516988789 77 -11.924672652050061 78 -15.529517755595126
+		 79 -15.529517755595126 80 -15.429578255611361 81 -15.167208325778526 82 -14.793505674959201
+		 83 -14.355417009577488 84 -13.892913693038714 85 -13.417118944308056 86 -12.944351552161178
+		 87 -12.483223892040943 88 -12.039777573610502 89 -11.618525029723788 90 -11.223062455983056
+		 91 -10.856464663609444 92 -10.52152400128989 93 -10.220917424605688 94 -9.9573491304832125
+		 95 -9.7336552091038246 96 -9.5529075030517614 97 -9.4185370627924474 98 -9.3344629020452601
+		 99 -9.3052767863664627 100 -9.3375629656208599 101 -9.4303856833881188 102 -9.5784564348127574
+		 103 -9.7772862635875022 104 -10.022964012783774 105 -10.311974172664387 106 -10.641068730144678
+		 107 -11.007122517544675 108 -11.406967929228497 109 -11.837232996821045 110 -12.294070370486619
+		 111 -12.772744952228271 112 -13.267021244805866 113 -13.768042401091385 114 -14.258090086601262
+		 115 -14.727665870933077 116 -15.132133571247492 117 -15.419050303934796 118 -15.529517755595126
+		 119 -15.529517755595126 120 -15.529517755595126;
+createNode animCurveTU -n "Slave_L_Hip_joint_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 1 2 1 3 1 4 1 5 1 6 1 7 1 8 1 9 1 10 1
+		 11 1 12 1 13 1 14 1 15 1 16 1 17 1 18 1 19 1 20 1 21 1 22 1 23 1 24 1 25 1 26 1 27 1
+		 28 1 29 1 30 1 31 1 32 1 33 1 34 1 35 1 36 1 37 1 38 1 39 1 40 1 41 1 42 1 43 1 44 1
+		 45 1 46 1 47 1 48 1 49 1 50 1 51 1 52 1 53 1 54 1 55 1 56 1 57 1 58 1 59 1 60 1 61 1
+		 62 1 63 1 64 1 65 1 66 1 67 1 68 1 69 1 70 1 71 1 72 1 73 1 74 1 75 1 76 1 77 1 78 1
+		 79 1 80 1 81 1 82 1 83 1 84 1 85 1 86 1 87 1 88 1 89 1 90 1 91 1 92 1 93 1 94 1 95 1
+		 96 1 97 1 98 1 99 1 100 1 101 1 102 1 103 1 104 1 105 1 106 1 107 1 108 1 109 1 110 1
+		 111 1 112 1 113 1 114 1 115 1 116 1 117 1 118 1 119 1 120 1;
+createNode animCurveTU -n "Slave_L_Hip_joint_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 1 2 1 3 1 4 1 5 1 6 1 7 1 8 1 9 1 10 1
+		 11 1 12 1 13 1 14 1 15 1 16 1 17 1 18 1 19 1 20 1 21 1 22 1 23 1 24 1 25 1 26 1 27 1
+		 28 1 29 1 30 1 31 1 32 1 33 1 34 1 35 1 36 1 37 1 38 1 39 1 40 1 41 1 42 1 43 1 44 1
+		 45 1 46 1 47 1 48 1 49 1 50 1 51 1 52 1 53 1 54 1 55 1 56 1 57 1 58 1 59 1 60 1 61 1
+		 62 1 63 1 64 1 65 1 66 1 67 1 68 1 69 1 70 1 71 1 72 1 73 1 74 1 75 1 76 1 77 1 78 1
+		 79 1 80 1 81 1 82 1 83 1 84 1 85 1 86 1 87 1 88 1 89 1 90 1 91 1 92 1 93 1 94 1 95 1
+		 96 1 97 1 98 1 99 1 100 1 101 1 102 1 103 1 104 1 105 1 106 1 107 1 108 1 109 1 110 1
+		 111 1 112 1 113 1 114 1 115 1 116 1 117 1 118 1 119 1 120 1;
+createNode animCurveTU -n "Slave_L_Hip_joint_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 1 2 1 3 1 4 1 5 1 6 1 7 1 8 1 9 1 10 1
+		 11 1 12 1 13 1 14 1 15 1 16 1 17 1 18 1 19 1 20 1 21 1 22 1 23 1 24 1 25 1 26 1 27 1
+		 28 1 29 1 30 1 31 1 32 1 33 1 34 1 35 1 36 1 37 1 38 1 39 1 40 1 41 1 42 1 43 1 44 1
+		 45 1 46 1 47 1 48 1 49 1 50 1 51 1 52 1 53 1 54 1 55 1 56 1 57 1 58 1 59 1 60 1 61 1
+		 62 1 63 1 64 1 65 1 66 1 67 1 68 1 69 1 70 1 71 1 72 1 73 1 74 1 75 1 76 1 77 1 78 1
+		 79 1 80 1 81 1 82 1 83 1 84 1 85 1 86 1 87 1 88 1 89 1 90 1 91 1 92 1 93 1 94 1 95 1
+		 96 1 97 1 98 1 99 1 100 1 101 1 102 1 103 1 104 1 105 1 106 1 107 1 108 1 109 1 110 1
+		 111 1 112 1 113 1 114 1 115 1 116 1 117 1 118 1 119 1 120 1;
+createNode animCurveTU -n "Slave_Body_joint_visibility";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 1 2 1 3 1 4 1 5 1 6 1 7 1 8 1 9 1 10 1
+		 11 1 12 1 13 1 14 1 15 1 16 1 17 1 18 1 19 1 20 1 21 1 22 1 23 1 24 1 25 1 26 1 27 1
+		 28 1 29 1 30 1 31 1 32 1 33 1 34 1 35 1 36 1 37 1 38 1 39 1 40 1 41 1 42 1 43 1 44 1
+		 45 1 46 1 47 1 48 1 49 1 50 1 51 1 52 1 53 1 54 1 55 1 56 1 57 1 58 1 59 1 60 1 61 1
+		 62 1 63 1 64 1 65 1 66 1 67 1 68 1 69 1 70 1 71 1 72 1 73 1 74 1 75 1 76 1 77 1 78 1
+		 79 1 80 1 81 1 82 1 83 1 84 1 85 1 86 1 87 1 88 1 89 1 90 1 91 1 92 1 93 1 94 1 95 1
+		 96 1 97 1 98 1 99 1 100 1 101 1 102 1 103 1 104 1 105 1 106 1 107 1 108 1 109 1 110 1
+		 111 1 112 1 113 1 114 1 115 1 116 1 117 1 118 1 119 1 120 1;
+createNode animCurveTL -n "Slave_Body_joint_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 0 2 0 3 1.3877787807814457e-017 4 -1.3877787807814457e-017
+		 5 -1.3877787807814457e-017 6 0 7 0 8 -1.3877787807814457e-017 9 2.7755575615628914e-017
+		 10 1.3877787807814457e-017 11 0 12 1.3877787807814457e-017 13 0 14 0 15 0 16 0 17 0
+		 18 1.3877787807814457e-017 19 0 20 0 21 0 22 6.9388939039072284e-018 23 6.9388939039072284e-018
+		 24 0 25 0 26 1.3877787807814457e-017 27 4.163336342344337e-017 28 -1.3877787807814457e-017
+		 29 2.7755575615628914e-017 30 0 31 0 32 1.3877787807814457e-017 33 1.3877787807814457e-017
+		 34 1.3877787807814457e-017 35 4.163336342344337e-017 36 1.3877787807814457e-017 37 -4.163336342344337e-017
+		 38 -6.9388939039072284e-018 39 1.3877787807814457e-017 40 1.3877787807814457e-017
+		 41 -1.3877787807814457e-017 42 0 43 1.3877787807814457e-017 44 -2.7755575615628914e-017
+		 45 -1.3877787807814457e-017 46 2.7755575615628914e-017 47 1.3877787807814457e-017
+		 48 2.7755575615628914e-017 49 1.3877787807814457e-017 50 1.3877787807814457e-017
+		 51 0 52 0 53 0 54 0 55 2.7755575615628914e-017 56 1.3877787807814457e-017 57 0 58 0
+		 59 0 60 -1.3877787807814457e-017 61 1.3877787807814457e-017 62 0 63 1.3877787807814457e-017
+		 64 0 65 0 66 0 67 0 68 1.3877787807814457e-017 69 0 70 0 71 0 72 0 73 1.3877787807814457e-017
+		 74 -1.3877787807814457e-017 75 0 76 0 77 1.3877787807814457e-017 78 0 79 0 80 0 81 0
+		 82 0 83 0 84 0 85 0 86 0 87 0 88 0 89 0 90 0 91 0 92 0 93 0 94 0 95 0 96 0 97 0 98 0
+		 99 0 100 0 101 0 102 0 103 0 104 0 105 0 106 0 107 0 108 0 109 0 110 0 111 0 112 0
+		 113 0 114 0 115 0 116 0 117 0 118 0 119 0 120 0;
+createNode animCurveTL -n "Slave_Body_joint_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 0.79112722933571988 2 0.79409072485713206
+		 3 0.80098479115456789 4 0.80881480099061021 5 0.81458612190663937 6 0.81530412877393377
+		 7 0.81002661928342079 8 0.80116008130838678 9 0.79073294367409142 10 0.78077361601297524
+		 11 0.77331050929589429 12 0.77037205034048473 13 0.77287490422423977 14 0.77924012726364023
+		 15 0.78775274837190978 16 0.79669776945494841 17 0.80436018994444591 18 0.80902504246494122
+		 19 0.80950094270291451 20 0.80669100158668949 21 0.80202193393113386 22 0.79692046630080893
+		 23 0.79281332773448687 24 0.79112722933571988 25 0.79112722933571988 26 0.89112722933571997
+		 27 0.88371983517378416 28 0.86520134579530916 29 0.84112722933571993 30 0.81705317645441089
+		 31 0.79853466323410072 32 0.79112722933571999 33 0.79853462349765569 34 0.81705311287613069
+		 35 0.84112722933572004 36 0.86520128221702874 37 0.88371979543733881 38 0.89112722933571997
+		 39 0.88371983517378416 40 0.86520134579530905 41 0.84112722933571993 42 0.81705317645441089
+		 43 0.79853466323410072 44 0.79112722933571977 45 0.79853463012038695 46 0.81705313406887592
+		 47 0.84112726509852376 48 0.86520132460256416 49 0.88371986828744098 50 0.89112722933571997
+		 51 0.79112722933571988 52 0.79112722933571988 53 0.79112722933571988 54 0.79112722933571988
+		 55 0.79112722933571988 56 0.79112722933571988 57 0.79112722933571988 58 0.79112722933571988
+		 59 0.78992385154253653 60 0.78665751551634477 61 0.78184396155313707 62 0.77599896536179414
+		 63 0.76963819788818744 64 0.76327743041458063 65 0.75743243422323758 66 0.75261888026002965
+		 67 0.74935254423383835 68 0.74814916644065477 69 0.74935255618566254 70 0.75261889914688107
+		 71 0.75743242492736662 72 0.76327745166228322 73 0.76963821633236762 74 0.7759989441140912
+		 75 0.78184397084900792 76 0.78665752023804925 77 0.78992383959071222 78 0.79112722933571988
+		 79 0.79112722933571988 80 0.79091959015188718 81 0.79032530795287015 82 0.78938734314196635
+		 83 0.7881486639887183 84 0.78665221651596817 85 0.78494096739542507 86 0.78305788821520128
+		 87 0.78104591762353781 88 0.77894802634817506 89 0.77680718708341523 90 0.77466633552765807
+		 91 0.77256844425229532 92 0.77055648484543926 93 0.76867339448040806 94 0.76696214535986507
+		 95 0.76546570575335238 96 0.76422701873386678 97 0.76328905834772443 98 0.76269477172394595
+		 99 0.76248713254011324 100 0.7627167861551355 101 0.76337235271133941 102 0.76440371067064761
+		 103 0.76576075913827923 104 0.76739341212848144 105 0.76925152573961386 106 0.7712850111188112
+		 107 0.77344378744114417 108 0.77567769876305692 109 0.77793666311277621 110 0.7801705996653725
+		 111 0.78232935075702204 112 0.78436283613621927 113 0.78622096981721146 114 0.78785360273755389
+		 115 0.78921065120518563 116 0.79024201891270596 117 0.79089757572069763 118 0.79112722933571988
+		 119 0.79112722933571988 120 0.79112722933571988;
+createNode animCurveTL -n "Slave_Body_joint_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 0 2 -1.3877787807814457e-017 3 0 4 0 5 -1.3877787807814457e-017
+		 6 -1.3877787807814457e-017 7 2.7755575615628914e-017 8 0 9 1.3877787807814457e-017
+		 10 1.3877787807814457e-017 11 0 12 1.3877787807814457e-017 13 0 14 -2.7755575615628914e-017
+		 15 0 16 0 17 2.7755575615628914e-017 18 2.7755575615628914e-017 19 1.3877787807814457e-017
+		 20 1.3877787807814457e-017 21 0 22 0 23 2.7755575615628914e-017 24 0 25 0 26 0.084262211814908589
+		 27 0.08393388644610536 28 0.083026163289641325 29 0.081654917294718909 30 0.079936036008852573
+		 31 0.077985395541615099 32 0.075918869350301676 33 0.073852348960844139 34 0.071901707996305297
+		 35 0.070182821405884221 36 0.068811578726307498 37 0.067903854077939085 38 0.067575526885694626
+		 39 0.067903852406451026 40 0.068811575963518723 41 0.070182822524814004 42 0.071901704459935156
+		 43 0.073852345576427614 44 0.075918872334113985 45 0.077985393124175517 46 0.079936034240667975
+		 47 0.081654920651507173 48 0.083026162737084325 49 0.083933888117589617 50 0.084262211814908589
+		 51 0 52 0 53 -1.3877787807814457e-017 54 2.7755575615628914e-017 55 1.3877787807814457e-017
+		 56 0 57 0 58 0 59 0.0044778446615701961 60 0.016632087012246222 61 0.034543624884577129
+		 62 0.056293224337514713 63 0.079962041259777294 64 0.10363085818203965 65 0.12538045763497718
+		 66 0.14329199550730809 67 0.15544623785798406 68 0.15992408251955437 69 0.15544619338449273
+		 70 0.14329192522814344 71 0.1253804922254988 72 0.10363077911799828 73 0.079961972627819788
+		 74 0.056293303401556027 75 0.034543590294055571 76 0.016632069442486574 77 0.0044778891350616828
+		 78 0 79 0 80 0 81 0 82 0 83 0 84 0 85 0 86 0 87 0 88 0 89 0 90 0 91 0 92 0 93 0 94 0
+		 95 0 96 0 97 0 98 0 99 0 100 0 101 0 102 0 103 0 104 0 105 0 106 0 107 0 108 0 109 0
+		 110 0 111 0 112 0 113 0 114 0 115 0 116 0 117 0 118 0 119 0 120 0;
+createNode animCurveTA -n "Slave_Body_joint_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0 10 0
+		 11 0 12 0 13 0 14 0 15 0 16 0 17 0 18 0 19 0 20 0 21 0 22 0 23 0 24 0 25 0 26 21.369997942323966
+		 27 21.262461970429118 28 20.974767516728434 29 20.564034109325942 30 20.083146778013248
+		 31 19.573781455302314 32 19.066010534126772 33 18.581587628164716 34 18.138291576278576
+		 35 17.753820208370296 36 17.448429529931914 37 17.245854242457163 38 17.172365614134609
+		 39 17.245853868688666 40 17.448428914306955 41 17.753820457706553 42 18.138290780944089
+		 43 18.581586849268763 44 19.066011248304228 45 19.573780844063094 46 20.083146300188368
+		 47 20.56403508306478 48 20.974767345666599 49 21.262462512996393 50 21.369997942323966
+		 51 0 52 0 53 0 54 0 55 0 56 0 57 0 58 0 59 0.95730499882160836 60 3.555724068390564
+		 61 7.3849781041373737 62 12.034759830009888 63 17.094845310494176 64 22.154930790978451
+		 65 26.804712516850969 66 30.63396655259778 67 33.232385622166724 68 34.189690620988351
+		 69 33.232376114312217 70 30.633951527825666 71 26.804719911854995 72 22.15491388811386
+		 73 17.094830637873546 74 12.034776732874493 75 7.3849707091333592 76 3.5557203122042593
+		 77 0.95731450667615814 78 0 79 0 80 0 81 0 82 0 83 0 84 0 85 0 86 0 87 0 88 0 89 0
+		 90 0 91 0 92 0 93 0 94 0 95 0 96 0 97 0 98 0 99 0 100 0 101 0 102 0 103 0 104 0 105 0
+		 106 0 107 0 108 0 109 0 110 0 111 0 112 0 113 0 114 0 115 0 116 0 117 0 118 0 119 0
+		 120 0;
+createNode animCurveTA -n "Slave_Body_joint_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 0 2 0.91219850401186886 3 3.4133876582151164
+		 4 7.1504592044628854 5 11.77030185384878 6 16.919809810718046 7 22.245870460207005
+		 8 27.39538027973056 9 32.015222865975637 10 35.752293180977325 11 38.253483661137849
+		 12 39.165681691593576 13 38.395059926485061 14 36.264521381729033 15 33.046043927282078
+		 16 29.011613992774553 17 24.433222676750468 18 19.582840845796781 19 14.732459014843093
+		 20 10.154067698819023 21 6.1196377643114914 22 2.9011603098645313 23 0.77062176510850389
+		 24 0 25 16.3443796525636 26 35.892404233770407 27 35.21440696681627 28 33.337987447881453
+		 29 30.498142060147718 30 26.929906496101005 31 22.869891163834914 32 18.557104252451015
+		 33 14.233200684679522 34 10.142195377166594 35 6.5300052554203978 36 3.6437852690521746
+		 37 1.7310481794123767 38 1.0387980597003392 39 1.7310446557641641 40 3.6437794499158782
+		 41 6.5300076089364554 42 10.142187952411184 43 14.233193594549663 44 18.557110487804994
+		 45 22.869886125509261 46 26.929902820878151 47 30.498149019523847 48 33.337986304792956
+		 49 35.214410419428795 50 35.892404233770407 51 16.3443796525636 52 -1.406635447093568
+		 53 3.0796500182464306 54 12.949551974081441 55 22.819453929916452 56 27.305739395256463
+		 57 16.3443796525636 58 16.3443796525636 59 16.344379652563596 60 16.3443796525636
+		 61 16.3443796525636 62 16.3443796525636 63 16.344379652563603 64 16.3443796525636
+		 65 16.344379652563596 66 16.3443796525636 67 16.344379652563596 68 16.344379652563603
+		 69 16.344379652563603 70 16.3443796525636 71 16.3443796525636 72 16.344379652563603
+		 73 16.3443796525636 74 16.3443796525636 75 16.344379652563603 76 16.344379652563603
+		 77 16.3443796525636 78 16.3443796525636 79 16.3443796525636 80 16.3443796525636 81 16.3443796525636
+		 82 16.3443796525636 83 16.3443796525636 84 16.3443796525636 85 16.3443796525636 86 16.3443796525636
+		 87 16.3443796525636 88 16.3443796525636 89 16.3443796525636 90 16.3443796525636 91 16.3443796525636
+		 92 16.3443796525636 93 16.3443796525636 94 16.3443796525636 95 16.3443796525636 96 16.3443796525636
+		 97 16.3443796525636 98 16.3443796525636 99 16.3443796525636 100 16.3443796525636
+		 101 16.3443796525636 102 16.3443796525636 103 16.3443796525636 104 16.3443796525636
+		 105 16.3443796525636 106 16.3443796525636 107 16.3443796525636 108 16.3443796525636
+		 109 16.3443796525636 110 16.3443796525636 111 16.3443796525636 112 16.3443796525636
+		 113 16.3443796525636 114 16.3443796525636 115 16.3443796525636 116 16.3443796525636
+		 117 16.3443796525636 118 16.3443796525636 119 16.3443796525636 120 16.3443796525636;
+createNode animCurveTA -n "Slave_Body_joint_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0 10 0
+		 11 0 12 0 13 0 14 0 15 0 16 0 17 0 18 0 19 0 20 0 21 0 22 0 23 0 24 0 25 0 26 7.7215431627786968
+		 27 7.4217137664376054 28 6.6071427305725381 29 5.4140338265129628 30 3.9762922322754473
+		 31 2.4148463191342264 32 0.83417276150875774 33 -0.67704572106336469 34 -2.0437405429776914
+		 35 -3.2018427245728751 36 -4.0952823010653994 37 -4.6719362039119723 38 -4.877611061773715
+		 39 -4.6719372549173599 40 -4.095284074108096 41 -3.2018419845522126 42 -2.0437429696933505
+		 43 -0.67704814178557526 44 0.83417499240235915 45 2.4148444271706788 46 3.9762907842124422
+		 47 5.4140366951399823 48 6.6071422409347464 49 7.4217152856486708 50 7.7215431627786968
+		 51 0 52 0 53 0 54 0 55 0 56 0 57 0 58 0 59 0 60 0 61 0 62 0 63 0 64 4.1431270262968457e-016
+		 65 0 66 0 67 -8.2862540525936914e-016 68 0 69 -8.2862540525936934e-016 70 -8.2862540525936934e-016
+		 71 -8.2862540525936943e-016 72 0 73 4.1431270262968457e-016 74 0 75 0 76 1.0357817565742118e-016
+		 77 2.5894543914355292e-017 78 0 79 0 80 0 81 0 82 0 83 0 84 0 85 0 86 0 87 0 88 0
+		 89 0 90 0 91 0 92 0 93 0 94 0 95 0 96 0 97 0 98 0 99 0 100 0 101 0 102 0 103 0 104 0
+		 105 0 106 0 107 0 108 0 109 0 110 0 111 0 112 0 113 0 114 0 115 0 116 0 117 0 118 0
+		 119 0 120 0;
+createNode animCurveTU -n "Slave_Body_joint_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 1 2 1 3 1 4 1 5 1 6 1 7 0.99999999999999989
+		 8 1 9 0.99999999999999989 10 0.99999999999999989 11 1 12 1 13 1 14 1 15 1 16 1 17 0.99999999999999989
+		 18 0.99999999999999989 19 1 20 1 21 1 22 1 23 0.99999999999999989 24 1 25 1 26 1
+		 27 0.99999999999999989 28 1 29 1 30 1 31 1 32 1 33 1 34 0.99999999999999989 35 0.99999999999999989
+		 36 1 37 1 38 1 39 1 40 1 41 0.99999999999999989 42 1 43 1 44 1 45 1 46 0.99999999999999989
+		 47 1 48 1 49 1 50 1 51 1 52 1 53 1 54 0.99999999999999989 55 0.99999999999999989
+		 56 1 57 1 58 1 59 1 60 1 61 1 62 1 63 1 64 1 65 1 66 1 67 1 68 1 69 1 70 1 71 1 72 1
+		 73 1 74 1 75 1 76 1 77 1 78 1 79 1 80 1 81 1 82 1 83 1 84 1 85 1 86 1 87 1 88 1 89 1
+		 90 1 91 1 92 1 93 1 94 1 95 1 96 1 97 1 98 1 99 1 100 1 101 1 102 1 103 1 104 1 105 1
+		 106 1 107 1 108 1 109 1 110 1 111 1 112 1 113 1 114 1 115 1 116 1 117 1 118 1 119 1
+		 120 1;
+createNode animCurveTU -n "Slave_Body_joint_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 1 2 1 3 1 4 1 5 1 6 1 7 1 8 1 9 1 10 1
+		 11 1 12 1 13 1 14 1 15 1 16 1 17 1 18 1 19 1 20 1 21 1 22 1 23 1 24 1 25 1 26 1 27 0.99999999999999989
+		 28 0.99999999999999989 29 1 30 0.99999999999999989 31 0.99999999999999989 32 0.99999999999999989
+		 33 1 34 1 35 1 36 1 37 1 38 0.99999999999999989 39 0.99999999999999989 40 0.99999999999999989
+		 41 1 42 0.99999999999999989 43 1 44 1 45 1 46 1 47 0.99999999999999989 48 1 49 1
+		 50 1 51 1 52 1 53 1 54 1 55 1 56 1 57 1 58 1 59 0.99999999999999989 60 1 61 1 62 0.99999999999999989
+		 63 0.99999999999999989 64 1 65 1 66 1 67 1 68 1 69 1 70 1 71 1 72 1 73 0.99999999999999989
+		 74 1 75 1 76 0.99999999999999989 77 0.99999999999999989 78 1 79 1 80 1 81 1 82 1
+		 83 1 84 1 85 1 86 1 87 1 88 1 89 1 90 1 91 1 92 1 93 1 94 1 95 1 96 1 97 1 98 1 99 1
+		 100 1 101 1 102 1 103 1 104 1 105 1 106 1 107 1 108 1 109 1 110 1 111 1 112 1 113 1
+		 114 1 115 1 116 1 117 1 118 1 119 1 120 1;
+createNode animCurveTU -n "Slave_Body_joint_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 1 2 1 3 1 4 1 5 1 6 1 7 0.99999999999999989
+		 8 1 9 0.99999999999999989 10 0.99999999999999989 11 1 12 1 13 1 14 1 15 1 16 1 17 0.99999999999999989
+		 18 0.99999999999999989 19 1 20 1 21 1 22 1 23 0.99999999999999989 24 1 25 1 26 0.99999999999999989
+		 27 1 28 1 29 0.99999999999999989 30 0.99999999999999989 31 1 32 0.99999999999999989
+		 33 1 34 1 35 1 36 1 37 1 38 1 39 0.99999999999999989 40 1 41 1 42 0.99999999999999989
+		 43 0.99999999999999989 44 1 45 0.99999999999999989 46 1 47 1 48 1 49 1 50 0.99999999999999989
+		 51 1 52 1 53 1 54 0.99999999999999989 55 0.99999999999999989 56 1 57 1 58 1 59 0.99999999999999989
+		 60 1 61 1 62 0.99999999999999989 63 0.99999999999999989 64 1 65 1 66 1 67 1 68 1
+		 69 1 70 1 71 1 72 1 73 0.99999999999999989 74 1 75 1 76 0.99999999999999989 77 0.99999999999999989
+		 78 1 79 1 80 1 81 1 82 1 83 1 84 1 85 1 86 1 87 1 88 1 89 1 90 1 91 1 92 1 93 1 94 1
+		 95 1 96 1 97 1 98 1 99 1 100 1 101 1 102 1 103 1 104 1 105 1 106 1 107 1 108 1 109 1
+		 110 1 111 1 112 1 113 1 114 1 115 1 116 1 117 1 118 1 119 1 120 1;
+createNode animCurveTU -n "knight_visibility";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 120 ".ktv[0:119]"  1 1 2 1 3 1 4 1 5 1 6 1 7 1 8 1 9 1 10 1
+		 11 1 12 1 13 1 14 1 15 1 16 1 17 1 18 1 19 1 20 1 21 1 22 1 23 1 24 1 25 1 26 1 27 1
+		 28 1 29 1 30 1 31 1 32 1 33 1 34 1 35 1 36 1 37 1 38 1 39 1 40 1 41 1 42 1 43 1 44 1
+		 45 1 46 1 47 1 48 1 49 1 50 1 51 1 52 1 53 1 54 1 55 1 56 1 57 1 58 1 59 1 60 1 61 1
+		 62 1 63 1 64 1 65 1 66 1 67 1 68 1 69 1 70 1 71 1 72 1 73 1 74 1 75 1 76 1 77 1 78 1
+		 79 1 80 1 81 1 82 1 83 1 84 1 85 1 86 1 87 1 88 1 89 1 90 1 91 1 92 1 93 1 94 1 95 1
+		 96 1 97 1 98 1 99 1 100 1 101 1 102 1 103 1 104 1 105 1 106 1 107 1 108 1 109 1 110 1
+		 111 1 112 1 113 1 114 1 115 1 116 1 117 1 118 1 119 1 120 1;
 select -ne :time1;
-	setAttr ".o" 118;
-	setAttr ".unw" 118;
+	setAttr ".o" 1;
+	setAttr ".unw" 1;
 select -ne :renderPartition;
 	setAttr -s 10 ".st";
 select -ne :renderGlobalsList1;
@@ -9161,26 +12807,28 @@ connectAttr "R_Leg_ctrl.s" "ikHandle2_parentConstraint1.tg[0].ts";
 connectAttr "R_Leg_ctrl.pm" "ikHandle2_parentConstraint1.tg[0].tpm";
 connectAttr "ikHandle2_parentConstraint1.w0" "ikHandle2_parentConstraint1.tg[0].tw"
 		;
-connectAttr "groupParts5.og" "polySurface1Shape.i";
-connectAttr "skinCluster1GroupId.id" "polySurface1Shape.iog.og[5].gid";
-connectAttr "skinCluster1Set.mwc" "polySurface1Shape.iog.og[5].gco";
-connectAttr "groupId3.id" "polySurface1Shape.iog.og[6].gid";
-connectAttr "tweakSet1.mwc" "polySurface1Shape.iog.og[6].gco";
-connectAttr "groupId4.id" "polySurface1Shape.iog.og[8].gid";
-connectAttr "blinn6SG.mwc" "polySurface1Shape.iog.og[8].gco";
-connectAttr "groupId6.id" "polySurface1Shape.iog.og[9].gid";
-connectAttr "blinn5SG.mwc" "polySurface1Shape.iog.og[9].gco";
-connectAttr "tweak1.vl[0].vt[0]" "polySurface1Shape.twl";
-connectAttr "groupId5.id" "polySurface1Shape.ciog.cog[0].cgid";
-connectAttr "Slave_Body_joint_parentConstraint1.ctx" "Slave_Body_joint.tx";
-connectAttr "Slave_Body_joint_parentConstraint1.cty" "Slave_Body_joint.ty";
-connectAttr "Slave_Body_joint_parentConstraint1.ctz" "Slave_Body_joint.tz";
-connectAttr "Slave_Body_joint_parentConstraint1.crx" "Slave_Body_joint.rx";
-connectAttr "Slave_Body_joint_parentConstraint1.cry" "Slave_Body_joint.ry";
-connectAttr "Slave_Body_joint_parentConstraint1.crz" "Slave_Body_joint.rz";
-connectAttr "Slave_Body_joint_scaleConstraint1.csx" "Slave_Body_joint.sx";
-connectAttr "Slave_Body_joint_scaleConstraint1.csy" "Slave_Body_joint.sy";
-connectAttr "Slave_Body_joint_scaleConstraint1.csz" "Slave_Body_joint.sz";
+connectAttr "knight_visibility.o" "knight.v";
+connectAttr "groupParts5.og" "knightShape.i";
+connectAttr "skinCluster1GroupId.id" "knightShape.iog.og[5].gid";
+connectAttr "skinCluster1Set.mwc" "knightShape.iog.og[5].gco";
+connectAttr "groupId3.id" "knightShape.iog.og[6].gid";
+connectAttr "tweakSet1.mwc" "knightShape.iog.og[6].gco";
+connectAttr "groupId4.id" "knightShape.iog.og[8].gid";
+connectAttr "blinn6SG.mwc" "knightShape.iog.og[8].gco";
+connectAttr "groupId6.id" "knightShape.iog.og[9].gid";
+connectAttr "blinn5SG.mwc" "knightShape.iog.og[9].gco";
+connectAttr "tweak1.vl[0].vt[0]" "knightShape.twl";
+connectAttr "groupId5.id" "knightShape.ciog.cog[0].cgid";
+connectAttr "Slave_Body_joint_translateX.o" "Slave_Body_joint.tx";
+connectAttr "Slave_Body_joint_translateY.o" "Slave_Body_joint.ty";
+connectAttr "Slave_Body_joint_translateZ.o" "Slave_Body_joint.tz";
+connectAttr "Slave_Body_joint_rotateX.o" "Slave_Body_joint.rx";
+connectAttr "Slave_Body_joint_rotateY.o" "Slave_Body_joint.ry";
+connectAttr "Slave_Body_joint_rotateZ.o" "Slave_Body_joint.rz";
+connectAttr "Slave_Body_joint_scaleX.o" "Slave_Body_joint.sx";
+connectAttr "Slave_Body_joint_scaleY.o" "Slave_Body_joint.sy";
+connectAttr "Slave_Body_joint_scaleZ.o" "Slave_Body_joint.sz";
+connectAttr "Slave_Body_joint_visibility.o" "Slave_Body_joint.v";
 connectAttr "Slave_Body_joint.ro" "Slave_Body_joint_parentConstraint1.cro";
 connectAttr "Slave_Body_joint.pim" "Slave_Body_joint_parentConstraint1.cpim";
 connectAttr "Slave_Body_joint.rp" "Slave_Body_joint_parentConstraint1.crp";
@@ -9204,16 +12852,17 @@ connectAttr "Body_joint.s" "Slave_Body_joint_scaleConstraint1.tg[0].ts";
 connectAttr "Body_joint.pm" "Slave_Body_joint_scaleConstraint1.tg[0].tpm";
 connectAttr "Slave_Body_joint_scaleConstraint1.w0" "Slave_Body_joint_scaleConstraint1.tg[0].tw"
 		;
-connectAttr "Slave_L_Hip_joint_parentConstraint1.ctx" "Slave_L_Hip_joint.tx";
-connectAttr "Slave_L_Hip_joint_parentConstraint1.cty" "Slave_L_Hip_joint.ty";
-connectAttr "Slave_L_Hip_joint_parentConstraint1.ctz" "Slave_L_Hip_joint.tz";
-connectAttr "Slave_L_Hip_joint_parentConstraint1.crx" "Slave_L_Hip_joint.rx";
-connectAttr "Slave_L_Hip_joint_parentConstraint1.cry" "Slave_L_Hip_joint.ry";
-connectAttr "Slave_L_Hip_joint_parentConstraint1.crz" "Slave_L_Hip_joint.rz";
-connectAttr "Slave_L_Hip_joint_scaleConstraint1.csx" "Slave_L_Hip_joint.sx";
-connectAttr "Slave_L_Hip_joint_scaleConstraint1.csy" "Slave_L_Hip_joint.sy";
-connectAttr "Slave_L_Hip_joint_scaleConstraint1.csz" "Slave_L_Hip_joint.sz";
+connectAttr "Slave_L_Hip_joint_translateX.o" "Slave_L_Hip_joint.tx";
+connectAttr "Slave_L_Hip_joint_translateY.o" "Slave_L_Hip_joint.ty";
+connectAttr "Slave_L_Hip_joint_translateZ.o" "Slave_L_Hip_joint.tz";
+connectAttr "Slave_L_Hip_joint_rotateX.o" "Slave_L_Hip_joint.rx";
+connectAttr "Slave_L_Hip_joint_rotateY.o" "Slave_L_Hip_joint.ry";
+connectAttr "Slave_L_Hip_joint_rotateZ.o" "Slave_L_Hip_joint.rz";
+connectAttr "Slave_L_Hip_joint_scaleX.o" "Slave_L_Hip_joint.sx";
+connectAttr "Slave_L_Hip_joint_scaleY.o" "Slave_L_Hip_joint.sy";
+connectAttr "Slave_L_Hip_joint_scaleZ.o" "Slave_L_Hip_joint.sz";
 connectAttr "Slave_Body_joint.s" "Slave_L_Hip_joint.is";
+connectAttr "Slave_L_Hip_joint_visibility.o" "Slave_L_Hip_joint.v";
 connectAttr "Slave_L_Hip_joint.ro" "Slave_L_Hip_joint_parentConstraint1.cro";
 connectAttr "Slave_L_Hip_joint.pim" "Slave_L_Hip_joint_parentConstraint1.cpim";
 connectAttr "Slave_L_Hip_joint.rp" "Slave_L_Hip_joint_parentConstraint1.crp";
@@ -9237,16 +12886,17 @@ connectAttr "L_Hip_joint.s" "Slave_L_Hip_joint_scaleConstraint1.tg[0].ts";
 connectAttr "L_Hip_joint.pm" "Slave_L_Hip_joint_scaleConstraint1.tg[0].tpm";
 connectAttr "Slave_L_Hip_joint_scaleConstraint1.w0" "Slave_L_Hip_joint_scaleConstraint1.tg[0].tw"
 		;
-connectAttr "Slave_L_Knee_joint_parentConstraint1.ctx" "Slave_L_Knee_joint.tx";
-connectAttr "Slave_L_Knee_joint_parentConstraint1.cty" "Slave_L_Knee_joint.ty";
-connectAttr "Slave_L_Knee_joint_parentConstraint1.ctz" "Slave_L_Knee_joint.tz";
-connectAttr "Slave_L_Knee_joint_parentConstraint1.crx" "Slave_L_Knee_joint.rx";
-connectAttr "Slave_L_Knee_joint_parentConstraint1.cry" "Slave_L_Knee_joint.ry";
-connectAttr "Slave_L_Knee_joint_parentConstraint1.crz" "Slave_L_Knee_joint.rz";
-connectAttr "Slave_L_Knee_joint_scaleConstraint1.csx" "Slave_L_Knee_joint.sx";
-connectAttr "Slave_L_Knee_joint_scaleConstraint1.csy" "Slave_L_Knee_joint.sy";
-connectAttr "Slave_L_Knee_joint_scaleConstraint1.csz" "Slave_L_Knee_joint.sz";
+connectAttr "Slave_L_Knee_joint_translateX.o" "Slave_L_Knee_joint.tx";
+connectAttr "Slave_L_Knee_joint_translateY.o" "Slave_L_Knee_joint.ty";
+connectAttr "Slave_L_Knee_joint_translateZ.o" "Slave_L_Knee_joint.tz";
+connectAttr "Slave_L_Knee_joint_rotateX.o" "Slave_L_Knee_joint.rx";
+connectAttr "Slave_L_Knee_joint_rotateY.o" "Slave_L_Knee_joint.ry";
+connectAttr "Slave_L_Knee_joint_rotateZ.o" "Slave_L_Knee_joint.rz";
+connectAttr "Slave_L_Knee_joint_scaleX.o" "Slave_L_Knee_joint.sx";
+connectAttr "Slave_L_Knee_joint_scaleY.o" "Slave_L_Knee_joint.sy";
+connectAttr "Slave_L_Knee_joint_scaleZ.o" "Slave_L_Knee_joint.sz";
 connectAttr "Slave_L_Hip_joint.s" "Slave_L_Knee_joint.is";
+connectAttr "Slave_L_Knee_joint_visibility.o" "Slave_L_Knee_joint.v";
 connectAttr "Slave_L_Knee_joint.ro" "Slave_L_Knee_joint_parentConstraint1.cro";
 connectAttr "Slave_L_Knee_joint.pim" "Slave_L_Knee_joint_parentConstraint1.cpim"
 		;
@@ -9271,22 +12921,17 @@ connectAttr "L_Knee_joint.s" "Slave_L_Knee_joint_scaleConstraint1.tg[0].ts";
 connectAttr "L_Knee_joint.pm" "Slave_L_Knee_joint_scaleConstraint1.tg[0].tpm";
 connectAttr "Slave_L_Knee_joint_scaleConstraint1.w0" "Slave_L_Knee_joint_scaleConstraint1.tg[0].tw"
 		;
-connectAttr "Slave_L_Ankle_joint_parentConstraint1.ctx" "Slave_L_Ankle_joint.tx"
-		;
-connectAttr "Slave_L_Ankle_joint_parentConstraint1.cty" "Slave_L_Ankle_joint.ty"
-		;
-connectAttr "Slave_L_Ankle_joint_parentConstraint1.ctz" "Slave_L_Ankle_joint.tz"
-		;
-connectAttr "Slave_L_Ankle_joint_parentConstraint1.crx" "Slave_L_Ankle_joint.rx"
-		;
-connectAttr "Slave_L_Ankle_joint_parentConstraint1.cry" "Slave_L_Ankle_joint.ry"
-		;
-connectAttr "Slave_L_Ankle_joint_parentConstraint1.crz" "Slave_L_Ankle_joint.rz"
-		;
-connectAttr "Slave_L_Ankle_joint_scaleConstraint1.csx" "Slave_L_Ankle_joint.sx";
-connectAttr "Slave_L_Ankle_joint_scaleConstraint1.csy" "Slave_L_Ankle_joint.sy";
-connectAttr "Slave_L_Ankle_joint_scaleConstraint1.csz" "Slave_L_Ankle_joint.sz";
+connectAttr "Slave_L_Ankle_joint_translateX.o" "Slave_L_Ankle_joint.tx";
+connectAttr "Slave_L_Ankle_joint_translateY.o" "Slave_L_Ankle_joint.ty";
+connectAttr "Slave_L_Ankle_joint_translateZ.o" "Slave_L_Ankle_joint.tz";
+connectAttr "Slave_L_Ankle_joint_rotateX.o" "Slave_L_Ankle_joint.rx";
+connectAttr "Slave_L_Ankle_joint_rotateY.o" "Slave_L_Ankle_joint.ry";
+connectAttr "Slave_L_Ankle_joint_rotateZ.o" "Slave_L_Ankle_joint.rz";
+connectAttr "Slave_L_Ankle_joint_scaleX.o" "Slave_L_Ankle_joint.sx";
+connectAttr "Slave_L_Ankle_joint_scaleY.o" "Slave_L_Ankle_joint.sy";
+connectAttr "Slave_L_Ankle_joint_scaleZ.o" "Slave_L_Ankle_joint.sz";
 connectAttr "Slave_L_Knee_joint.s" "Slave_L_Ankle_joint.is";
+connectAttr "Slave_L_Ankle_joint_visibility.o" "Slave_L_Ankle_joint.v";
 connectAttr "Slave_L_Ankle_joint.ro" "Slave_L_Ankle_joint_parentConstraint1.cro"
 		;
 connectAttr "Slave_L_Ankle_joint.pim" "Slave_L_Ankle_joint_parentConstraint1.cpim"
@@ -9324,16 +12969,17 @@ connectAttr "L_Ankle_joint.s" "Slave_L_Ankle_joint_scaleConstraint1.tg[0].ts";
 connectAttr "L_Ankle_joint.pm" "Slave_L_Ankle_joint_scaleConstraint1.tg[0].tpm";
 connectAttr "Slave_L_Ankle_joint_scaleConstraint1.w0" "Slave_L_Ankle_joint_scaleConstraint1.tg[0].tw"
 		;
-connectAttr "Slave_L_Hip_joint1_parentConstraint1.ctx" "Slave_L_Hip_joint1.tx";
-connectAttr "Slave_L_Hip_joint1_parentConstraint1.cty" "Slave_L_Hip_joint1.ty";
-connectAttr "Slave_L_Hip_joint1_parentConstraint1.ctz" "Slave_L_Hip_joint1.tz";
-connectAttr "Slave_L_Hip_joint1_parentConstraint1.crx" "Slave_L_Hip_joint1.rx";
-connectAttr "Slave_L_Hip_joint1_parentConstraint1.cry" "Slave_L_Hip_joint1.ry";
-connectAttr "Slave_L_Hip_joint1_parentConstraint1.crz" "Slave_L_Hip_joint1.rz";
-connectAttr "Slave_L_Hip_joint1_scaleConstraint1.csx" "Slave_L_Hip_joint1.sx";
-connectAttr "Slave_L_Hip_joint1_scaleConstraint1.csy" "Slave_L_Hip_joint1.sy";
-connectAttr "Slave_L_Hip_joint1_scaleConstraint1.csz" "Slave_L_Hip_joint1.sz";
+connectAttr "Slave_L_Hip_joint1_translateX.o" "Slave_L_Hip_joint1.tx";
+connectAttr "Slave_L_Hip_joint1_translateY.o" "Slave_L_Hip_joint1.ty";
+connectAttr "Slave_L_Hip_joint1_translateZ.o" "Slave_L_Hip_joint1.tz";
+connectAttr "Slave_L_Hip_joint1_rotateX.o" "Slave_L_Hip_joint1.rx";
+connectAttr "Slave_L_Hip_joint1_rotateY.o" "Slave_L_Hip_joint1.ry";
+connectAttr "Slave_L_Hip_joint1_rotateZ.o" "Slave_L_Hip_joint1.rz";
+connectAttr "Slave_L_Hip_joint1_scaleX.o" "Slave_L_Hip_joint1.sx";
+connectAttr "Slave_L_Hip_joint1_scaleY.o" "Slave_L_Hip_joint1.sy";
+connectAttr "Slave_L_Hip_joint1_scaleZ.o" "Slave_L_Hip_joint1.sz";
 connectAttr "Slave_Body_joint.s" "Slave_L_Hip_joint1.is";
+connectAttr "Slave_L_Hip_joint1_visibility.o" "Slave_L_Hip_joint1.v";
 connectAttr "Slave_L_Hip_joint1.ro" "Slave_L_Hip_joint1_parentConstraint1.cro";
 connectAttr "Slave_L_Hip_joint1.pim" "Slave_L_Hip_joint1_parentConstraint1.cpim"
 		;
@@ -9358,22 +13004,17 @@ connectAttr "L_Hip_joint1.s" "Slave_L_Hip_joint1_scaleConstraint1.tg[0].ts";
 connectAttr "L_Hip_joint1.pm" "Slave_L_Hip_joint1_scaleConstraint1.tg[0].tpm";
 connectAttr "Slave_L_Hip_joint1_scaleConstraint1.w0" "Slave_L_Hip_joint1_scaleConstraint1.tg[0].tw"
 		;
-connectAttr "Slave_L_Knee_joint1_parentConstraint1.ctx" "Slave_L_Knee_joint1.tx"
-		;
-connectAttr "Slave_L_Knee_joint1_parentConstraint1.cty" "Slave_L_Knee_joint1.ty"
-		;
-connectAttr "Slave_L_Knee_joint1_parentConstraint1.ctz" "Slave_L_Knee_joint1.tz"
-		;
-connectAttr "Slave_L_Knee_joint1_parentConstraint1.crx" "Slave_L_Knee_joint1.rx"
-		;
-connectAttr "Slave_L_Knee_joint1_parentConstraint1.cry" "Slave_L_Knee_joint1.ry"
-		;
-connectAttr "Slave_L_Knee_joint1_parentConstraint1.crz" "Slave_L_Knee_joint1.rz"
-		;
-connectAttr "Slave_L_Knee_joint1_scaleConstraint1.csx" "Slave_L_Knee_joint1.sx";
-connectAttr "Slave_L_Knee_joint1_scaleConstraint1.csy" "Slave_L_Knee_joint1.sy";
-connectAttr "Slave_L_Knee_joint1_scaleConstraint1.csz" "Slave_L_Knee_joint1.sz";
+connectAttr "Slave_L_Knee_joint1_translateX.o" "Slave_L_Knee_joint1.tx";
+connectAttr "Slave_L_Knee_joint1_translateY.o" "Slave_L_Knee_joint1.ty";
+connectAttr "Slave_L_Knee_joint1_translateZ.o" "Slave_L_Knee_joint1.tz";
+connectAttr "Slave_L_Knee_joint1_rotateX.o" "Slave_L_Knee_joint1.rx";
+connectAttr "Slave_L_Knee_joint1_rotateY.o" "Slave_L_Knee_joint1.ry";
+connectAttr "Slave_L_Knee_joint1_rotateZ.o" "Slave_L_Knee_joint1.rz";
+connectAttr "Slave_L_Knee_joint1_scaleX.o" "Slave_L_Knee_joint1.sx";
+connectAttr "Slave_L_Knee_joint1_scaleY.o" "Slave_L_Knee_joint1.sy";
+connectAttr "Slave_L_Knee_joint1_scaleZ.o" "Slave_L_Knee_joint1.sz";
 connectAttr "Slave_L_Hip_joint1.s" "Slave_L_Knee_joint1.is";
+connectAttr "Slave_L_Knee_joint1_visibility.o" "Slave_L_Knee_joint1.v";
 connectAttr "Slave_L_Knee_joint1.ro" "Slave_L_Knee_joint1_parentConstraint1.cro"
 		;
 connectAttr "Slave_L_Knee_joint1.pim" "Slave_L_Knee_joint1_parentConstraint1.cpim"
@@ -9411,25 +13052,17 @@ connectAttr "L_Knee_joint1.s" "Slave_L_Knee_joint1_scaleConstraint1.tg[0].ts";
 connectAttr "L_Knee_joint1.pm" "Slave_L_Knee_joint1_scaleConstraint1.tg[0].tpm";
 connectAttr "Slave_L_Knee_joint1_scaleConstraint1.w0" "Slave_L_Knee_joint1_scaleConstraint1.tg[0].tw"
 		;
-connectAttr "Slave_L_Ankle_joint1_parentConstraint1.ctx" "Slave_L_Ankle_joint1.tx"
-		;
-connectAttr "Slave_L_Ankle_joint1_parentConstraint1.cty" "Slave_L_Ankle_joint1.ty"
-		;
-connectAttr "Slave_L_Ankle_joint1_parentConstraint1.ctz" "Slave_L_Ankle_joint1.tz"
-		;
-connectAttr "Slave_L_Ankle_joint1_parentConstraint1.crx" "Slave_L_Ankle_joint1.rx"
-		;
-connectAttr "Slave_L_Ankle_joint1_parentConstraint1.cry" "Slave_L_Ankle_joint1.ry"
-		;
-connectAttr "Slave_L_Ankle_joint1_parentConstraint1.crz" "Slave_L_Ankle_joint1.rz"
-		;
-connectAttr "Slave_L_Ankle_joint1_scaleConstraint1.csx" "Slave_L_Ankle_joint1.sx"
-		;
-connectAttr "Slave_L_Ankle_joint1_scaleConstraint1.csy" "Slave_L_Ankle_joint1.sy"
-		;
-connectAttr "Slave_L_Ankle_joint1_scaleConstraint1.csz" "Slave_L_Ankle_joint1.sz"
-		;
+connectAttr "Slave_L_Ankle_joint1_translateX.o" "Slave_L_Ankle_joint1.tx";
+connectAttr "Slave_L_Ankle_joint1_translateY.o" "Slave_L_Ankle_joint1.ty";
+connectAttr "Slave_L_Ankle_joint1_translateZ.o" "Slave_L_Ankle_joint1.tz";
+connectAttr "Slave_L_Ankle_joint1_rotateX.o" "Slave_L_Ankle_joint1.rx";
+connectAttr "Slave_L_Ankle_joint1_rotateY.o" "Slave_L_Ankle_joint1.ry";
+connectAttr "Slave_L_Ankle_joint1_rotateZ.o" "Slave_L_Ankle_joint1.rz";
+connectAttr "Slave_L_Ankle_joint1_scaleX.o" "Slave_L_Ankle_joint1.sx";
+connectAttr "Slave_L_Ankle_joint1_scaleY.o" "Slave_L_Ankle_joint1.sy";
+connectAttr "Slave_L_Ankle_joint1_scaleZ.o" "Slave_L_Ankle_joint1.sz";
 connectAttr "Slave_L_Knee_joint1.s" "Slave_L_Ankle_joint1.is";
+connectAttr "Slave_L_Ankle_joint1_visibility.o" "Slave_L_Ankle_joint1.v";
 connectAttr "Slave_L_Ankle_joint1.ro" "Slave_L_Ankle_joint1_parentConstraint1.cro"
 		;
 connectAttr "Slave_L_Ankle_joint1.pim" "Slave_L_Ankle_joint1_parentConstraint1.cpim"
@@ -9471,25 +13104,17 @@ connectAttr "L_Ankle_joint1.pm" "Slave_L_Ankle_joint1_scaleConstraint1.tg[0].tpm
 		;
 connectAttr "Slave_L_Ankle_joint1_scaleConstraint1.w0" "Slave_L_Ankle_joint1_scaleConstraint1.tg[0].tw"
 		;
-connectAttr "Slave_L_Shoulder_joint_parentConstraint1.ctx" "Slave_L_Shoulder_joint.tx"
-		;
-connectAttr "Slave_L_Shoulder_joint_parentConstraint1.cty" "Slave_L_Shoulder_joint.ty"
-		;
-connectAttr "Slave_L_Shoulder_joint_parentConstraint1.ctz" "Slave_L_Shoulder_joint.tz"
-		;
-connectAttr "Slave_L_Shoulder_joint_parentConstraint1.crx" "Slave_L_Shoulder_joint.rx"
-		;
-connectAttr "Slave_L_Shoulder_joint_parentConstraint1.cry" "Slave_L_Shoulder_joint.ry"
-		;
-connectAttr "Slave_L_Shoulder_joint_parentConstraint1.crz" "Slave_L_Shoulder_joint.rz"
-		;
-connectAttr "Slave_L_Shoulder_joint_scaleConstraint1.csx" "Slave_L_Shoulder_joint.sx"
-		;
-connectAttr "Slave_L_Shoulder_joint_scaleConstraint1.csy" "Slave_L_Shoulder_joint.sy"
-		;
-connectAttr "Slave_L_Shoulder_joint_scaleConstraint1.csz" "Slave_L_Shoulder_joint.sz"
-		;
+connectAttr "Slave_L_Shoulder_joint_translateX.o" "Slave_L_Shoulder_joint.tx";
+connectAttr "Slave_L_Shoulder_joint_translateY.o" "Slave_L_Shoulder_joint.ty";
+connectAttr "Slave_L_Shoulder_joint_translateZ.o" "Slave_L_Shoulder_joint.tz";
+connectAttr "Slave_L_Shoulder_joint_rotateX.o" "Slave_L_Shoulder_joint.rx";
+connectAttr "Slave_L_Shoulder_joint_rotateY.o" "Slave_L_Shoulder_joint.ry";
+connectAttr "Slave_L_Shoulder_joint_rotateZ.o" "Slave_L_Shoulder_joint.rz";
+connectAttr "Slave_L_Shoulder_joint_scaleX.o" "Slave_L_Shoulder_joint.sx";
+connectAttr "Slave_L_Shoulder_joint_scaleY.o" "Slave_L_Shoulder_joint.sy";
+connectAttr "Slave_L_Shoulder_joint_scaleZ.o" "Slave_L_Shoulder_joint.sz";
 connectAttr "Slave_Body_joint.s" "Slave_L_Shoulder_joint.is";
+connectAttr "Slave_L_Shoulder_joint_visibility.o" "Slave_L_Shoulder_joint.v";
 connectAttr "Slave_L_Shoulder_joint.ro" "Slave_L_Shoulder_joint_parentConstraint1.cro"
 		;
 connectAttr "Slave_L_Shoulder_joint.pim" "Slave_L_Shoulder_joint_parentConstraint1.cpim"
@@ -9532,22 +13157,17 @@ connectAttr "L_Shoulder_joint.pm" "Slave_L_Shoulder_joint_scaleConstraint1.tg[0]
 		;
 connectAttr "Slave_L_Shoulder_joint_scaleConstraint1.w0" "Slave_L_Shoulder_joint_scaleConstraint1.tg[0].tw"
 		;
-connectAttr "Slave_L_Elbow_joint_parentConstraint1.ctx" "Slave_L_Elbow_joint.tx"
-		;
-connectAttr "Slave_L_Elbow_joint_parentConstraint1.cty" "Slave_L_Elbow_joint.ty"
-		;
-connectAttr "Slave_L_Elbow_joint_parentConstraint1.ctz" "Slave_L_Elbow_joint.tz"
-		;
-connectAttr "Slave_L_Elbow_joint_parentConstraint1.crx" "Slave_L_Elbow_joint.rx"
-		;
-connectAttr "Slave_L_Elbow_joint_parentConstraint1.cry" "Slave_L_Elbow_joint.ry"
-		;
-connectAttr "Slave_L_Elbow_joint_parentConstraint1.crz" "Slave_L_Elbow_joint.rz"
-		;
-connectAttr "Slave_L_Elbow_joint_scaleConstraint1.csx" "Slave_L_Elbow_joint.sx";
-connectAttr "Slave_L_Elbow_joint_scaleConstraint1.csy" "Slave_L_Elbow_joint.sy";
-connectAttr "Slave_L_Elbow_joint_scaleConstraint1.csz" "Slave_L_Elbow_joint.sz";
+connectAttr "Slave_L_Elbow_joint_translateX.o" "Slave_L_Elbow_joint.tx";
+connectAttr "Slave_L_Elbow_joint_translateY.o" "Slave_L_Elbow_joint.ty";
+connectAttr "Slave_L_Elbow_joint_translateZ.o" "Slave_L_Elbow_joint.tz";
+connectAttr "Slave_L_Elbow_joint_rotateX.o" "Slave_L_Elbow_joint.rx";
+connectAttr "Slave_L_Elbow_joint_rotateY.o" "Slave_L_Elbow_joint.ry";
+connectAttr "Slave_L_Elbow_joint_rotateZ.o" "Slave_L_Elbow_joint.rz";
+connectAttr "Slave_L_Elbow_joint_scaleX.o" "Slave_L_Elbow_joint.sx";
+connectAttr "Slave_L_Elbow_joint_scaleY.o" "Slave_L_Elbow_joint.sy";
+connectAttr "Slave_L_Elbow_joint_scaleZ.o" "Slave_L_Elbow_joint.sz";
 connectAttr "Slave_L_Shoulder_joint.s" "Slave_L_Elbow_joint.is";
+connectAttr "Slave_L_Elbow_joint_visibility.o" "Slave_L_Elbow_joint.v";
 connectAttr "Slave_L_Elbow_joint.ro" "Slave_L_Elbow_joint_parentConstraint1.cro"
 		;
 connectAttr "Slave_L_Elbow_joint.pim" "Slave_L_Elbow_joint_parentConstraint1.cpim"
@@ -9585,22 +13205,17 @@ connectAttr "L_Elbow_joint.s" "Slave_L_Elbow_joint_scaleConstraint1.tg[0].ts";
 connectAttr "L_Elbow_joint.pm" "Slave_L_Elbow_joint_scaleConstraint1.tg[0].tpm";
 connectAttr "Slave_L_Elbow_joint_scaleConstraint1.w0" "Slave_L_Elbow_joint_scaleConstraint1.tg[0].tw"
 		;
-connectAttr "Slave_L_Wrist_joint_parentConstraint1.ctx" "Slave_L_Wrist_joint.tx"
-		;
-connectAttr "Slave_L_Wrist_joint_parentConstraint1.cty" "Slave_L_Wrist_joint.ty"
-		;
-connectAttr "Slave_L_Wrist_joint_parentConstraint1.ctz" "Slave_L_Wrist_joint.tz"
-		;
-connectAttr "Slave_L_Wrist_joint_parentConstraint1.crx" "Slave_L_Wrist_joint.rx"
-		;
-connectAttr "Slave_L_Wrist_joint_parentConstraint1.cry" "Slave_L_Wrist_joint.ry"
-		;
-connectAttr "Slave_L_Wrist_joint_parentConstraint1.crz" "Slave_L_Wrist_joint.rz"
-		;
-connectAttr "Slave_L_Wrist_joint_scaleConstraint1.csx" "Slave_L_Wrist_joint.sx";
-connectAttr "Slave_L_Wrist_joint_scaleConstraint1.csy" "Slave_L_Wrist_joint.sy";
-connectAttr "Slave_L_Wrist_joint_scaleConstraint1.csz" "Slave_L_Wrist_joint.sz";
+connectAttr "Slave_L_Wrist_joint_translateX.o" "Slave_L_Wrist_joint.tx";
+connectAttr "Slave_L_Wrist_joint_translateY.o" "Slave_L_Wrist_joint.ty";
+connectAttr "Slave_L_Wrist_joint_translateZ.o" "Slave_L_Wrist_joint.tz";
+connectAttr "Slave_L_Wrist_joint_rotateX.o" "Slave_L_Wrist_joint.rx";
+connectAttr "Slave_L_Wrist_joint_rotateY.o" "Slave_L_Wrist_joint.ry";
+connectAttr "Slave_L_Wrist_joint_rotateZ.o" "Slave_L_Wrist_joint.rz";
+connectAttr "Slave_L_Wrist_joint_scaleX.o" "Slave_L_Wrist_joint.sx";
+connectAttr "Slave_L_Wrist_joint_scaleY.o" "Slave_L_Wrist_joint.sy";
+connectAttr "Slave_L_Wrist_joint_scaleZ.o" "Slave_L_Wrist_joint.sz";
 connectAttr "Slave_L_Elbow_joint.s" "Slave_L_Wrist_joint.is";
+connectAttr "Slave_L_Wrist_joint_visibility.o" "Slave_L_Wrist_joint.v";
 connectAttr "Slave_L_Wrist_joint.ro" "Slave_L_Wrist_joint_parentConstraint1.cro"
 		;
 connectAttr "Slave_L_Wrist_joint.pim" "Slave_L_Wrist_joint_parentConstraint1.cpim"
@@ -9638,16 +13253,17 @@ connectAttr "L_Wrist_joint.s" "Slave_L_Wrist_joint_scaleConstraint1.tg[0].ts";
 connectAttr "L_Wrist_joint.pm" "Slave_L_Wrist_joint_scaleConstraint1.tg[0].tpm";
 connectAttr "Slave_L_Wrist_joint_scaleConstraint1.w0" "Slave_L_Wrist_joint_scaleConstraint1.tg[0].tw"
 		;
-connectAttr "Slave_Head_joint_parentConstraint1.ctx" "Slave_Head_joint.tx";
-connectAttr "Slave_Head_joint_parentConstraint1.cty" "Slave_Head_joint.ty";
-connectAttr "Slave_Head_joint_parentConstraint1.ctz" "Slave_Head_joint.tz";
-connectAttr "Slave_Head_joint_parentConstraint1.crx" "Slave_Head_joint.rx";
-connectAttr "Slave_Head_joint_parentConstraint1.cry" "Slave_Head_joint.ry";
-connectAttr "Slave_Head_joint_parentConstraint1.crz" "Slave_Head_joint.rz";
-connectAttr "Slave_Head_joint_scaleConstraint1.csx" "Slave_Head_joint.sx";
-connectAttr "Slave_Head_joint_scaleConstraint1.csy" "Slave_Head_joint.sy";
-connectAttr "Slave_Head_joint_scaleConstraint1.csz" "Slave_Head_joint.sz";
+connectAttr "Slave_Head_joint_translateX.o" "Slave_Head_joint.tx";
+connectAttr "Slave_Head_joint_translateY.o" "Slave_Head_joint.ty";
+connectAttr "Slave_Head_joint_translateZ.o" "Slave_Head_joint.tz";
+connectAttr "Slave_Head_joint_rotateX.o" "Slave_Head_joint.rx";
+connectAttr "Slave_Head_joint_rotateY.o" "Slave_Head_joint.ry";
+connectAttr "Slave_Head_joint_rotateZ.o" "Slave_Head_joint.rz";
+connectAttr "Slave_Head_joint_scaleX.o" "Slave_Head_joint.sx";
+connectAttr "Slave_Head_joint_scaleY.o" "Slave_Head_joint.sy";
+connectAttr "Slave_Head_joint_scaleZ.o" "Slave_Head_joint.sz";
 connectAttr "Slave_Body_joint.s" "Slave_Head_joint.is";
+connectAttr "Slave_Head_joint_visibility.o" "Slave_Head_joint.v";
 connectAttr "Slave_Head_joint.ro" "Slave_Head_joint_parentConstraint1.cro";
 connectAttr "Slave_Head_joint.pim" "Slave_Head_joint_parentConstraint1.cpim";
 connectAttr "Slave_Head_joint.rp" "Slave_Head_joint_parentConstraint1.crp";
@@ -9671,25 +13287,17 @@ connectAttr "Head_joint.s" "Slave_Head_joint_scaleConstraint1.tg[0].ts";
 connectAttr "Head_joint.pm" "Slave_Head_joint_scaleConstraint1.tg[0].tpm";
 connectAttr "Slave_Head_joint_scaleConstraint1.w0" "Slave_Head_joint_scaleConstraint1.tg[0].tw"
 		;
-connectAttr "Slave_R_Shoulder_joint_parentConstraint1.ctx" "Slave_R_Shoulder_joint.tx"
-		;
-connectAttr "Slave_R_Shoulder_joint_parentConstraint1.cty" "Slave_R_Shoulder_joint.ty"
-		;
-connectAttr "Slave_R_Shoulder_joint_parentConstraint1.ctz" "Slave_R_Shoulder_joint.tz"
-		;
-connectAttr "Slave_R_Shoulder_joint_parentConstraint1.crx" "Slave_R_Shoulder_joint.rx"
-		;
-connectAttr "Slave_R_Shoulder_joint_parentConstraint1.cry" "Slave_R_Shoulder_joint.ry"
-		;
-connectAttr "Slave_R_Shoulder_joint_parentConstraint1.crz" "Slave_R_Shoulder_joint.rz"
-		;
-connectAttr "Slave_R_Shoulder_joint_scaleConstraint1.csx" "Slave_R_Shoulder_joint.sx"
-		;
-connectAttr "Slave_R_Shoulder_joint_scaleConstraint1.csy" "Slave_R_Shoulder_joint.sy"
-		;
-connectAttr "Slave_R_Shoulder_joint_scaleConstraint1.csz" "Slave_R_Shoulder_joint.sz"
-		;
+connectAttr "Slave_R_Shoulder_joint_translateX.o" "Slave_R_Shoulder_joint.tx";
+connectAttr "Slave_R_Shoulder_joint_translateY.o" "Slave_R_Shoulder_joint.ty";
+connectAttr "Slave_R_Shoulder_joint_translateZ.o" "Slave_R_Shoulder_joint.tz";
+connectAttr "Slave_R_Shoulder_joint_rotateX.o" "Slave_R_Shoulder_joint.rx";
+connectAttr "Slave_R_Shoulder_joint_rotateY.o" "Slave_R_Shoulder_joint.ry";
+connectAttr "Slave_R_Shoulder_joint_rotateZ.o" "Slave_R_Shoulder_joint.rz";
+connectAttr "Slave_R_Shoulder_joint_scaleX.o" "Slave_R_Shoulder_joint.sx";
+connectAttr "Slave_R_Shoulder_joint_scaleY.o" "Slave_R_Shoulder_joint.sy";
+connectAttr "Slave_R_Shoulder_joint_scaleZ.o" "Slave_R_Shoulder_joint.sz";
 connectAttr "Slave_Body_joint.s" "Slave_R_Shoulder_joint.is";
+connectAttr "Slave_R_Shoulder_joint_visibility.o" "Slave_R_Shoulder_joint.v";
 connectAttr "Slave_R_Shoulder_joint.ro" "Slave_R_Shoulder_joint_parentConstraint1.cro"
 		;
 connectAttr "Slave_R_Shoulder_joint.pim" "Slave_R_Shoulder_joint_parentConstraint1.cpim"
@@ -9732,22 +13340,17 @@ connectAttr "R_Shoulder_joint.pm" "Slave_R_Shoulder_joint_scaleConstraint1.tg[0]
 		;
 connectAttr "Slave_R_Shoulder_joint_scaleConstraint1.w0" "Slave_R_Shoulder_joint_scaleConstraint1.tg[0].tw"
 		;
-connectAttr "Slave_R_Elbow_joint_parentConstraint1.ctx" "Slave_R_Elbow_joint.tx"
-		;
-connectAttr "Slave_R_Elbow_joint_parentConstraint1.cty" "Slave_R_Elbow_joint.ty"
-		;
-connectAttr "Slave_R_Elbow_joint_parentConstraint1.ctz" "Slave_R_Elbow_joint.tz"
-		;
-connectAttr "Slave_R_Elbow_joint_parentConstraint1.crx" "Slave_R_Elbow_joint.rx"
-		;
-connectAttr "Slave_R_Elbow_joint_parentConstraint1.cry" "Slave_R_Elbow_joint.ry"
-		;
-connectAttr "Slave_R_Elbow_joint_parentConstraint1.crz" "Slave_R_Elbow_joint.rz"
-		;
-connectAttr "Slave_R_Elbow_joint_scaleConstraint1.csx" "Slave_R_Elbow_joint.sx";
-connectAttr "Slave_R_Elbow_joint_scaleConstraint1.csy" "Slave_R_Elbow_joint.sy";
-connectAttr "Slave_R_Elbow_joint_scaleConstraint1.csz" "Slave_R_Elbow_joint.sz";
+connectAttr "Slave_R_Elbow_joint_translateX.o" "Slave_R_Elbow_joint.tx";
+connectAttr "Slave_R_Elbow_joint_translateY.o" "Slave_R_Elbow_joint.ty";
+connectAttr "Slave_R_Elbow_joint_translateZ.o" "Slave_R_Elbow_joint.tz";
+connectAttr "Slave_R_Elbow_joint_rotateX.o" "Slave_R_Elbow_joint.rx";
+connectAttr "Slave_R_Elbow_joint_rotateY.o" "Slave_R_Elbow_joint.ry";
+connectAttr "Slave_R_Elbow_joint_rotateZ.o" "Slave_R_Elbow_joint.rz";
+connectAttr "Slave_R_Elbow_joint_scaleX.o" "Slave_R_Elbow_joint.sx";
+connectAttr "Slave_R_Elbow_joint_scaleY.o" "Slave_R_Elbow_joint.sy";
+connectAttr "Slave_R_Elbow_joint_scaleZ.o" "Slave_R_Elbow_joint.sz";
 connectAttr "Slave_R_Shoulder_joint.s" "Slave_R_Elbow_joint.is";
+connectAttr "Slave_R_Elbow_joint_visibility.o" "Slave_R_Elbow_joint.v";
 connectAttr "Slave_R_Elbow_joint.ro" "Slave_R_Elbow_joint_parentConstraint1.cro"
 		;
 connectAttr "Slave_R_Elbow_joint.pim" "Slave_R_Elbow_joint_parentConstraint1.cpim"
@@ -10056,14 +13659,14 @@ connectAttr "Slave_R_Wrist_joint.obcc" "skinCluster1.ifcl[13]";
 connectAttr "groupParts3.og" "tweak1.ip[0].ig";
 connectAttr "groupId3.id" "tweak1.ip[0].gi";
 connectAttr "skinCluster1GroupId.msg" "skinCluster1Set.gn" -na;
-connectAttr "polySurface1Shape.iog.og[5]" "skinCluster1Set.dsm" -na;
+connectAttr "knightShape.iog.og[5]" "skinCluster1Set.dsm" -na;
 connectAttr "skinCluster1.msg" "skinCluster1Set.ub[0]";
 connectAttr "tweak1.og[0]" "skinCluster1GroupParts.ig";
 connectAttr "skinCluster1GroupId.id" "skinCluster1GroupParts.gi";
 connectAttr "groupId3.msg" "tweakSet1.gn" -na;
-connectAttr "polySurface1Shape.iog.og[6]" "tweakSet1.dsm" -na;
+connectAttr "knightShape.iog.og[6]" "tweakSet1.dsm" -na;
 connectAttr "tweak1.msg" "tweakSet1.ub[0]";
-connectAttr "polySurface1ShapeOrig.w" "groupParts3.ig";
+connectAttr "knightShapeOrig.w" "groupParts3.ig";
 connectAttr "groupId3.id" "groupParts3.gi";
 connectAttr "Slave_Body_joint.msg" "bindPose1.m[0]";
 connectAttr "Slave_L_Hip_joint.msg" "bindPose1.m[1]";
@@ -10110,7 +13713,7 @@ connectAttr "Slave_R_Wrist_joint.bps" "bindPose1.wm[13]";
 connectAttr "file5.oc" "knightClothShader.c";
 connectAttr "file5.ot" "knightClothShader.it";
 connectAttr "knightClothShader.oc" "blinn5SG.ss";
-connectAttr "polySurface1Shape.iog.og[9]" "blinn5SG.dsm" -na;
+connectAttr "knightShape.iog.og[9]" "blinn5SG.dsm" -na;
 connectAttr "groupId6.msg" "blinn5SG.gn" -na;
 connectAttr "blinn5SG.msg" "materialInfo7.sg";
 connectAttr "knightClothShader.msg" "materialInfo7.m";
@@ -10135,8 +13738,8 @@ connectAttr "place2dTexture5.o" "file5.uv";
 connectAttr "place2dTexture5.ofs" "file5.fs";
 connectAttr "file6.oc" "knightArmorShader.c";
 connectAttr "knightArmorShader.oc" "blinn6SG.ss";
-connectAttr "polySurface1Shape.iog.og[8]" "blinn6SG.dsm" -na;
-connectAttr "polySurface1Shape.ciog.cog[0]" "blinn6SG.dsm" -na;
+connectAttr "knightShape.iog.og[8]" "blinn6SG.dsm" -na;
+connectAttr "knightShape.ciog.cog[0]" "blinn6SG.dsm" -na;
 connectAttr "groupId4.msg" "blinn6SG.gn" -na;
 connectAttr "groupId5.msg" "blinn6SG.gn" -na;
 connectAttr "blinn6SG.msg" "materialInfo8.sg";
@@ -10191,4 +13794,4 @@ connectAttr "ikSCsolver.msg" ":ikSystem.sol" -na;
 dataStructure -fmt "raw" -as "name=externalContentTable:string=node:string=key:string=upath:uint32=upathcrc:string=rpath:string=roles";
 applyMetadata -fmt "raw" -v "channel\nname externalContentTable\nstream\nname v1.0\nindexType numeric\nstructure externalContentTable\n0\n\"file1\" \"fileTextureName\" \"D:/School/GGJ/knightTexture.png\" 3927958590 \"\" \"sourceImages\"\n1\n\"file2\" \"fileTextureName\" \"D:/ComicSense/artFolder/characterModels/knightModel/knightTextures/knightTexture.png\" 3945644377 \"D:/ComicSense/artFolder/characterModels/knightModel/knightTextures/knightTexture.png\" \"sourceImages\"\n2\n\"file3\" \"fileTextureName\" \"D:/ComicSense/artFolder/characterModels/knightModel/knightTextures/knightClothTexture.png\" 4230239574 \"D:/ComicSense/artFolder/characterModels/knightModel/knightTextures/knightClothTexture.png\" \"sourceImages\"\n3\n\"file4\" \"fileTextureName\" \"D:/ComicSense/artFolder/characterModels/knightModel/knightTextures/knightClothTexture.png\" 4230239574 \"D:/ComicSense/artFolder/characterModels/knightModel/knightTextures/knightClothTexture.png\" \"sourceImages\"\n4\n\"file5\" \"fileTextureName\" \"D:/ComicSense/artFolder/characterModels/knightModel/knightTextures/knightClothTexture.png\" 4230239574 \"D:/ComicSense/artFolder/characterModels/knightModel/knightTextures/knightClothTexture.png\" \"sourceImages\"\n5\n\"file6\" \"fileTextureName\" \"D:/ComicSense/artFolder/characterModels/knightModel/knightTextures/knightTexture.png\" 3945644377 \"D:/ComicSense/artFolder/characterModels/knightModel/knightTextures/knightTexture.png\" \"sourceImages\"\nendStream\nendChannel\nendAssociations\n" 
 		-scn;
-// End of knightRigtry.ma
+// End of knightRigtry2.ma
