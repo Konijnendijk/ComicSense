@@ -12,6 +12,8 @@ public class ScreamManager : MonoBehaviour {
     //Amount of scream to be added when a princess screams
     public float ScreamIncrement;
 
+    //Time untill a princess screams again
+    public float ScreamTime;
 
     // 0 is no screams, 1 is game over
     private float m_scream;
@@ -19,15 +21,14 @@ public class ScreamManager : MonoBehaviour {
     /// <summary>
     /// Princess screams, play sound and add to scream meter
     /// </summary>
-    public void Scream (Room room){
-        m_scream += ScreamIncrement;
+    public void Scream (Room room, int numFlies){
+        m_scream += ScreamIncrement * numFlies;
     }
 
     public void Update()
     {
         m_scream -= m_scream<0?0:  RecoveryPerSecond * Time.deltaTime;
-        Image meter=GameObject.FindGameObjectWithTag(Globals.GetInstance().ScreamMeterTag).GetComponent<Image>();
-        meter.fillAmount = m_scream;
+        ScreamMeter.fillAmount = m_scream;
     }
 	
 }
