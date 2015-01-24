@@ -7,6 +7,8 @@ public class Room : MonoBehaviour {
     public GameObject TextBubble;
     public GameObject Canvas;
 
+    public AudioClip[] Clips;
+
     // on-screen marker
     private GameObject m_img;
 
@@ -26,6 +28,9 @@ public class Room : MonoBehaviour {
         if (other.gameObject.tag == Globals.GetInstance().FliesTag)
         {
             manager.Scream(this,1);
+            AudioSource source = gameObject.GetComponent<AudioSource>();
+            source.clip = Clips[Random.Range(0, Clips.Length)];
+            source.Play();
 
             if (m_previousNumFlies == 0)
             {
