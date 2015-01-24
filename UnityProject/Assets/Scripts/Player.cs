@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
   {
     IDLE,
     ATTACKING,
-    SELECTING_TRAP,
+    SELECTING_TRAP
   }
 
   public float m_movementSpeed;

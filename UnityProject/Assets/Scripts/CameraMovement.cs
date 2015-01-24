@@ -7,6 +7,11 @@ public class CameraMovement : MonoBehaviour
   public Vector3 m_cameraPosOffset;
   public float m_deadZone;
 
+  void Start()
+  {
+    transform.position = m_player.transform.position + m_cameraPosOffset;
+  }
+
   void Update()
   {
     Vector3 targetPos = m_player.transform.position + m_cameraPosOffset;
