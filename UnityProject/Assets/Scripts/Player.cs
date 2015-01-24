@@ -34,7 +34,7 @@ public class Player : MonoBehaviour
     m_trapPreview.transform.parent = transform;
     m_trapPreview.transform.localPosition = new Vector3(0, 0, 0);
     m_trapPreview.transform.rotation = Quaternion.identity;
-    
+
     if(m_trapPreview.GetComponent<CapsuleCollider>())
       m_trapPreview.GetComponent<CapsuleCollider>().radius /= 1.05f;
     if(m_trapPreview.GetComponent<BoxCollider>())
@@ -112,7 +112,7 @@ public class Player : MonoBehaviour
         {
           if(m_trapPreview.GetComponent<TowerPreview>().placable)
           {
-            GameObject trap = (GameObject)Instantiate(
+            Instantiate(
               m_traps[0],
               m_trapPreview.transform.position,
               m_trapPreview.transform.rotation);
