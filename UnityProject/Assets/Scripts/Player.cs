@@ -21,7 +21,6 @@ public class Player : MonoBehaviour
   public GameObject[] m_trapPreviews;
   float m_lastAttackTime;
   State m_state;
-  GameObject m_colliderToBeCleaned;
   GameObject m_trapPreview;
   Animator m_animator;
 
@@ -53,11 +52,7 @@ public class Player : MonoBehaviour
   }
   void Attack()
   {
-    GameObject go = (GameObject)Instantiate(m_attackCollider);
-    go.transform.parent = transform;
-    go.transform.localPosition = new Vector3(0.366f, 0.9f, 0.452f);
-    go.transform.localRotation = Quaternion.identity;
-    m_colliderToBeCleaned = go;
+    m_attackCollider.GetComponent<BoxCollider>().enabled = true;
     m_state = State.ATTACKING;
     audio.Play();
   }
@@ -106,9 +101,9 @@ public class Player : MonoBehaviour
         }
         break;
       case State.ATTACKING:
-        if(m_colliderToBeCleaned != null && !IsAttacking())
+        if(m_attackCollider.GetComponent<BoxCollider>().enabled && !IsAttacking())
         {
-          Destroy(m_colliderToBeCleaned);
+          m_attackCollider.GetComponent<BoxCollider>().enabled = false;
           m_state = State.IDLE;
         }
         break;
@@ -154,9 +149,9 @@ public class Player : MonoBehaviour
       -Input.GetAxis("leftStickY"),
       0.0f);
     Vector3 axisLeft = new Vector3(axis4.x, axis4.y, axis4.z);
-    
+
     m_animator.SetFloat("speed", axisLeft.magnitude);
-   
+
     switch(m_state)
     {
       case State.IDLE:
