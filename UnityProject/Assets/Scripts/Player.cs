@@ -23,12 +23,6 @@ public class Player : MonoBehaviour
   State m_state;
   GameObject m_colliderToBeCleaned;
   GameObject m_trapPreview;
-  Dictionary<PickupType, int> m_inventory = new Dictionary<PickupType,int>();
-
-  public void AddItemToInventory(PickupType pt)
-  {
-    m_inventory[pt] += 1;
-  }
 
   void Start()
   {
@@ -63,6 +57,7 @@ public class Player : MonoBehaviour
     go.transform.localRotation = Quaternion.identity;
     m_colliderToBeCleaned = go;
     m_state = State.ATTACKING;
+    audio.Play();
   }
 
   bool IsAttacking()
