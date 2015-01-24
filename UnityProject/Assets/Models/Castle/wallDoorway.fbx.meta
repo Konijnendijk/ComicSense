@@ -1,0 +1,128 @@
+fileFormatVersion: 2
+guid: 587bacf6165faf348b5e32aacf69283b
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: door
+    100002: doorFrame1
+    100004: doorFrame2
+    100006: doorFrame3
+    100008: doorFrame4
+    100010: doorKnob
+    100012: doorPlane
+    100014: doorwayPart1
+    100016: doorwayPart2
+    100018: doorwayPart3
+    100020: group1
+    100022: knob
+    100024: pipe
+    100026: threshold
+    100028: //RootNode
+    100030: wallDoorway 1
+    400000: door
+    400002: doorFrame1
+    400004: doorFrame2
+    400006: doorFrame3
+    400008: doorFrame4
+    400010: doorKnob
+    400012: doorPlane
+    400014: doorwayPart1
+    400016: doorwayPart2
+    400018: doorwayPart3
+    400020: group1
+    400022: knob
+    400024: pipe
+    400026: threshold
+    400028: //RootNode
+    400030: wallDoorway 1
+    2300000: doorFrame1
+    2300002: doorFrame2
+    2300004: doorFrame3
+    2300006: doorFrame4
+    2300008: doorPlane
+    2300010: doorwayPart1
+    2300012: doorwayPart2
+    2300014: doorwayPart3
+    2300016: knob
+    2300018: pipe
+    2300020: threshold
+    2300022: wallDoorway 1
+    3300000: doorFrame1
+    3300002: doorFrame2
+    3300004: doorFrame3
+    3300006: doorFrame4
+    3300008: doorPlane
+    3300010: doorwayPart1
+    3300012: doorwayPart2
+    3300014: doorwayPart3
+    3300016: knob
+    3300018: pipe
+    3300020: threshold
+    3300022: wallDoorway 1
+    4300000: threshold
+    4300002: doorFrame1
+    4300004: doorFrame2
+    4300006: doorFrame3
+    4300008: doorFrame4
+    4300010: doorPlane
+    4300012: knob
+    4300014: pipe
+    4300016: wallDoorway
+    4300018: doorwayPart1
+    4300020: doorwayPart2
+    4300022: doorwayPart3
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

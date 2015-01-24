@@ -17,7 +17,7 @@ public class Globals : MonoBehaviour
   private const string m_fliesTag = "Flies";
   private const string m_roomsTag = "Rooms";
   private const string m_screamMeterTag = "ScreamMeter";
-  //Inventory m_inventory;
+  Inventory m_inventory;
 
   //public variables for the debugging
   public float GRID_TILE_SIZE = 1;
@@ -50,6 +50,11 @@ public class Globals : MonoBehaviour
     return v.x == float.NaN || v.y == float.NaN || v.z == float.NaN;
   }
 
+  private void Init()
+  {
+    m_inventory = new Inventory();  
+  }
+
   //PLEASE DO NOT TOUCH
   static Globals s_instance = null;
   public static Globals GetInstance()
@@ -61,6 +66,8 @@ public class Globals : MonoBehaviour
     go.name = "Globals";
 
     s_instance = go.AddComponent<Globals>();
+
+    s_instance.Init();
 
     return s_instance;
   }
