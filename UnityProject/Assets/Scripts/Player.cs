@@ -19,11 +19,13 @@ public class Player : MonoBehaviour
   public GameObject m_attackCollider;
   public GameObject[] m_traps;
   public GameObject[] m_trapPreviews;
+  public GameObject m_candle;
   float m_lastAttackTime;
   State m_state;
   GameObject m_colliderToBeCleaned;
   GameObject m_trapPreview;
   Animator m_animator;
+  private GameObject m_windowNear;
 
   void Start()
   {
@@ -87,6 +89,20 @@ public class Player : MonoBehaviour
     }
   }
 
+  public void OnTriggerEnter(Collider other)
+  {
+      if (other.gameObject.tag == Globals.GetInstance().WindowTag)
+          m_windowNear = other.gameObject;
+  }
+
+  public void OnTriggerExit(Collider other)
+  {
+      if (other.gameObject.tag == Globals.GetInstance().WindowTag)
+          m_windowNear = null;
+  }   
+
+
+
   void Update()
   {
     m_animator.SetInteger("State", (int)m_state);
@@ -101,6 +117,15 @@ public class Player : MonoBehaviour
         }
         if(Input.GetButton("TrapPlacingMode") && !IsAttacking())
         {
+            Inventory inv = Globals.GetInstance().Inventory;
+            if (m_windowNear!=null && Globals.GetInstance().Inventory.GetItemCount(PickupType.CANDLE)>0)
+            {
+                inv.RemoveItem(PickupType.CANDLE);
+                GameObject candle = (GameObject)Instantiate(m_candle);
+                candle.transform.position = m_windowNear.transform.position;
+
+            }
+
           m_state = State.PLACING_TRAP;
           EnterTrapPlacingMode();
         }
