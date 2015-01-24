@@ -31,9 +31,10 @@ public class Fly : MonoBehaviour {
 
     public void OnCollisionEnter(Collision collision)
     {
-        m_flyDirection = Vector3.ClampMagnitude(Quaternion.AngleAxis(Random.value * 180 - 90, Vector3.up) * collision.contacts[0].normal, FlySpeed);
+        //m_flyDirection = Vector3.ClampMagnitude(Quaternion.AngleAxis(Random.value * 180 - 90, collision.gameObject.transform.up) * collision.contacts[0].normal, FlySpeed);
+        m_flyDirection = Vector3.ClampMagnitude(collision.contacts[0].normal, FlySpeed);
+        m_flyDirection.y = 0;
         resetTimer();
-        
     }
 
     private Vector3 chooseDirection()
