@@ -122,6 +122,16 @@ public class Player : MonoBehaviour
         window.PlaceCandle();
       }
     }
+    else if(col.tag == "CrackedWall")
+    {
+      if(!Input.GetButton("PlaceDown"))
+        return;
+      if(Globals.GI().inventory.GetItemCount(PickupType.WAX) <= 0)
+        return;
+      
+      Globals.GI().inventory.RemoveItem(PickupType.WAX);
+      col.gameObject.GetComponent<WallCrack>().Fill();
+    }
   }
 
   void Update()
