@@ -28,7 +28,7 @@ public class Princess : MonoBehaviour
     }
   }
 
-  bool IsScreaming()
+  public bool IsScreaming()
   {
     return m_lastScreamTime + m_screamDelay > Time.time;
   }
