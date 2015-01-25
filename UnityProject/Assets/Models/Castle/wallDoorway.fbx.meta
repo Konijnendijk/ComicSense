@@ -19,6 +19,7 @@ ModelImporter:
     100026: threshold
     100028: //RootNode
     100030: wallDoorway 1
+    100032: wall
     400000: door
     400002: doorFrame1
     400004: doorFrame2
@@ -35,6 +36,7 @@ ModelImporter:
     400026: threshold
     400028: //RootNode
     400030: wallDoorway 1
+    400032: wall
     2300000: doorFrame1
     2300002: doorFrame2
     2300004: doorFrame3
@@ -47,6 +49,8 @@ ModelImporter:
     2300018: pipe
     2300020: threshold
     2300022: wallDoorway 1
+    2300024: door
+    2300026: wall
     3300000: doorFrame1
     3300002: doorFrame2
     3300004: doorFrame3
@@ -59,6 +63,8 @@ ModelImporter:
     3300018: pipe
     3300020: threshold
     3300022: wallDoorway 1
+    3300024: door
+    3300026: wall
     4300000: threshold
     4300002: doorFrame1
     4300004: doorFrame2
@@ -71,6 +77,8 @@ ModelImporter:
     4300018: doorwayPart1
     4300020: doorwayPart2
     4300022: doorwayPart3
+    4300024: wall
+    4300026: door
     9500000: //RootNode
   materials:
     importMaterials: 1
