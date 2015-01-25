@@ -36,30 +36,6 @@ public class ScreamManager : MonoBehaviour {
 
     private void gameOver()
     {
-        GameObject.Find("Flyspawner").SetActive(false);
-        GameObject.Find("Player").SetActive(false);
-
-        StartCoroutine("GameOver");
-    }
-
-
-    IEnumerator GameOver()
-    {
-        while (m_gameOverTimer > 0)
-        {
-            m_gameOverTimer -= Time.deltaTime;
-
-            Text text = GameObject.Find("GameOver").GetComponent<Text>();
-
-            text.color = new Color(text.color.r, text.color.g, text.color.b, text.color.a + 1 * Time.deltaTime);
-
-
-            if (m_gameOverTimer <= 0)
-                Application.LoadLevel("mainMenu");
-            else
-                yield return null;
-        }
-
-        
+        Application.LoadLevel("gameOver");
     }
 }
