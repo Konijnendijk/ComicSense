@@ -33,10 +33,10 @@ public class asdf : MonoBehaviour {
         else
             m_time = 0;
 
-        if (m_time >= 30)
+        if (m_time >= 90)
             Application.LoadLevel("gameOver");
 
         GameObject meter = GameObject.Find("ScreamMeter");
-        meter.GetComponent<Image>().fillAmount = m_time / 30.0f;
+        meter.GetComponent<Image>().fillAmount = m_time / 90.0f;
     }
 }
