@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class Princess : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class Princess : MonoBehaviour
   float m_lastScreamTime;
   float m_screamDelay;
   int m_lastPlayedIndex = -1;
+  private ScreamManager manager;
 
   void SetTextures(Texture t)
   {
@@ -36,12 +38,14 @@ public class Princess : MonoBehaviour
       idx = (idx + 1) %  m_screamingSounds.Length;
     audio.clip = m_screamingSounds[idx];
     audio.Play();
+    manager.Scream();
   }
 
   // Use this for initialization
   void Start()
   {
     SetTextures(m_idleTexture);
+    manager = GameObject.FindObjectOfType<ScreamManager>();
   }
 
   // Update is called once per frame
@@ -58,4 +62,6 @@ public class Princess : MonoBehaviour
 
 
   }
+
+
 }
