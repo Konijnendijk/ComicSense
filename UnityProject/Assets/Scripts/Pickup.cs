@@ -5,7 +5,6 @@ public enum PickupType
 {
   HONEY_JAR,
   CANDLE,
-  NET,
   WAX,
   HERB,
   PERFUME,
@@ -19,15 +18,15 @@ public class Pickup : MonoBehaviour
   float m_startY;
   float m_timeOffset;
 
-  void OnCollisionEnter(Collision collision)
+  void OnTriggerEnter(Collider col)
   {
-    if(collision.collider.tag == "Player")
+    if(col.tag == "Player")
     {
-      //Globals.GI().inventory.AddItem(m_pickupType);
+      Globals.GI().inventory.AddItem(m_pickupType);
       Destroy(gameObject);
     }
   }
-
+  
   void Start()
   {
     m_startY = transform.position.y;
@@ -38,7 +37,8 @@ public class Pickup : MonoBehaviour
   {
     transform.position = new Vector3(
       transform.position.x,
-      m_startY + Mathf.Sin(Time.time + m_timeOffset),
+      m_startY + Mathf.Sin(Time.time * 3.0f + m_timeOffset) * .25f,
       transform.position.z);
+    transform.Rotate(new Vector3(0, 20, 0) * Time.deltaTime);
   }
 }

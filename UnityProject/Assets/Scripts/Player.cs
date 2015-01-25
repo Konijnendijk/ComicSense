@@ -23,6 +23,7 @@ public class Player : MonoBehaviour
   State m_state;
   GameObject m_trapPreview;
   Animator m_animator;
+  public AudioClip m_pickupSound;
 
   void Start()
   {
@@ -78,6 +79,47 @@ public class Player : MonoBehaviour
           Globals.GI().SnapPositionToGrid(m_trapPreview.transform.position);
 
         m_trapPreview.transform.rotation = Quaternion.identity;
+      }
+    }
+  }
+
+  void OnTriggerEnter(Collider col)
+  {
+    if(col.tag == "CandleWaxTrigger")
+    {
+      Globals.GI().inventory.AddItem(PickupType.CANDLE);
+
+      GameObject deathSoundPlayer = new GameObject();
+      AudioSource aus = deathSoundPlayer.AddComponent<AudioSource>();
+      aus.clip = m_pickupSound;
+      aus.Play();
+      deathSoundPlayer.AddComponent<DestroyOnAudioClipDone>();
+      deathSoundPlayer.transform.position = collider.transform.position;
+      Destroy(col.gameObject);
+    }
+    else if(col.GetComponent<Pickup>() != null)
+    {
+      GameObject deathSoundPlayer = new GameObject();
+      AudioSource aus = deathSoundPlayer.AddComponent<AudioSource>();
+      aus.clip = m_pickupSound;
+      aus.Play();
+      deathSoundPlayer.AddComponent<DestroyOnAudioClipDone>();
+      deathSoundPlayer.transform.position = collider.transform.position;
+    }
+  }
+  void OnTriggerStay(Collider col)
+  {
+    if(col.tag == "CandlePlacementTrigger")
+    {
+      //if(Globals.GI().inventory.GetItemCount(PickupType.CANDLE) <= 0)
+      //  return;
+      if(!Input.GetButton("PlaceDown"))
+        return;
+      Window window = col.GetComponent<Window>();
+      if(!window.HasCandleOrWax())
+      {
+        Globals.GI().inventory.RemoveItem(PickupType.CANDLE);
+        window.PlaceCandle();
       }
     }
   }

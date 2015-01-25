@@ -11,7 +11,7 @@ public class Globals : MonoBehaviour
   public string FliesTag { get { return m_fliesTag; } }
   public string RoomsTag { get { return m_roomsTag; } }
   public string ScreamMeterTag { get { return m_screamMeterTag; } }
-  //public Inventory inventory { get { return m_inventory; } }
+  public Inventory inventory { get { return m_inventory; } }
 
   //variables
   private const string m_fliesTag = "Flies";
