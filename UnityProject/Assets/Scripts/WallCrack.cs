@@ -3,7 +3,7 @@ using System.Collections;
 
 public class WallCrack : MonoBehaviour
 {
-  public GameObject m_wallCrackFiller;
+  public GameObject[] m_wallCrackFiller;
   public float m_breakTime;
   float m_filledTimeStamp;
 
@@ -17,11 +17,14 @@ public class WallCrack : MonoBehaviour
   {
     m_filledTimeStamp = Time.time;
   }
-  
-  
+
+
   // Update is called once per frame
   void Update()
   {
-    m_wallCrackFiller.renderer.enabled = IsFilled();
+    foreach(GameObject go in m_wallCrackFiller)
+    {
+      go.renderer.enabled = IsFilled();
+    }
   }
 }

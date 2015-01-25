@@ -16,6 +16,7 @@ public class Princess : MonoBehaviour
   private ScreamManager m_manager;
   private Canvas m_canvas;
   private GameObject m_marker;
+  Animator m_animator;
 
   void SetTextures(Texture t)
   {
@@ -38,7 +39,7 @@ public class Princess : MonoBehaviour
     m_lastScreamTime = Time.time;
     int idx = Random.Range(0, m_screamingSounds.Length - 1);
     if(idx == m_lastPlayedIndex)
-      idx = (idx + 1) %  m_screamingSounds.Length;
+      idx = (idx + 1) % m_screamingSounds.Length;
     audio.clip = m_screamingSounds[idx];
     audio.Play();
     m_manager.Scream();
@@ -50,6 +51,7 @@ public class Princess : MonoBehaviour
     SetTextures(m_idleTexture);
     m_manager = GameObject.FindObjectOfType<ScreamManager>();
     m_canvas = GameObject.Find("ScreamUI").GetComponent<Canvas>();
+    m_animator = GetComponentInChildren<Animator>();
   }
 
   // Update is called once per frame
@@ -60,25 +62,27 @@ public class Princess : MonoBehaviour
       flyCount += go.GetComponent<RoomCollider>().flyCollisions;
 
     SetTextures(flyCount > 0 ? m_screamingTexture : m_idleTexture);
+    m_animator.SetBool("Banana", flyCount > 0);
 
-    if (flyCount > 0 && !IsScreaming())
+    if(flyCount > 0 && !IsScreaming())
     {
-        Scream();
+      Scream();
+      placeMarker();
+    }
+    else if(flyCount > 0 && IsScreaming())
+    {
+      if(m_marker != null)
+      {
+        Vector3 screenPos = calculateScreenPos();
+        setImgPos(screenPos);
+      }
+      else
         placeMarker();
-    }
-    else if (flyCount > 0 && IsScreaming())
-    {
-        if (m_marker != null)
-        {
-            Vector3 screenPos = calculateScreenPos();
-                setImgPos(screenPos);
-        }
-        else
-            placeMarker();
 
     }
-    else {
-        destroyMarker();
+    else
+    {
+      destroyMarker();
     }
 
 
@@ -86,40 +90,47 @@ public class Princess : MonoBehaviour
 
   private void destroyMarker()
   {
-      Destroy(m_marker);
-      m_marker = null;
+    Destroy(m_marker);
+    m_marker = null;
   }
 
   private void placeMarker()
   {
-      destroyMarker();
+    destroyMarker();
 
     Vector3 screenPos = calculateScreenPos();
 
-        m_marker = (GameObject)Instantiate(TextBubble);
-        m_marker.transform.SetParent(m_canvas.transform);
+    m_marker = (GameObject)Instantiate(TextBubble);
+    m_marker.transform.SetParent(m_canvas.transform);
 
-        setImgPos(screenPos);
+    setImgPos(screenPos);
   }
 
   private void setImgPos(Vector3 screenPos)
   {
-      Rect canvasRect = m_canvas.GetComponent<RectTransform>().rect;
-      RectTransform imgRect = m_marker.GetComponent<RectTransform>();
-      if (imgRect)
-          imgRect.anchoredPosition = new Vector2(
-            canvasRect.width * screenPos.x,
-            canvasRect.height * screenPos.y);
+    Rect canvasRect = m_canvas.GetComponent<RectTransform>().rect;
+    RectTransform imgRect = m_marker.GetComponent<RectTransform>();
+    if(imgRect)
+      imgRect.anchoredPosition = new Vector2(
+        canvasRect.width * screenPos.x,
+        canvasRect.height * screenPos.y);
   }
 
   private Vector3 calculateScreenPos()
   {
-      Camera cam = GameObject.Find("Main Camera").GetComponent<Camera>();
-      Vector3 screenPos = cam.WorldToViewportPoint(transform.position);
+    Vector3 screenPos = Camera.main.WorldToViewportPoint(
+      transform.position + new Vector3(0, 2.5f, 0));
 
-      screenPos.x = Mathf.Clamp(screenPos.x, 0.0f, 1.0f);
-      screenPos.y = Mathf.Clamp(screenPos.y, 0.0f, 1.0f);
-      return screenPos;
+
+    if(screenPos.z < 0)
+    {
+      screenPos.x = -screenPos.x;
+      screenPos.y = -screenPos.y;
+    }
+    screenPos.x = Mathf.Clamp(screenPos.x, 0.1f, 0.9f);
+    screenPos.y = Mathf.Clamp(screenPos.y, 0.1f, 0.9f);
+
+    return screenPos;
   }
 
 
