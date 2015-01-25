@@ -10,7 +10,7 @@ public class MainMenu : MonoBehaviour {
 
     public void About()
     {
-        Debug.LogError("Not Implemented");
+        Application.LoadLevel("howTo");
     }
 
     public void ExitGame()
