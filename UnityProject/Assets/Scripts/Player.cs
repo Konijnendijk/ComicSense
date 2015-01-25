@@ -97,6 +97,15 @@ public class Player : MonoBehaviour
       deathSoundPlayer.transform.position = collider.transform.position;
       Destroy(col.gameObject);
     }
+    else if(col.GetComponent<Pickup>() != null)
+    {
+      GameObject deathSoundPlayer = new GameObject();
+      AudioSource aus = deathSoundPlayer.AddComponent<AudioSource>();
+      aus.clip = m_pickupSound;
+      aus.Play();
+      deathSoundPlayer.AddComponent<DestroyOnAudioClipDone>();
+      deathSoundPlayer.transform.position = collider.transform.position;
+    }
   }
   void OnTriggerStay(Collider col)
   {
