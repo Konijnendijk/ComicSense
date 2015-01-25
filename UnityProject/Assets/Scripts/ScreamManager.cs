@@ -22,7 +22,7 @@ public class ScreamManager : MonoBehaviour {
     public void Scream (){
         m_scream += ScreamIncrement;
 
-        if (m_scream >= 0)
+        if (m_scream >= 1)
         {
             gameOver();
         }
