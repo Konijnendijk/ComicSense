@@ -6,7 +6,7 @@ public class Inventory
 {
   Dictionary<PickupType, int> m_inventory;
 
-  void Start()
+  public Inventory()
   {
     m_inventory = new Dictionary<PickupType, int>();
 

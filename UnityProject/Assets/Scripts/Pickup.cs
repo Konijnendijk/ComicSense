@@ -5,7 +5,6 @@ public enum PickupType
 {
   HONEY_JAR,
   CANDLE,
-  NET,
   WAX,
   HERB,
   PERFUME,
