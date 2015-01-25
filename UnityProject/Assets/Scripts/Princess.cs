@@ -16,6 +16,7 @@ public class Princess : MonoBehaviour
   private ScreamManager m_manager;
   private Canvas m_canvas;
   private GameObject m_marker;
+  Animator m_animator;
 
   void SetTextures(Texture t)
   {
@@ -50,6 +51,7 @@ public class Princess : MonoBehaviour
     SetTextures(m_idleTexture);
     m_manager = GameObject.FindObjectOfType<ScreamManager>();
     m_canvas = GameObject.Find("ScreamUI").GetComponent<Canvas>();
+    m_animator = GetComponentInChildren<Animator>();
   }
 
   // Update is called once per frame
@@ -60,6 +62,7 @@ public class Princess : MonoBehaviour
       flyCount += go.GetComponent<RoomCollider>().flyCollisions;
 
     SetTextures(flyCount > 0 ? m_screamingTexture : m_idleTexture);
+    m_animator.SetBool("Banana", flyCount > 0);
 
     if(flyCount > 0 && !IsScreaming())
     {
@@ -118,7 +121,7 @@ public class Princess : MonoBehaviour
     Vector3 screenPos = Camera.main.WorldToViewportPoint(
       transform.position + new Vector3(0, 2.5f, 0));
 
-    
+
     if(screenPos.z < 0)
     {
       screenPos.x = -screenPos.x;

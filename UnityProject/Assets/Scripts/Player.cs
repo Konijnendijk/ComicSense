@@ -111,9 +111,9 @@ public class Player : MonoBehaviour
   {
     if(col.tag == "CandlePlacementTrigger")
     {
-      //if(Globals.GI().inventory.GetItemCount(PickupType.CANDLE) <= 0)
-      //  return;
       if(!Input.GetButton("PlaceDown"))
+        return;
+      if(Globals.GI().inventory.GetItemCount(PickupType.CANDLE) <= 0)
         return;
       Window window = col.GetComponent<Window>();
       if(!window.HasCandleOrWax())
@@ -152,8 +152,10 @@ public class Player : MonoBehaviour
       case State.PLACING_TRAP:
         if(Input.GetButtonDown("TrapPlacingDown"))
         {
-          if(m_trapPreview.GetComponent<TowerPreview>().placable)
+          if(m_trapPreview.GetComponent<TowerPreview>().placable &&
+            Globals.GI().inventory.GetItemCount(PickupType.HONEY_JAR) > 0)
           {
+            Globals.GI().inventory.RemoveItem(PickupType.HONEY_JAR);
             Instantiate(
               m_traps[0],
               m_trapPreview.transform.position,
