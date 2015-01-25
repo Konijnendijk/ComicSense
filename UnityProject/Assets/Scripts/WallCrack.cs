@@ -7,6 +7,10 @@ public class WallCrack : MonoBehaviour
   public float m_breakTime;
   float m_filledTimeStamp;
 
+  void Start()
+  {
+    m_filledTimeStamp = -10000.0f;
+  }
 
   public bool IsFilled()
   {
